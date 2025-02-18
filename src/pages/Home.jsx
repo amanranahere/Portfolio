@@ -1,6 +1,7 @@
 import React from "react";
+import PageTransition from "../components/Transitions/PageTransition";
 
-function App() {
+function Home() {
   return (
     <div className="pb-80">
       <div className="ml-3 lg:ml-10 flex flex-col justify-end h-screen text-[12vw] lg:text-[10vw] text-[#222222] leading-[0.9] tracking-[-0.04em] font-semibold select-none">
@@ -14,4 +15,4 @@ function App() {
   );
 }
 
-export default App;
+export default PageTransition(Home);

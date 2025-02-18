@@ -11,6 +11,10 @@ function Navbar() {
 
   const navItems = [
     {
+      name: "HOME",
+      slug: "/",
+    },
+    {
       name: "WORK",
       slug: "/work",
     },
@@ -94,7 +98,7 @@ function Navbar() {
             <li key={item.name}>
               <button
                 onClick={() => navigate(item.slug)}
-                className="font-extrabold text-[#2a2a2a] hover:text-gray-700"
+                className="font-extrabold text-[#2a2a2a] hover:text-black/60 transition duration-200"
               >
                 {item.name}
               </button>

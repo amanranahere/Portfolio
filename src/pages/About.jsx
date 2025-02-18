@@ -1,7 +1,12 @@
 import React from "react";
+import PageTransition from "../components/Transitions/PageTransition";
 
 function About() {
-  return <div className="text-xl">About page</div>;
+  return (
+    <div className="h-screen text-xl flex justify-center items-center">
+      About page
+    </div>
+  );
 }
 
-export default About;
+export default PageTransition(About);
