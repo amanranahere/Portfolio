@@ -1,11 +1,16 @@
+import { Outlet } from "react-router-dom";
 import "./App.css";
-import NumLoader from "./components/Loader/NumLoader.jsx";
+import Navbar from "./components/Navbar/Navbar.jsx";
 
 function App() {
   return (
-    <>
-      <NumLoader />
-    </>
+    <div>
+      <Navbar />
+
+      <main>
+        <Outlet />
+      </main>
+    </div>
   );
 }
 
