@@ -4,6 +4,8 @@ import { useNavigate } from "react-router-dom";
 function Navbar() {
   const navigate = useNavigate();
   const [isMenuOpen, setIsMenuOpen] = useState(false);
+  const [isHovered, setIsHovered] = useState(false);
+  const [hoveredItem, setHoveredItem] = useState(null);
 
   const handleClick = () => {
     setIsMenuOpen(!isMenuOpen);
@@ -92,12 +94,20 @@ function Navbar() {
       )}
 
       {/* nav items list on md and lg screens */}
-      <div className="hidden md:flex mr-5 mt-10 ">
-        <ul className="p-5">
+      <div className="hidden md:flex mr-5 mt-10">
+        <ul
+          className="m-5"
+          onMouseEnter={() => setIsHovered(true)}
+          onMouseLeave={() => {
+            setIsHovered(false);
+            setHoveredItem(null);
+          }}
+        >
           {navItems.map((item) => (
             <li key={item.name}>
               <button
                 onClick={() => navigate(item.slug)}
+                onMouseEnter={() => setHoveredItem(item.name)}
                 className="font-extrabold text-[#2a2a2a] hover:text-black/60 transition duration-200"
               >
                 {item.name}
@@ -106,6 +116,15 @@ function Navbar() {
           ))}
         </ul>
       </div>
+
+      {/* Overlay div that appears when hovered */}
+      {isHovered && (
+        <div className="hidden lg:flex justify-center items-center  fixed inset-0 bg-black z-30">
+          <div className="z-50 text-[20vw] text-white font-bold">
+            {hoveredItem}
+          </div>
+        </div>
+      )}
     </div>
   );
 }
