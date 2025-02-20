@@ -94,7 +94,7 @@ function Navbar() {
       )}
 
       {/* nav items list on md and lg screens */}
-      <div className="hidden md:flex mr-5 mt-10">
+      <div className="hidden md:flex mr-5 mt-10 z-[99]">
         <ul
           className="m-5"
           onMouseEnter={() => setIsHovered(true)}
@@ -118,13 +118,13 @@ function Navbar() {
       </div>
 
       {/* Overlay div that appears when hovered */}
-      {isHovered && (
+      {/* {isHovered && (
         <div className="hidden lg:flex justify-center items-center  fixed inset-0 bg-black z-30">
           <div className="z-50 text-[20vw] text-white font-bold">
             {hoveredItem}
           </div>
         </div>
-      )}
+      )} */}
     </div>
   );
 }
