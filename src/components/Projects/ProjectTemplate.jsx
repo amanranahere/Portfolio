@@ -110,11 +110,15 @@ function ProjectTemplate({
 
         <hr className="w-full border-t border-black my-4" />
 
-        <div>{projectBuiltWith}</div>
+        <div className="w-full flex justify-end">
+          <div className="lg:w-[55%] flex flex-wrap gap-2 pr-2">
+            {projectBuiltWith}
+          </div>
+        </div>
 
         {/* project 3rd heading */}
 
-        <div>WEB VIEW</div>
+        <div className="lg:w-[40%] mt-20 text-4xl font-semibold">WEB VIEW</div>
 
         <hr />
 
