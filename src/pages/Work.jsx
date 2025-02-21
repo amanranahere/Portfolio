@@ -3,14 +3,17 @@ import { Link } from "react-router-dom";
 import PageTransition from "../components/Transitions/PageTransition";
 
 function Work() {
-  const projects = [{ name: "Weblog", path: "weblog" }];
+  const projects = [
+    { name: "Weblog", path: "weblog" },
+    { name: "Vidron", path: "vidron" },
+  ];
 
   return (
     <div>
       <div className="p-10 text-xl flex justify-center items-center">
         MY PROJECTS
       </div>
-      <div>
+      <div className="w-full h-full flex justify-center items-center">
         <ul>
           {projects.map((project) => (
             <li key={project.path}>

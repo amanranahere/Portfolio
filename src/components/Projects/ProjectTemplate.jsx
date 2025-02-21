@@ -26,7 +26,7 @@ function ProjectTemplate({
         {/* project tagline */}
 
         <div className="mt-10 text-xs font-medium text-black/70 md:w-[50%] lg:w-[30%]">
-          {projectTagline}
+          {projectTagline.toUpperCase()}
         </div>
 
         {/* project link */}
@@ -50,6 +50,7 @@ function ProjectTemplate({
             className="w-full h-full my-4 md:my-2 lg:my-0 [clip-path:inset(8%_0.7%_11.7%_0)]"
             autoPlay
             loop
+            muted
           >
             <source src={projectVideo} type="video/mp4" />
           </video>
@@ -76,7 +77,9 @@ function ProjectTemplate({
             {/* overview */}
             <div className="flex">
               <div className="w-[30%]">OVERVIEW</div>
-              <div className="w-[70%] md:pr-2">{projectOverview}</div>
+              <div className="w-[70%] md:pr-2">
+                {projectOverview.toUpperCase()}
+              </div>
             </div>
 
             <hr className="w-full border-t border-black my-4" />
@@ -84,7 +87,9 @@ function ProjectTemplate({
             {/* the making of */}
             <div className="flex">
               <div className="w-[30%]">THE MAKING OF</div>
-              <div className="w-[70%] md:pr-2">{projectMaking}</div>
+              <div className="w-[70%] md:pr-2">
+                {projectMaking.toUpperCase()}
+              </div>
             </div>
 
             <hr className="w-full border-t border-black my-4" />

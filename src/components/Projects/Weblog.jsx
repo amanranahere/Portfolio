@@ -18,53 +18,65 @@ import {
 } from "react-icons/si";
 
 function Weblog() {
+  const builtWith = [
+    {
+      name: "React",
+      logo: <SiReact className="w-6 h-6 leading-tight" />,
+    },
+    {
+      name: "appwrite",
+      logo: <SiAppwrite className="w-6 h-6" />,
+    },
+    {
+      name: "Vite",
+      logo: <SiVite className="w-6 h-6" />,
+    },
+    {
+      name: "tailwindcss",
+      logo: <SiTailwindcss className="w-6 h-6" />,
+    },
+    {
+      name: "Redux",
+      logo: <SiRedux className="w-6 h-6" />,
+    },
+    {
+      name: "React Router",
+      logo: <SiReactrouter className="w-6 h-6" />,
+    },
+    {
+      name: "React Hook Form",
+      logo: <SiReacthookform className="w-6 h-6" />,
+    },
+    {
+      name: "Framer Motion",
+      logo: <SiFramer className="w-6 h-6" />,
+    },
+    {
+      name: "TinyMCE",
+    },
+  ];
+
   return (
     <ProjectTemplate
       projectName="WEBLOG"
-      projectTagline="A MODERN BLOGGING PLATFORM WHERE USERS CAN READ, WRITE, AND SHARE BLOGS."
+      projectTagline="A modern blogging platform where users can read, write, and share blogs."
       projectLink="https://weblogspace.vercel.app"
       projectVideo={weblogVideo}
       projectYear="2024"
-      projectOverview="WEBLOG IS A MODERN, RESPONSIVE BLOG WEBSITE DESIGNED FOR DISCOVERING AND SHARING NEW IDEAS AND TOPICS. USERS CAN BROWSE THROUGH A VARIETY OF BLOG POSTS WRITTEN BY OTHERS, OR CONTRIBUTE BY WRITING THEIR OWN BLOGS ONCE THEY SIGN UP OR LOG IN. THE WEBSITE OFFERS A SMOOTH READING EXPERIENCE ACROSS ALL DEVICES."
-      projectMaking="IN THIS HEADING I SHOULD BE TALKING ABOUT HOW I MADE THE PROJECT, ANY TECHNICAL DIFFICULTIES I FACED AND HOW I OVERCAME IT. WEBLOG IS A MODERN, RESPONSIVE BLOG WEBSITE DESIGNED FOR DISCOVERING AND SHARING NEW IDEAS AND TOPICS. USERS CAN BROWSE THROUGH A VARIETY OF BLOG POSTS WRITTEN BY OTHERS, OR CONTRIBUTE BY WRITING THEIR OWN BLOGS ONCE THEY SIGN UP OR LOG IN. THE WEBSITE OFFERS A SMOOTH READING EXPERIENCE ACROSS ALL DEVICES."
+      projectOverview="WeBlog is a modern, responsive blog website designed for discovering and sharing new ideas and topics. Users can browse through a variety of blog posts written by others, or contribute by writing their own blogs once they sign up or log in. The website offers a smooth reading experience across all devices."
+      projectMaking="WeBlog is my first large project built with React, and it was also my first real experience working with the backend—well, kind of! Since I used Appwrite, which is a backend-as-a-service, I didn’t have to build everything from scratch, but I did get some exposure to setting up authentication and connecting the frontend with a backend system. It was interesting to see how everything came together, from initializing Appwrite to integrating it with my React app. This project also helped me get comfortable with state management, routing, and handling dynamic content efficiently. Plus, it was the first project I ever deployed on the web using Vercel, which was a whole new experience in itself."
       projectCodeLink="https://github.com/amanranahere/WeBlog"
       projectBuiltWith={
         <>
-          <div className="border border-black/20 flex items-center gap-2 py-1 px-2">
-            <SiReact className="w-6 h-6 leading-tight" />
-            <span className="leading-tight">React</span>
-          </div>
-          <div className="border border-black/20 flex items-center gap-2 py-1 px-2">
-            <SiAppwrite className="w-6 h-6" />
-            appwrite
-          </div>
-          <div className="border border-black/20 flex items-center gap-2 py-1 px-2">
-            <SiVite className="w-6 h-6" />
-            Vite
-          </div>
-          <div className="border border-black/20 flex items-center gap-2 py-1 px-2">
-            <SiTailwindcss className="w-6 h-6" />
-            tailwindcss
-          </div>
-          <div className="border border-black/20 flex items-center gap-2 py-1 px-2">
-            <SiRedux className="w-6 h-6" />
-            Redux
-          </div>
-          <div className="border border-black/20 flex items-center gap-2 py-1 px-2">
-            <SiReactrouter className="w-6 h-6" />
-            React Router
-          </div>
-          <div className="border border-black/20 flex items-center gap-2 py-1 px-2">
-            <SiReacthookform className="w-6 h-6" />
-            React Hook Form
-          </div>
-          <div className="border border-black/20 flex items-center gap-2 py-1 px-2">
-            <SiFramer className="w-6 h-6" />
-            Framer Motion
-          </div>
-          <div className="border border-black/20 flex items-center gap-2 py-1 px-2">
-            TinyMCE
-          </div>
+          {builtWith.map((item) => (
+            <div
+              key={item.name}
+              className="border border-black/20 flex items-center gap-2 py-1 px-2"
+            >
+              {item.logo && item.logo}
+              <span className="leading-tight">{item.name}</span>
+            </div>
+          ))}
         </>
       }
       projectImages={
