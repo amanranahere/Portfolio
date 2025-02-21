@@ -6,6 +6,7 @@ function Work() {
   const projects = [
     { name: "Weblog", path: "weblog" },
     { name: "Vidron", path: "vidron" },
+    { name: "Currency Converter", path: "currencyConverter" },
   ];
 
   return (

@@ -18,7 +18,7 @@ function ProjectTemplate({
     <div className="m-4 md:m-8">
       {/* project name */}
 
-      <div className="mt-44 text-[3.5rem] md:text-[8vw] leading-[0.9] tracking-tight font-medium flex-wrap">
+      <div className="mt-60 text-[3.5rem] md:text-[8vw] leading-[0.9] tracking-tight font-medium flex-wrap">
         {projectName}
       </div>
 
@@ -36,7 +36,7 @@ function ProjectTemplate({
             href={projectLink}
             target="_blank"
             rel="noopener noreferrer"
-            className="flex items-center"
+            className="flex items-center break-all"
           >
             {projectLink.replace(/^https?:\/\//, "").toUpperCase()}
             <MdArrowOutward className="w-6 h-6" />

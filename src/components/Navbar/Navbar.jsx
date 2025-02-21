@@ -94,7 +94,7 @@ function Navbar() {
       )}
 
       {/* nav items list on md and lg screens */}
-      <div className="hidden md:flex mr-5 mt-10 z-[99]">
+      <div className="hidden md:flex mr-8 mt-10 z-[99]">
         <ul
           className="m-5"
           onMouseEnter={() => setIsHovered(true)}

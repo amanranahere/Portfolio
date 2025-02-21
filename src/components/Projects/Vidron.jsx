@@ -18,7 +18,7 @@ import {
   SiDotenv,
 } from "react-icons/si";
 
-function Weblog() {
+function Vidron() {
   const builtWith = [
     {
       name: "React",
@@ -127,4 +127,4 @@ function Weblog() {
   );
 }
 
-export default Weblog;
+export default Vidron;
