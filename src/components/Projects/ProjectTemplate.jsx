@@ -1,5 +1,6 @@
 import React from "react";
 import { MdArrowOutward } from "react-icons/md";
+import { Link } from "react-router-dom";
 
 function ProjectTemplate({
   projectName,
@@ -11,15 +12,13 @@ function ProjectTemplate({
   projectMaking,
   projectCodeLink,
   projectBuiltWith,
-  projectImg1,
-  projectImg2,
-  projectImg3,
+  projectImages,
 }) {
   return (
-    <div className="m-8">
+    <div className="m-4 md:m-8">
       {/* project name */}
 
-      <div className="mt-44 text-[8vw] leading-[0.9] tracking-tight font-medium flex-wrap">
+      <div className="mt-44 text-[3.5rem] md:text-[8vw] leading-[0.9] tracking-tight font-medium flex-wrap">
         {projectName}
       </div>
 
@@ -32,7 +31,7 @@ function ProjectTemplate({
 
         {/* project link */}
 
-        <div className="text-xl my-4 font-semibold flex items-center">
+        <div className="text-xl mt-2 md:mt-4 font-semibold flex items-center">
           <a
             href={projectLink}
             target="_blank"
@@ -40,21 +39,25 @@ function ProjectTemplate({
             className="flex items-center"
           >
             {projectLink.replace(/^https?:\/\//, "").toUpperCase()}
+            <MdArrowOutward className="w-6 h-6" />
           </a>
-          <MdArrowOutward className="w-6 h-6" />
         </div>
 
         {/* project video */}
 
-        <div className="my-8">
-          <video className="" autoPlay>
+        <div className="w-full">
+          <video
+            className="w-full h-full my-4 md:my-2 lg:my-0 [clip-path:inset(8%_0.7%_11.7%_0)]"
+            autoPlay
+            loop
+          >
             <source src={projectVideo} type="video/mp4" />
           </video>
         </div>
 
         {/* project 1st heading */}
 
-        <div className="lg:w-[40%] mt-12 text-4xl font-semibold">
+        <div className="lg:w-[40%] text-3xl md:text-4xl font-semibold leading-none">
           IN A NUTSHELL
         </div>
 
@@ -73,7 +76,7 @@ function ProjectTemplate({
             {/* overview */}
             <div className="flex">
               <div className="w-[30%]">OVERVIEW</div>
-              <div className="w-[70%] pr-2">{projectOverview}</div>
+              <div className="w-[70%] md:pr-2">{projectOverview}</div>
             </div>
 
             <hr className="w-full border-t border-black my-4" />
@@ -81,7 +84,7 @@ function ProjectTemplate({
             {/* the making of */}
             <div className="flex">
               <div className="w-[30%]">THE MAKING OF</div>
-              <div className="w-[70%] pr-2">{projectMaking}</div>
+              <div className="w-[70%] md:pr-2">{projectMaking}</div>
             </div>
 
             <hr className="w-full border-t border-black my-4" />
@@ -93,7 +96,7 @@ function ProjectTemplate({
                 href={projectCodeLink}
                 target="_blank"
                 rel="noopener noreferrer"
-                className="flex items-center"
+                className="flex items-center break-all w-[70%]"
               >
                 {projectCodeLink.replace(/^https?:\/\//, "").toUpperCase()}
                 <MdArrowOutward className="w-[1.1rem] h-[1.1rem]" />
@@ -104,7 +107,7 @@ function ProjectTemplate({
 
         {/* project 2nd heading */}
 
-        <div className="lg:w-[40%] mt-20 text-4xl font-semibold">
+        <div className="lg:w-[40%] mt-32 text-4xl font-semibold leading-none">
           BUILT WITH
         </div>
 
@@ -118,15 +121,23 @@ function ProjectTemplate({
 
         {/* project 3rd heading */}
 
-        <div className="lg:w-[40%] mt-20 text-4xl font-semibold">WEB VIEW</div>
-
-        <hr />
-
-        <div>
-          {projectImg1 && <img src={projectImg1} alt="Project Snapshot 01" />}
-          {projectImg2 && <img src={projectImg2} alt="Project Snapshot 02" />}
-          {projectImg3 && <img src={projectImg3} alt="Project Snapshot 03" />}
+        <div className="lg:w-[40%] mt-32 text-4xl font-semibold leading-none">
+          WEB VIEW
         </div>
+
+        <hr className="w-full border-t border-black mt-4 mb-6" />
+
+        <div className="w-full h-full">{projectImages}</div>
+
+        <hr className="w-full border-t border-black my-10" />
+
+        {/* other projects heading */}
+        <Link
+          to={`/work`}
+          className="text-4xl pb-20 md:text-[8vw] leading-[0.9] tracking-tight font-medium flex flex-wrap justify-end"
+        >
+          OTHER PROJECTS
+        </Link>
       </div>
     </div>
   );

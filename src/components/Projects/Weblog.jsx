@@ -1,9 +1,11 @@
 import React from "react";
 import ProjectTemplate from "./ProjectTemplate";
-import weblogImg01 from "../../assets/images/ss1.png";
-import weblogImg02 from "../../assets/images/ss2.png";
-import weblogImg03 from "../../assets/images/ss3.png";
-import weblogVid from "../../assets/videos/weblogVid.mp4";
+import weblogVideo from "../../assets/videos/weblogVideo.mp4";
+import weblogHome from "../../assets/images/weblogHome.png";
+import weblogAddBlog from "../../assets/images/weblogAddBlog.png";
+import weblogAllBlogs from "../../assets/images/weblogAllBlogs.png";
+import weblogBlog from "../../assets/images/weblogBlog.png";
+import weblogEditBlog from "../../assets/images/weblogEditBlog.png";
 import {
   SiTailwindcss,
   SiVite,
@@ -19,9 +21,9 @@ function Weblog() {
   return (
     <ProjectTemplate
       projectName="WEBLOG"
-      projectTagline="A MODERN BLOGGING PLATFORM WHERE USERS CAN READ,WRITE, AND SHARE BLOGS."
+      projectTagline="A MODERN BLOGGING PLATFORM WHERE USERS CAN READ, WRITE, AND SHARE BLOGS."
       projectLink="https://weblogspace.vercel.app"
-      projectVideo={weblogVid}
+      projectVideo={weblogVideo}
       projectYear="2024"
       projectOverview="WEBLOG IS A MODERN, RESPONSIVE BLOG WEBSITE DESIGNED FOR DISCOVERING AND SHARING NEW IDEAS AND TOPICS. USERS CAN BROWSE THROUGH A VARIETY OF BLOG POSTS WRITTEN BY OTHERS, OR CONTRIBUTE BY WRITING THEIR OWN BLOGS ONCE THEY SIGN UP OR LOG IN. THE WEBSITE OFFERS A SMOOTH READING EXPERIENCE ACROSS ALL DEVICES."
       projectMaking="IN THIS HEADING I SHOULD BE TALKING ABOUT HOW I MADE THE PROJECT, ANY TECHNICAL DIFFICULTIES I FACED AND HOW I OVERCAME IT. WEBLOG IS A MODERN, RESPONSIVE BLOG WEBSITE DESIGNED FOR DISCOVERING AND SHARING NEW IDEAS AND TOPICS. USERS CAN BROWSE THROUGH A VARIETY OF BLOG POSTS WRITTEN BY OTHERS, OR CONTRIBUTE BY WRITING THEIR OWN BLOGS ONCE THEY SIGN UP OR LOG IN. THE WEBSITE OFFERS A SMOOTH READING EXPERIENCE ACROSS ALL DEVICES."
@@ -48,7 +50,6 @@ function Weblog() {
             <SiRedux className="w-6 h-6" />
             Redux
           </div>
-
           <div className="border border-black/20 flex items-center gap-2 py-1 px-2">
             <SiReactrouter className="w-6 h-6" />
             React Router
@@ -66,9 +67,19 @@ function Weblog() {
           </div>
         </>
       }
-      projectImg1={weblogImg01}
-      projectImg2={weblogImg02}
-      projectImg3={weblogImg03}
+      projectImages={
+        <div className="flex flex-col md:flex-row gap-4">
+          <div className="md:w-1/2 flex-col justify-between">
+            <img src={weblogAddBlog} alt="Add Blog" className="mb-5" />
+            <img src={weblogAllBlogs} alt="All Blogs" className="mt-5" />
+            <img src={weblogBlog} alt="Blog" className="mt-5" />
+            <img src={weblogEditBlog} alt="Edit Blogs" className="mt-5" />
+          </div>
+          <div className="md:w-1/2">
+            <img src={weblogHome} alt="Home page" />
+          </div>
+        </div>
+      }
     />
   );
 }
