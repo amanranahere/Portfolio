@@ -1,8 +1,8 @@
 import React from "react";
 import ProjectTemplate from "./ProjectTemplate";
 import SnakeGameVideo from "../../assets/videos/snakeGameVideo.mp4";
-import SnakeGame from "../../assets/images/snakeGame.png";
-import SnakeGameOver from "../../assets/images/snakeGameOver.png";
+import SnakeGameImage from "../../assets/images/snakeGame.png";
+import SnakeGameOverImage from "../../assets/images/snakeGameOver.png";
 
 import { SiJavascript, SiHtml5, SiCss3 } from "react-icons/si";
 
@@ -26,7 +26,7 @@ function HungrySnake() {
     <ProjectTemplate
       projectName="HUNGRY SNAKE"
       projectTagline="A simple browser-based Snake game"
-      projectLink="https://amanranahere.github.io/Hungry-Snake/"
+      projectLink="https://amanranahere.github.io/Hungry-Snake"
       projectVideo={SnakeGameVideo}
       projectYear="2024"
       projectOverview="Snake Game is a simple implementation of the classic Snake game using HTML, CSS, and JavaScript. The goal is to navigate the snake, eat food, and grow longer while avoiding collisions with the walls or itself. With each piece of food consumed, the snake increases in size, moves faster, and the score goes up. The game ends if the snake crashes, challenging players to survive as long as possible."
@@ -49,8 +49,8 @@ function HungrySnake() {
       projectImages={
         <div className="">
           <div className="md:w-[49.5%] flex flex-col md:flex-row justify-between gap-4">
-            <img src={SnakeGame} alt="Snake Game" />
-            <img src={SnakeGameOver} alt="Snake Game Over" />
+            <img src={SnakeGameImage} alt="Snake Game" />
+            <img src={SnakeGameOverImage} alt="Snake Game Over" />
           </div>
         </div>
       }
