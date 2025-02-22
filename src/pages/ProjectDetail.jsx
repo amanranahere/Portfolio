@@ -5,6 +5,7 @@ import Vidron from "../components/Projects/Vidron.jsx";
 import CurrencyConverter from "../components/Projects/CurrencyConverter.jsx";
 import HungrySnake from "../components/Projects/HungrySnake.jsx";
 import FlappyBird from "../components/Projects/FlappyBird.jsx";
+import BrickBreaker from "../components/Projects/BrickBreaker.jsx";
 
 const project = {
   weblog: <Weblog />,
@@ -12,6 +13,7 @@ const project = {
   currencyConverter: <CurrencyConverter />,
   hungrySnake: <HungrySnake />,
   flappyBird: <FlappyBird />,
+  brickBreaker: <BrickBreaker />,
 };
 
 const ProjectDetail = () => {

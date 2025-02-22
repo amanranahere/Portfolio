@@ -7,8 +7,9 @@ function Work() {
     { name: "Weblog", path: "weblog" },
     { name: "Vidron", path: "vidron" },
     { name: "Currency Converter", path: "currencyConverter" },
-    { name: "Hungry Snake", path: "hungrySnake" },
+    { name: "Brick Breaker", path: "brickBreaker" },
     { name: "Flappy Bird Clone", path: "flappyBird" },
+    { name: "Hungry Snake", path: "hungrySnake" },
   ];
 
   return (
