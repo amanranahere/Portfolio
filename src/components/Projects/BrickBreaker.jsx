@@ -30,7 +30,7 @@ function BrickBreaker() {
       projectVideo={BrickBreakerVideo}
       projectYear="2024"
       projectOverview="Brick Breaker is a classic arcade-style game where players control a paddle to bounce a ball and break bricks. The goal is to clear all the bricks while keeping the ball in play. This game is built using HTML, CSS, and JavaScript."
-      projectMaking="I built this project as a fun way to practice working with the HTML5 Canvas element in JavaScript. One of the key things I learned was handling collision detection, ensuring that the ball interacts correctly with bricks, the paddle, and the screen boundaries.&nbsp;&nbsp;&nbsp;&nbsp;
+      projectMaking="I built this project as a fun way to practice working with the HTML5 Canvas element in JavaScript. One of the key things I learned was handling collision detection, ensuring that the ball interacts correctly with bricks, the paddle, and the board boundaries.&nbsp;&nbsp;&nbsp;&nbsp;
       Another interesting aspect was managing game physics, like the ball’s movement and how it bounces off different surfaces. I also implemented progressive difficulty, where more rows of bricks are added as the player advances.
       &nbsp;&nbsp;&nbsp;&nbsp;
       This project really helped me improve my understanding of game loops, event handling, and working with 2D graphics in JavaScript. It was a great way to apply my knowledge while creating something interactive and enjoyable.
