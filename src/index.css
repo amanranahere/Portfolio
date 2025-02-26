@@ -5,3 +5,42 @@
 body {
   background-color: #f7f7f7;
 }
+
+/* slide right like completing the div - start */
+
+@keyframes slideInFromLeft {
+  0% {
+    clip-path: inset(0 100% 0 0);
+    opacity: 0;
+  }
+  100% {
+    clip-path: inset(0 0 0 0);
+    opacity: 1;
+  }
+}
+
+.slide-right {
+  animation: slideInFromLeft 0.8s ease-out 0.5s forwards;
+}
+
+/* slide right like completing the div - end */
+
+/* button glow effect - start */
+
+@keyframes glowEffect {
+  0% {
+    filter: brightness(1);
+  }
+  50% {
+    filter: brightness(1.5);
+  }
+  100% {
+    filter: brightness(1);
+  }
+}
+
+.button-glow {
+  animation: glowEffect 0.8s ease-in-out forwards;
+}
+
+/* button glow effect - end */
