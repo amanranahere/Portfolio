@@ -127,7 +127,7 @@ function WorkComponent() {
           <li
             key={project.path}
             onClick={() => setActiveProject(index)}
-            className={`text-5xl md:text-6xl lg:text-8xl whitespace-nowrap overflow-hidden lg:overflow-visible lg:line-clamp-1 font-semibold relative bg-white p-2 md:p-3 lg:p-4 border-y border-black shadow-md cursor-pointer transition-transform duration-500 will-change-transform -mt-5 md:-mt-6 lg:-mt-9 first:mt-0 last:hover:transform-none last:pointer-events-none  lg:last:h-28 last:border-t last:border-b-0 last:shadow-none last:bg-[#f7f7f7] hover:-translate-y-5 md:hover:-translate-y-6 lg:hover:-translate-y-9 hover:shadow-lg select-none ${project.hoverColor}`}
+            className={`text-5xl md:text-6xl lg:text-8xl whitespace-nowrap overflow-hidden lg:overflow-visible lg:line-clamp-1 font-semibold relative bg-white p-2 md:p-3 lg:p-4 border-y border-black shadow-md cursor-pointer transition-transform duration-500 will-change-transform -mt-5 md:-mt-6 lg:-mt-9 first:mt-0 last:hover:transform-none last:pointer-events-none  lg:last:h-28 last:border-t last:border-b-0 last:shadow-none last:bg-[#f7f7f7] hover:-translate-y-5 md:hover:-translate-y-6 lg:hover:-translate-y-9 hover:shadow-lg select-none ${project.hoverColor} project-highlight project-${index}`}
             style={{
               transitionTimingFunction: "cubic-bezier(0.25, 1, 0.5, 1)",
             }}

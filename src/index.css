@@ -44,3 +44,63 @@ body {
 }
 
 /* button glow effect - end */
+
+/* project list highlight - start */
+
+@keyframes highlightBackground {
+  0% {
+    opacity: 0;
+  }
+  50% {
+    opacity: 1;
+  }
+  100% {
+    opacity: 0;
+  }
+}
+
+.project-highlight::before {
+  content: "";
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  background-color: var(--highlight-color);
+  z-index: -1;
+  opacity: 0;
+  animation: highlightBackground 1s ease-in-out forwards;
+}
+
+/*  colors & delays for each project */
+.project-0::before {
+  --highlight-color: #dbeafe;
+  animation-delay: 0s;
+}
+
+.project-1::before {
+  --highlight-color: #ccfbf1;
+  animation-delay: 0.2s;
+}
+
+.project-2::before {
+  --highlight-color: #fef9c3;
+  animation-delay: 0.4s;
+}
+
+.project-3::before {
+  --highlight-color: #ffedd5;
+  animation-delay: 0.6s;
+}
+
+.project-4::before {
+  --highlight-color: #f3e8ff;
+  animation-delay: 0.8s;
+}
+
+.project-5::before {
+  --highlight-color: #dcfce7;
+  animation-delay: 1s;
+}
+
+/* project list highlight - end */

@@ -129,7 +129,7 @@ export default function ContactForm() {
             type="submit"
             className="w-[40%] flex justify-center items-center bg-gray-800 text-white 
                hover:bg-gray-700 active:bg-gray-600 relative button-glow"
-            style={{ animationDelay: "1.2s" }}
+            style={{ animationDelay: "0.8s" }}
           >
             <span> SEND </span>
             <div className="absolute -top-8 text-lg text-white">
@@ -143,7 +143,7 @@ export default function ContactForm() {
               target="_blank"
               rel="noopener noreferrer"
               className="w-full h-full p-6 bg-gray-300 text-white hover:bg-gray-200 transition duration-500 flex justify-center items-center gap-2 button-glow"
-              style={{ animationDelay: "0.3s" }}
+              style={{ animationDelay: "0.2s" }}
             >
               <SiLinkedin /> <span>LINKEDIN</span>
             </a>
@@ -153,7 +153,7 @@ export default function ContactForm() {
               target="_blank"
               rel="noopener noreferrer"
               className="w-full h-full p-6 bg-gray-500 text-white hover:bg-gray-400 transition duration-500 flex justify-center items-center gap-2 button-glow"
-              style={{ animationDelay: "0.6s" }}
+              style={{ animationDelay: "0.4s" }}
             >
               <SiGithub /> <span>GITHUB</span>
             </a>
@@ -163,7 +163,7 @@ export default function ContactForm() {
               target="_blank"
               rel="noopener noreferrer"
               className="w-full h-full p-6 bg-gray-700 text-white hover:bg-gray-600 transition duration-500 flex justify-center items-center gap-2 button-glow"
-              style={{ animationDelay: "0.9s" }}
+              style={{ animationDelay: "0.6s" }}
             >
               <SiX />
             </a>
