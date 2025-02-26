@@ -3,6 +3,9 @@ import emailjs from "@emailjs/browser";
 import { SiLinkedin, SiGithub, SiX } from "react-icons/si";
 
 export default function ContactForm() {
+  const [status, setStatus] = useState("");
+  const [loading, setLoading] = useState(false);
+
   const [formData, setFormData] = useState({
     name: "",
     email: "",
@@ -10,7 +13,6 @@ export default function ContactForm() {
     company: "",
     phone: "",
   });
-  const [status, setStatus] = useState("");
 
   const handleChange = (e) => {
     setFormData({ ...formData, [e.target.name]: e.target.value });
@@ -18,6 +20,7 @@ export default function ContactForm() {
 
   const handleSubmit = (e) => {
     e.preventDefault();
+    setLoading(true);
 
     emailjs
       .send(
@@ -38,6 +41,9 @@ export default function ContactForm() {
       })
       .catch(() => {
         setStatus("Failed to send message.");
+      })
+      .finally(() => {
+        setLoading(false);
       });
   };
 
@@ -45,7 +51,7 @@ export default function ContactForm() {
     <div className="contact-form h-full flex justify-center items-center">
       <form
         onSubmit={handleSubmit}
-        className="w-full h-full flex flex-col border-x border-dotted flex-grow"
+        className="w-full h-full flex flex-col flex-grow"
       >
         <div className="flex flex-col md:flex-row">
           <div className="w-full relative">
@@ -56,7 +62,7 @@ export default function ContactForm() {
               value={formData.name}
               onChange={handleChange}
               required
-              className="w-full p-6 text-4xl leading-5 bg-[#343434] hover:bg-[#3f3f3f] focus:bg-[#3f3f3f] text-[#f7f7f7] outline-none border-b md:border-r border-dotted border-[#f7f7f7] transition-colors duration-500"
+              className="w-full p-6 text-lg md:text-2xl lg:text-4xl leading-5 bg-[#343434] hover:bg-[#3f3f3f] focus:bg-[#3f3f3f] text-[#f7f7f7] outline-none border-b md:border-r border-dotted border-[#f7f7f7] transition-colors duration-500"
             />
             <span className="absolute top-3 right-3 text-sm text-gray-400">
               *Required
@@ -71,7 +77,7 @@ export default function ContactForm() {
               value={formData.email}
               onChange={handleChange}
               required
-              className="w-full p-6 text-4xl leading-5 bg-[#343434] hover:bg-[#3f3f3f] focus:bg-[#3f3f3f] text-[#f7f7f7] outline-none border-b border-l lg:border-l-0  border-dotted border-[#f7f7f7] focus:border-[#f7f7f7] transition duration-500"
+              className="w-full p-6 text-lg md:text-2xl lg:text-4xl leading-5 bg-[#343434] hover:bg-[#3f3f3f] focus:bg-[#3f3f3f] text-[#f7f7f7] outline-none border-b border-l md:border-l-0  border-dotted border-[#f7f7f7] focus:border-[#f7f7f7] transition duration-500"
             />
             <span className="absolute top-3 right-3 text-sm text-gray-400">
               *Required
@@ -84,10 +90,10 @@ export default function ContactForm() {
             <input
               type="text"
               name="company"
-              placeholder="COMPANY"
+              placeholder="Company"
               value={formData.company}
               onChange={handleChange}
-              className="w-full p-6 text-4xl leading-5 bg-[#343434] hover:bg-[#3f3f3f] focus:bg-[#3f3f3f] text-[#f7f7f7] outline-none border-b md:border-r border-dotted border-[#f7f7f7] focus:border-[#f7f7f7] transition duration-500"
+              className="w-full p-6 text-lg md:text-2xl lg:text-4xl leading-5 bg-[#343434] hover:bg-[#3f3f3f] focus:bg-[#3f3f3f] text-[#f7f7f7] outline-none border-b md:border-r border-dotted border-[#f7f7f7] focus:border-[#f7f7f7] transition duration-500"
             />
             <span className="absolute top-3 right-3 text-sm text-gray-400">
               Optional
@@ -98,10 +104,10 @@ export default function ContactForm() {
             <input
               type="tel"
               name="phone"
-              placeholder="PHONE NUMBER"
+              placeholder="Phone Number"
               value={formData.phone}
               onChange={handleChange}
-              className="w-full p-6 text-4xl leading-5 bg-[#343434] hover:bg-[#3f3f3f] focus:bg-[#3f3f3f] text-[#f7f7f7] outline-none md:border-b border-dotted border-[#f7f7f7] focus:border-[#f7f7f7] transition duration-500"
+              className="w-full p-6 text-lg md:text-2xl lg:text-4xl leading-5 bg-[#343434] hover:bg-[#3f3f3f] focus:bg-[#3f3f3f] text-[#f7f7f7] outline-none border-b border-dotted border-[#f7f7f7] focus:border-[#f7f7f7] transition duration-500"
             />
             <span className="absolute top-3 right-3 text-sm text-gray-400">
               Optional
@@ -112,32 +118,44 @@ export default function ContactForm() {
         <div className="w-full h-full relative">
           <textarea
             name="message"
-            placeholder="MESSAGE"
+            placeholder="Message"
             value={formData.message}
             onChange={handleChange}
             required
             rows="2"
-            className="flex-grow w-full h-full p-6 text-4xl bg-[#343434] hover:bg-[#3f3f3f] focus:bg-[#3f3f3f] text-[#f7f7f7] outline-none border-dotted border-[#f7f7f7] transition-colors duration-500 resize-none"
+            className="flex-grow w-full pb-24 lg:pb-0 h-full p-6 text-lg md:text-2xl lg:text-4xl bg-[#343434] hover:bg-[#3f3f3f] focus:bg-[#3f3f3f] text-[#f7f7f7] outline-none  transition-colors duration-500 resize-none"
           ></textarea>
           <span className="absolute top-3 right-3 text-sm text-gray-400">
             *Required
           </span>
         </div>
 
-        <div className="w-full flex flex-col md:flex-row-reverse text-4xl leading-5">
+        <div className="w-full flex flex-col md:flex-row-reverse text-lg md:text-2xl lg:text-4xl leading-5">
           <button
             type="submit"
-            className="w-[40%] flex justify-center items-center bg-gray-800 text-white 
-               hover:bg-gray-700 active:bg-gray-600 relative button-glow"
+            className="w-full h-full p-6 md:w-[40%] flex justify-center items-center bg-gray-800 text-white 
+            hover:bg-gray-600 active:bg-gray-600 relative button-glow"
             style={{ animationDelay: "0.8s" }}
           >
-            <span> SEND </span>
+            {loading ? (
+              <span className="flex items-center">
+                Sending
+                <span className="loading-dots">
+                  <span>.</span>
+                  <span>.</span>
+                  <span>.</span>
+                </span>
+              </span>
+            ) : (
+              "SEND"
+            )}
+
             <div className="absolute -top-8 text-lg text-white">
               {status && <p>{status}</p>}
             </div>
           </button>
 
-          <div className="w-[60%] flex justify-evenly">
+          <div className=" md:w-[60%] flex flex-col-reverse md:flex-row justify-evenly">
             <a
               href=""
               target="_blank"
