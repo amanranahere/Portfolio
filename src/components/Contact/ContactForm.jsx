@@ -62,9 +62,9 @@ export default function ContactForm() {
               value={formData.name}
               onChange={handleChange}
               required
-              className="w-full p-6 text-lg md:text-2xl lg:text-4xl leading-5 bg-[#343434] hover:bg-[#3f3f3f] focus:bg-[#3f3f3f] text-[#f7f7f7] outline-none border-b md:border-r border-dotted border-[#f7f7f7] transition-colors duration-500"
+              className="w-full p-6 text-lg md:text-2xl lg:text-4xl leading-5 bg-[#0c0a00] hover:bg-[#1a1a1a] focus:bg-[#2a2a2a] text-[#f7f7f7] outline-none border-b md:border-r border-dotted border-[#f7f7f7] transition-colors duration-500"
             />
-            <span className="absolute top-3 right-3 text-sm text-gray-400">
+            <span className="absolute top-2 right-2 text-sm text-gray-400">
               *Required
             </span>
           </div>
@@ -77,9 +77,9 @@ export default function ContactForm() {
               value={formData.email}
               onChange={handleChange}
               required
-              className="w-full p-6 text-lg md:text-2xl lg:text-4xl leading-5 bg-[#343434] hover:bg-[#3f3f3f] focus:bg-[#3f3f3f] text-[#f7f7f7] outline-none border-b border-l md:border-l-0  border-dotted border-[#f7f7f7] focus:border-[#f7f7f7] transition duration-500"
+              className="w-full p-6 text-lg md:text-2xl lg:text-4xl leading-5 bg-[#0c0a00] hover:bg-[#1a1a1a] focus:bg-[#2a2a2a] text-[#f7f7f7] outline-none border-b border-dotted border-[#f7f7f7] transition duration-500"
             />
-            <span className="absolute top-3 right-3 text-sm text-gray-400">
+            <span className="absolute top-2 right-2 text-sm text-gray-400">
               *Required
             </span>
           </div>
@@ -93,9 +93,9 @@ export default function ContactForm() {
               placeholder="Company"
               value={formData.company}
               onChange={handleChange}
-              className="w-full p-6 text-lg md:text-2xl lg:text-4xl leading-5 bg-[#343434] hover:bg-[#3f3f3f] focus:bg-[#3f3f3f] text-[#f7f7f7] outline-none border-b md:border-r border-dotted border-[#f7f7f7] focus:border-[#f7f7f7] transition duration-500"
+              className="w-full p-6 text-lg md:text-2xl lg:text-4xl leading-5 bg-[#0c0a00] hover:bg-[#1a1a1a] focus:bg-[#2a2a2a] text-[#f7f7f7] outline-none border-b md:border-r border-dotted border-[#f7f7f7] transition duration-500"
             />
-            <span className="absolute top-3 right-3 text-sm text-gray-400">
+            <span className="absolute top-2 right-2 text-sm text-gray-400">
               Optional
             </span>
           </div>
@@ -107,9 +107,9 @@ export default function ContactForm() {
               placeholder="Phone Number"
               value={formData.phone}
               onChange={handleChange}
-              className="w-full p-6 text-lg md:text-2xl lg:text-4xl leading-5 bg-[#343434] hover:bg-[#3f3f3f] focus:bg-[#3f3f3f] text-[#f7f7f7] outline-none border-b border-dotted border-[#f7f7f7] focus:border-[#f7f7f7] transition duration-500"
+              className="w-full p-6 text-lg md:text-2xl lg:text-4xl leading-5 bg-[#0c0a00] hover:bg-[#1a1a1a] focus:bg-[#2a2a2a] text-[#f7f7f7] outline-none border-b border-dotted border-[#f7f7f7]  transition duration-500"
             />
-            <span className="absolute top-3 right-3 text-sm text-gray-400">
+            <span className="absolute top-2 right-2 text-sm text-gray-400">
               Optional
             </span>
           </div>
@@ -123,9 +123,9 @@ export default function ContactForm() {
             onChange={handleChange}
             required
             rows="2"
-            className="flex-grow w-full pb-24 lg:pb-0 h-full p-6 text-lg md:text-2xl lg:text-4xl bg-[#343434] hover:bg-[#3f3f3f] focus:bg-[#3f3f3f] text-[#f7f7f7] outline-none  transition-colors duration-500 resize-none"
+            className="flex-grow w-full pb-24 lg:pb-0 h-full p-6 text-lg md:text-2xl lg:text-4xl bg-[#0c0a00] hover:bg-[#1a1a1a] focus:bg-[#2a2a2a] text-[#f7f7f7] outline-none  transition-colors duration-500 resize-none"
           ></textarea>
-          <span className="absolute top-3 right-3 text-sm text-gray-400">
+          <span className="absolute top-2 right-2 text-sm text-gray-400">
             *Required
           </span>
         </div>
@@ -133,8 +133,7 @@ export default function ContactForm() {
         <div className="w-full flex flex-col md:flex-row-reverse text-lg md:text-2xl lg:text-4xl leading-5">
           <button
             type="submit"
-            className="w-full h-full p-6 md:w-[40%] flex justify-center items-center bg-gray-800 text-white 
-            hover:bg-gray-600 active:bg-gray-600 relative button-glow"
+            className="w-full h-full p-6 md:w-[40%] flex justify-center items-center bg-[#505050] hover:bg-[#303030] active:bg-[#161616] text-white relative button-glow transition duration-500"
             style={{ animationDelay: "0.8s" }}
           >
             {loading ? (
@@ -160,7 +159,7 @@ export default function ContactForm() {
               href=""
               target="_blank"
               rel="noopener noreferrer"
-              className="w-full h-full p-6 bg-gray-300 text-white hover:bg-gray-200 transition duration-500 flex justify-center items-center gap-2 button-glow"
+              className="w-full h-full p-6 bg-[#f1f1f1] hover:bg-[#d4d4d4] active:bg-[#bcbcbc] text-black/70 transition duration-500 flex justify-center items-center gap-2 button-glow"
               style={{ animationDelay: "0.2s" }}
             >
               <SiLinkedin /> <span>LINKEDIN</span>
@@ -170,7 +169,7 @@ export default function ContactForm() {
               href="https://github.com/amanranahere"
               target="_blank"
               rel="noopener noreferrer"
-              className="w-full h-full p-6 bg-gray-500 text-white hover:bg-gray-400 transition duration-500 flex justify-center items-center gap-2 button-glow"
+              className="w-full h-full p-6 bg-[#c9c9c9] hover:bg-[#a8a8a8] active:bg-[#8a8a8a] text-black/70 transition duration-500 flex justify-center items-center gap-2 button-glow"
               style={{ animationDelay: "0.4s" }}
             >
               <SiGithub /> <span>GITHUB</span>
@@ -180,7 +179,8 @@ export default function ContactForm() {
               href=""
               target="_blank"
               rel="noopener noreferrer"
-              className="w-full h-full p-6 bg-gray-700 text-white hover:bg-gray-600 transition duration-500 flex justify-center items-center gap-2 button-glow"
+              className="w-full h-full p-6 bg-[#969696] hover:bg-[#707070]
+               active:bg-[#545454] text-black/70 transition duration-500 flex justify-center items-center gap-2 button-glow"
               style={{ animationDelay: "0.6s" }}
             >
               <SiX />

@@ -32,7 +32,7 @@ body {
     filter: brightness(1);
   }
   50% {
-    filter: brightness(1.5);
+    filter: brightness(0.5);
   }
   100% {
     filter: brightness(1);
@@ -40,7 +40,7 @@ body {
 }
 
 .button-glow {
-  animation: glowEffect 0.8s ease-in-out forwards;
+  animation: glowEffect 1.2s ease-in-out forwards;
 }
 
 /* button glow effect - end */
