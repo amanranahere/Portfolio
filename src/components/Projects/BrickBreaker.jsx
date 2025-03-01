@@ -3,6 +3,7 @@ import ProjectTemplate from "./ProjectTemplate";
 import BrickBreakerVideo from "../../assets/videos/brickBreakerVideo.mp4";
 import BrickBreakerImg from "../../assets/images/brickBreaker.png";
 import BrickBreakerGameOverImg from "../../assets/images/brickBreakerGameOver.png";
+import { motion } from "framer-motion";
 
 import { SiJavascript, SiHtml5, SiCss3 } from "react-icons/si";
 
@@ -21,6 +22,16 @@ function BrickBreaker() {
       logo: <SiJavascript className="w-6 h-6" />,
     },
   ];
+
+  const imageVariant = {
+    hidden: { opacity: 0, y: 50, scale: 0.9 },
+    visible: (delay) => ({
+      opacity: 1,
+      y: 0,
+      scale: 1,
+      transition: { duration: 0.6, delay },
+    }),
+  };
 
   return (
     <ProjectTemplate
@@ -53,8 +64,23 @@ function BrickBreaker() {
       projectImages={
         <div className="">
           <div className="md:w-[49.5%] flex flex-col md:flex-row justify-between gap-4">
-            <img src={BrickBreakerImg} alt="Brick Breaker" />
-            <img src={BrickBreakerGameOverImg} alt="Brick Breaker Game Over" />
+            <motion.img
+              src={BrickBreakerImg}
+              alt="Brick Breaker"
+              variants={imageVariant}
+              initial="hidden"
+              whileInView="visible"
+              viewport={{ once: true, amount: 0.6 }}
+            />
+
+            <motion.img
+              src={BrickBreakerGameOverImg}
+              alt="Brick Breaker Game Over"
+              variants={imageVariant}
+              initial="hidden"
+              whileInView="visible"
+              viewport={{ once: true, amount: 0.6 }}
+            />
           </div>
         </div>
       }

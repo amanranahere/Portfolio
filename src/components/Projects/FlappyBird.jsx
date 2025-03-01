@@ -3,6 +3,7 @@ import ProjectTemplate from "./ProjectTemplate";
 import FlappyBirdVideo from "../../assets/videos/flappyBirdVideo.mp4";
 import FlappyBirdImage from "../../assets/images/flappyBird.png";
 import FlappyBirdGameOverImg from "../../assets/images/flappyBirdGameOver.png";
+import { motion } from "framer-motion";
 
 import { SiJavascript, SiHtml5, SiCss3 } from "react-icons/si";
 
@@ -21,6 +22,16 @@ function FlappyBird() {
       logo: <SiJavascript className="w-6 h-6" />,
     },
   ];
+
+  const imageVariant = {
+    hidden: { opacity: 0, y: 50, scale: 0.9 },
+    visible: (delay) => ({
+      opacity: 1,
+      y: 0,
+      scale: 1,
+      transition: { duration: 0.6, delay },
+    }),
+  };
 
   return (
     <ProjectTemplate
@@ -48,8 +59,23 @@ function FlappyBird() {
       projectImages={
         <div className="">
           <div className="md:w-[49.5%] flex flex-col md:flex-row justify-between gap-4">
-            <img src={FlappyBirdImage} alt="Flappy Bird" />
-            <img src={FlappyBirdGameOverImg} alt="Flappy Bird Game Over" />
+            <motion.img
+              src={FlappyBirdImage}
+              alt="Flappy Bird"
+              variants={imageVariant}
+              initial="hidden"
+              whileInView="visible"
+              viewport={{ once: true, amount: 0.6 }}
+            />
+
+            <motion.img
+              src={FlappyBirdGameOverImg}
+              alt="Flappy Bird Game Over"
+              variants={imageVariant}
+              initial="hidden"
+              whileInView="visible"
+              viewport={{ once: true, amount: 0.6 }}
+            />
           </div>
         </div>
       }

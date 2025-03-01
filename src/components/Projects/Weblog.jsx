@@ -1,5 +1,6 @@
 import React from "react";
 import ProjectTemplate from "./ProjectTemplate";
+import { motion } from "framer-motion";
 import weblogVideo from "../../assets/videos/weblogVideo.mp4";
 import weblogHome from "../../assets/images/weblogHome.png";
 import weblogAddBlog from "../../assets/images/weblogAddBlog.png";
@@ -56,6 +57,16 @@ function Weblog() {
     },
   ];
 
+  const imageVariant = {
+    hidden: { opacity: 0, y: 50, scale: 1.1 },
+    visible: (delay) => ({
+      opacity: 1,
+      y: 0,
+      scale: 1,
+      transition: { duration: 0.6, delay },
+    }),
+  };
+
   return (
     <ProjectTemplate
       projectName="WEBLOG"
@@ -82,13 +93,55 @@ function Weblog() {
       projectImages={
         <div className="flex flex-col md:flex-row gap-4">
           <div className="md:w-1/2 flex-col justify-between">
-            <img src={weblogAddBlog} alt="Add Blog" className="mb-5" />
-            <img src={weblogAllBlogs} alt="All Blogs" className="mt-5" />
-            <img src={weblogBlog} alt="Blog" className="mt-5" />
-            <img src={weblogEditBlog} alt="Edit Blogs" className="mt-5" />
+            <motion.img
+              src={weblogAddBlog}
+              alt="Add Blog"
+              className="mb-5"
+              variants={imageVariant}
+              initial="hidden"
+              whileInView="visible"
+              viewport={{ once: true, amount: 0.2 }}
+            />
+
+            <motion.img
+              src={weblogAllBlogs}
+              alt="All Blogs"
+              className="mt-5"
+              variants={imageVariant}
+              initial="hidden"
+              whileInView="visible"
+              viewport={{ once: true, amount: 0.2 }}
+            />
+
+            <motion.img
+              src={weblogBlog}
+              alt="Blog"
+              className="mt-5"
+              variants={imageVariant}
+              initial="hidden"
+              whileInView="visible"
+              viewport={{ once: true, amount: 0.2 }}
+            />
+
+            <motion.img
+              src={weblogEditBlog}
+              alt="Edit Blogs"
+              className="mt-5"
+              variants={imageVariant}
+              initial="hidden"
+              whileInView="visible"
+              viewport={{ once: true, amount: 0.2 }}
+            />
           </div>
           <div className="md:w-1/2">
-            <img src={weblogHome} alt="Home page" />
+            <motion.img
+              src={weblogHome}
+              alt="Home page"
+              variants={imageVariant}
+              initial="hidden"
+              whileInView="visible"
+              viewport={{ once: true, amount: 0.2 }}
+            />
           </div>
         </div>
       }

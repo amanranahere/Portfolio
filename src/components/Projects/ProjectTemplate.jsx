@@ -1,6 +1,7 @@
 import React from "react";
 import { MdArrowOutward } from "react-icons/md";
 import { Link } from "react-router-dom";
+import { motion } from "framer-motion";
 
 function ProjectTemplate({
   projectName,
@@ -14,24 +15,47 @@ function ProjectTemplate({
   projectBuiltWith,
   projectImages,
 }) {
+  const nameVariant = {
+    hidden: { y: "-100%" },
+    visible: {
+      y: "0%", // Slides into view
+      transition: { duration: 0.7, ease: "easeInOut" },
+    },
+  };
+
+  const hrVariant = {
+    hidden: { scaleX: 0 },
+    visible: {
+      scaleX: 1,
+      transition: { duration: 0.8, ease: "easeInOut" },
+    },
+  };
+
   return (
     <div className="m-4 md:m-8">
       {/* project name */}
-
-      <div className="mt-60 text-[3.5rem] md:text-[8vw] leading-[0.9] tracking-tight font-medium flex-wrap">
-        {projectName}
-      </div>
+      <motion.div className="overflow-hidden mt-60">
+        <motion.div
+          className="text-[3.5rem] md:text-[8vw] leading-[0.9] tracking-tight font-medium flex-wrap"
+          variants={nameVariant}
+          initial="hidden"
+          whileInView="visible"
+          viewport={{ once: true }}
+        >
+          {projectName}
+        </motion.div>
+      </motion.div>
 
       <div className="mx-2">
         {/* project tagline */}
 
-        <div className="mt-10 text-xs font-medium text-black/70 md:w-[50%] lg:w-[30%]">
+        <div className="mt-10 text-xs font-medium text-black/70 md:w-[50%] lg:w-[30%] fade-in">
           {projectTagline.toUpperCase()}
         </div>
 
         {/* project link */}
 
-        <div className="text-xl mt-2 md:mt-4 font-semibold flex items-center">
+        <div className="text-xl mt-2 md:mt-4 font-semibold flex items-center fade-in">
           <a
             href={projectLink}
             target="_blank"
@@ -47,7 +71,7 @@ function ProjectTemplate({
 
         <div className="w-full">
           <video
-            className="w-full h-full my-4 md:my-2 lg:my-0 [clip-path:inset(8%_0.7%_11.7%_0)]"
+            className="w-full h-full my-4 md:my-2 lg:my-0 [clip-path:inset(8%_0.7%_11.7%_0)] fade-in"
             autoPlay
             loop
             muted
@@ -58,14 +82,26 @@ function ProjectTemplate({
 
         {/* project 1st heading */}
 
-        <div className="lg:w-[40%] text-3xl md:text-4xl font-semibold leading-none">
+        <div className="lg:w-[40%] text-3xl md:text-4xl font-semibold leading-none fade-in">
           IN A NUTSHELL
         </div>
 
-        <hr className="w-full border-t border-black my-4" />
+        <motion.hr
+          className="w-full border-t border-black my-4 origin-left"
+          variants={hrVariant}
+          initial="hidden"
+          whileInView="visible"
+          viewport={{ once: true, amount: 0.2 }}
+        />
 
         <div className="w-full flex justify-end text-sm font-medium text-black/60">
-          <div className="lg:w-[55%]">
+          <motion.div
+            className="lg:w-[55%]"
+            initial={{ opacity: 0, y: 50 }}
+            whileInView={{ opacity: 1, y: 0 }}
+            transition={{ duration: 0.4 }}
+            viewport={{ once: true, amount: 0.4 }}
+          >
             {/* year */}
             <div className="flex">
               <div className="w-[30%]">YEAR</div>
@@ -107,7 +143,7 @@ function ProjectTemplate({
                 <MdArrowOutward className="w-[1.1rem] h-[1.1rem]" />
               </a>
             </div>
-          </div>
+          </motion.div>
         </div>
 
         {/* project 2nd heading */}
@@ -116,13 +152,25 @@ function ProjectTemplate({
           BUILT WITH
         </div>
 
-        <hr className="w-full border-t border-black my-4" />
+        <motion.hr
+          className="w-full border-t border-black my-4 origin-left"
+          variants={hrVariant}
+          initial="hidden"
+          whileInView="visible"
+          viewport={{ once: true }}
+        />
 
-        <div className="w-full flex justify-end">
+        <motion.div
+          className="w-full flex justify-end"
+          initial={{ opacity: 0, y: 50 }}
+          whileInView={{ opacity: 1, y: 0 }}
+          transition={{ duration: 0.4 }}
+          viewport={{ once: true, amount: 0.6 }}
+        >
           <div className="lg:w-[55%] flex flex-wrap gap-2 pr-2">
             {projectBuiltWith}
           </div>
-        </div>
+        </motion.div>
 
         {/* project 3rd heading */}
 
@@ -130,19 +178,41 @@ function ProjectTemplate({
           WEB VIEW
         </div>
 
-        <hr className="w-full border-t border-black mt-4 mb-6" />
+        <motion.hr
+          className="w-full border-t border-black my-4 origin-left"
+          variants={hrVariant}
+          initial="hidden"
+          whileInView="visible"
+          viewport={{ once: true }}
+        />
 
         <div className="w-full h-full">{projectImages}</div>
 
-        <hr className="w-full border-t border-black my-10" />
+        <motion.hr
+          className="w-full border-t border-black my-4 mt-20 origin-left"
+          variants={hrVariant}
+          initial="hidden"
+          whileInView="visible"
+          viewport={{ once: true, amount: 0.2 }}
+        />
 
         {/* other projects heading */}
-        <Link
-          to={`/work`}
-          className="text-4xl pb-20 md:text-[8vw] leading-[0.9] tracking-tight font-medium flex flex-wrap justify-end"
-        >
-          OTHER PROJECTS
-        </Link>
+
+        <motion.div className="overflow-hidden">
+          <motion.div
+            variants={nameVariant}
+            initial="hidden"
+            whileInView="visible"
+            viewport={{ once: true }}
+          >
+            <Link
+              to={`/work`}
+              className="text-4xl pb-20 md:text-[8vw] leading-[0.9] tracking-tight font-medium flex flex-wrap justify-end"
+            >
+              OTHER WORKS
+            </Link>
+          </motion.div>
+        </motion.div>
       </div>
     </div>
   );

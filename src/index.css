@@ -23,6 +23,24 @@ body {
   animation: slideInFromLeft 0.8s ease-out 0.5s forwards;
 }
 
+/* fade-in animation - start */
+
+@keyframes fadeIn {
+  0% {
+    opacity: 0;
+  }
+  100% {
+    opacity: 1;
+  }
+}
+
+.fade-in {
+  opacity: 0;
+  animation: fadeIn 0.3s ease-in-out 0.5s forwards;
+}
+
+/* fade-in animation - end */
+
 /* slide right like completing the div - end */
 
 /* button glow effect - start */

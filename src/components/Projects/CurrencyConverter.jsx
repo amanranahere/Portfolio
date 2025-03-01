@@ -3,6 +3,7 @@ import ProjectTemplate from "./ProjectTemplate";
 import CurrencyConverterVideo from "../../assets/videos/CurrencyConverterVideo.mp4";
 import CurrConvImage from "../../assets/images/currencyConverter.png";
 import CurrConvImage02 from "../../assets/images/currencyConverter02.png";
+import { motion } from "framer-motion";
 
 import { SiJavascript, SiHtml5, SiCss3 } from "react-icons/si";
 
@@ -21,6 +22,16 @@ function CurrencyConverter() {
       logo: <SiJavascript className="w-6 h-6" />,
     },
   ];
+
+  const imageVariant = {
+    hidden: { opacity: 0, y: 50, scale: 0.9 },
+    visible: (delay) => ({
+      opacity: 1,
+      y: 0,
+      scale: 1,
+      transition: { duration: 0.6, delay },
+    }),
+  };
 
   return (
     <ProjectTemplate
@@ -49,8 +60,23 @@ function CurrencyConverter() {
       projectImages={
         <div className="">
           <div className="md:w-[49.5%] flex flex-col md:flex-row justify-between gap-4">
-            <img src={CurrConvImage} alt="Currency converter" />
-            <img src={CurrConvImage02} alt="Currency converter 02" />
+            <motion.img
+              src={CurrConvImage}
+              alt="Currency converter"
+              variants={imageVariant}
+              initial="hidden"
+              whileInView="visible"
+              viewport={{ once: true, amount: 0.6 }}
+            />
+
+            <motion.img
+              src={CurrConvImage02}
+              alt="Currency converter 02"
+              variants={imageVariant}
+              initial="hidden"
+              whileInView="visible"
+              viewport={{ once: true, amount: 0.6 }}
+            />
           </div>
         </div>
       }

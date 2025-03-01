@@ -3,6 +3,7 @@ import ProjectTemplate from "./ProjectTemplate";
 import SnakeGameVideo from "../../assets/videos/snakeGameVideo.mp4";
 import SnakeGameImage from "../../assets/images/snakeGame.png";
 import SnakeGameOverImage from "../../assets/images/snakeGameOver.png";
+import { motion } from "framer-motion";
 
 import { SiJavascript, SiHtml5, SiCss3 } from "react-icons/si";
 
@@ -21,6 +22,16 @@ function HungrySnake() {
       logo: <SiJavascript className="w-6 h-6" />,
     },
   ];
+
+  const imageVariant = {
+    hidden: { opacity: 0, y: 50, scale: 0.9 },
+    visible: (delay) => ({
+      opacity: 1,
+      y: 0,
+      scale: 1,
+      transition: { duration: 0.6, delay },
+    }),
+  };
 
   return (
     <ProjectTemplate
@@ -49,8 +60,23 @@ function HungrySnake() {
       projectImages={
         <div className="">
           <div className="md:w-[49.5%] flex flex-col md:flex-row justify-between gap-4">
-            <img src={SnakeGameImage} alt="Snake Game" />
-            <img src={SnakeGameOverImage} alt="Snake Game Over" />
+            <motion.img
+              src={SnakeGameImage}
+              alt="Snake Game"
+              variants={imageVariant}
+              initial="hidden"
+              whileInView="visible"
+              viewport={{ once: true, amount: 0.6 }}
+            />
+
+            <motion.img
+              src={SnakeGameOverImage}
+              alt="Snake Game Over"
+              variants={imageVariant}
+              initial="hidden"
+              whileInView="visible"
+              viewport={{ once: true, amount: 0.6 }}
+            />
           </div>
         </div>
       }
