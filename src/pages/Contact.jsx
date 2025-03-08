@@ -13,7 +13,7 @@ function Contact() {
           transition={{
             duration: 0.8,
             ease: [0.16, 1, 0.3, 1],
-            delay: 0.4,
+            delay: 0.6,
           }}
           className="p-8 pt-40 md:pt-52 lg:pt-10 bg-[#c9c9c9] text-[4rem] md:text-[15vw] leading-[0.9] tracking-tight font-medium whitespace-nowrap flex justify-center items-center select-none"
         >
@@ -26,7 +26,7 @@ function Contact() {
           transition={{
             duration: 0.8,
             ease: [0.16, 1, 0.3, 1],
-            delay: 0.4,
+            delay: 0.6,
           }}
           className="bg-[#f1f1f1] flex flex-col justify-between p-2 gap-10 lg:gap-0"
         >

@@ -56,9 +56,9 @@ export default function ContactForm() {
       >
         <div className="flex flex-col md:flex-row">
           <motion.div
-            initial={{ x: -50, y: -50, opacity: 0 }}
+            initial={{ x: -100, y: -100, opacity: 0 }}
             animate={{ x: 0, y: 0, opacity: 1 }}
-            transition={{ duration: 0.6, ease: [0.16, 1, 0.3, 1], delay: 0.7 }}
+            transition={{ duration: 0.6, ease: [0.16, 1, 0.3, 1], delay: 0.6 }}
             className="w-full relative"
           >
             <input
@@ -76,9 +76,9 @@ export default function ContactForm() {
           </motion.div>
 
           <motion.div
-            initial={{ x: 50, y: -50, opacity: 0 }}
+            initial={{ x: 100, y: -100, opacity: 0 }}
             animate={{ x: 0, y: 0, opacity: 1 }}
-            transition={{ duration: 0.6, ease: [0.16, 1, 0.3, 1], delay: 0.7 }}
+            transition={{ duration: 0.6, ease: [0.16, 1, 0.3, 1], delay: 0.6 }}
             className="w-full relative"
           >
             <input
@@ -98,9 +98,9 @@ export default function ContactForm() {
 
         <div className="w-full flex flex-col md:flex-row">
           <motion.div
-            initial={{ x: -50, opacity: 0 }}
+            initial={{ x: -100, opacity: 0 }}
             animate={{ x: 0, y: 0, opacity: 1 }}
-            transition={{ duration: 0.6, ease: [0.16, 1, 0.3, 1], delay: 0.8 }}
+            transition={{ duration: 0.6, ease: [0.16, 1, 0.3, 1], delay: 0.6 }}
             className="w-full relative"
           >
             <input
@@ -117,9 +117,9 @@ export default function ContactForm() {
           </motion.div>
 
           <motion.div
-            initial={{ x: 50, opacity: 0 }}
+            initial={{ x: 100, opacity: 0 }}
             animate={{ x: 0, y: 0, opacity: 1 }}
-            transition={{ duration: 0.6, ease: [0.16, 1, 0.3, 1], delay: 0.8 }}
+            transition={{ duration: 0.6, ease: [0.16, 1, 0.3, 1], delay: 0.6 }}
             className="w-full relative"
           >
             <input
@@ -137,9 +137,9 @@ export default function ContactForm() {
         </div>
 
         <motion.div
-          initial={{ y: 50, opacity: 0 }}
+          initial={{ y: 100, opacity: 0 }}
           animate={{ y: 0, opacity: 1 }}
-          transition={{ duration: 0.6, ease: [0.16, 1, 0.3, 1], delay: 0.9 }}
+          transition={{ duration: 0.6, ease: [0.16, 1, 0.3, 1], delay: 0.6 }}
           className="w-full h-full relative"
         >
           <textarea
@@ -205,7 +205,7 @@ export default function ContactForm() {
               transition={{
                 duration: 0.8,
                 ease: [0.16, 1, 0.3, 1],
-                delay: 0.7,
+                delay: 0.6,
               }}
               href="https://github.com/amanranahere"
               target="_blank"
@@ -221,7 +221,7 @@ export default function ContactForm() {
               transition={{
                 duration: 0.8,
                 ease: [0.16, 1, 0.3, 1],
-                delay: 0.7,
+                delay: 0.6,
               }}
               href=""
               target="_blank"

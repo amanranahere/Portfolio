@@ -6,6 +6,13 @@ body {
   background-color: #f7f7f7;
 }
 
+@font-face {
+  font-family: "Raleway";
+  src: url("/Raleway-Font.ttf") format("truetype");
+  font-weight: bold;
+  font-style: normal;
+}
+
 /* slide right like completing the div - start */
 
 @keyframes slideInFromLeft {
@@ -65,7 +72,7 @@ body {
 
 /* project list highlight - start */
 
-@keyframes highlightBackground {
+/* @keyframes highlightBackground {
   0% {
     opacity: 0;
   }
@@ -88,10 +95,10 @@ body {
   z-index: -1;
   opacity: 0;
   animation: highlightBackground 1s ease-in-out forwards;
-}
+} */
 
 /*  colors & delays for each project */
-.project-0::before {
+/* .project-0::before {
   --highlight-color: #dbeafe;
   animation-delay: 0s;
 }
@@ -119,7 +126,7 @@ body {
 .project-5::before {
   --highlight-color: #dcfce7;
   animation-delay: 1s;
-}
+} */
 
 /* project list highlight - end */
 
