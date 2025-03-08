@@ -1,6 +1,7 @@
 import React, { useState } from "react";
 import emailjs from "@emailjs/browser";
 import { SiLinkedin, SiGithub, SiX } from "react-icons/si";
+import { motion } from "framer-motion";
 
 export default function ContactForm() {
   const [status, setStatus] = useState("");
@@ -54,7 +55,12 @@ export default function ContactForm() {
         className="w-full h-full flex flex-col flex-grow"
       >
         <div className="flex flex-col md:flex-row">
-          <div className="w-full relative">
+          <motion.div
+            initial={{ x: -50, y: -50, opacity: 0 }}
+            animate={{ x: 0, y: 0, opacity: 1 }}
+            transition={{ duration: 0.6, ease: [0.16, 1, 0.3, 1], delay: 0.7 }}
+            className="w-full relative"
+          >
             <input
               type="text"
               name="name"
@@ -67,9 +73,14 @@ export default function ContactForm() {
             <span className="absolute top-2 right-2 text-sm text-gray-400">
               *Required
             </span>
-          </div>
+          </motion.div>
 
-          <div className="w-full relative">
+          <motion.div
+            initial={{ x: 50, y: -50, opacity: 0 }}
+            animate={{ x: 0, y: 0, opacity: 1 }}
+            transition={{ duration: 0.6, ease: [0.16, 1, 0.3, 1], delay: 0.7 }}
+            className="w-full relative"
+          >
             <input
               type="email"
               name="email"
@@ -82,11 +93,16 @@ export default function ContactForm() {
             <span className="absolute top-2 right-2 text-sm text-gray-400">
               *Required
             </span>
-          </div>
+          </motion.div>
         </div>
 
         <div className="w-full flex flex-col md:flex-row">
-          <div className="w-full relative">
+          <motion.div
+            initial={{ x: -50, opacity: 0 }}
+            animate={{ x: 0, y: 0, opacity: 1 }}
+            transition={{ duration: 0.6, ease: [0.16, 1, 0.3, 1], delay: 0.8 }}
+            className="w-full relative"
+          >
             <input
               type="text"
               name="company"
@@ -98,9 +114,14 @@ export default function ContactForm() {
             <span className="absolute top-2 right-2 text-sm text-gray-400">
               Optional
             </span>
-          </div>
+          </motion.div>
 
-          <div className="w-full relative">
+          <motion.div
+            initial={{ x: 50, opacity: 0 }}
+            animate={{ x: 0, y: 0, opacity: 1 }}
+            transition={{ duration: 0.6, ease: [0.16, 1, 0.3, 1], delay: 0.8 }}
+            className="w-full relative"
+          >
             <input
               type="tel"
               name="phone"
@@ -112,10 +133,15 @@ export default function ContactForm() {
             <span className="absolute top-2 right-2 text-sm text-gray-400">
               Optional
             </span>
-          </div>
+          </motion.div>
         </div>
 
-        <div className="w-full h-full relative">
+        <motion.div
+          initial={{ y: 50, opacity: 0 }}
+          animate={{ y: 0, opacity: 1 }}
+          transition={{ duration: 0.6, ease: [0.16, 1, 0.3, 1], delay: 0.9 }}
+          className="w-full h-full relative"
+        >
           <textarea
             name="message"
             placeholder="Message"
@@ -128,13 +154,15 @@ export default function ContactForm() {
           <span className="absolute top-2 right-2 text-sm text-gray-400">
             *Required
           </span>
-        </div>
+        </motion.div>
 
         <div className="w-full flex flex-col md:flex-row-reverse text-lg md:text-2xl lg:text-4xl leading-5">
-          <button
+          <motion.button
+            initial={{ x: 100, y: 100, opacity: 0 }}
+            animate={{ x: 0, y: 0, opacity: 1 }}
+            transition={{ duration: 0.6, ease: [0.16, 1, 0.3, 1], delay: 0.6 }}
             type="submit"
-            className="w-full h-full p-6 md:w-[40%] flex justify-center items-center bg-[#505050] hover:bg-[#303030] active:bg-[#161616] text-white relative button-glow transition duration-500"
-            style={{ animationDelay: "0.8s" }}
+            className="w-full h-full p-6 md:w-[40%] flex justify-center items-center bg-[#505050] hover:bg-[#303030] active:bg-[#161616] text-white relative "
           >
             {loading ? (
               <span className="flex items-center">
@@ -152,39 +180,57 @@ export default function ContactForm() {
             <div className="absolute -top-8 text-lg text-white">
               {status && <p>{status}</p>}
             </div>
-          </button>
+          </motion.button>
 
           <div className=" md:w-[60%] flex flex-col-reverse md:flex-row justify-evenly">
-            <a
+            <motion.a
+              initial={{ x: -100, y: 100, opacity: 0 }}
+              animate={{ x: 0, y: 0, opacity: 1 }}
+              transition={{
+                duration: 0.8,
+                ease: [0.16, 1, 0.3, 1],
+                delay: 0.6,
+              }}
               href=""
               target="_blank"
               rel="noopener noreferrer"
-              className="w-full h-full p-6 bg-[#f1f1f1] hover:bg-[#d4d4d4] active:bg-[#bcbcbc] text-black/70 transition duration-500 flex justify-center items-center gap-2 button-glow"
-              style={{ animationDelay: "0.2s" }}
+              className="w-full h-full p-6 bg-[#f1f1f1] hover:bg-[#d4d4d4] active:bg-[#bcbcbc] text-black/70 flex justify-center items-center gap-2 "
             >
               <SiLinkedin /> <span>LINKEDIN</span>
-            </a>
+            </motion.a>
 
-            <a
+            <motion.a
+              initial={{ x: -20, y: 100, opacity: 0 }}
+              animate={{ x: 0, y: 0, opacity: 1 }}
+              transition={{
+                duration: 0.8,
+                ease: [0.16, 1, 0.3, 1],
+                delay: 0.7,
+              }}
               href="https://github.com/amanranahere"
               target="_blank"
               rel="noopener noreferrer"
-              className="w-full h-full p-6 bg-[#c9c9c9] hover:bg-[#a8a8a8] active:bg-[#8a8a8a] text-black/70 transition duration-500 flex justify-center items-center gap-2 button-glow"
-              style={{ animationDelay: "0.4s" }}
+              className="w-full h-full p-6 bg-[#c9c9c9] hover:bg-[#a8a8a8] active:bg-[#8a8a8a] text-black/70 flex justify-center items-center gap-2 "
             >
               <SiGithub /> <span>GITHUB</span>
-            </a>
+            </motion.a>
 
-            <a
+            <motion.a
+              initial={{ y: 100, opacity: 0 }}
+              animate={{ y: 0, opacity: 1 }}
+              transition={{
+                duration: 0.8,
+                ease: [0.16, 1, 0.3, 1],
+                delay: 0.7,
+              }}
               href=""
               target="_blank"
               rel="noopener noreferrer"
               className="w-full h-full p-6 bg-[#969696] hover:bg-[#707070]
-               active:bg-[#545454] text-black/70 transition duration-500 flex justify-center items-center gap-2 button-glow"
-              style={{ animationDelay: "0.6s" }}
+               active:bg-[#545454] text-black/70 flex justify-center items-center gap-2 "
             >
               <SiX />
-            </a>
+            </motion.a>
           </div>
         </div>
       </form>
