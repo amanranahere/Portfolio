@@ -26,7 +26,7 @@ function Work() {
         initial={{ opacity: 1 }}
         animate={{ opacity: scrolled ? 0 : 1 }}
         transition={{ duration: 0.2, ease: "easeOut" }}
-        className="h-screen flex flex-col justify-center items-center bg-[#1e1919] text-[#f1f1f1]"
+        className="fixed top-0 left-0 w-full h-screen flex flex-col justify-center items-center bg-[#1e1919] text-[#f1f1f1] select-none"
       >
         <div className="max-w-max font-raleway flex flex-col justify-center items-center">
           <div className="absolute top-[30%] lg:top-[20%] lg:left-[25%] text-8xl lg:text-[5vw]">
@@ -48,7 +48,7 @@ function Work() {
         <WorkComponent />
       </motion.div>
 
-      <Footer />
+      {/* <Footer /> */}
     </>
   );
 }

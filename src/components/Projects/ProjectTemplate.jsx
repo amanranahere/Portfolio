@@ -18,7 +18,7 @@ function ProjectTemplate({
   const nameVariant = {
     hidden: { y: "-100%" },
     visible: {
-      y: "0%", // Slides into view
+      y: "0%",
       transition: { duration: 0.7, ease: "easeInOut" },
     },
   };

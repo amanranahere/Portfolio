@@ -6,6 +6,10 @@ body {
   background-color: #f7f7f7;
 }
 
+.invert-color {
+  mix-blend-mode: difference;
+}
+
 @font-face {
   font-family: "Raleway";
   src: url("/Raleway-Font.ttf") format("truetype");

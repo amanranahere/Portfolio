@@ -31,10 +31,10 @@ function Navbar() {
   ];
 
   return (
-    <div className="max-w-max fixed top-0 right-0">
+    <div className="max-w-max fixed top-0 right-0 z-[9999] md:mix-blend-difference">
       {/* menu svg for sm screens */}
       <div
-        className="md:hidden fixed top-0 right-0 mr-5 mt-10 z-50 cursor-pointer"
+        className="md:hidden fixed top-0 right-0 mr-5 mt-10 cursor-pointer z-[99999] mix-blend-difference"
         onClick={handleClick}
       >
         <svg width="50" height="25" viewBox="0 0 50 25">
@@ -74,11 +74,11 @@ function Navbar() {
       </div>
 
       {isMenuOpen && (
-        <div className="bg-[#1a1a1a] fixed inset-0 z-40">
+        <div className="bg-[#1a1a1a] fixed inset-0 z-[9999]">
           <ul className="absolute bottom-32 p-6">
             {navItems.map((item) => (
               <li key={item.name}>
-                <button
+                <div
                   onClick={() => {
                     navigate(item.slug);
                     setIsMenuOpen(false);
@@ -86,7 +86,7 @@ function Navbar() {
                   className="font-extrabold text-white hover:text-white/60 active:text-white/60 text-6xl py-1"
                 >
                   {item.name}
-                </button>
+                </div>
               </li>
             ))}
           </ul>
@@ -94,7 +94,7 @@ function Navbar() {
       )}
 
       {/* nav items list on md and lg screens */}
-      <div className="hidden md:flex mr-8 mt-10 z-[99]">
+      <div className="hidden md:flex mr-8 mt-10 z-[9999]">
         <ul
           className="m-5"
           onMouseEnter={() => setIsHovered(true)}
@@ -108,7 +108,7 @@ function Navbar() {
               <button
                 onClick={() => navigate(item.slug)}
                 onMouseEnter={() => setHoveredItem(item.name)}
-                className="font-extrabold text-[#2a2a2a] hover:text-black/60 transition duration-200"
+                className="font-extrabold text-[#fff] hover:text-white/60 transition duration-200"
               >
                 {item.name}
               </button>
@@ -119,8 +119,8 @@ function Navbar() {
 
       {/* Overlay div that appears when hovered */}
       {/* {isHovered && (
-        <div className="hidden lg:flex justify-center items-center  fixed inset-0 bg-black z-30">
-          <div className="z-50 text-[20vw] text-white font-bold">
+        <div className="hidden lg:flex justify-center items-center fixed inset-0 bg-black z-[99]">
+          <div className="z-50 text-[20vw] bg-black text-white font-bold">
             {hoveredItem}
           </div>
         </div>
