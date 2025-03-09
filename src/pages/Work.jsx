@@ -28,7 +28,7 @@ function Work() {
         transition={{ duration: 0.2, ease: "easeOut" }}
         className="fixed top-0 left-0 w-full h-screen flex flex-col justify-center items-center bg-[#1e1919] text-[#f1f1f1] select-none"
       >
-        <div className="max-w-max font-raleway flex flex-col justify-center items-center">
+        <div className="max-w-max font-raleway font-bold flex flex-col justify-center items-center">
           <div className="absolute top-[30%] lg:top-[20%] lg:left-[25%] text-8xl lg:text-[5vw]">
             My
           </div>

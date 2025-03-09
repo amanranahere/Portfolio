@@ -30,6 +30,7 @@ function WorkComponent() {
   const projects = [
     {
       name: "Weblog",
+      type: "Blogging website",
       path: "weblog",
       hoverColor: "hover:bg-blue-100",
       logo: (
@@ -44,6 +45,7 @@ function WorkComponent() {
     },
     {
       name: "Vidron",
+      type: "Streaming Platform",
       path: "vidron",
       hoverColor: "hover:bg-teal-100",
       logo: (
@@ -58,6 +60,7 @@ function WorkComponent() {
     },
     {
       name: "Currency Converter",
+      type: "Tool",
       path: "currencyConverter",
       hoverColor: "hover:bg-yellow-100",
       logo: (
@@ -72,6 +75,7 @@ function WorkComponent() {
     },
     {
       name: "Brick Breaker",
+      type: "Arcade Game",
       path: "brickBreaker",
       hoverColor: "hover:bg-orange-100",
       logo: (
@@ -86,6 +90,7 @@ function WorkComponent() {
     },
     {
       name: "Flappy Bird Clone",
+      type: "Casual Game",
       path: "flappyBird",
       hoverColor: "hover:bg-purple-100",
       logo: (
@@ -100,6 +105,7 @@ function WorkComponent() {
     },
     {
       name: "Hungry Snake",
+      type: "Classic Game",
       path: "hungrySnake",
       hoverColor: "hover:bg-green-100",
       logo: (
@@ -153,6 +159,13 @@ function WorkComponent() {
                 className="hidden lg:block w-full group"
               >
                 {project.name.toUpperCase()}
+
+                {project.type && (
+                  <span className="text-sm ml-2 self-start text-gray-700">
+                    {project.type.toUpperCase()}
+                  </span>
+                )}
+
                 {project.logo && project.logo}
               </Link>
 

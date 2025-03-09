@@ -5,7 +5,7 @@ import { motion } from "framer-motion";
 
 function Contact() {
   return (
-    <div className="lg:pt-0 bg-[#f7f7f7] h-screen flex flex-col overflow-hidden">
+    <div className="lg:pt-0 bg-[#f7f7f7] h-screen flex flex-col md:overflow-hidden">
       <div className="flex flex-col lg:flex-row">
         <motion.div
           initial={{ x: -300, y: -300, opacity: 0 }}

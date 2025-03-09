@@ -1,5 +1,6 @@
 import React, { useState } from "react";
 import { useNavigate } from "react-router-dom";
+import { motion } from "framer-motion";
 
 function Navbar() {
   const navigate = useNavigate();
@@ -73,25 +74,49 @@ function Navbar() {
         </svg>
       </div>
 
-      {isMenuOpen && (
-        <div className="bg-[#1a1a1a] fixed inset-0 z-[9999]">
-          <ul className="absolute bottom-32 p-6">
-            {navItems.map((item) => (
-              <li key={item.name}>
-                <div
+      {/* when menu is open */}
+      <motion.div
+        initial={{ x: "100%" }}
+        animate={{ x: isMenuOpen ? 0 : "100%" }}
+        exit={{ x: "100%" }}
+        transition={{ duration: 0.35, ease: [0.25, 1, 0.5, 1] }}
+        className="bg-[#1a1a1a] fixed inset-0 z-[9999] pointer-events-auto"
+      >
+        <ul className="absolute bottom-32 p-6">
+          {navItems.map((item, index) => (
+            <li key={item.name}>
+              <motion.div className="overflow-hidden">
+                <motion.div
+                  key={
+                    isMenuOpen ? `menu-open-${index}` : `menu-closed-${index}`
+                  }
+                  variants={{
+                    hidden: { y: "-100%" },
+                    visible: {
+                      y: "0%",
+                      transition: {
+                        delay: 0.2,
+                        duration: 0.7,
+                        ease: [0.25, 1, 0.5, 1],
+                      },
+                    },
+                  }}
+                  initial="hidden"
+                  whileInView="visible"
+                  viewport={{ once: true }}
+                  className=" text-white hover:text-white/60 active:text-white/60 text-6xl py-1"
                   onClick={() => {
                     navigate(item.slug);
                     setIsMenuOpen(false);
                   }}
-                  className="font-extrabold text-white hover:text-white/60 active:text-white/60 text-6xl py-1"
                 >
                   {item.name}
-                </div>
-              </li>
-            ))}
-          </ul>
-        </div>
-      )}
+                </motion.div>
+              </motion.div>
+            </li>
+          ))}
+        </ul>
+      </motion.div>
 
       {/* nav items list on md and lg screens */}
       <div className="hidden md:flex mr-8 mt-10 z-[9999]">
