@@ -1,7 +1,6 @@
 import React, { useState, useEffect } from "react";
 import PageTransition from "../components/Transitions/PageTransition.jsx";
 import WorkComponent from "../components/Work/WorkComponent.jsx";
-import Footer from "../components/Footer/Footer.jsx";
 import { motion } from "framer-motion";
 
 function Work() {
@@ -46,9 +45,9 @@ function Work() {
         transition={{ duration: 0.5, ease: "easeOut" }}
       >
         <WorkComponent />
-      </motion.div>
 
-      {/* <Footer /> */}
+        <div>{/* add footer here */}</div>
+      </motion.div>
     </>
   );
 }
