@@ -2,6 +2,127 @@
 @tailwind components;
 @tailwind utilities;
 
+/* fonts - start */
+
+@font-face {
+  font-family: "BigShouldersStencil";
+  src: url("/fonts/BigShouldersStencil.ttf") format("truetype");
+}
+
+.bigShoulderStencil-text {
+  font-family: "BigShouldersStencil", sans-serif;
+}
+
+@font-face {
+  font-family: "CroissantOne";
+  src: url("/fonts/CroissantOne-Regular.ttf") format("truetype");
+}
+
+.croissantOne-text {
+  font-family: "CroissantOne", sans-serif;
+}
+
+@font-face {
+  font-family: "EricaOne";
+  src: url("/fonts/EricaOne-Regular.ttf") format("truetype");
+}
+
+.ericaOne-text {
+  font-family: "EricaOne", sans-serif;
+}
+
+@font-face {
+  font-family: "GiveYouGlory";
+  src: url("/fonts/GiveYouGlory-Regular.ttf") format("truetype");
+}
+
+.giveYouGlory-text {
+  font-family: "GiveYouGlory", sans-serif;
+}
+
+@font-face {
+  font-family: "Kranky";
+  src: url("/fonts/Kranky-Regular.ttf") format("truetype");
+}
+
+.kranky-text {
+  font-family: "Kranky", sans-serif;
+}
+
+@font-face {
+  font-family: "Inter";
+  src: url("/fonts/Inter-VariableFont.ttf") format("truetype");
+}
+
+.inter-text {
+  font-family: "Inter", sans-serif;
+}
+
+@font-face {
+  font-family: "Montez";
+  src: url("/fonts/Montez-Regular.ttf") format("truetype");
+}
+
+.montez-text {
+  font-family: "Montez", sans-serif;
+}
+
+@font-face {
+  font-family: "Lato";
+  src: url("/fonts/Lato-Thin.ttf") format("truetype");
+}
+
+.lato-text {
+  font-family: "Lato", sans-serif;
+}
+
+@font-face {
+  font-family: "PlaywriteNGModernGuides";
+  src: url("/fonts/PlaywriteNGModernGuides-Regular.ttf") format("truetype");
+}
+
+.playwrite-text {
+  font-family: "PlaywriteNGModernGuides", sans-serif;
+}
+
+@font-face {
+  font-family: "SourceCodePro";
+  src: url("/fonts/SourceCodePro.ttf") format("truetype");
+}
+
+.sourceCodePro-text {
+  font-family: "SourceCodePro", sans-serif;
+}
+
+@font-face {
+  font-family: "SpecialElite";
+  src: url("/fonts/SpecialElite-Regular.ttf") format("truetype");
+}
+
+.specialElite-text {
+  font-family: "SpecialElite", sans-serif;
+}
+
+@font-face {
+  font-family: "Vibes";
+  src: url("/fonts/Vibes-Regular.ttf") format("truetype");
+}
+
+.vibes-text {
+  font-family: "Vibes", sans-serif;
+}
+
+@font-face {
+  font-family: "Zeyada";
+  src: url("/fonts/Zeyada-Regular.ttf") format("truetype");
+}
+
+.zeyada-text {
+  font-family: "Zeyada", sans-serif;
+}
+
+/* fonts - end */
+
 body {
   background-color: #f7f7f7;
 }
@@ -10,11 +131,263 @@ body {
   mix-blend-mode: difference;
 }
 
-@font-face {
-  font-family: "Raleway";
-  src: url("/Raleway-Font.ttf") format("truetype");
-  font-style: normal;
+/* coloring button - start */
+
+.type--A {
+  --line_color: #555555;
+  --back_color: #ffecf6;
 }
+.type--B {
+  --line_color: #1b1919;
+  --back_color: #e9ecff;
+}
+.type--C {
+  --line_color: #00135c;
+  --back_color: #defffa;
+}
+.button-home {
+  position: relative;
+  z-index: 0;
+  width: 240px;
+  height: 56px;
+  text-decoration: none;
+  font-size: 14px;
+  font-weight: bold;
+  color: var(--line_color);
+  letter-spacing: 2px;
+  transition: all 0.3s ease;
+}
+.button__text {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  width: 100%;
+  height: 100%;
+}
+.button-home::before,
+.button-home::after,
+.button__text::before,
+.button__text::after {
+  content: "";
+  position: absolute;
+  height: 4px;
+  border-radius: 2px;
+  background: var(--line_color);
+  transition: all 0.5s ease;
+}
+.button-home::before {
+  top: 0;
+  left: 54px;
+  width: calc(100% - 56px * 2 - 16px);
+}
+.button-home::after {
+  top: 0;
+  right: 54px;
+  width: 8px;
+}
+.button__text::before {
+  bottom: 0;
+  right: 54px;
+  width: calc(100% - 56px * 2 - 16px);
+}
+.button__text::after {
+  bottom: 0;
+  left: 54px;
+  width: 8px;
+}
+.button__line {
+  position: absolute;
+  top: 0;
+  width: 56px;
+  height: 100%;
+  overflow: hidden;
+}
+.button__line::before {
+  content: "";
+  position: absolute;
+  top: 0;
+  width: 150%;
+  height: 100%;
+  box-sizing: border-box;
+  border-radius: 300px;
+  border: solid 4px var(--line_color);
+}
+.button__line:nth-child(1),
+.button__line:nth-child(1)::before {
+  left: 0;
+}
+.button__line:nth-child(2),
+.button__line:nth-child(2)::before {
+  right: 0;
+}
+.button-home:hover {
+  letter-spacing: 6px;
+}
+.button-home:hover::before,
+.button-home:hover .button__text::before {
+  width: 8px;
+}
+.button-home:hover::after,
+.button-home:hover .button__text::after {
+  width: calc(100% - 56px * 2 - 16px);
+}
+.button__drow1,
+.button__drow2 {
+  position: absolute;
+  z-index: -1;
+  border-radius: 16px;
+  transform-origin: 16px 16px;
+}
+.button__drow1 {
+  top: -16px;
+  left: 40px;
+  width: 32px;
+  height: 0;
+  transform: rotate(30deg);
+}
+.button__drow2 {
+  top: 44px;
+  left: 77px;
+  width: 32px;
+  height: 0;
+  transform: rotate(-127deg);
+}
+.button__drow1::before,
+.button__drow1::after,
+.button__drow2::before,
+.button__drow2::after {
+  content: "";
+  position: absolute;
+}
+.button__drow1::before {
+  bottom: 0;
+  left: 0;
+  width: 0;
+  height: 32px;
+  border-radius: 16px;
+  transform-origin: 16px 16px;
+  transform: rotate(-60deg);
+}
+.button__drow1::after {
+  top: -10px;
+  left: 45px;
+  width: 0;
+  height: 32px;
+  border-radius: 16px;
+  transform-origin: 16px 16px;
+  transform: rotate(69deg);
+}
+.button__drow2::before {
+  bottom: 0;
+  left: 0;
+  width: 0;
+  height: 32px;
+  border-radius: 16px;
+  transform-origin: 16px 16px;
+  transform: rotate(-146deg);
+}
+.button__drow2::after {
+  bottom: 26px;
+  left: -40px;
+  width: 0;
+  height: 32px;
+  border-radius: 16px;
+  transform-origin: 16px 16px;
+  transform: rotate(-262deg);
+}
+.button__drow1,
+.button__drow1::before,
+.button__drow1::after,
+.button__drow2,
+.button__drow2::before,
+.button__drow2::after {
+  background: var(--back_color);
+}
+.button-home:hover .button__drow1 {
+  animation: drow1 ease-in 0.06s;
+  animation-fill-mode: forwards;
+}
+.button-home:hover .button__drow1::before {
+  animation: drow2 linear 0.08s 0.06s;
+  animation-fill-mode: forwards;
+}
+.button-home:hover .button__drow1::after {
+  animation: drow3 linear 0.03s 0.14s;
+  animation-fill-mode: forwards;
+}
+.button-home:hover .button__drow2 {
+  animation: drow4 linear 0.06s 0.2s;
+  animation-fill-mode: forwards;
+}
+.button-home:hover .button__drow2::before {
+  animation: drow3 linear 0.03s 0.26s;
+  animation-fill-mode: forwards;
+}
+.button-home:hover .button__drow2::after {
+  animation: drow5 linear 0.06s 0.32s;
+  animation-fill-mode: forwards;
+}
+@keyframes drow1 {
+  0% {
+    height: 0;
+  }
+  100% {
+    height: 100px;
+  }
+}
+@keyframes drow2 {
+  0% {
+    width: 0;
+    opacity: 0;
+  }
+  10% {
+    opacity: 0;
+  }
+  11% {
+    opacity: 1;
+  }
+  100% {
+    width: 120px;
+  }
+}
+@keyframes drow3 {
+  0% {
+    width: 0;
+  }
+  100% {
+    width: 80px;
+  }
+}
+@keyframes drow4 {
+  0% {
+    height: 0;
+  }
+  100% {
+    height: 120px;
+  }
+}
+@keyframes drow5 {
+  0% {
+    width: 0;
+  }
+  100% {
+    width: 124px;
+  }
+}
+
+.container {
+  width: 100%;
+  height: 70px;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+}
+.button-home:not(:last-child) {
+  margin-bottom: 64px;
+}
+
+/* coloring button - end */
 
 /* slide right like completing the div - start */
 

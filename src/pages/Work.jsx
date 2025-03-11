@@ -27,12 +27,12 @@ function Work() {
         transition={{ duration: 0.2, ease: "easeOut" }}
         className="fixed top-0 left-0 w-full h-screen flex flex-col justify-center items-center bg-[#1e1919] text-[#f1f1f1] select-none"
       >
-        <div className="max-w-max font-raleway font-bold flex flex-col justify-center items-center">
-          <div className="absolute top-[30%] lg:top-[20%] lg:left-[25%] text-8xl lg:text-[5vw]">
+        <div className="max-w-max font-bold flex flex-col justify-center items-center">
+          <div className="absolute top-[33%] lg:top-[15%] lg:left-[30%] text-3xl md:text-6xl lg:text-[5vw] giveYouGlory-text text-[#bfbfbf]">
             My
           </div>
 
-          <div className="w-full absolute top-1/2 left-1/2 transform -translate-y-1/2 -translate-x-1/2 text-center text-8xl md:text-[25vw] leading-[0.7em] tracking-tight">
+          <div className="w-full absolute top-1/2 left-1/2 transform -translate-y-1/2 -translate-x-1/2 text-center text-8xl md:text-[25vw] leading-[0.7em] tracking-tight bigShoulderStencil-text ">
             Projects
           </div>
         </div>

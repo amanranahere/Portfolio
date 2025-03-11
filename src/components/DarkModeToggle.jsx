@@ -12,13 +12,6 @@ function DarkModeToggle() {
   }, [isDark]);
 
   return (
-    // <button
-    //   onClick={() => setIsDark(!isDark)}
-    //   className="p-2 bg-gray-200 dark:bg-gray-800 text-black dark:text-white rounded-lg"
-    // >
-    //   {isDark ? "🌙 Dark" : "☀️ Light"}
-    // </button>
-
     <label
       htmlFor="themeToggle"
       className="themeToggle st-sunMoonThemeToggleBtn"
