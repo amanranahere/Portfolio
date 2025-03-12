@@ -6,7 +6,7 @@ const ColoringButton = ({ text, link, type }) => {
 
   return (
     <button onClick={() => navigate(link)} className="">
-      <div className="container">
+      <div className="container_btn">
         <div className={`button-home type--${type}`}>
           <div className="button__line"></div>
           <div className="button__line"></div>
