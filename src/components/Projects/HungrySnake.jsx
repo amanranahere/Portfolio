@@ -1,6 +1,6 @@
 import React from "react";
 import ProjectTemplate from "./ProjectTemplate";
-import SnakeGameVideo from "../../assets/videos/snakeGameVideo.mp4";
+import SnakeGameVideo from "../../assets/videos/snakeGame_vid.mp4";
 import SnakeGameImage from "../../assets/images/snakeGame.png";
 import SnakeGameOverImage from "../../assets/images/snakeGameOver.png";
 import { motion } from "framer-motion";

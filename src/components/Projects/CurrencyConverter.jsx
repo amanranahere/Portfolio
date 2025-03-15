@@ -1,6 +1,6 @@
 import React from "react";
 import ProjectTemplate from "./ProjectTemplate";
-import CurrencyConverterVideo from "../../assets/videos/CurrencyConverterVideo.mp4";
+import CurrencyConverterVideo from "../../assets/videos/currencyConverter_vid.mp4";
 import CurrConvImage from "../../assets/images/currencyConverter.png";
 import CurrConvImage02 from "../../assets/images/currencyConverter02.png";
 import { motion } from "framer-motion";

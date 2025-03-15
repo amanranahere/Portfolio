@@ -1,7 +1,7 @@
 import React from "react";
 import ProjectTemplate from "./ProjectTemplate";
 import { motion } from "framer-motion";
-import weblogVideo from "../../assets/videos/weblogVideo.mp4";
+import weblogVideo from "../../assets/videos/weblog_vid.mp4";
 import weblogHome from "../../assets/images/weblogHome.png";
 import weblogAddBlog from "../../assets/images/weblogAddBlog.png";
 import weblogAllBlogs from "../../assets/images/weblogAllBlogs.png";

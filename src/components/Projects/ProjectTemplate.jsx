@@ -55,7 +55,7 @@ function ProjectTemplate({
 
         {/* project link */}
 
-        <div className="text-xl mt-2 md:mt-4 font-semibold flex items-center fade-in">
+        <div className="text-2xl mt-2 md:mt-4 text-[#333] hover:text-black/60 font-bold flex items-center fade-in">
           <a
             href={projectLink}
             target="_blank"
@@ -63,7 +63,7 @@ function ProjectTemplate({
             className="flex items-center break-all"
           >
             {projectLink.replace(/^https?:\/\//, "").toUpperCase()}
-            <MdArrowOutward className="w-6 h-6" />
+            <MdArrowOutward className="w-7 h-7" />
           </a>
         </div>
 
@@ -71,7 +71,7 @@ function ProjectTemplate({
 
         <div className="w-full">
           <video
-            className="w-full h-full my-4 md:my-2 lg:my-0 [clip-path:inset(8%_0.7%_11.7%_0)] fade-in"
+            className="w-full h-full my-4 md:my-2 lg:my-8  fade-in"
             autoPlay
             loop
             muted
@@ -137,7 +137,7 @@ function ProjectTemplate({
                 href={projectCodeLink}
                 target="_blank"
                 rel="noopener noreferrer"
-                className="flex items-center break-all w-[70%]"
+                className="flex items-center break-all w-[70%] hover:text-black/40"
               >
                 {projectCodeLink.replace(/^https?:\/\//, "").toUpperCase()}
                 <MdArrowOutward className="w-[1.1rem] h-[1.1rem]" />

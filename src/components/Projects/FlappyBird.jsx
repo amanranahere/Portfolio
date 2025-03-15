@@ -1,6 +1,6 @@
 import React from "react";
 import ProjectTemplate from "./ProjectTemplate";
-import FlappyBirdVideo from "../../assets/videos/flappyBirdVideo.mp4";
+import FlappyBirdVideo from "../../assets/videos/flappyBird_vid.mp4";
 import FlappyBirdImage from "../../assets/images/flappyBird.png";
 import FlappyBirdGameOverImg from "../../assets/images/flappyBirdGameOver.png";
 import { motion } from "framer-motion";

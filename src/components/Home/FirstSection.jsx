@@ -3,7 +3,7 @@ import ColoringButton from "../Buttons/ColoringButton.jsx";
 
 function FirstSection() {
   return (
-    <div className="h-full lg:h-screen mb-80 bg-[#f7f7f7] dark:bg-[#1e1919] dark:text-[#f1f1f1] flex justify-center items-center p-5 md:px-10 lg:">
+    <div className="h-full lg:h-screen mb-80 bg-[#f7f7f7] dark:bg-[#1e1919] dark:text-[#f1f1f1] flex justify-center items-center p-5 md:px-[5.6rem]">
       <p className="text-2xl md:text-5xl font-light leading-relaxed md:leading-tight text-justify">
         Hi, I'm{" "}
         <span className="ericaOne-text text-5xl md:text-7xl whitespace-nowrap">
@@ -49,7 +49,7 @@ function FirstSection() {
         <span className="zeyada-text text-4xl md:text-6xl">
           drop me a message
         </span>{" "}
-        and <ColoringButton text="let's talk" type="A" link="/contact" />
+        and <ColoringButton text="let's talk" type="A" link="/contact" /> .
       </p>
     </div>
   );

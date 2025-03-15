@@ -1,6 +1,6 @@
 import React from "react";
 import ProjectTemplate from "./ProjectTemplate";
-import BrickBreakerVideo from "../../assets/videos/brickBreakerVideo.mp4";
+import BrickBreakerVideo from "../../assets/videos/brickBreaker_vid.mp4";
 import BrickBreakerImg from "../../assets/images/brickBreaker.png";
 import BrickBreakerGameOverImg from "../../assets/images/brickBreakerGameOver.png";
 import { motion } from "framer-motion";
@@ -42,11 +42,9 @@ function BrickBreaker() {
       projectYear="2024"
       projectOverview="Brick Breaker is a classic arcade-style game where players control a paddle to bounce a ball and break bricks. The goal is to clear all the bricks while keeping the ball in play. This game is built using HTML, CSS, and JavaScript."
       projectMaking="I built this project as a fun way to practice working with the HTML5 Canvas element in JavaScript. One of the key things I learned was handling collision detection, ensuring that the ball interacts correctly with bricks, the paddle, and the board boundaries.&nbsp;&nbsp;&nbsp;&nbsp;
-      Another interesting aspect was managing game physics, like the ball’s movement and how it bounces off different surfaces. I also implemented progressive difficulty, where more rows of bricks are added as the player advances.
+      Another interesting aspect was managing game physics, like the ball's movement and how it bounces off different surfaces. I also implemented progressive difficulty, where more rows of bricks are added as the player advances.
       &nbsp;&nbsp;&nbsp;&nbsp;
-      This project really helped me improve my understanding of game loops, event handling, and working with 2D graphics in JavaScript. It was a great way to apply my knowledge while creating something interactive and enjoyable.
-
-"
+      This project really helped me improve my understanding of game loops, event handling, and working with 2D graphics in JavaScript. It was a great way to apply my knowledge while creating something interactive and enjoyable."
       projectCodeLink="https://github.com/amanranahere/Brick-Breaker"
       projectBuiltWith={
         <>
