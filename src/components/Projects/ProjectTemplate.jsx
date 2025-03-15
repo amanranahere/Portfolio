@@ -1,7 +1,7 @@
-import React from "react";
+import React, { useRef } from "react";
 import { MdArrowOutward } from "react-icons/md";
 import { Link } from "react-router-dom";
-import { motion } from "framer-motion";
+import { motion, useScroll, useTransform } from "framer-motion";
 
 function ProjectTemplate({
   projectName,
@@ -15,6 +15,16 @@ function ProjectTemplate({
   projectBuiltWith,
   projectImages,
 }) {
+  const videoRef = useRef(null);
+  const isLargeScreen = window.innerWidth >= 1024;
+
+  const { scrollYProgress } = useScroll({
+    target: videoRef,
+    offset: ["start end", "start start"],
+  });
+
+  const scale = useTransform(scrollYProgress, [0, 1.1], [1.1, 0.8]);
+
   const nameVariant = {
     hidden: { y: "-100%" },
     visible: {
@@ -32,7 +42,7 @@ function ProjectTemplate({
   };
 
   return (
-    <div className="m-4 md:m-8">
+    <div className="mx-4 md:mx-8">
       {/* project name */}
       <motion.div className="overflow-hidden mt-60">
         <motion.div
@@ -55,7 +65,7 @@ function ProjectTemplate({
 
         {/* project link */}
 
-        <div className="text-2xl mt-2 md:mt-4 text-[#333] hover:text-black/60 font-bold flex items-center fade-in">
+        <div className="text-xl md:text-2xl mt-2 md:mt-2 text-[#333] hover:text-black/60 font-bold flex items-center fade-in">
           <a
             href={projectLink}
             target="_blank"
@@ -69,15 +79,23 @@ function ProjectTemplate({
 
         {/* project video */}
 
-        <div className="w-full">
-          <video
-            className="w-full h-full my-4 md:my-2 lg:my-8  fade-in"
-            autoPlay
-            loop
-            muted
-          >
-            <source src={projectVideo} type="video/mp4" />
-          </video>
+        <div className="w-full my-8 md:my-10 lg:my-8 ">
+          {isLargeScreen ? (
+            <motion.video
+              ref={videoRef}
+              style={{ scale }}
+              className="w-full h-auto  fade-in"
+              autoPlay
+              loop
+              muted
+            >
+              <source src={projectVideo} type="video/mp4" />
+            </motion.video>
+          ) : (
+            <motion.video className="w-full h-auto fade-in" autoPlay loop muted>
+              <source src={projectVideo} type="video/mp4" />
+            </motion.video>
+          )}
         </div>
 
         {/* project 1st heading */}
