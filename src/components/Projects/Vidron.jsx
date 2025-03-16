@@ -16,6 +16,8 @@ import {
   SiReacthookform,
   SiFramer,
   SiDotenv,
+  SiVite,
+  SiAppwrite,
 } from "react-icons/si";
 
 function Vidron() {

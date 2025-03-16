@@ -26,6 +26,10 @@ function Navbar() {
       slug: "/about",
     },
     {
+      name: "CAPABILITIES",
+      slug: "/capabilities",
+    },
+    {
       name: "CONTACT",
       slug: "/contact",
     },

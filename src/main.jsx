@@ -7,6 +7,7 @@ import {
   About,
   Contact,
   Work,
+  Capabilities,
   ProjectDetail,
 } from "./pages/pages.index.js";
 import { RouterProvider, createBrowserRouter } from "react-router-dom";
@@ -31,6 +32,10 @@ const router = createBrowserRouter([
       {
         path: "/about",
         element: <About />,
+      },
+      {
+        path: "/capabilities",
+        element: <Capabilities />,
       },
       {
         path: "/contact",
