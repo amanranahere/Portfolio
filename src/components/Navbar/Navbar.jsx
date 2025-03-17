@@ -110,7 +110,7 @@ function Navbar() {
                   initial="hidden"
                   whileInView="visible"
                   viewport={{ once: true }}
-                  className=" text-white hover:text-white/60 active:text-white/60 text-6xl md:text-9xl py-1"
+                  className=" text-white hover:text-white/60 active:text-white/60 text-6xl md:text-9xl py-1 select-none cursor-pointer"
                   onClick={() => {
                     navigate(item.slug);
                     setIsMenuOpen(false);

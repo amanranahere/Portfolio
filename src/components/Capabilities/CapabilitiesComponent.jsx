@@ -97,10 +97,10 @@ function CapabilitiesComponent() {
     },
     {
       name: "Mongoose",
-      label: "Object Data Modeling",
+      label: "ODM",
       logo: <SiMongoose className="w-14 h-14" />,
       description:
-        "Mongoose is an ODM library that provides a structured schema for MongoDB, making database interactions easier in Node.js applications.",
+        "Mongoose is an ODM (Object Data Modeling) library that provides a structured schema for MongoDB, making database interactions easier in Node.js applications.",
       category: "Backend",
     },
     {
@@ -222,7 +222,7 @@ function CapabilitiesComponent() {
     },
     {
       name: "Tiny MCE",
-      label: "Rich Text Editor",
+      label: "Text Editor",
       description:
         "TinyMCE is a flexible WYSIWYG editor that allows users to create and edit rich text content in web applications.",
       category: "Frontend",
@@ -254,15 +254,41 @@ function CapabilitiesComponent() {
     setExpandedItem(expandedItem === name ? null : name);
   };
 
+  const categories = [
+    "All",
+    "Frontend",
+    "Backend",
+    "Tools & Services",
+    "Languages",
+    "Exploring / Learning",
+  ];
+
+  const delays = categories.map(() => Math.random() * 0.7);
+
+  const nameVariant = {
+    hidden: { y: "-100%" },
+    visible: {
+      y: "0%",
+      transition: { duration: 0.7, ease: "easeInOut" },
+    },
+  };
+
   return (
     <div className="w-full min-h-screen bg-black text-[#fff] flex flex-col lg:flex-row">
       <div className="w-full lg:w-[50%]">
         <div className="lg:fixed lg:w-1/2 top-52 mt-52 lg:mt-0 lg:pt-0 px-6">
-          <div className="lg:w-[80%] text-5xl lg:text-6xl font-medium">
-            Building with the Right Stack
-          </div>
+          <motion.div className="lg:w-[80%] text-5xl lg:text-6xl pb-3 font-medium select-none overflow-hidden">
+            <motion.div
+              variants={nameVariant}
+              initial="hidden"
+              whileInView="visible"
+              viewport={{ once: true }}
+            >
+              Building with the Right Stack
+            </motion.div>
+          </motion.div>
           <p
-            className="lg:w-[65%] pt-12 pb-12 lg:pb-0"
+            className="lg:w-[65%] pt-9 pb-12 lg:pb-0 select-none fade-in"
             style={{ textIndent: "35%" }}
           >
             A strong foundation of the right technologies is key to building
@@ -272,30 +298,32 @@ function CapabilitiesComponent() {
         </div>
 
         {/* categories buttons */}
-        <div className="lg:fixed bottom-0 lg:w-[40%] gap-2 lg:gap-3 p-6 flex flex-wrap">
-          {[
-            "All",
-            "Frontend",
-            "Backend",
-            "Tools & Services",
-            "Languages",
-            "Exploring / Learning",
-          ].map((category) => (
-            <button
+        <div className="lg:fixed bottom-0 lg:w-[40%] gap-2 lg:gap-3 p-6 flex flex-wrap select-none">
+          {categories.map((category, index) => (
+            <motion.button
               key={category}
+              initial={{ opacity: 0 }}
+              animate={{ opacity: 1 }}
+              transition={{ delay: delays[index], duration: 0.5 }}
               onClick={() => setSelectedCategory(category)}
-              className={`px-6 py-2 border border-white text-[0.6rem] font-medium tracking-widest rounded-[0.21rem] hover:text-black hover:bg-[#fff] transition duration-300 active:scale-95 ${
+              className={`px-6 py-2 border border-white text-[0.6rem] font-medium tracking-widest rounded-[0.21rem] hover:text-black hover:bg-[#fff] transition duration-300 active:scale-95  ${
                 selectedCategory === category ? "bg-[#fff] text-black" : ""
               }`}
             >
               {category.toUpperCase()}
-            </button>
+            </motion.button>
           ))}
         </div>
       </div>
 
       {/* tech list */}
-      <div className="lg:w-[50%] lg:pr-8 lg:mt-52">
+      <motion.div
+        initial={{ opacity: 0, y: 80 }}
+        animate={{ opacity: 1, y: 0 }}
+        transition={{ duration: 0.4, delay: 0.9 }}
+        viewport={{ once: true }}
+        className="lg:w-[50%] lg:pr-8 lg:mt-52 pt-6 lg:pt-0"
+      >
         <div className="mx-4 border-b-2 border-dotted border-[#6a6a6a]"></div>
         <ul className="pb-6">
           {filteredTech.map(({ name, label, logo, description }) => (
@@ -304,23 +332,61 @@ function CapabilitiesComponent() {
                 layout
                 onClick={() => toggleExpand(name)}
                 key={name}
-                className={`group flex flex-col md:flex-row justify-between px-4 py-2 hover:bg-[#fff] hover:text-black select-none cursor-pointer ${
+                className={`group flex justify-between px-4 py-2 hover:bg-[#fff] hover:text-black select-none cursor-pointer ${
                   expandedItem === name && "bg-white text-black"
                 }`}
               >
-                <div className="text-3xl md:text-4xl font-semibold pb-1">
-                  {name}
-                </div>
+                <div className="w-[90%] flex flex-col lg:flex-row justify-between">
+                  {/* tech name */}
+                  <div className="lg:w-[50%] text-3xl md:text-4xl font-semibold pb-1">
+                    {name}
+                  </div>
 
-                <div
-                  className={`w-[40%] text-[0.6rem] md:text-sm group-hover:text-black/70
+                  {/* label */}
+                  <div
+                    className={`w-full lg:w-[40%] text-[0.6rem] md:text-[0.7rem] group-hover:text-black/70
                     ${
                       expandedItem === name ? "text-black/70" : "text-white/70"
                     } 
-                    font-medium my-auto transition-colors duration-300`}
-                >
-                  {label.toUpperCase()}
+                    font-medium md:font-semibold my-auto transition-colors duration-300`}
+                  >
+                    {label.toUpperCase()}
+                  </div>
                 </div>
+
+                {/* plus button */}
+                <svg
+                  className="w-12 h-12 cursor-pointer"
+                  viewBox="0 0 100 100"
+                  onClick={() => expandedItem(name)}
+                >
+                  <line
+                    x1="25"
+                    y1="50"
+                    x2="75"
+                    y2="50"
+                    stroke={expandedItem === name ? "black" : "white"}
+                    className="group-hover:stroke-black"
+                    strokeWidth="2"
+                  />
+
+                  <line
+                    x1="50"
+                    y1="25"
+                    x2="50"
+                    y2="75"
+                    stroke={expandedItem === name ? "black" : "white"}
+                    strokeWidth="2"
+                    className="origin-center transition-transform duration-300 group-hover:stroke-black"
+                    style={{
+                      transform:
+                        expandedItem === name
+                          ? "rotate(90deg)"
+                          : "rotate(0deg)",
+                      transformOrigin: "50% 50%",
+                    }}
+                  />
+                </svg>
               </motion.li>
 
               {expandedItem === name && (
@@ -332,7 +398,7 @@ function CapabilitiesComponent() {
                   transition={{ duration: 0.3, ease: "easeInOut" }}
                   className="border-t border-black/40 p-4 flex gap-4 bg-gray-50 origin-top"
                 >
-                  <div className="w-[60%] pb-12 py-6 text-black font-medium leading-tight">
+                  <div className="w-[60%] pb-16 py-6 text-black font-medium leading-tight">
                     {description}
                   </div>
 
@@ -346,7 +412,7 @@ function CapabilitiesComponent() {
             </>
           ))}
         </ul>
-      </div>
+      </motion.div>
     </div>
   );
 }
