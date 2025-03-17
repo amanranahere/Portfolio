@@ -6,7 +6,7 @@ function Capabilities() {
   return (
     <>
       <CapabilitiesComponent />
-      <Footer />
+      {/* <Footer /> */}
     </>
   );
 }

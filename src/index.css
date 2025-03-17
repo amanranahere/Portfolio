@@ -407,6 +407,36 @@ body {
 
 /* slide right like completing the div - end */
 
+/* slide down like completing the div - start */
+
+@keyframes slideIn {
+  0% {
+    transform: translateY(-10px);
+  }
+  100% {
+    transform: translateY(0);
+  }
+}
+
+@keyframes slideOut {
+  0% {
+    transform: translateY(0);
+  }
+  100% {
+    transform: translateY(-10px);
+  }
+}
+
+.slide-down {
+  animation: slideIn 0.3s ease-in-out forwards;
+}
+
+.slide-up {
+  animation: slideOut 0.3s ease-in-out forwards;
+}
+
+/* slide up like vanishing the div - end */
+
 /* fade-in animation - start */
 
 @keyframes fadeIn {

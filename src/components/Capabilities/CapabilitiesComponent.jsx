@@ -1,4 +1,5 @@
 import React, { useState } from "react";
+import { motion } from "framer-motion";
 import {
   SiReact,
   SiNodedotjs,
@@ -246,7 +247,7 @@ function CapabilitiesComponent() {
 
   const filteredTech =
     selectedCategory === "All"
-      ? techStack
+      ? techStack.filter((tech) => tech.category !== "Exploring / Learning")
       : techStack.filter((tech) => tech.category === selectedCategory);
 
   const toggleExpand = (name) => {
@@ -256,13 +257,13 @@ function CapabilitiesComponent() {
   return (
     <div className="w-full min-h-screen bg-black text-[#fff] flex flex-col lg:flex-row">
       <div className="w-full lg:w-[50%]">
-        <div className="lg:fixed top-52 mt-52 lg:mt-0 lg:pt-0 px-6">
-          <div className="lg:w-[40%] text-5xl lg:text-6xl">
+        <div className="lg:fixed lg:w-1/2 top-52 mt-52 lg:mt-0 lg:pt-0 px-6">
+          <div className="lg:w-[80%] text-5xl lg:text-6xl font-medium">
             Building with the Right Stack
           </div>
           <p
-            className="lg:w-[35%] pt-12 pb-12 lg:pb-0"
-            style={{ textIndent: "25%" }}
+            className="lg:w-[65%] pt-12 pb-12 lg:pb-0"
+            style={{ textIndent: "35%" }}
           >
             A strong foundation of the right technologies is key to building
             efficient and high-performing applications. These are the languages,
@@ -299,7 +300,8 @@ function CapabilitiesComponent() {
         <ul className="pb-6">
           {filteredTech.map(({ name, label, logo, description }) => (
             <>
-              <li
+              <motion.li
+                layout
                 onClick={() => toggleExpand(name)}
                 key={name}
                 className={`group flex flex-col md:flex-row justify-between px-4 py-2 hover:bg-[#fff] hover:text-black select-none cursor-pointer ${
@@ -319,10 +321,17 @@ function CapabilitiesComponent() {
                 >
                   {label.toUpperCase()}
                 </div>
-              </li>
+              </motion.li>
 
               {expandedItem === name && (
-                <div className="border-t border-black/40 p-4 flex gap-4 bg-gray-50">
+                <motion.div
+                  layout
+                  initial={{ scaleY: 0 }}
+                  animate={{ scaleY: 1 }}
+                  exit={{ scaleY: 0 }}
+                  transition={{ duration: 0.3, ease: "easeInOut" }}
+                  className="border-t border-black/40 p-4 flex gap-4 bg-gray-50 origin-top"
+                >
                   <div className="w-[60%] pb-12 py-6 text-black font-medium leading-tight">
                     {description}
                   </div>
@@ -330,7 +339,7 @@ function CapabilitiesComponent() {
                   <div className="w-[40%] flex justify-center pt-6">
                     <div className="text-black">{logo}</div>
                   </div>
-                </div>
+                </motion.div>
               )}
 
               <div className="mx-4 border-b-2 border-dotted border-[#6a6a6a]"></div>
