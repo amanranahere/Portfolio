@@ -5,11 +5,8 @@ import Footer from "../components/Footer/Footer.jsx";
 function Capabilities() {
   return (
     <>
-      <div className="mb-80">
-        <CapabilitiesComponent />
-        <div className="h-screen w-full bg-blue-200"></div>
-      </div>
-      <Footer />
+      <CapabilitiesComponent />
+      {/* <Footer /> */}
     </>
   );
 }

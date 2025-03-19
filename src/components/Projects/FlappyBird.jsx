@@ -41,7 +41,7 @@ function FlappyBird() {
       projectVideo={FlappyBirdVideo}
       projectYear="2024"
       projectOverview="Flappy Bird Clone is a simple recreation of the classic Flappy Bird game, built from scratch using JavaScript, HTML, and CSS. The objective is to navigate a bird through a series of pipes by flapping at the right time. The game gets progressively challenging as players try to avoid obstacles and achieve the highest score possible. It features smooth animations, keyboard controls, and score tracking for an engaging experience."
-      projectMaking="I built this project as a way to explore game development using JavaScript. One of the biggest realizations I had while working on this was that in many 2D games, it’s not the player that moves forward, but rather the background and obstacles shift to create the illusion of movement. Implementing this concept in my game by making the pipes move while the bird stayed in place was a fun challenge."
+      projectMaking01="I built this project as a way to explore game development using JavaScript. One of the biggest realizations I had while working on this was that in many 2D games, it's not the player that moves forward, but rather the background and obstacles shift to create the illusion of movement. Implementing this concept in my game by making the pipes move while the bird stayed in place was a fun challenge."
       projectCodeLink="https://github.com/amanranahere/Flappy-Bird"
       projectBuiltWith={
         <>

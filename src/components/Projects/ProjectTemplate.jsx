@@ -10,7 +10,9 @@ function ProjectTemplate({
   projectVideo,
   projectYear,
   projectOverview,
-  projectMaking,
+  projectMaking01,
+  projectMaking02,
+  projectMaking03,
   projectCodeLink,
   projectBuiltWith,
   projectImages,
@@ -141,8 +143,10 @@ function ProjectTemplate({
             {/* the making of */}
             <div className="flex">
               <div className="w-[30%]">THE MAKING OF</div>
-              <div className="w-[70%] md:pr-2">
-                {projectMaking.toUpperCase()}
+              <div className="w-[70%] md:pr-2 uppercase">
+                <p>{projectMaking01}</p>
+                {projectMaking02 && <p>{projectMaking02}</p>}
+                {projectMaking03 && <p>{projectMaking03}</p>}
               </div>
             </div>
 

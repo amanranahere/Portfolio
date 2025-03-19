@@ -409,6 +409,25 @@ body {
 
 /* slide down like completing the div - start */
 
+@keyframes slideInFromUp {
+  0% {
+    clip-path: inset(0 0 100% 0);
+    opacity: 0;
+  }
+  100% {
+    clip-path: inset(0 0 0 0);
+    opacity: 1;
+  }
+}
+
+.slide-bottom {
+  animation: slideInFromUp 0.8s ease-out 0.5s forwards;
+}
+
+/* slide down like completing the div - end */
+
+/* capabilities page tech info box - start */
+
 @keyframes slideIn {
   0% {
     transform: translateY(-10px);
@@ -435,7 +454,7 @@ body {
   animation: slideOut 0.3s ease-in-out forwards;
 }
 
-/* slide up like vanishing the div - end */
+/* capabilities page tech info box - end */
 
 /* fade-in animation - start */
 

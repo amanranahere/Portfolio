@@ -1,6 +1,15 @@
 import React from "react";
 import ProjectTemplate from "./ProjectTemplate";
-
+import { motion } from "framer-motion";
+import VidronVideo from "../../assets/videos/vidron_vid.mp4";
+import VidronHome from "../../assets/images/VidronHome.png";
+import VidronVidPage from "../../assets/images/VidronVidPage.png";
+import VidronSnap from "../../assets/images/VidronSnap.png";
+import VidronAllSnaps from "../../assets/images/VidronAllSnaps.png";
+import VidronTweets from "../../assets/images/VidronTweets.png";
+import VidronMetrics from "../../assets/images/VidronMetrics.png";
+import VidronChannel from "../../assets/images/VidronChannel.png";
+import VidronSettings from "../../assets/images/VidronSettings.png";
 import {
   SiReact,
   SiNodedotjs,
@@ -16,8 +25,6 @@ import {
   SiReacthookform,
   SiFramer,
   SiDotenv,
-  SiVite,
-  SiAppwrite,
 } from "react-icons/si";
 
 function Vidron() {
@@ -89,15 +96,27 @@ function Vidron() {
     },
   ];
 
+  const imageVariant = {
+    hidden: { opacity: 0, y: 50, scale: 1.1 },
+    visible: (delay) => ({
+      opacity: 1,
+      y: 0,
+      scale: 1,
+      transition: { duration: 0.6, delay },
+    }),
+  };
+
   return (
     <ProjectTemplate
       projectName="VIDRON"
       projectTagline="A video streaming platform offering a diverse range of content, including engaging full-length videos and quick 30-second snaps."
       projectLink="https://vidron.vercel.app"
-      projectVideo=""
+      projectVideo={VidronVideo}
       projectYear="2025"
-      projectOverview="#"
-      projectMaking="#"
+      projectOverview="Vidron is a dynamic video streaming platform designed to deliver an engaging viewing experience. Users can explore a diverse collection of content, including full-length videos and short-form snaps. The platform allows seamless video playback, intuitive navigation, and a user-friendly interface for managing channels and content. Built with scalability in mind, Vidron offers smooth performance while handling media uploads and streaming efficiently."
+      projectMaking01="Building Vidron was an exciting and challenging experience, especially because it was my first project where I designed the backend from the ground up. I had worked with backend-as-a-service platforms before, but this time, I wanted to take full control over how data flowed between the server and the client. Setting up authentication, managing media storage, and optimizing API performance were all new but rewarding challenges."
+      projectMaking02="One of the most frustrating yet interesting parts was integrating the backend with the frontend. There were multiple instances where data didn’t appear as expected, and I had to carefully inspect and adjust how responses were structured. Debugging these issues helped me gain a much deeper understanding of how the frontend processes and displays data."
+      projectMaking03="Vidron was more than just a coding project, it was a deep dive into the complexities of backend development. Seeing everything come together, from database design to frontend integration, was incredibly satisfying."
       projectCodeLink="https://github.com/amanranahere/Vidron"
       projectBuiltWith={
         <>
@@ -113,15 +132,87 @@ function Vidron() {
         </>
       }
       projectImages={
-        <div className="flex flex-col md:flex-row gap-4">
-          <div className="md:w-1/2 flex-col justify-between">
-            <img src="#" alt="" className="mb-5" />
-            <img src="#" alt="" className="mt-5" />
-            <img src="#" alt="" className="mt-5" />
-            <img src="#" alt="" className="mt-5" />
-          </div>
-          <div className="md:w-1/2">
-            <img src="#" alt="" />
+        <div className=" gap-4">
+          <div className="h-full flex flex-wrap justify-between">
+            <motion.img
+              src={VidronHome}
+              alt="Vidron Home"
+              className="md:w-[49.3%] mb-5"
+              variants={imageVariant}
+              initial="hidden"
+              whileInView="visible"
+              viewport={{ once: true, amount: 0.2 }}
+            />
+
+            <motion.img
+              src={VidronVidPage}
+              alt="Vidron Video page"
+              className="md:w-[49.3%] mb-5"
+              variants={imageVariant}
+              initial="hidden"
+              whileInView="visible"
+              viewport={{ once: true, amount: 1 }}
+            />
+
+            <motion.img
+              src={VidronAllSnaps}
+              alt="Vidron All Snaps"
+              className="md:w-[49.3%] mb-5"
+              variants={imageVariant}
+              initial="hidden"
+              whileInView="visible"
+              viewport={{ once: true, amount: 0.2 }}
+            />
+
+            <motion.img
+              src={VidronSnap}
+              alt="Vidron Snap"
+              className="md:w-[49.3%] mb-5"
+              variants={imageVariant}
+              initial="hidden"
+              whileInView="visible"
+              viewport={{ once: true, amount: 1 }}
+            />
+
+            <motion.img
+              src={VidronTweets}
+              alt="Vidron Tweets"
+              className="md:w-[49.3%] mb-5"
+              variants={imageVariant}
+              initial="hidden"
+              whileInView="visible"
+              viewport={{ once: true, amount: 0.2 }}
+            />
+
+            <motion.img
+              src={VidronChannel}
+              alt="Vidron Channel"
+              className="md:w-[49.3%] mb-5"
+              variants={imageVariant}
+              initial="hidden"
+              whileInView="visible"
+              viewport={{ once: true, amount: 1 }}
+            />
+
+            <motion.img
+              src={VidronMetrics}
+              alt="Vidron Metrics"
+              className="md:w-[49.3%] mb-5"
+              variants={imageVariant}
+              initial="hidden"
+              whileInView="visible"
+              viewport={{ once: true, amount: 0.2 }}
+            />
+
+            <motion.img
+              src={VidronSettings}
+              alt="Vidron Settings"
+              className="md:w-[49.3%] mb-5"
+              variants={imageVariant}
+              initial="hidden"
+              whileInView="visible"
+              viewport={{ once: true, amount: 1 }}
+            />
           </div>
         </div>
       }
