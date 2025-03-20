@@ -86,7 +86,7 @@ function Navbar() {
         animate={{ x: isMenuOpen ? 0 : "100%" }}
         exit={{ x: "100%" }}
         transition={{ duration: 0.35, ease: [0.25, 1, 0.5, 1] }}
-        className="bg-[#1a1a1a] fixed inset-0 z-[999] pointer-events-auto flex flex-col justify-end items-start"
+        className="bg-black fixed inset-0 z-[999] pointer-events-auto flex flex-col justify-end items-start"
       >
         <ul className="absolute p-6">
           {navItems.map((item, index) => (
@@ -101,8 +101,7 @@ function Navbar() {
                     visible: {
                       y: "0%",
                       transition: {
-                        delay: 0.2,
-                        duration: 0.7,
+                        duration: 0.2,
                         ease: [0.25, 1, 0.5, 1],
                       },
                     },
@@ -110,7 +109,7 @@ function Navbar() {
                   initial="hidden"
                   whileInView="visible"
                   viewport={{ once: true }}
-                  className=" text-white hover:text-white/60 active:text-white/60 text-6xl md:text-9xl py-1 select-none cursor-pointer"
+                  className=" text-[#8a8a8a] hover:text-white font-extrabold transition duration-300 text-6xl md:text-9xl py-1 select-none cursor-pointer"
                   onClick={() => {
                     navigate(item.slug);
                     setIsMenuOpen(false);
