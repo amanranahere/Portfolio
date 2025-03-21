@@ -1,5 +1,6 @@
-import { useRef } from "react";
+import { useEffect, useRef, useState } from "react";
 import { motion, useScroll, useTransform, useSpring } from "framer-motion";
+import { useNavigate } from "react-router-dom";
 import brickBreaker from "../../assets/images/brickBreaker.png";
 import currencyConverter from "../../assets/images/currencyConverter.png";
 import flappyBird from "../../assets/images/flappyBird.png";
@@ -8,98 +9,149 @@ import vidron from "../../assets/images/vidronHome.png";
 import weblog from "../..//assets/images/weblog.png";
 
 function WorkSection() {
+  const navigate = useNavigate();
+  const [screenSize, setScreenSize] = useState("lg");
   const containerRef = useRef(null);
   const { scrollYProgress } = useScroll({
     target: containerRef,
     offset: ["start start", "end end"],
   });
 
+  useEffect(() => {
+    const handleResize = () => {
+      if (window.innerWidth < 768) {
+        setScreenSize("sm");
+      } else if (window.innerWidth < 1024) {
+        setScreenSize("md");
+      } else {
+        setScreenSize("lg");
+      }
+    };
+
+    handleResize();
+    window.addEventListener("resize", handleResize);
+    return () => window.removeEventListener("resize", handleResize);
+  }, []);
+
+  const stiffness = screenSize === "sm" ? 200 : screenSize === "md" ? 120 : 50;
+  const damping = screenSize === "sm" ? 30 : screenSize === "md" ? 25 : 20;
+
   const smoothScroll = useSpring(scrollYProgress, {
-    stiffness: 50, // Adjusts resistance (higher = bouncier, lower = smoother)
-    damping: 20, // Controls smoothness (higher = less jitter)
+    stiffness: stiffness,
+    damping: damping,
   });
 
   const firstLineTransformX = useTransform(
     smoothScroll,
     [0, 1],
-    ["23%", "-25%"]
+    screenSize === "sm"
+      ? ["40%", "-42%"]
+      : screenSize === "md"
+      ? ["20%", "-30%"]
+      : ["25%", "-27%"]
   );
 
   const projectsTransformX = useTransform(
     smoothScroll,
     [0, 1],
-    ["10%", "-20%"]
+    screenSize === "sm"
+      ? ["25%", "-30%"]
+      : screenSize === "md"
+      ? ["10%", "-25%"]
+      : ["10%", "-20%"]
   );
 
   const secondLineTransformX = useTransform(
     smoothScroll,
     [0, 1],
-    ["-26%", "25%"]
+    screenSize === "sm"
+      ? ["-42%", "42%"]
+      : screenSize === "md"
+      ? ["-26%", "30%"]
+      : ["-27%", "27%"]
   );
 
   return (
-    <section ref={containerRef} className="relative h-[900vh] bg-[#1e1e1e]">
-      <div className="sticky top-0 flex flex-col h-screen justify-center items-center overflow-hidden">
-        <motion.div
-          style={{ x: firstLineTransformX }}
-          className=" text-[14rem] leading-[0.7em] tracking-tighter font-extrabold text-[#f3f1ec] whitespace-nowrap uppercase select-none oswald-text"
+    <>
+      <section
+        ref={containerRef}
+        className="relative h-[4000vh] lg:h-[900vh] bg-[#1e1e1e]"
+      >
+        <div className="sticky top-0 flex flex-col h-screen transform -translate-y-5 justify-center items-center overflow-hidden">
+          <motion.div
+            style={{ x: firstLineTransformX }}
+            className="text-[15rem] md:text-[15rem] leading-[0.7em] tracking-tighter font-extrabold text-[#f3f1ec] whitespace-nowrap uppercase select-none oswald-text flex"
+          >
+            Explore{" "}
+            <span className="hidden lg:block">&nbsp;the Depth of&nbsp;</span> My
+            Work
+          </motion.div>
+
+          <motion.div
+            style={{ x: projectsTransformX }}
+            className="flex gap-6 md:gap-8 z-10"
+          >
+            <div className="w-[90vw] lg:w-[30vw] aspect-video flex-shrink-0 rounded-2xl">
+              <img
+                className="w-full h-full rounded-2xl"
+                src={currencyConverter}
+                alt="Currency Converter"
+              />
+            </div>
+
+            <div className="w-[90vw] lg:w-[30vw] aspect-video flex-shrink-0 rounded-2xl">
+              <img
+                className="w-full h-full rounded-2xl"
+                src={weblog}
+                alt="Weblog"
+              />
+            </div>
+
+            <div className="w-[90vw] lg:w-[30vw] aspect-video flex-shrink-0 rounded-2xl">
+              <img
+                className="w-full h-full rounded-2xl"
+                src={vidron}
+                alt="Vidron"
+              />
+            </div>
+
+            <div className="w-[90vw] lg:w-[30vw] aspect-video flex-shrink-0 rounded-2xl">
+              <img
+                className="w-full h-full rounded-2xl"
+                src={brickBreaker}
+                alt="Brick Breaker"
+              />
+            </div>
+
+            <div className=" w-[90vw] lg:w-[30vw] aspect-video flex-shrink-0 rounded-2xl">
+              <img
+                className="w-full h-full rounded-2xl"
+                src={snakeGame}
+                alt="Snake Game"
+              />
+            </div>
+          </motion.div>
+
+          <motion.div
+            style={{ x: secondLineTransformX }}
+            className="z-20 text-[15rem] md:text-[15rem] leading-[0.5em] tracking-tighter font-extrabold text-[#f3f1ec] whitespace-nowrap uppercase select-none oswald-text flex"
+          >
+            Built with{" "}
+            <span className="hidden lg:block">&nbsp;Expertise &&nbsp;</span>
+            Creativity
+          </motion.div>
+        </div>
+      </section>
+
+      <div className="h-[50vh] bg-[#1e1e1e] text-white flex justify-center items-center">
+        <button
+          onClick={() => navigate("/work")}
+          className="px-10 py-3 border border-white font-bold tracking-widest rounded-[0.3rem] hover:text-black hover:bg-[#fff] transition duration-300 active:scale-95"
         >
-          Explore the Depth of My Work
-        </motion.div>
-
-        <motion.div
-          style={{ x: projectsTransformX }}
-          className="flex gap-10 z-10"
-        >
-          <div className="w-[30vw] aspect-video flex-shrink-0 bg-gray-800 rounded-xl">
-            <img
-              className="w-full h-full rounded-2xl"
-              src={currencyConverter}
-              alt="Currency Converter"
-            />
-          </div>
-
-          <div className="w-[30vw] aspect-video flex-shrink-0 bg-gray-700 rounded-xl">
-            <img
-              className="w-full h-full rounded-2xl"
-              src={weblog}
-              alt="Weblog"
-            />
-          </div>
-
-          <div className="w-[30vw] aspect-video flex-shrink-0 bg-gray-600 rounded-xl">
-            <img
-              className="w-full h-full rounded-2xl"
-              src={vidron}
-              alt="Vidron"
-            />
-          </div>
-
-          <div className="w-[30vw] aspect-video flex-shrink-0 bg-gray-800 rounded-xl">
-            <img
-              className="w-full h-full rounded-2xl"
-              src={brickBreaker}
-              alt="Brick Breaker"
-            />
-          </div>
-
-          <div className="w-[30vw] aspect-video flex-shrink-0 bg-gray-800 rounded-xl">
-            <img
-              className="w-full h-full rounded-2xl"
-              src={snakeGame}
-              alt="Snake Game"
-            />
-          </div>
-        </motion.div>
-
-        <motion.div
-          style={{ x: secondLineTransformX }}
-          className="z-20 text-[14rem] leading-[0.5em] tracking-tighter font-extrabold text-[#f3f1ec] whitespace-nowrap uppercase select-none oswald-text"
-        >
-          Built with Expertise & Creativity
-        </motion.div>
+          MORE PROJECTS
+        </button>
       </div>
-    </section>
+    </>
   );
 }
 
