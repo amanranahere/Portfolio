@@ -29,7 +29,7 @@ function ContactComponent() {
           }}
           className="bg-[#f1f1f1] flex flex-col justify-between p-2 gap-10 lg:gap-0"
         >
-          <div className="text-3xl md:text-center lg:text-left lg:pr-36 lg:pt-4 select-none">
+          <div className="text-4xl md:text-center lg:text-left lg:pr-4 lg:pt-10 select-none">
             Looking to bring an idea to life? Let&apos;s work together to create
             something impactful!
           </div>

@@ -10,15 +10,17 @@ import Footer from "../components/Footer/Footer.jsx";
 function Home() {
   return (
     <>
-      <LandingSection />
+      <div className="mb-[75vh] md:mb-[50vh] lg:mb-[80vh]">
+        <LandingSection />
 
-      <AboutSection />
+        <AboutSection />
 
-      <WorkSection />
+        <WorkSection />
 
-      <CapabilitiesSection />
+        <CapabilitiesSection />
 
-      <ContactSection />
+        <ContactSection />
+      </div>
 
       <Footer />
     </>

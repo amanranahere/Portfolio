@@ -34,7 +34,7 @@ function Footer() {
   const filteredNavItems = navItems.filter((item) => item.slug !== currentPage);
 
   return (
-    <div className="h-[75vh] md:h-[50vh] lg:h-[80vh] bg-[#d8fc44] flex flex-col justify-between">
+    <div className="h-[75vh] md:h-[50vh] lg:h-[80vh] w-screen bg-[#d8fc44] flex flex-col justify-between fixed bottom-0 left-0 -z-10">
       <div className="flex flex-row justify-between relative">
         <div className="w-screen md:w-[70%] lg:w-[60%]">
           <div className="flex flex-col md:flex-row justify-between">
@@ -61,7 +61,7 @@ function Footer() {
                 className="text-xl md:text-2xl lg:text-4xl font-extrabold hover:text-[#4a4a4a] oswald-text transition duration-300 flex justify-center items-center group leading-relaxed"
               >
                 <span>LINKEDIN</span>
-                <MdArrowOutward className="w-7 h-7 group-hover:rotate-90 transition duration-300" />
+                <MdArrowOutward className="w-7 h-7 md:w-8 md:h-8 lg:w-12 lg:h-12 group-hover:rotate-90 transition duration-300" />
               </a>
 
               <a
@@ -71,7 +71,7 @@ function Footer() {
                 className="text-xl md:text-2xl lg:text-4xl font-extrabold hover:text-[rgb(74,74,74)] oswald-text transition duration-300 flex justify-center items-center group leading-relaxed"
               >
                 <span>GITHUB</span>
-                <MdArrowOutward className="w-7 h-7 group-hover:rotate-90 transition duration-300" />
+                <MdArrowOutward className="w-7 h-7 md:w-8 md:h-8 lg:w-12 lg:h-12 group-hover:rotate-90 transition duration-300" />
               </a>
 
               <a
@@ -81,7 +81,7 @@ function Footer() {
                 className="text-xl md:text-2xl lg:text-4xl font-extrabold hover:text-[#4a4a4a] oswald-text transition duration-300 flex justify-center items-center group leading-relaxed"
               >
                 <span>X (TWITTER)</span>
-                <MdArrowOutward className="w-7 h-7 group-hover:rotate-90 transition duration-300" />
+                <MdArrowOutward className="w-7 h-7 md:w-8 md:h-8 lg:w-12 lg:h-12 group-hover:rotate-90 transition duration-300" />
               </a>
             </div>
           </div>
@@ -115,7 +115,7 @@ function Footer() {
       </div>
 
       {/* name at the very bottom */}
-      <div className="flex justify-center md:items-end text-[9rem] lg:text-[18rem] leading-[6rem] md:leading-[5rem] lg:leading-[9rem] badeenDisplay-text overflow-hidden">
+      <div className="flex justify-center text-[9rem] lg:text-[18rem] leading-[6rem] md:leading-[5rem] lg:leading-[9rem] badeenDisplay-text overflow-hidden">
         <span>AMAN</span>
         <span className="hidden md:block">&nbsp;RANA</span>
       </div>

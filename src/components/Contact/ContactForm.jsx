@@ -191,7 +191,7 @@ export default function ContactForm() {
                 ease: [0.16, 1, 0.3, 1],
                 delay: 0.6,
               }}
-              href=""
+              href="https://www.linkedin.com/in/aman-rana-709a0a330/"
               target="_blank"
               rel="noopener noreferrer"
               className="w-full h-full p-6 bg-[#f1f1f1] hover:bg-[#d4d4d4] active:bg-[#bcbcbc] text-black/70 flex justify-center items-center gap-2 "
