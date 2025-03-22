@@ -34,9 +34,9 @@ function Footer() {
   const filteredNavItems = navItems.filter((item) => item.slug !== currentPage);
 
   return (
-    <div className="h-[80vh] bg-[#d8fc44] flex flex-col justify-between">
-      <div className="flex justify-between">
-        <div>
+    <div className="h-[75vh] md:h-[50vh] lg:h-[80vh] bg-[#d8fc44] flex flex-col justify-between">
+      <div className="flex flex-row justify-between relative">
+        <div className="w-screen md:w-[70%] lg:w-[60%]">
           <div className="flex flex-col md:flex-row justify-between">
             {/* links to different pages */}
             <ul className="flex flex-col p-10">
@@ -44,7 +44,7 @@ function Footer() {
                 <li key={item.name}>
                   <a
                     href={item.slug}
-                    className="text-4xl font-extrabold hover:text-[#4a4a4a] oswald-text transition duration-300"
+                    className="text-xl md:text-2xl lg:text-4xl font-extrabold hover:text-[#4a4a4a] oswald-text transition duration-300 leading-relaxed"
                   >
                     {item.name}
                   </a>
@@ -53,67 +53,69 @@ function Footer() {
             </ul>
 
             {/* social link buttons */}
-            <div className="flex flex-col items-end p-10">
+            <div className="flex flex-col items-start md:items-end p-10">
               <a
                 href=""
                 target="_blank"
                 rel="noopener noreferrer"
-                className="text-4xl font-extrabold hover:text-[#4a4a4a] oswald-text transition duration-300 flex justify-center items-center group"
+                className="text-xl md:text-2xl lg:text-4xl font-extrabold hover:text-[#4a4a4a] oswald-text transition duration-300 flex justify-center items-center group leading-relaxed"
               >
                 <span>LINKEDIN</span>
-                <MdArrowOutward className="w-12 h-12 group-hover:rotate-90 transition duration-300" />
+                <MdArrowOutward className="w-7 h-7 group-hover:rotate-90 transition duration-300" />
               </a>
 
               <a
                 href="https://github.com/amanranahere"
                 target="_blank"
                 rel="noopener noreferrer"
-                className="text-4xl font-extrabold hover:text-[rgb(74,74,74)] oswald-text transition duration-300 flex justify-center items-center group"
+                className="text-xl md:text-2xl lg:text-4xl font-extrabold hover:text-[rgb(74,74,74)] oswald-text transition duration-300 flex justify-center items-center group leading-relaxed"
               >
                 <span>GITHUB</span>
-                <MdArrowOutward className="w-12 h-12 group-hover:rotate-90 transition duration-300" />
+                <MdArrowOutward className="w-7 h-7 group-hover:rotate-90 transition duration-300" />
               </a>
 
               <a
                 href=""
                 target="_blank"
                 rel="noopener noreferrer"
-                className="text-4xl font-extrabold hover:text-[#4a4a4a] oswald-text transition duration-300 flex justify-center items-center group"
+                className="text-xl md:text-2xl lg:text-4xl font-extrabold hover:text-[#4a4a4a] oswald-text transition duration-300 flex justify-center items-center group leading-relaxed"
               >
                 <span>X (TWITTER)</span>
-                <MdArrowOutward className="w-12 h-12 group-hover:rotate-90 transition duration-300" />
+                <MdArrowOutward className="w-7 h-7 group-hover:rotate-90 transition duration-300" />
               </a>
             </div>
           </div>
 
           <a
             href="mailto:amanranahere@gmail.com"
-            className="m-10 flex justify-center items-center hover:opacity-75 transition duration-300 text-6xl font-extrabold uppercase leading-none oswald-text group"
+            className="m-10 flex lg:justify-center items-center hover:opacity-75 transition duration-300 text-xl md:text-2xl lg:text-6xl font-extrabold uppercase leading-none oswald-text group"
           >
             <span>amanranahere@gmail.com</span>
-            <MdArrowOutward className="w-20 h-20 pt-1 scale-110 group-hover:rotate-90 transition duration-300" />
+            <MdArrowOutward className="w-7 h-7 md:w-9 md:h-9 lg:w-20 lg:h-20 md:pt-1 md:scale-110 group-hover:rotate-90 transition duration-300" />
           </a>
         </div>
 
         {/* page top button */}
         <div
           onClick={() => window.scrollTo({ top: 0, behavior: "smooth" })}
-          className="p-10 flex flex-col items-center cursor-pointer group -translate-y-20"
+          className="absolute top-[4.5rem] md:top-10 right-8 flex flex-col items-center cursor-pointer group -translate-y-20 select-none"
         >
           <IoIosArrowUp
             strokeWidth="10"
-            className="h-20 w-20 translate-y-16 group-hover:translate-y-[3.5rem] transition-transform duration-300"
+            className="h-12 w-12 md:h-20 md:w-20 translate-y-[2.5rem] md:translate-y-16 group-hover:translate-y-[2rem] md:group-hover:translate-y-[3.5rem] transition-transform duration-300"
           />
           <IoIosArrowUp
             strokeWidth="10"
-            className="h-20 w-20 translate-y-2 group-hover:translate-y-0 transition-transform duration-300 delay-100"
+            className="h-12 w-12 md:h-20 md:w-20 translate-y-[0.5rem]  group-hover:translate-y-[0rem] md:translate-y-2 md:group-hover:translate-y-0 transition-transform duration-300 delay-100"
           />
-          <p className="oswald-text tracking-widest">PAGE TOP</p>
+          <p className="text-sm md:text-base oswald-text tracking-widest">
+            PAGE TOP
+          </p>
         </div>
       </div>
 
       {/* name at the very bottom */}
-      <div className="flex justify-center items-end text-[9rem] lg:text-[18rem] leading-[6rem] md:leading-[5rem] lg:leading-[9rem] badeenDisplay-text overflow-hidden">
+      <div className="flex justify-center md:items-end text-[9rem] lg:text-[18rem] leading-[6rem] md:leading-[5rem] lg:leading-[9rem] badeenDisplay-text overflow-hidden">
         <span>AMAN</span>
         <span className="hidden md:block">&nbsp;RANA</span>
       </div>
