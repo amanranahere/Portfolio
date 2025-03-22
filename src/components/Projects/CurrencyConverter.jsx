@@ -49,7 +49,7 @@ function CurrencyConverter() {
           {builtWith.map((item) => (
             <div
               key={item.name}
-              className="border border-black/20 flex items-center gap-2 py-1 px-2"
+              className="border border-white/40 flex items-center gap-2 py-1 px-2"
             >
               {item.logo && item.logo}
               <span className="leading-tight">{item.name}</span>

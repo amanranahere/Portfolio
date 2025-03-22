@@ -44,11 +44,11 @@ function ProjectTemplate({
   };
 
   return (
-    <div className="mx-4 md:mx-8">
+    <div className="mx-4 md:mx-8 pt-60">
       {/* project name */}
-      <motion.div className="overflow-hidden mt-60">
+      <motion.div className="overflow-hidden">
         <motion.div
-          className="text-[3.5rem] md:text-[8vw] leading-[0.9] tracking-tight font-medium flex-wrap"
+          className="text-[3.5rem] md:text-[8vw] text-[#f1f1f1] leading-[0.9] tracking-tight font-medium flex-wrap"
           variants={nameVariant}
           initial="hidden"
           whileInView="visible"
@@ -61,13 +61,13 @@ function ProjectTemplate({
       <div className="mx-2">
         {/* project tagline */}
 
-        <div className="mt-10 text-xs font-medium text-black/70 md:w-[50%] lg:w-[30%] fade-in">
+        <div className="mt-10 text-xs font-medium text-[#f1f1f1] md:w-[50%] lg:w-[30%] fade-in">
           {projectTagline.toUpperCase()}
         </div>
 
         {/* project link */}
 
-        <div className="text-xl md:text-2xl mt-2 md:mt-2 text-[#333] hover:text-black/60 font-bold flex items-center fade-in">
+        <div className="text-xl md:text-2xl my-8 text-[#f1f1f1] hover:text-white/80 font-bold flex items-center fade-in">
           <a
             href={projectLink}
             target="_blank"
@@ -102,19 +102,19 @@ function ProjectTemplate({
 
         {/* project 1st heading */}
 
-        <div className="lg:w-[40%] text-3xl md:text-4xl font-semibold leading-none fade-in">
+        <div className="lg:w-[40%] text-3xl md:text-4xl text-[#f1f1f1] font-semibold leading-none fade-in">
           IN A NUTSHELL
         </div>
 
         <motion.hr
-          className="w-full border-t border-black my-4 origin-left"
+          className="w-full border-t border-white my-4 origin-left"
           variants={hrVariant}
           initial="hidden"
           whileInView="visible"
           viewport={{ once: true, amount: 0.2 }}
         />
 
-        <div className="w-full flex justify-end text-sm font-medium text-black/60">
+        <div className="w-full flex justify-end text-sm font-medium text-[#f1f1f1]">
           <motion.div
             className="lg:w-[55%]"
             initial={{ opacity: 0, y: 50 }}
@@ -128,7 +128,7 @@ function ProjectTemplate({
               <div>{projectYear}</div>
             </div>
 
-            <hr className="w-full border-t border-black my-4" />
+            <hr className="w-full border-t border-white my-4" />
 
             {/* overview */}
             <div className="flex">
@@ -138,7 +138,7 @@ function ProjectTemplate({
               </div>
             </div>
 
-            <hr className="w-full border-t border-black my-4" />
+            <hr className="w-full border-t border-white my-4" />
 
             {/* the making of */}
             <div className="flex">
@@ -150,7 +150,7 @@ function ProjectTemplate({
               </div>
             </div>
 
-            <hr className="w-full border-t border-black my-4" />
+            <hr className="w-full border-t border-white my-4" />
 
             {/* code */}
             <div className="flex">
@@ -159,7 +159,7 @@ function ProjectTemplate({
                 href={projectCodeLink}
                 target="_blank"
                 rel="noopener noreferrer"
-                className="flex items-center break-all w-[70%] hover:text-black/40"
+                className="flex items-center break-all w-[70%] text-[#f1f1f1] hover:text-white/80"
               >
                 {projectCodeLink.replace(/^https?:\/\//, "").toUpperCase()}
                 <MdArrowOutward className="w-[1.1rem] h-[1.1rem]" />
@@ -170,12 +170,12 @@ function ProjectTemplate({
 
         {/* project 2nd heading */}
 
-        <div className="lg:w-[40%] mt-32 text-4xl font-semibold leading-none">
+        <div className="lg:w-[40%] mt-32 text-4xl text-[#f1f1f1] font-semibold leading-none">
           BUILT WITH
         </div>
 
         <motion.hr
-          className="w-full border-t border-black my-4 origin-left"
+          className="w-full border-t border-white my-4 origin-left"
           variants={hrVariant}
           initial="hidden"
           whileInView="visible"
@@ -189,19 +189,19 @@ function ProjectTemplate({
           transition={{ duration: 0.4 }}
           viewport={{ once: true, amount: 0.6 }}
         >
-          <div className="lg:w-[55%] flex flex-wrap gap-2 pr-2">
+          <div className="lg:w-[55%] text-[#f1f1f1] flex flex-wrap gap-2 pr-2">
             {projectBuiltWith}
           </div>
         </motion.div>
 
         {/* project 3rd heading */}
 
-        <div className="lg:w-[40%] mt-32 text-4xl font-semibold leading-none">
+        <div className="lg:w-[40%] mt-32 text-4xl text-[#f1f1f1] font-semibold leading-none">
           WEB VIEW
         </div>
 
         <motion.hr
-          className="w-full border-t border-black my-4 origin-left"
+          className="w-full border-t border-white my-4 origin-left"
           variants={hrVariant}
           initial="hidden"
           whileInView="visible"
@@ -211,7 +211,7 @@ function ProjectTemplate({
         <div className="w-full h-full">{projectImages}</div>
 
         <motion.hr
-          className="w-full border-t border-black my-4 mt-20 origin-left"
+          className="w-full border-t border-white my-4 mt-20 origin-left"
           variants={hrVariant}
           initial="hidden"
           whileInView="visible"
@@ -229,7 +229,7 @@ function ProjectTemplate({
           >
             <Link
               to={`/work`}
-              className="text-4xl pb-20 md:text-[8vw] leading-[0.9] tracking-tight font-medium flex flex-wrap justify-end"
+              className="text-4xl mb-40 md:text-[8vw] text-[#f1f1f1] hover:text-white/80 leading-[0.9] tracking-tight font-medium flex flex-wrap justify-end"
             >
               OTHER WORKS
             </Link>
