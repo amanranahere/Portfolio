@@ -44,7 +44,7 @@ function ProjectTemplate({
   };
 
   return (
-    <div className="mx-4 md:mx-8 pt-60">
+    <div className="mx-2 md:mx-8 pt-60">
       {/* project name */}
       <motion.div className="overflow-hidden">
         <motion.div
@@ -72,10 +72,10 @@ function ProjectTemplate({
             href={projectLink}
             target="_blank"
             rel="noopener noreferrer"
-            className="flex items-center break-all"
+            className="flex items-center break-all group"
           >
             {projectLink.replace(/^https?:\/\//, "").toUpperCase()}
-            <MdArrowOutward className="w-7 h-7" />
+            <MdArrowOutward className="w-7 h-7 group-hover:rotate-90 transition duration-300" />
           </a>
         </div>
 
@@ -159,10 +159,10 @@ function ProjectTemplate({
                 href={projectCodeLink}
                 target="_blank"
                 rel="noopener noreferrer"
-                className="flex items-center break-all w-[70%] text-[#f1f1f1] hover:text-white/80"
+                className="flex items-center break-all w-[70%] text-[#f1f1f1] hover:text-white/80 group"
               >
                 {projectCodeLink.replace(/^https?:\/\//, "").toUpperCase()}
-                <MdArrowOutward className="w-[1.1rem] h-[1.1rem]" />
+                <MdArrowOutward className="w-[1.1rem] h-[1.1rem] group-hover:rotate-90 transition duration-300" />
               </a>
             </div>
           </motion.div>
@@ -229,7 +229,7 @@ function ProjectTemplate({
           >
             <Link
               to={`/work`}
-              className="text-4xl mb-40 md:text-[8vw] text-[#f1f1f1] hover:text-white/80 leading-[0.9] tracking-tight font-medium flex flex-wrap justify-end"
+              className="text-7xl text-right mb-[50vh] md:text-[8vw] text-[#f1f1f1] hover:text-white/80 leading-[0.9] tracking-tight font-semibold flex flex-wrap justify-end"
             >
               OTHER WORKS
             </Link>

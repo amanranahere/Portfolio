@@ -1,6 +1,7 @@
 import React, { useEffect, useState } from "react";
 import { useNavigate, useLocation } from "react-router-dom";
 import { SiLinkedin, SiGithub, SiX } from "react-icons/si";
+import { IoMail } from "react-icons/io5";
 import { motion, AnimatePresence } from "framer-motion";
 
 function Navbar() {
@@ -109,7 +110,7 @@ function Navbar() {
                   >
                     <div className="overflow-hidden">
                       <div
-                        className="py-1 lg:py-2 max-w-max px-6 text-[#f1f1f1] hover:text-white hover:brightness-200 font-semibold hover:scale-110 transition duration-300 text-2xl md:text-4xl select-none cursor-pointer oswald-text tracking-wider"
+                        className="py-1 lg:py-2 max-w-max px-6 text-[#f1f1f1] hover:text-[#4a4a4a] font-semibold hover:scale-105 transition duration-300 text-2xl md:text-4xl select-none cursor-pointer oswald-text tracking-wider"
                         onClick={() => {
                           navigate(item.slug);
                           setIsMenuOpen(false);
@@ -134,31 +135,41 @@ function Navbar() {
                 initial="hidden"
                 animate="visible"
                 exit="hidden"
-                className="flex absolute bottom-6 left-6 space-x-5 p-2 text-white text-2xl md:text-3xl"
+                className="flex absolute bottom-6 left-6 text-white text-2xl md:text-3xl"
               >
-                <a
-                  href="https://www.linkedin.com/in/aman-rana-709a0a330/"
-                  target="_blank"
-                  rel="noopener noreferrer"
-                >
-                  <SiLinkedin className="hover:brightness-200 hover:scale-110 text-[#f1f1f1] transition duration-300" />
-                </a>
+                <div className="flex justify-center items-center gap-3 lg:gap-5">
+                  <a
+                    href="https://www.linkedin.com/in/aman-rana-709a0a330/"
+                    target="_blank"
+                    rel="noopener noreferrer"
+                  >
+                    <SiLinkedin className="hover:scale-110 text-[#f1f1f1] hover:text-[#7a7a7a] transition duration-300" />
+                  </a>
 
-                <a
-                  href="https://github.com/amanranahere"
-                  target="_blank"
-                  rel="noopener noreferrer"
-                >
-                  <SiGithub className="hover:brightness-200 hover:scale-110 text-[#f1f1f1] transition duration-300" />
-                </a>
+                  <a
+                    href="https://github.com/amanranahere"
+                    target="_blank"
+                    rel="noopener noreferrer"
+                  >
+                    <SiGithub className="hover:scale-110 text-[#f1f1f1] hover:text-[#7a7a7a] transition duration-300" />
+                  </a>
 
-                <a
-                  href="https://twitter.com"
-                  target="_blank"
-                  rel="noopener noreferrer"
-                >
-                  <SiX className="hover:brightness-200 hover:scale-110 text-[#f1f1f1] transition duration-300" />
-                </a>
+                  <a
+                    href="https://twitter.com"
+                    target="_blank"
+                    rel="noopener noreferrer"
+                  >
+                    <SiX className="hover:scale-110 text-[#f1f1f1] hover:text-[#7a7a7a] transition duration-300" />
+                  </a>
+
+                  <a
+                    href="mailto:amanranahere@gmail.com"
+                    target="_blank"
+                    rel="noopener noreferrer"
+                  >
+                    <IoMail className="text-3xl lg:text-4xl scale-110 hover:scale-125 text-[#f1f1f1] hover:text-[#7a7a7a] transition duration-300" />
+                  </a>
+                </div>
               </motion.div>
             </motion.div>
           </>

@@ -1,6 +1,6 @@
 import React from "react";
 import { useLocation } from "react-router-dom";
-import DarkModeToggle from "../DarkModeToggle";
+import DarkModeToggle from "../DarkModeToggle.jsx";
 import { IoIosArrowUp } from "react-icons/io";
 import { MdArrowOutward } from "react-icons/md";
 
@@ -34,7 +34,9 @@ function Footer() {
   const filteredNavItems = navItems.filter((item) => item.slug !== currentPage);
 
   return (
-    <div className="h-[75vh] md:h-[50vh] lg:h-[80vh] w-screen bg-[#d8fc44] flex flex-col justify-between fixed bottom-0 left-0 -z-10">
+    <div
+      className={`h-[75vh] md:h-[50vh] lg:h-[80vh] w-screen bg-black text-white flex flex-col justify-between fixed bottom-0 left-0 -z-10`}
+    >
       <div className="flex flex-row justify-between relative">
         <div className="w-screen md:w-[70%] lg:w-[60%]">
           <div className="flex flex-col md:flex-row justify-between">
@@ -44,7 +46,7 @@ function Footer() {
                 <li key={item.name}>
                   <a
                     href={item.slug}
-                    className="text-xl md:text-2xl lg:text-4xl font-extrabold hover:text-[#4a4a4a] oswald-text transition duration-300 leading-relaxed"
+                    className="text-xl md:text-2xl lg:text-4xl font-extrabold hover:text-[#7a7a7a] oswald-text transition duration-300 leading-relaxed"
                   >
                     {item.name}
                   </a>
@@ -88,7 +90,7 @@ function Footer() {
 
           <a
             href="mailto:amanranahere@gmail.com"
-            className="m-10 flex lg:justify-center items-center hover:opacity-75 transition duration-300 text-xl md:text-2xl lg:text-6xl font-extrabold uppercase leading-none oswald-text group"
+            className="m-10 flex lg:justify-center items-center hover:text-[#7a7a7a] transition duration-300 text-xl md:text-2xl lg:text-6xl font-extrabold uppercase leading-none oswald-text group"
           >
             <span>amanranahere@gmail.com</span>
             <MdArrowOutward className="w-7 h-7 md:w-9 md:h-9 lg:w-20 lg:h-20 md:pt-1 md:scale-110 group-hover:rotate-90 transition duration-300" />
@@ -98,24 +100,29 @@ function Footer() {
         {/* page top button */}
         <div
           onClick={() => window.scrollTo({ top: 0, behavior: "smooth" })}
-          className="absolute top-[4.5rem] md:top-10 right-8 flex flex-col items-center cursor-pointer group -translate-y-20 select-none"
+          className="absolute top-[4.5rem] md:top-10 right-10 flex flex-col items-center cursor-pointer group -translate-y-20 select-none"
         >
           <IoIosArrowUp
             strokeWidth="10"
-            className="h-12 w-12 md:h-20 md:w-20 translate-y-[2.5rem] md:translate-y-16 group-hover:translate-y-[2rem] md:group-hover:translate-y-[3.5rem] transition-transform duration-300"
+            className="h-12 w-12 md:h-20 md:w-20 translate-y-[2.5rem] md:translate-y-16 group-hover:translate-y-[2rem] md:group-hover:translate-y-[3.5rem] transition-transform duration-300 group-hover:text-[#7a7a7a]"
           />
           <IoIosArrowUp
             strokeWidth="10"
-            className="h-12 w-12 md:h-20 md:w-20 translate-y-[0.5rem]  group-hover:translate-y-[0rem] md:translate-y-2 md:group-hover:translate-y-0 transition-transform duration-300 delay-100"
+            className="h-12 w-12 md:h-20 md:w-20 translate-y-[0.5rem]  group-hover:translate-y-[0rem] md:translate-y-2 md:group-hover:translate-y-0 transition-transform duration-300 delay-100 group-hover:text-[#7a7a7a]"
           />
           <p className="text-sm md:text-base oswald-text tracking-widest">
             PAGE TOP
           </p>
         </div>
+
+        {/* light/dark toggle */}
+        <div className="absolute top-40 md:top-52 right-10 md:right-[3.2rem]">
+          <DarkModeToggle />
+        </div>
       </div>
 
       {/* name at the very bottom */}
-      <div className="flex justify-center text-[9rem] lg:text-[18rem] leading-[6rem] md:leading-[5rem] lg:leading-[9rem] badeenDisplay-text overflow-hidden">
+      <div className="flex justify-center text-[9rem] lg:text-[18rem] leading-[6rem] md:leading-[5rem] lg:leading-[9rem] badeenDisplay-text overflow-hidden select-none">
         <span>AMAN</span>
         <span className="hidden md:block">&nbsp;RANA</span>
       </div>

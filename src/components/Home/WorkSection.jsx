@@ -144,11 +144,15 @@ function WorkSection() {
       </section>
 
       <div className="h-[50vh] bg-[#1e1e1e] text-white flex justify-center items-center">
+        <div className="absolute outline-text whiteColor pb-7 text-8xl lg:text-9xl tracking-widest">
+          MORE
+        </div>
+
         <button
           onClick={() => navigate("/work")}
-          className="px-10 py-3 border border-white font-bold tracking-widest rounded-[0.3rem] hover:text-black hover:bg-[#fff] transition duration-300 active:scale-95"
+          className="px-8 lg:px-10 py-2 lg:py-3 text-sm lg:text-base bg-black z-10 border border-white font-bold tracking-widest rounded-[0.3rem] hover:text-black hover:bg-[#fff] transition duration-300 active:scale-95"
         >
-          MORE PROJECTS
+          PROJECTS
         </button>
       </div>
     </>

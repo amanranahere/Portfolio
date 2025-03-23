@@ -6,6 +6,25 @@ body {
   background-color: #f7f7f7;
 }
 
+/* outline text - start */
+
+.blackColor {
+  --textColor: black;
+}
+
+.whiteColor {
+  --textColor: white;
+}
+
+.outline-text {
+  font-family: sans-serif;
+  color: transparent;
+  -webkit-text-stroke-color: var(--textColor);
+  -webkit-text-stroke-width: 1.5px;
+}
+
+/* outline text - end */
+
 /* page transition - start */
 
 .slide-in {
