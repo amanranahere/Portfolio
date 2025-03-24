@@ -276,7 +276,7 @@ function CapabilitiesComponent() {
   return (
     <div className="w-full min-h-screen bg-black text-[#fff] flex flex-col lg:flex-row">
       <div className="w-full lg:w-[50%]">
-        <div className="lg:fixed lg:w-1/2 top-52 mt-52 lg:mt-0 lg:pt-0 px-6">
+        <div className="lg:sticky top-52 mt-52 lg:mt-0 lg:pt-0 px-6 z-10 bg-black">
           <motion.div className="lg:w-[80%] text-5xl lg:text-6xl pb-3 font-medium select-none overflow-hidden">
             <motion.div
               variants={nameVariant}
@@ -288,7 +288,7 @@ function CapabilitiesComponent() {
             </motion.div>
           </motion.div>
           <p
-            className="lg:w-[65%] pt-9 pb-12 lg:pb-0 select-none fade-in"
+            className="lg:w-[65%] pt-9 pb-12 lg:pb-20 select-none fade-in"
             style={{ textIndent: "35%" }}
           >
             A strong foundation of the right technologies is key to building
@@ -298,14 +298,17 @@ function CapabilitiesComponent() {
         </div>
 
         {/* categories buttons */}
-        <div className="lg:fixed bottom-0 lg:w-[40%] gap-2 lg:gap-3 p-6 flex flex-wrap select-none">
+        <div className="lg:sticky top-[34rem] lg:w-[70%] gap-2 lg:gap-3 p-6 flex flex-wrap select-none">
           {categories.map((category, index) => (
             <motion.button
               key={category}
               initial={{ opacity: 0 }}
               animate={{ opacity: 1 }}
               transition={{ delay: delays[index], duration: 0.5 }}
-              onClick={() => setSelectedCategory(category)}
+              onClick={() => {
+                setSelectedCategory(category);
+                window.scrollTo({ top: 0, behavior: "smooth" });
+              }}
               className={`px-6 py-2 border border-white text-[0.6rem] font-medium tracking-widest rounded-[0.21rem] hover:text-black hover:bg-[#fff] transition duration-300 active:scale-95  ${
                 selectedCategory === category ? "bg-[#fff] text-black" : ""
               }`}
@@ -408,7 +411,7 @@ function CapabilitiesComponent() {
                 </motion.div>
               )}
 
-              <div className="mx-4 border-b-2 border-dotted border-[#6a6a6a]"></div>
+              <div className="mx-4 border-b-2 border-dotted border-[#6a6a6a] last:mb-20"></div>
             </>
           ))}
         </ul>

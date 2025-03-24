@@ -6,11 +6,11 @@ import Footer from "../components/Footer/Footer";
 function Contact() {
   return (
     <>
-      <ContactComponent />
+      <div className="mb-[75vh] md:mb-[50vh] lg:mb-[80vh]">
+        <ContactComponent />
+      </div>
 
-      {/* <div>
-        <Footer />
-      </div> */}
+      <Footer />
     </>
   );
 }

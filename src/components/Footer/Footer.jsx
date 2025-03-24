@@ -37,11 +37,11 @@ function Footer() {
     <div
       className={`h-[75vh] md:h-[50vh] lg:h-[80vh] w-screen bg-black text-white flex flex-col justify-between fixed bottom-0 left-0 -z-10`}
     >
-      <div className="flex flex-row justify-between relative">
+      <div className="flex flex-row md:justify-between relative">
         <div className="w-screen md:w-[70%] lg:w-[60%]">
           <div className="flex flex-col md:flex-row justify-between">
             {/* links to different pages */}
-            <ul className="flex flex-col p-10">
+            <ul className="flex flex-col px-10 py-5 md:p-10">
               {filteredNavItems.map((item) => (
                 <li key={item.name}>
                   <a
@@ -55,7 +55,7 @@ function Footer() {
             </ul>
 
             {/* social link buttons */}
-            <div className="flex flex-col items-start md:items-end p-10">
+            <div className="flex flex-col items-start md:items-end px-10 py-4 md:p-10">
               <a
                 href=""
                 target="_blank"
@@ -90,7 +90,7 @@ function Footer() {
 
           <a
             href="mailto:amanranahere@gmail.com"
-            className="m-10 flex lg:justify-center items-center hover:text-[#7a7a7a] transition duration-300 text-xl md:text-2xl lg:text-6xl font-extrabold uppercase leading-none oswald-text group"
+            className="mx-10 my-5 md:m-10 flex lg:justify-center items-center hover:text-[#7a7a7a] transition duration-300 text-xl md:text-2xl lg:text-6xl font-extrabold uppercase leading-none oswald-text group"
           >
             <span>amanranahere@gmail.com</span>
             <MdArrowOutward className="w-7 h-7 md:w-9 md:h-9 lg:w-20 lg:h-20 md:pt-1 md:scale-110 group-hover:rotate-90 transition duration-300" />
@@ -100,7 +100,7 @@ function Footer() {
         {/* page top button */}
         <div
           onClick={() => window.scrollTo({ top: 0, behavior: "smooth" })}
-          className="absolute top-[4.5rem] md:top-10 right-10 flex flex-col items-center cursor-pointer group -translate-y-20 select-none"
+          className="absolute top-[3.4rem] md:top-10 right-10 flex flex-col items-center cursor-pointer group -translate-y-20 select-none"
         >
           <IoIosArrowUp
             strokeWidth="10"
@@ -116,7 +116,7 @@ function Footer() {
         </div>
 
         {/* light/dark toggle */}
-        <div className="absolute top-40 md:top-52 right-10 md:right-[3.2rem]">
+        <div className="absolute top-32 md:top-52 right-11 md:right-[3.2rem]">
           <DarkModeToggle />
         </div>
       </div>

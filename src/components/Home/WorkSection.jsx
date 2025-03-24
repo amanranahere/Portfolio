@@ -144,8 +144,8 @@ function WorkSection() {
       </section>
 
       <div className="h-[50vh] bg-[#1e1e1e] text-white flex justify-center items-center">
-        <div className="absolute outline-text whiteColor pb-7 text-8xl lg:text-9xl tracking-widest">
-          MORE
+        <div className="absolute outline-text whiteColor pb-7 text-7xl md:text-8xl lg:text-9xl tracking-widst">
+          SEE ALL
         </div>
 
         <button

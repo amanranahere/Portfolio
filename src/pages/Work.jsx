@@ -10,7 +10,9 @@ function Work() {
         <ProjectsListComponent />
       </div>
 
-      <Footer />
+      <div className="-z-10 fixed bottom-0">
+        <Footer />
+      </div>
     </div>
   );
 }
