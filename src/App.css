@@ -42,6 +42,15 @@
   font-family: "Oswald", sans-serif;
 }
 
+@font-face {
+  font-family: "YesevaOne";
+  src: url("/fonts/YesevaOne.ttf") format("truetype");
+}
+
+.yesevaOne-text {
+  font-family: "YesevaOne", sans-serif;
+}
+
 /* fonts - end */
 
 .project-img {

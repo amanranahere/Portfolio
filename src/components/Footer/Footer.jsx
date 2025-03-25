@@ -116,9 +116,11 @@ function Footer() {
         </div>
 
         {/* light/dark toggle */}
-        <div className="absolute top-32 md:top-52 right-11 md:right-[3.2rem]">
-          <DarkModeToggle />
-        </div>
+        {currentPage === "/work" && (
+          <div className="absolute top-32 md:top-52 right-11 md:right-[3.2rem]">
+            <DarkModeToggle />
+          </div>
+        )}
       </div>
 
       {/* name at the very bottom */}
