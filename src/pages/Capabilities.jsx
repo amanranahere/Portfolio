@@ -9,7 +9,7 @@ function Capabilities() {
         <CapabilitiesComponent />
       </div>
 
-      <div className="border-t-2 border-white"></div>
+      {/* <div className="border-t-2 border-white"></div> */}
 
       <Footer />
     </>

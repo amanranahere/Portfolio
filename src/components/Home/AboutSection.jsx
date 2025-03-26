@@ -14,7 +14,7 @@ function AboutSection() {
 
   const { scrollYProgress } = useScroll({
     target: targetRef,
-    offset: ["start 0.9", "start 0.25"],
+    offset: ["start 0.9", "start 0.2"],
   });
 
   const wordAnimation = (word, index) => {
@@ -23,29 +23,33 @@ function AboutSection() {
     const opacity = useTransform(scrollYProgress, [start, end], [0, 1]);
 
     return (
-      <motion.span key={index} style={{ opacity }} className="mr-3">
+      <motion.span
+        key={index}
+        style={{ opacity }}
+        className="mr-3 leading-snug"
+      >
         {word}
       </motion.span>
     );
   };
 
   return (
-    <div className=" bg-[#1c1d21] text-white border-y-2 border-white ">
-      <div className="h-screen flex flex-col relative mx-40">
+    <div className=" bg-[#1c1d21] text-[#f1f1f1]">
+      <div className="h-screen flex flex-col relative mx-10 md:mx-20 lg:mx-40">
         {/* paragraph */}
         <div className="w-full absolute top-32">
           <motion.div
             ref={targetRef}
-            className="text-5xl font-bold text-center leading-relaxed flex flex-wrap absolute yesevaOne-text"
+            className="text-xl md:text-4xl lg:text-5xl font-bold text-center flex flex-wrap absolute yesevaOne-text"
           >
             {words.map((word, index) => (
-              <span className="mr-3 opacity-10">{word}</span>
+              <span className="mr-3 leading-snug opacity-10">{word}</span>
             ))}
           </motion.div>
 
           <motion.div
             ref={targetRef}
-            className="text-5xl font-bold text-center leading-relaxed flex flex-wrap absolute yesevaOne-text"
+            className="text-xl md:text-4xl lg:text-5xl font-bold text-center flex flex-wrap absolute yesevaOne-text"
           >
             {words.map((word, index) => wordAnimation(word, index))}
           </motion.div>
@@ -56,7 +60,9 @@ function AboutSection() {
           onClick={() => navigate("/about")}
           className="absolute bottom-24 py-6 flex justify-center items-center gap-8 cursor-pointer rounded-md transition duration-300 hover:text-white/35"
         >
-          <p className="text-4xl font-medium tracking-widest">ABOUT ME</p>
+          <p className="text-xl md:text-3xl lg:text-4xl font-medium tracking-widest">
+            ABOUT ME
+          </p>
           <IoIosArrowForward className="text-4xl mt-1 absolute -right-16" />
         </div>
       </div>

@@ -6,7 +6,7 @@ import Footer from "../components/Footer/Footer";
 function Contact() {
   return (
     <>
-      <div className="mb-[75vh] md:mb-[50vh] lg:mb-[80vh]">
+      <div className="mb-[155vh] md:mb-[50vh] lg:mb-[80vh]">
         <ContactComponent />
       </div>
 
