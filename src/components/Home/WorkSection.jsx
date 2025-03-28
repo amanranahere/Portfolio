@@ -1,37 +1,21 @@
 import { useEffect, useRef, useState } from "react";
 import { motion, useScroll, useTransform, useSpring } from "framer-motion";
 import { useNavigate } from "react-router-dom";
+import useScreenSize from "../../utils/ScreenSize.jsx";
 import brickBreaker from "../../assets/images/brickBreaker.png";
 import currencyConverter from "../../assets/images/currencyConverter.png";
-import flappyBird from "../../assets/images/flappyBird.png";
 import snakeGame from "../../assets/images/snakeGame.png";
 import vidron from "../../assets/images/vidronHome.png";
 import weblog from "../..//assets/images/weblog.png";
 
 function WorkSection() {
   const navigate = useNavigate();
-  const [screenSize, setScreenSize] = useState("lg");
+  const screenSize = useScreenSize();
   const containerRef = useRef(null);
   const { scrollYProgress } = useScroll({
     target: containerRef,
     offset: ["start start", "end end"],
   });
-
-  useEffect(() => {
-    const handleResize = () => {
-      if (window.innerWidth < 768) {
-        setScreenSize("sm");
-      } else if (window.innerWidth < 1024) {
-        setScreenSize("md");
-      } else {
-        setScreenSize("lg");
-      }
-    };
-
-    handleResize();
-    window.addEventListener("resize", handleResize);
-    return () => window.removeEventListener("resize", handleResize);
-  }, []);
 
   const stiffness = screenSize === "sm" ? 200 : screenSize === "md" ? 120 : 50;
   const damping = screenSize === "sm" ? 30 : screenSize === "md" ? 25 : 20;
@@ -143,17 +127,23 @@ function WorkSection() {
         </div>
       </section>
 
-      <div className="h-[50vh] bg-[#1e1e1e] text-white flex justify-center items-center">
-        <div className="absolute outline-text whiteColor pb-7 text-7xl md:text-8xl lg:text-9xl tracking-widst">
-          SEE ALL
+      <div className="h-[20vh] w-full bg-[#1e1e1e] text-[#f1f1f1] text-sm font-semibold font-mono flex justify-between items-center px-4">
+        <div className=" select-none">
+          /<span className="pl-4 md:pl-10 lg:pl-28 tracking-widest">WORK</span>
         </div>
 
-        <button
-          onClick={() => navigate("/work")}
-          className="px-8 lg:px-10 py-2 lg:py-3 text-sm lg:text-base bg-black z-10 border border-white font-bold tracking-widest rounded-[0.3rem] hover:text-black hover:bg-[#fff] transition duration-300 active:scale-95"
-        >
-          PROJECTS
-        </button>
+        <div className="lg:w-[25%] select-none overflow-hidden">
+          <span>/</span>
+          <button
+            onClick={() => navigate("/work")}
+            className=" tracking-widest hover:text-red-300"
+          >
+            <span className="px-4 md:px-10 lg:px-28 whitespace-nowrap">
+              VIEW ALL
+            </span>
+            <span className="text-lg">&rarr;</span>
+          </button>
+        </div>
       </div>
     </>
   );
