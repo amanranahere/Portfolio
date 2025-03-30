@@ -1,9 +1,10 @@
 import React from "react";
+import ContactComponent from "../Contact/ContactComponent.jsx";
 
 function ContactSection() {
   return (
-    <div className="h-screen bg-[#1c1d21] text-[#f3f1ec] text-2xl flex justify-center items-center">
-      CONTACT SECTION
+    <div className="h-[150vh] flex justify-center items-center bg-black lg:p-10">
+      <ContactComponent />
     </div>
   );
 }

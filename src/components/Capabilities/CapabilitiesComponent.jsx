@@ -1,4 +1,5 @@
 import React, { useState } from "react";
+import { useLocation } from "react-router-dom";
 import { motion } from "framer-motion";
 import {
   SiReact,
@@ -27,7 +28,9 @@ import {
 } from "react-icons/si";
 
 function CapabilitiesComponent() {
-  const [selectedCategory, setSelectedCategory] = useState("All");
+  const location = useLocation();
+  const initialCategory = location.state?.selectedCategory || "All";
+  const [selectedCategory, setSelectedCategory] = useState(initialCategory);
   const [expandedItem, setExpandedItem] = useState(null);
 
   const techStack = [

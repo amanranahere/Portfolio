@@ -34,7 +34,7 @@ function AboutSection() {
   };
 
   return (
-    <div className=" bg-[#1c1d21] text-[#f1f1f1]">
+    <div className=" bg-[#f1f1f1] text-black">
       <div className="h-screen flex flex-col relative mx-10 md:mx-20 lg:mx-40">
         {/* paragraph */}
         <div className="w-full absolute top-32">

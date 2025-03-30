@@ -4,7 +4,7 @@ import { motion } from "framer-motion";
 
 function ContactComponent() {
   return (
-    <div className="lg:pt-0 bg-[#f7f7f7] h-screen flex flex-col md:overflow-hidden">
+    <div className="">
       <div className="flex flex-col lg:flex-row">
         <motion.div
           initial={{ x: -300, y: -300, opacity: 0 }}
@@ -14,7 +14,7 @@ function ContactComponent() {
             ease: [0.16, 1, 0.3, 1],
             delay: 0.6,
           }}
-          className="p-8 pt-40 md:pt-52 lg:pt-10 bg-[#c9c9c9] text-[4rem] md:text-[15vw] leading-[0.9] tracking-tight font-medium whitespace-nowrap flex justify-center items-center select-none"
+          className="p-8 bg-[#c9c9c9] text-[4rem] md:text-[15vw] leading-[0.9] tracking-tight font-medium whitespace-nowrap flex justify-center items-center select-none"
         >
           Let's Talk
         </motion.div>
