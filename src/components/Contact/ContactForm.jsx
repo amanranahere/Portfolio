@@ -51,18 +51,19 @@ export default function ContactForm() {
   };
 
   return (
-    <div className="h-full flex justify-center items-center">
+    <div className="h-full flex justify-center items-center overflow-hidden">
       <form onSubmit={handleSubmit} className="w-full h-full flex flex-col">
-        <div className="h-full md:border-x border-b border-dotted border-[#f7f7f7] bg-green-300">
+        <div className="">
           <div className="flex flex-col md:flex-row">
             <motion.div
-              initial={{ x: -100, y: -100, opacity: 0 }}
-              animate={{ x: 0, y: 0, opacity: 1 }}
+              initial={{ y: 100, opacity: 0 }}
+              whileInView={{ y: 0, opacity: 1 }}
               transition={{
                 duration: 0.6,
                 ease: [0.16, 1, 0.3, 1],
-                delay: 0.6,
+                delay: 0.5,
               }}
+              viewport={{ once: true }}
               className="w-full relative"
             >
               <input
@@ -72,21 +73,23 @@ export default function ContactForm() {
                 value={formData.name}
                 onChange={handleChange}
                 required
-                className="w-full p-6 text-lg md:text-2xl lg:text-4xl leading-5 bg-[#0c0a00] hover:bg-[#1a1a1a] focus:bg-[#2a2a2a] text-[#f7f7f7] outline-none border-b md:border-r border-dotted border-[#f7f7f7] transition-colors duration-500"
+                className="w-full p-3 lg:p-6 text-lg md:text-2xl lg:text-4xl bg-[#0c0a00] hover:bg-[#1a1a1a] focus:bg-[#2a2a2a] text-[#f7f7f7] outline-none border-b border-x border-dotted border-[#f7f7f7] transition-colors duration-500"
+                style={{ lineHeight: "2.9rem" }}
               />
-              <span className="absolute top-2 right-2 text-sm text-gray-400">
+              <span className="absolute top-2 right-2 text-xs text-gray-400">
                 *Required
               </span>
             </motion.div>
 
             <motion.div
-              initial={{ x: 100, y: -100, opacity: 0 }}
-              animate={{ x: 0, y: 0, opacity: 1 }}
+              initial={{ y: 100, opacity: 0 }}
+              whileInView={{ y: 0, opacity: 1 }}
               transition={{
                 duration: 0.6,
                 ease: [0.16, 1, 0.3, 1],
                 delay: 0.6,
               }}
+              viewport={{ once: true }}
               className="w-full relative"
             >
               <input
@@ -96,9 +99,10 @@ export default function ContactForm() {
                 value={formData.email}
                 onChange={handleChange}
                 required
-                className="w-full p-6 text-lg md:text-2xl lg:text-4xl leading-5 bg-[#0c0a00] hover:bg-[#1a1a1a] focus:bg-[#2a2a2a] text-[#f7f7f7] outline-none border-b border-dotted border-[#f7f7f7] transition duration-500"
+                className="w-full p-3 lg:p-6 text-lg md:text-2xl lg:text-4xl bg-[#0c0a00] hover:bg-[#1a1a1a] focus:bg-[#2a2a2a] text-[#f7f7f7] outline-none border-b border-x md:border-x-0 md:border-r border-dotted border-[#f7f7f7] transition duration-500"
+                style={{ lineHeight: "2.9rem" }}
               />
-              <span className="absolute top-2 right-2 text-sm text-gray-400">
+              <span className="absolute top-2 right-2 text-xs text-gray-400">
                 *Required
               </span>
             </motion.div>
@@ -106,13 +110,14 @@ export default function ContactForm() {
 
           <div className="w-full flex flex-col md:flex-row">
             <motion.div
-              initial={{ x: -100, opacity: 0 }}
-              animate={{ x: 0, y: 0, opacity: 1 }}
+              initial={{ y: 100, opacity: 0 }}
+              whileInView={{ y: 0, opacity: 1 }}
               transition={{
                 duration: 0.6,
                 ease: [0.16, 1, 0.3, 1],
-                delay: 0.6,
+                delay: 0.7,
               }}
+              viewport={{ once: true }}
               className="w-full relative"
             >
               <input
@@ -121,21 +126,23 @@ export default function ContactForm() {
                 placeholder="Company"
                 value={formData.company}
                 onChange={handleChange}
-                className="w-full p-6 text-lg md:text-2xl lg:text-4xl leading-5 bg-[#0c0a00] hover:bg-[#1a1a1a] focus:bg-[#2a2a2a] text-[#f7f7f7] outline-none border-b md:border-r border-dotted border-[#f7f7f7] transition duration-500"
+                className="w-full p-3 lg:p-6 text-lg md:text-2xl lg:text-4xl bg-[#0c0a00] hover:bg-[#1a1a1a] focus:bg-[#2a2a2a] text-[#f7f7f7] outline-none border-b border-x border-dotted border-[#f7f7f7] transition duration-500"
+                style={{ lineHeight: "2.9rem" }}
               />
-              <span className="absolute top-2 right-2 text-sm text-gray-400">
+              <span className="absolute top-2 right-2 text-xs text-gray-400">
                 Optional
               </span>
             </motion.div>
 
             <motion.div
-              initial={{ x: 100, opacity: 0 }}
-              animate={{ x: 0, y: 0, opacity: 1 }}
+              initial={{ y: 100, opacity: 0 }}
+              whileInView={{ y: 0, opacity: 1 }}
               transition={{
                 duration: 0.6,
                 ease: [0.16, 1, 0.3, 1],
-                delay: 0.6,
+                delay: 0.8,
               }}
+              viewport={{ once: true }}
               className="w-full relative"
             >
               <input
@@ -144,9 +151,10 @@ export default function ContactForm() {
                 placeholder="Phone Number"
                 value={formData.phone}
                 onChange={handleChange}
-                className="w-full p-6 text-lg md:text-2xl lg:text-4xl leading-5 bg-[#0c0a00] hover:bg-[#1a1a1a] focus:bg-[#2a2a2a] text-[#f7f7f7] outline-none border-b border-dotted border-[#f7f7f7]  transition duration-500"
+                className="w-full p-3 lg:p-6 text-lg md:text-2xl lg:text-4xl bg-[#0c0a00] hover:bg-[#1a1a1a] focus:bg-[#2a2a2a] text-[#f7f7f7] outline-none border-b border-x md:border-x-0 md:border-r border-dotted border-[#f7f7f7]  transition duration-500"
+                style={{ lineHeight: "2.9rem" }}
               />
-              <span className="absolute top-2 right-2 text-sm text-gray-400">
+              <span className="absolute top-2 right-2 text-xs text-gray-400">
                 Optional
               </span>
             </motion.div>
@@ -154,8 +162,9 @@ export default function ContactForm() {
 
           <motion.div
             initial={{ y: 100, opacity: 0 }}
-            animate={{ y: 0, opacity: 1 }}
-            transition={{ duration: 0.6, ease: [0.16, 1, 0.3, 1], delay: 0.6 }}
+            whileInView={{ y: 0, opacity: 1 }}
+            transition={{ duration: 0.6, ease: [0.16, 1, 0.3, 1], delay: 0.9 }}
+            viewport={{ once: true }}
             className="w-full relative"
           >
             <textarea
@@ -164,23 +173,19 @@ export default function ContactForm() {
               value={formData.message}
               onChange={handleChange}
               required
-              rows="4"
-              className="flex-grow w-full  p-6 text-lg md:text-2xl lg:text-4xl bg-white hover:bg-[#1a1a1a] focus:bg-[#2a2a2a] text-[#f7f7f7] outline-none transition-colors duration-500 resize-none"
+              rows="3"
+              className="flex-grow w-full p-3 lg:p-6 text-lg md:text-2xl lg:text-4xl bg-[#0c0a00] hover:bg-[#1a1a1a] focus:bg-[#2a2a2a] text-[#f7f7f7] border-b border-x border-dotted border-[#f7f7f7] outline-none transition-colors duration-500 resize-none"
+              style={{ lineHeight: "2.9rem" }}
             ></textarea>
-            <span className="absolute top-2 right-2 text-sm text-gray-400">
+            <span className="absolute top-2 right-2 text-xs text-gray-400">
               *Required
             </span>
           </motion.div>
         </div>
 
         {/* buttons */}
-        <div className="w-full mt-10 flex">
-          <div className="lg:w-[45%] text-white text-sm font-semibold tracking-widest select-none font-mono">
-            <span>/</span>
-            <span className="pl-4 md:pl-10 lg:pl-28">CONTACT</span>
-          </div>
-
-          <div className="w-[55%] flex flex-col md:flex-row-reverse lg:flex-col text-lg md:text-2xl lg:text-lg leading-5">
+        <div className="w-full mt-8 lg:mt-10 flex justify-end">
+          <div className="w-full lg:w-[55%] flex flex-col  lg:flex-col text-lg md:text-2xl lg:text-lg leading-5">
             <div>
               <motion.button
                 initial={{ x: 100, y: 100, opacity: 0 }}
@@ -191,7 +196,7 @@ export default function ContactForm() {
                   delay: 0.6,
                 }}
                 type="submit"
-                className="w-full h-full p-3 leading-5 flex justify-end items-center text-2xl bg-white text-black relative"
+                className="w-full h-full p-3 leading-5 flex justify-end items-center text-2xl bg-[#f1f1f1] hover:bg-[#d4d4d4] active:bg-[#bcbcbc] text-black/70 relative transition duration-300"
               >
                 {loading ? (
                   <span className="flex items-center">
@@ -215,7 +220,7 @@ export default function ContactForm() {
               </motion.button>
             </div>
 
-            <div className="w-full mt-2 flex flex-col-reverse md:flex-row justify-evenly">
+            <div className="w-full mt-2 flex flex-row justify-evenly">
               <motion.a
                 initial={{ x: -100, y: 100, opacity: 0 }}
                 animate={{ x: 0, y: 0, opacity: 1 }}
@@ -227,9 +232,10 @@ export default function ContactForm() {
                 href="https://www.linkedin.com/in/aman-rana-709a0a330/"
                 target="_blank"
                 rel="noopener noreferrer"
-                className="w-full p-2 bg-[#f1f1f1] hover:bg-[#d4d4d4] active:bg-[#bcbcbc] text-black/70 flex justify-center items-center gap-2"
+                className="w-full p-2 text-lg bg-[#f1f1f1] hover:brightness-150 active:bg-[#bcbcbc] text-black/70 flex justify-center items-center gap-2 transition duration-300"
               >
-                <SiLinkedin /> <span>Linkedin</span>
+                <SiLinkedin className="text-3xl" />{" "}
+                <span className="hidden md:block">Linkedin</span>
               </motion.a>
 
               <motion.a
@@ -243,9 +249,10 @@ export default function ContactForm() {
                 href="https://github.com/amanranahere"
                 target="_blank"
                 rel="noopener noreferrer"
-                className="w-full p-2 bg-[#c9c9c9] hover:bg-[#a8a8a8] active:bg-[#8a8a8a] text-black/70 flex justify-center items-center gap-2 "
+                className="w-full p-2 text-lg bg-[#c9c9c9] hover:brightness-150 active:bg-[#8a8a8a] text-black/70 flex justify-center items-center gap-2 transition duration-300"
               >
-                <SiGithub /> <span>Github</span>
+                <SiGithub className="text-3xl" />{" "}
+                <span className="hidden md:block">Github</span>
               </motion.a>
 
               <motion.a
@@ -259,10 +266,10 @@ export default function ContactForm() {
                 href=""
                 target="_blank"
                 rel="noopener noreferrer"
-                className="w-full p-2 bg-[#969696] hover:bg-[#707070]
-               active:bg-[#545454] text-black/70 flex justify-center items-center gap-2 "
+                className="w-full p-3 text-lg bg-[#969696] hover:brightness-150
+               active:bg-[#545454] text-black/70 flex justify-center items-center gap-2 transition duration-300"
               >
-                <SiX />
+                <SiX className="text-2xl" />
               </motion.a>
 
               <motion.a
@@ -276,9 +283,10 @@ export default function ContactForm() {
                 href="mailto:amanranahere@gmail.com"
                 target="_blank"
                 rel="noopener noreferrer"
-                className="w-full p-2 bg-[#505050] hover:bg-[#303030] active:bg-[#161616] text-white/80 flex justify-center items-center gap-2 "
+                className="w-full p-2 text-lg bg-[#505050] hover:brightness-150 active:bg-[#2a2a2a] text-white/80 flex justify-center items-center gap-2 transition duration-300"
               >
-                <IoMail className="text-2xl" /> <span>Mail</span>
+                <IoMail className="text-3xl" />{" "}
+                <span className="hidden md:block">Mail</span>
               </motion.a>
             </div>
           </div>

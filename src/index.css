@@ -75,16 +75,14 @@ body {
 @keyframes slideInFromUp {
   0% {
     clip-path: inset(0 0 100% 0);
-    opacity: 0;
   }
   100% {
     clip-path: inset(0 0 0 0);
-    opacity: 1;
   }
 }
 
 .slide-bottom {
-  animation: slideInFromUp 0.8s ease-out 0.5s forwards;
+  animation: slideInFromUp 0.5s ease-out 0.5s forwards;
 }
 
 /* slide down like completing the div - end */
