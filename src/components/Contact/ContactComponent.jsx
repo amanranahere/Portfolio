@@ -8,7 +8,7 @@ function ContactComponent() {
       <motion.div
         initial={{ clipPath: "inset(0% 100% 0% 0%)" }}
         whileInView={{ clipPath: "inset(0% 0% 0% 0%)" }}
-        transition={{ duration: 1, ease: [0.25, 1, 0.5, 1], delay: 0.6 }}
+        transition={{ duration: 1, ease: [0.25, 1, 0.5, 1], delay: 0.2 }}
         viewport={{ once: true }}
         className="h-[48vh] lg:h-[40vh] flex flex-col lg:flex-row"
       >

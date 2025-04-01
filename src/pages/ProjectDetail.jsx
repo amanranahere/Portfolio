@@ -21,7 +21,7 @@ const ProjectDetail = () => {
   const { projectName } = useParams();
   return (
     <>
-      <div className="mb-[75vh] md:mb-[50vh] lg:mb-[80vh] bg-[#1c1d21]">
+      <div className="bg-[#1c1d21]">
         {project[projectName] ? (
           project[projectName]
         ) : (

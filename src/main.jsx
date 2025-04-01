@@ -5,7 +5,6 @@ import App from "./App.jsx";
 import {
   Home,
   About,
-  Contact,
   Work,
   Capabilities,
   ProjectDetail,
@@ -37,10 +36,10 @@ const router = createBrowserRouter([
         path: "/capabilities",
         element: <Capabilities />,
       },
-      {
-        path: "/contact",
-        element: <Contact />,
-      },
+      // {
+      //   path: "/contact",
+      //   element: <Contact />,
+      // },
     ],
   },
 ]);

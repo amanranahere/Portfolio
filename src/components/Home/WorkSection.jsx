@@ -1,4 +1,4 @@
-import { useEffect, useRef, useState } from "react";
+import { useRef } from "react";
 import { motion, useScroll, useTransform, useSpring } from "framer-motion";
 import { useNavigate } from "react-router-dom";
 import useScreenSize from "../../utils/ScreenSize.jsx";

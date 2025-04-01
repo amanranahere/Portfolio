@@ -39,7 +39,13 @@ function Navbar() {
     },
     {
       name: "CONTACT",
-      slug: "/contact",
+      action: () => {
+        if (window.location.pathname !== "/") {
+          navigate("/", { state: { scrollToContact: true } });
+        } else {
+          window.dispatchEvent(new Event("scrollToContact"));
+        }
+      },
     },
   ];
 
@@ -112,7 +118,11 @@ function Navbar() {
                       <div
                         className="py-1 lg:py-2 max-w-max px-6 text-[#f1f1f1] hover:text-[#4a4a4a] font-semibold hover:scale-105 transition duration-300 text-2xl md:text-4xl select-none cursor-pointer oswald-text tracking-wider"
                         onClick={() => {
-                          navigate(item.slug);
+                          if (item.action) {
+                            item.action();
+                          } else {
+                            navigate(item.slug);
+                          }
                           setIsMenuOpen(false);
                         }}
                       >

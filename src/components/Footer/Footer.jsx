@@ -1,10 +1,11 @@
 import React from "react";
-import { useLocation } from "react-router-dom";
+import { useLocation, useNavigate } from "react-router-dom";
 import DarkModeToggle from "../DarkModeToggle.jsx";
 import { IoIosArrowUp } from "react-icons/io";
 import { MdArrowOutward } from "react-icons/md";
 
 function Footer() {
+  const navigate = useNavigate();
   const location = useLocation();
   const currentPage = location.pathname;
 
@@ -27,7 +28,13 @@ function Footer() {
     },
     {
       name: "CONTACT",
-      slug: "/contact",
+      action: () => {
+        if (window.location.pathname !== "/") {
+          navigate("/", { state: { scrollToContact: true } });
+        } else {
+          window.dispatchEvent(new Event("scrollToContact"));
+        }
+      },
     },
   ];
 
@@ -35,7 +42,7 @@ function Footer() {
 
   return (
     <div
-      className={`h-[75vh] md:h-[50vh] lg:h-[80vh] w-screen bg-black text-white flex flex-col justify-between fixed bottom-0 left-0 -z-10`}
+      className={`h-[75vh] md:h-[50vh] lg:h-[80vh] w-full bg-black text-white flex flex-col justify-between overflow-hidden relative`}
     >
       <div className="flex flex-row md:justify-between relative">
         <div className="w-screen md:w-[70%] lg:w-[60%]">
@@ -44,12 +51,18 @@ function Footer() {
             <ul className="flex flex-col px-10 py-5 md:p-10">
               {filteredNavItems.map((item) => (
                 <li key={item.name}>
-                  <a
-                    href={item.slug}
-                    className="text-xl md:text-2xl lg:text-4xl font-extrabold hover:text-[#7a7a7a] oswald-text transition duration-300 leading-relaxed"
+                  <div
+                    onClick={() => {
+                      if (item.action) {
+                        item.action();
+                      } else {
+                        navigate(item.slug);
+                      }
+                    }}
+                    className="text-xl md:text-2xl lg:text-4xl font-extrabold hover:text-[#7a7a7a] oswald-text transition duration-300 leading-relaxed cursor-pointer select-none"
                   >
                     {item.name}
-                  </a>
+                  </div>
                 </li>
               ))}
             </ul>
@@ -124,7 +137,7 @@ function Footer() {
       </div>
 
       {/* name at the very bottom */}
-      <div className="flex justify-center text-[9rem] lg:text-[18rem] leading-[6rem] md:leading-[5rem] lg:leading-[9rem] badeenDisplay-text overflow-hidden select-none">
+      <div className="w-full flex justify-center text-[9rem] lg:text-[18rem] leading-[6rem] md:leading-[5rem] lg:leading-[9rem] badeenDisplay-text overflow-hidden select-none absolute bottom-0 left-0">
         <span>AMAN</span>
         <span className="hidden md:block">&nbsp;RANA</span>
       </div>

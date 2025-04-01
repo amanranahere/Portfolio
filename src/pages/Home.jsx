@@ -1,4 +1,5 @@
-import React from "react";
+import React, { useEffect } from "react";
+import { useLocation } from "react-router-dom";
 import PageTransition from "../components/Transitions/PageTransition.jsx";
 import LandingSection from "../components/Home/LandingSection.jsx";
 import AboutSection from "../components/Home/AboutSection.jsx";
@@ -8,21 +9,48 @@ import ContactSection from "../components/Home/ContactSection.jsx";
 import Footer from "../components/Footer/Footer.jsx";
 
 function Home() {
+  const location = useLocation();
+
+  useEffect(() => {
+    const handleScrollToContact = () => scrollToContactSection();
+    window.addEventListener("scrollToContact", handleScrollToContact);
+
+    if (location.state?.scrollToContact) {
+      scrollToContactSection();
+    }
+
+    return () =>
+      window.removeEventListener("scrollToContact", handleScrollToContact);
+  }, [location]);
+
+  const scrollToContactSection = () => {
+    const section = document.getElementById("contactSection");
+    if (section) {
+      section.scrollIntoView({ behavior: "smooth" });
+    }
+  };
+
   return (
     <>
-      <div className="mb-[75vh] md:mb-[50vh] lg:mb-[80vh]">
+      <div className="bg-[#1c1d21] text-[#f3f1ec]">
         <LandingSection />
-
-        <AboutSection />
-
-        <WorkSection />
-
-        <CapabilitiesSection />
-
-        <ContactSection />
       </div>
 
-      <Footer />
+      <AboutSection />
+
+      <WorkSection />
+
+      <CapabilitiesSection />
+
+      <div className="py-32 bg-black">
+        <div id="contactSection">
+          <ContactSection />
+        </div>
+      </div>
+
+      <div className="border-t-2 border-white">
+        <Footer />
+      </div>
     </>
   );
 }

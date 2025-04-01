@@ -5,7 +5,7 @@ import Footer from "../components/Footer/Footer.jsx";
 function About() {
   return (
     <>
-      <div className="mb-[75vh] md:mb-[50vh] lg:mb-[80vh]">
+      <div className="">
         <div className="h-screen text-xl flex justify-center items-center bg-white">
           About page
         </div>

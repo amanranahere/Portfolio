@@ -14,7 +14,7 @@ function AboutSection() {
 
   const { scrollYProgress } = useScroll({
     target: targetRef,
-    offset: ["start 0.9", "start 0.2"],
+    offset: ["start 0.4", "start 0.2"],
   });
 
   const wordAnimation = (word, index) => {
@@ -34,10 +34,10 @@ function AboutSection() {
   };
 
   return (
-    <div className=" bg-[#f1f1f1] text-black">
-      <div className="h-screen flex flex-col relative mx-10 md:mx-20 lg:mx-40">
+    <section className="h-[200vh] bg-[#f1f1f1] text-black">
+      <div className="h-full flex flex-col relative mx-10 md:mx-20 lg:mx-40">
         {/* paragraph */}
-        <div className="w-full absolute top-32">
+        <div className="w-full sticky top-16 pt-16">
           <motion.div
             ref={targetRef}
             className="text-xl md:text-4xl lg:text-5xl font-bold text-center flex flex-wrap absolute yesevaOne-text"
@@ -66,7 +66,7 @@ function AboutSection() {
           <IoIosArrowForward className="text-4xl mt-1 absolute -right-16" />
         </div>
       </div>
-    </div>
+    </section>
   );
 }
 

@@ -61,7 +61,7 @@ export default function ContactForm() {
               transition={{
                 duration: 0.6,
                 ease: [0.16, 1, 0.3, 1],
-                delay: 0.5,
+                delay: 0.9,
               }}
               viewport={{ once: true }}
               className="w-full relative"
@@ -87,7 +87,7 @@ export default function ContactForm() {
               transition={{
                 duration: 0.6,
                 ease: [0.16, 1, 0.3, 1],
-                delay: 0.6,
+                delay: 1,
               }}
               viewport={{ once: true }}
               className="w-full relative"
@@ -115,7 +115,7 @@ export default function ContactForm() {
               transition={{
                 duration: 0.6,
                 ease: [0.16, 1, 0.3, 1],
-                delay: 0.7,
+                delay: 1.1,
               }}
               viewport={{ once: true }}
               className="w-full relative"
@@ -140,7 +140,7 @@ export default function ContactForm() {
               transition={{
                 duration: 0.6,
                 ease: [0.16, 1, 0.3, 1],
-                delay: 0.8,
+                delay: 1.2,
               }}
               viewport={{ once: true }}
               className="w-full relative"
@@ -163,7 +163,7 @@ export default function ContactForm() {
           <motion.div
             initial={{ y: 100, opacity: 0 }}
             whileInView={{ y: 0, opacity: 1 }}
-            transition={{ duration: 0.6, ease: [0.16, 1, 0.3, 1], delay: 0.9 }}
+            transition={{ duration: 0.6, ease: [0.16, 1, 0.3, 1], delay: 1.3 }}
             viewport={{ once: true }}
             className="w-full relative"
           >
@@ -232,7 +232,7 @@ export default function ContactForm() {
                 href="https://www.linkedin.com/in/aman-rana-709a0a330/"
                 target="_blank"
                 rel="noopener noreferrer"
-                className="w-full p-2 text-lg bg-[#f1f1f1] hover:brightness-150 active:bg-[#bcbcbc] text-black/70 flex justify-center items-center gap-2 transition duration-300"
+                className="w-full p-2 text-lg bg-[#f1f1f1] hover:brightness-150 active:bg-[#bcbcbc] text-black/70 flex justify-center lg:justify-start items-center gap-2 transition duration-300"
               >
                 <SiLinkedin className="text-3xl" />{" "}
                 <span className="hidden md:block">Linkedin</span>
@@ -249,7 +249,7 @@ export default function ContactForm() {
                 href="https://github.com/amanranahere"
                 target="_blank"
                 rel="noopener noreferrer"
-                className="w-full p-2 text-lg bg-[#c9c9c9] hover:brightness-150 active:bg-[#8a8a8a] text-black/70 flex justify-center items-center gap-2 transition duration-300"
+                className="w-full p-2 text-lg bg-[#c9c9c9] hover:brightness-150 active:bg-[#8a8a8a] text-black/70 flex justify-center lg:justify-start items-center gap-2 transition duration-300"
               >
                 <SiGithub className="text-3xl" />{" "}
                 <span className="hidden md:block">Github</span>
@@ -267,7 +267,7 @@ export default function ContactForm() {
                 target="_blank"
                 rel="noopener noreferrer"
                 className="w-full p-3 text-lg bg-[#969696] hover:brightness-150
-               active:bg-[#545454] text-black/70 flex justify-center items-center gap-2 transition duration-300"
+               active:bg-[#545454] text-black/70 flex justify-center lg:justify-start items-center gap-2 transition duration-300"
               >
                 <SiX className="text-2xl" />
               </motion.a>
@@ -283,7 +283,7 @@ export default function ContactForm() {
                 href="mailto:amanranahere@gmail.com"
                 target="_blank"
                 rel="noopener noreferrer"
-                className="w-full p-2 text-lg bg-[#505050] hover:brightness-150 active:bg-[#2a2a2a] text-white/80 flex justify-center items-center gap-2 transition duration-300"
+                className="w-full p-2 text-lg bg-[#505050] hover:brightness-150 active:bg-[#2a2a2a] text-white/80 flex justify-center lg:justify-start items-center gap-2 transition duration-300"
               >
                 <IoMail className="text-3xl" />{" "}
                 <span className="hidden md:block">Mail</span>
