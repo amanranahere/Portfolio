@@ -61,7 +61,7 @@ export default function ContactForm() {
               transition={{
                 duration: 0.6,
                 ease: [0.16, 1, 0.3, 1],
-                delay: 0.9,
+                delay: 0.7,
               }}
               viewport={{ once: true }}
               className="w-full relative"
@@ -87,7 +87,7 @@ export default function ContactForm() {
               transition={{
                 duration: 0.6,
                 ease: [0.16, 1, 0.3, 1],
-                delay: 1,
+                delay: 0.8,
               }}
               viewport={{ once: true }}
               className="w-full relative"
@@ -115,7 +115,7 @@ export default function ContactForm() {
               transition={{
                 duration: 0.6,
                 ease: [0.16, 1, 0.3, 1],
-                delay: 1.1,
+                delay: 0.9,
               }}
               viewport={{ once: true }}
               className="w-full relative"
@@ -140,7 +140,7 @@ export default function ContactForm() {
               transition={{
                 duration: 0.6,
                 ease: [0.16, 1, 0.3, 1],
-                delay: 1.2,
+                delay: 1,
               }}
               viewport={{ once: true }}
               className="w-full relative"
@@ -163,7 +163,7 @@ export default function ContactForm() {
           <motion.div
             initial={{ y: 100, opacity: 0 }}
             whileInView={{ y: 0, opacity: 1 }}
-            transition={{ duration: 0.6, ease: [0.16, 1, 0.3, 1], delay: 1.3 }}
+            transition={{ duration: 0.6, ease: [0.16, 1, 0.3, 1], delay: 1.1 }}
             viewport={{ once: true }}
             className="w-full relative"
           >

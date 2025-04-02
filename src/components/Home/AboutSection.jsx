@@ -34,13 +34,13 @@ function AboutSection() {
   };
 
   return (
-    <section className="h-[200vh] bg-[#f1f1f1] text-black">
+    <section className="h-[400vh] bg-[#f1f1f1] text-black">
       <div className="h-full flex flex-col relative mx-10 md:mx-20 lg:mx-40">
         {/* paragraph */}
         <div className="w-full sticky top-16 pt-16">
           <motion.div
             ref={targetRef}
-            className="text-xl md:text-4xl lg:text-5xl font-bold text-center flex flex-wrap absolute yesevaOne-text"
+            className="text-xl md:text-4xl lg:text-5xl text-center flex flex-wrap absolute font-mono"
           >
             {words.map((word, index) => (
               <span className="mr-3 leading-snug opacity-10">{word}</span>
@@ -49,14 +49,14 @@ function AboutSection() {
 
           <motion.div
             ref={targetRef}
-            className="text-xl md:text-4xl lg:text-5xl font-bold text-center flex flex-wrap absolute yesevaOne-text"
+            className="text-xl text-[#3a3a3a] md:text-4xl lg:text-5xl text-center flex flex-wrap absolute font-mono"
           >
             {words.map((word, index) => wordAnimation(word, index))}
           </motion.div>
         </div>
 
         {/* about me button */}
-        <div
+        {/* <div
           onClick={() => navigate("/about")}
           className="absolute bottom-24 py-6 flex justify-center items-center gap-8 cursor-pointer rounded-md transition duration-300 hover:text-white/35"
         >
@@ -64,7 +64,7 @@ function AboutSection() {
             ABOUT ME
           </p>
           <IoIosArrowForward className="text-4xl mt-1 absolute -right-16" />
-        </div>
+        </div> */}
       </div>
     </section>
   );
