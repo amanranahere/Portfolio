@@ -14,7 +14,7 @@ function AboutSection() {
 
   const { scrollYProgress } = useScroll({
     target: targetRef,
-    offset: ["start 0.4", "start 0.2"],
+    offset: ["start start", "end end"],
   });
 
   const wordAnimation = (word, index) => {
@@ -34,21 +34,21 @@ function AboutSection() {
   };
 
   return (
-    <section className="h-[400vh] bg-[#f1f1f1] text-black">
-      <div className="h-full flex flex-col relative mx-10 md:mx-20 lg:mx-40">
+    <section className=" bg-[#f1f1f1] text-black">
+      <div
+        ref={targetRef}
+        className="h-[400vh] flex flex-col relative mx-10 md:mx-20 lg:mx-40"
+      >
         {/* paragraph */}
-        <div className="w-full sticky top-16 pt-16">
-          <motion.div
-            ref={targetRef}
-            className="text-xl md:text-4xl lg:text-5xl text-center flex flex-wrap absolute font-mono"
-          >
+        <div className="w-full sticky top-20 pt-20">
+          <motion.div className="text-xl md:text-4xl lg:text-5xl text-center flex flex-wrap absolute font-mono">
             {words.map((word, index) => (
               <span className="mr-3 leading-snug opacity-10">{word}</span>
             ))}
           </motion.div>
 
           <motion.div
-            ref={targetRef}
+            // ref={targetRef}
             className="text-xl text-[#3a3a3a] md:text-4xl lg:text-5xl text-center flex flex-wrap absolute font-mono"
           >
             {words.map((word, index) => wordAnimation(word, index))}

@@ -42,7 +42,7 @@ function Footer() {
 
   return (
     <div
-      className={`h-[75vh] md:h-[50vh] lg:h-[80vh] w-full bg-black text-white flex flex-col justify-between overflow-hidden relative`}
+      className={`h-[75vh] md:h-[50vh] lg:h-[80vh] w-full bg-black text-white border-t-2 border-white flex flex-col justify-between overflow-hidden relative`}
     >
       <div className="flex flex-row md:justify-between relative">
         <div className="w-screen md:w-[70%] lg:w-[60%]">
@@ -103,7 +103,7 @@ function Footer() {
 
           <a
             href="mailto:amanranahere@gmail.com"
-            className="mx-10 my-5 md:m-10 flex lg:justify-center items-center hover:text-[#7a7a7a] transition duration-300 text-xl md:text-2xl lg:text-6xl font-extrabold uppercase leading-none oswald-text group"
+            className="mx-10 my-5 md:m-10 flex lg:justify-start items-center hover:text-[#7a7a7a] transition duration-300 text-xl md:text-2xl lg:text-5xl font-extrabold uppercase leading-none oswald-text group"
           >
             <span>amanranahere@gmail.com</span>
             <MdArrowOutward className="w-7 h-7 md:w-9 md:h-9 lg:w-20 lg:h-20 md:pt-1 md:scale-110 group-hover:rotate-90 transition duration-300" />

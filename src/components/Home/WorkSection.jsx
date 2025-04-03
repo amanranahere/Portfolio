@@ -136,7 +136,7 @@ function WorkSection() {
           <span>/</span>
           <button
             onClick={() => navigate("/work")}
-            className=" tracking-widest hover:text-red-300"
+            className="tracking-widest hover:text-[#9a9a9a]"
           >
             <span className="px-4 md:px-10 lg:px-28 whitespace-nowrap">
               VIEW ALL

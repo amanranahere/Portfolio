@@ -94,7 +94,7 @@ function CapabilitiesSection() {
             <span>/</span>
             <button
               onClick={() => navigate("/capabilities")}
-              className="hover:text-red-300 overflow-hidden"
+              className="hover:text-black/30 overflow-hidden"
             >
               <span className="px-4 md:px-10 lg:px-28 whitespace-nowrap">
                 VIEW ALL
