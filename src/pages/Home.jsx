@@ -32,7 +32,7 @@ function Home() {
 
   return (
     <>
-      <div className="bg-[#1c1d21] text-[#f3f1ec]">
+      <div className="bg-[#161616] text-[#f3f1ec]">
         <LandingSection />
       </div>
 

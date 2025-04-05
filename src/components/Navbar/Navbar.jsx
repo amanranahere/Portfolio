@@ -9,8 +9,6 @@ function Navbar() {
   const location = useLocation();
   const [key, setKey] = useState(0);
   const [isMenuOpen, setIsMenuOpen] = useState(false);
-  const [isHovered, setIsHovered] = useState(false);
-  const [hoveredItem, setHoveredItem] = useState(null);
 
   useEffect(() => {
     setKey((prev) => prev + 1);

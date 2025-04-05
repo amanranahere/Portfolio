@@ -37,11 +37,11 @@ function AboutSection() {
     <section className=" bg-[#f1f1f1] text-black">
       <div
         ref={targetRef}
-        className="h-[400vh] flex flex-col relative mx-10 md:mx-20 lg:mx-40"
+        className="h-[400vh] flex flex-col relative mx-6 md:mx-20 lg:mx-40"
       >
         {/* paragraph */}
-        <div className="w-full sticky top-20 pt-20">
-          <motion.div className="text-xl md:text-4xl lg:text-5xl text-center flex flex-wrap absolute font-mono">
+        <div className="w-full sticky top-20 pt-20 uppercase">
+          <motion.div className="text-xl md:text-4xl lg:text-5xl text-center flex flex-wrap absolute font-extrabold">
             {words.map((word, index) => (
               <span className="mr-3 leading-snug opacity-10">{word}</span>
             ))}
@@ -49,7 +49,7 @@ function AboutSection() {
 
           <motion.div
             // ref={targetRef}
-            className="text-xl text-[#3a3a3a] md:text-4xl lg:text-5xl text-center flex flex-wrap absolute font-mono"
+            className="text-xl text-[#3a3a3a] md:text-4xl lg:text-5xl text-center flex flex-wrap absolute font-extrabold"
           >
             {words.map((word, index) => wordAnimation(word, index))}
           </motion.div>

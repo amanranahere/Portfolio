@@ -7,6 +7,15 @@
 /* fonts - start */
 
 @font-face {
+  font-family: "BadeenDisplay";
+  src: url("/fonts/BadeenDisplay.ttf") format("truetype");
+}
+
+.badeenDisplay-text {
+  font-family: "BadeenDisplay", sans-serif;
+}
+
+@font-face {
   font-family: "BigShouldersStencil";
   src: url("/fonts/BigShouldersStencil.ttf") format("truetype");
 }
@@ -25,12 +34,21 @@
 }
 
 @font-face {
-  font-family: "BadeenDisplay";
-  src: url("/fonts/BadeenDisplay.ttf") format("truetype");
+  font-family: "Inter";
+  src: url("/fonts/Inter.ttf") format("truetype");
 }
 
-.badeenDisplay-text {
-  font-family: "BadeenDisplay", sans-serif;
+.inter-text {
+  font-family: "Inter", sans-serif;
+}
+
+@font-face {
+  font-family: "Lato";
+  src: url("/fonts/Lato.ttf") format("truetype");
+}
+
+.lato-text {
+  font-family: "Lato", sans-serif;
 }
 
 @font-face {
