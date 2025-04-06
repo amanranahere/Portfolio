@@ -1,5 +1,5 @@
 import React, { useState, useEffect } from "react";
-import PageTransition from "../components/Transitions/PageTransition.jsx";
+import PageTransition from "../components/Animations/PageTransition.jsx";
 import ProjectsListComponent from "../components/Work/ProjectsListComponent.jsx";
 import Footer from "../components/Footer/Footer.jsx";
 

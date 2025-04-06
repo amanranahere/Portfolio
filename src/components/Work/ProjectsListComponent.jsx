@@ -8,6 +8,7 @@ import BrickBreakerImg from "../../assets/images/brickBreaker.png";
 import FlappyBirdImg from "../../assets/images/flappyBird.png";
 import SnakeGameImg from "../../assets/images/snakeGame.png";
 import { motion } from "framer-motion";
+import RandomText from "../Animations/RandomText";
 
 function ProjectsListComponent() {
   const [activeProject, setActiveProject] = useState(null);
@@ -118,29 +119,13 @@ function ProjectsListComponent() {
   return (
     <>
       {/* MY PROJECTS heading */}
-      <motion.div className="mb-12 lg:mb-20 flex justify-center items-center">
-        <motion.div
-          className=" dark:text-[#f1f1f1] flex flex-col md:flex-row justify-center items-center"
-          variants={{
-            hidden: { y: "-100%" },
-            visible: {
-              y: "0%",
-              transition: { delay: 0.2, duration: 0.5, ease: "easeInOut" },
-            },
-          }}
-          initial="hidden"
-          whileInView="visible"
-          viewport={{ once: true }}
-        >
-          <span className="outline-text blackColor dark:text-white giveYouGlory-text text-5xl md:text-8xl lg:text-9xl leading-3 md:pt-12 lg:pt-14">
-            MY&nbsp;
+      <div className="mb-12 lg:mb-20 flex justify-center items-center">
+        <div className=" dark:text-[#f1f1f1] flex flex-col md:flex-row justify-center items-center">
+          <span className="dark:text-white text-5xl md:text-8xl lg:text-9xl leading-3">
+            <RandomText text="MY PROJECTS" />
           </span>
-
-          <span className="text-[3.5rem] md:text-8xl lg:text-9xl oswald-text font-extrabold">
-            PROJECTS
-          </span>
-        </motion.div>
-      </motion.div>
+        </div>
+      </div>
 
       {/* projects list */}
       <div className="w-full h-full flex justify-center items-center pb-[30vh]">

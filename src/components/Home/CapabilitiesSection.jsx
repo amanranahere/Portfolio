@@ -1,7 +1,8 @@
-import React, { useState, useEffect } from "react";
+import React from "react";
 import { motion, useScroll, useTransform } from "framer-motion";
 import { useNavigate } from "react-router-dom";
 import useScreenSize from "../../utils/ScreenSize";
+import RandomText from "../Animations/RandomText";
 
 function CapabilitiesSection() {
   const navigate = useNavigate();
@@ -79,15 +80,10 @@ function CapabilitiesSection() {
           <span className="pl-4 md:pl-10 lg:pl-28">CAPABILITIES</span>
         </div>
 
-        <motion.div
-          initial={{ opacity: 0, y: 50 }}
-          whileInView={{ opacity: 1, y: 0 }}
-          transition={{ duration: 0.4 }}
-          viewport={{ once: true, amount: 0.4 }}
-          className="lg:w-[50%] text-5xl font-medium lg:mt-14 mr-auto lg:flex lg:flex-col"
-        >
-          <span>Tools that shape</span> <span>my craft</span>
-        </motion.div>
+        <div className="lg:w-[50%] text-5xl font-medium lg:mt-14 mr-auto lg:flex lg:flex-col">
+          <RandomText text="TOOLS THAT SHAPE" />
+          <RandomText text="MY CRAFT" />
+        </div>
 
         <div className="lg:w-[25%] md:mx-20 my-14 lg:mx-0 lg:my-0 text-sm font-semibold tracking-widest font-mono lg:flex lg:justify-between overflow-hidden">
           <div className="flex justify-end items-end select-none">
@@ -120,11 +116,13 @@ function CapabilitiesSection() {
                 </div>
 
                 <div className="lg:w-[50%] md:px-20 lg:px-0">
-                  <h1 className="text-2xl md:text-4xl lg:py-5">{item.title}</h1>
+                  <h1 className="text-lg md:text-xl lg:py-5 pr-4 uppercase font-semibold">
+                    {item.title}
+                  </h1>
 
                   <p
-                    className="text-sm md:text-base pt-16 lg:pt-20 pb-12 lg:pr-40 leading-tight text-justify"
-                    style={{ textIndent: "25%" }}
+                    className="text-sm md:text-base pt-16 lg:pt-20 pb-12 lg:pr-40 text-justify uppercase font-mono text-[#6b6b6c] font-medium"
+                    style={{ textIndent: "30%" }}
                   >
                     {item.description}
                   </p>

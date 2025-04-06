@@ -1,5 +1,7 @@
 import React from "react";
 import Time from "../../utils/Time.jsx";
+import { motion } from "framer-motion";
+import RandomText from "../Animations/RandomText.jsx";
 
 function LandingSection() {
   const handleScroll = () => {
@@ -10,16 +12,35 @@ function LandingSection() {
   };
 
   return (
-    <div className="h-screen relative top-24 lg:top-40 w-full flex flex-col items-center gap-32 lg:gap-0">
-      <div className="lg:h-[40%] w-full px-14 md:px-24 lg:px-32 flex flex-col gap-16 lg:gap-0 lg:flex-row justify-between text-[#6b6b6c]">
+    <div className="h-screen pt-24 pb-24 md:pt-40 md:pb-20 w-full flex flex-col items-center justify-between gap-32 lg:gap-0">
+      <div className="md:h-[40%] w-full px-14 md:px-24 lg:px-32 flex flex-col gap-16 lg:gap-0 lg:flex-row justify-between text-[#6b6b6c]">
         <div className="lg:w-[40%] flex justify-between pt-14 text-sm font-semibold font-mono">
           {/* <div>FREELANCE</div> */}
-          <Time />
-          <div>BASED IN INDIA</div>
+          <motion.div
+            initial={{ opacity: 0 }}
+            animate={{ opacity: 1 }}
+            transition={{ duration: 1, ease: "easeOut", delay: 1.5 }}
+            className="flex flex-col "
+          >
+            <p>LOCAL TIME:</p>
+            <p>
+              <Time />
+            </p>
+          </motion.div>
+          <motion.div
+            initial={{ opacity: 0 }}
+            animate={{ opacity: 1 }}
+            transition={{ duration: 1, ease: "easeOut", delay: 0.9 }}
+          >
+            BASED IN INDIA
+          </motion.div>
         </div>
 
         {/* description */}
-        <div
+        <motion.div
+          initial={{ opacity: 0 }}
+          animate={{ opacity: 1 }}
+          transition={{ duration: 1, ease: "easeOut", delay: 1.2 }}
           className="lg:w-[30%] text-sm font-semibold uppercase font-mono text-justify"
           style={{ textIndent: "20%" }}
         >
@@ -27,24 +48,30 @@ function LandingSection() {
           facere aspernatur deleniti dolorusdfasdm nostrum accusantium corporis
           aperiam iusto aliasdasquid molestias, tempora qusadfisquam voluptate
           aliquam.
-        </div>
+        </motion.div>
       </div>
 
       {/* name div */}
-      <div className="w-full md:px-24 lg:px-32 flex flex-col lg:flex-row justify-between items-center gap-14 lg:gap-0">
-        <div className="flex flex-col text-4xl md:text-6xl lg:text-[6vw]">
-          <div className="whitespace-nowrap lato-text">AMAN RANA</div>
-          <div className="whitespace-nowrap font-semibold inter-text">
-            &nbsp;&nbsp;&nbsp;&nbsp;WEB DEVELOPER
-          </div>
+      <div className="w-full pl-6 md:px-24 lg:px-32 flex flex-col lg:flex-row justify-between gap-14 lg:gap-0">
+        <div className="w-full flex flex-col text-4xl md:text-6xl lg:text-[6vw]">
+          <RandomText text="AMAN RANA" className="lato-text" />
+          <RandomText
+            text="&nbsp;&nbsp;&nbsp;&nbsp;WEB DEVELOPER"
+            className="font-semibold inter-text"
+          />
         </div>
 
-        <button
-          onClick={handleScroll}
-          className="w-full text-sm text-[#6b6b6c] hover:text-white/50 font-semibold font-mono transition duration-300 flex justify-end px-14 lg:px-0"
-        >
-          EXPLORE
-        </button>
+        <div className="flex justify-end">
+          <motion.button
+            initial={{ opacity: 0 }}
+            animate={{ opacity: 1 }}
+            transition={{ duration: 1, ease: "easeOut", delay: 1.8 }}
+            onClick={handleScroll}
+            className="text-sm text-[#6b6b6c] hover:text-white/50 font-semibold font-mono transition duration-300 px-14 md:px-0"
+          >
+            EXPLORE
+          </motion.button>
+        </div>
       </div>
     </div>
   );

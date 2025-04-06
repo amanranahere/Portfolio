@@ -1,6 +1,6 @@
 import React, { useEffect } from "react";
 import { useLocation } from "react-router-dom";
-import PageTransition from "../components/Transitions/PageTransition.jsx";
+import PageTransition from "../components/Animations/PageTransition.jsx";
 import LandingSection from "../components/Home/LandingSection.jsx";
 import AboutSection from "../components/Home/AboutSection.jsx";
 import WorkSection from "../components/Home/WorkSection.jsx";
@@ -36,7 +36,9 @@ function Home() {
         <LandingSection />
       </div>
 
-      <AboutSection />
+      <div className="bg-[#f1f1f1]">
+        <AboutSection />
+      </div>
 
       <WorkSection />
 

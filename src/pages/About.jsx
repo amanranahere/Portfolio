@@ -1,5 +1,5 @@
 import React from "react";
-import PageTransition from "../components/Transitions/PageTransition";
+import PageTransition from "../components/Animations/PageTransition";
 import Footer from "../components/Footer/Footer.jsx";
 
 function About() {

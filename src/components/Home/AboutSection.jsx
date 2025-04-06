@@ -1,70 +1,70 @@
 import React, { useRef } from "react";
 import { useNavigate } from "react-router-dom";
-import { motion, useScroll, useTransform } from "framer-motion";
-import { IoIosArrowForward } from "react-icons/io";
+import { motion } from "framer-motion";
+import useScreenSize from "../../utils/ScreenSize.jsx";
 
 function AboutSection() {
-  const navigate = useNavigate();
-  const targetRef = useRef(null);
+  const screenSize = useScreenSize();
 
-  const paragraph =
-    "I'm a full-stack developer passionate about building intuitive and scalable digital experiences. With a strong foundation in both front-end and back-end technologies, I craft seamless applications that blend.";
-
-  const words = paragraph.split(" ");
-
-  const { scrollYProgress } = useScroll({
-    target: targetRef,
-    offset: ["start start", "end end"],
-  });
-
-  const wordAnimation = (word, index) => {
-    const start = index / words.length;
-    const end = start + 1 / words.length;
-    const opacity = useTransform(scrollYProgress, [start, end], [0, 1]);
-
-    return (
-      <motion.span
-        key={index}
-        style={{ opacity }}
-        className="mr-3 leading-snug"
-      >
-        {word}
-      </motion.span>
-    );
-  };
+  const columnSize = screenSize === "sm" ? 60 : screenSize === "md" ? 90 : 120;
+  const rowSize = screenSize === "sm" ? 30 : screenSize === "md" ? 45 : 60;
 
   return (
-    <section className=" bg-[#f1f1f1] text-black">
-      <div
-        ref={targetRef}
-        className="h-[400vh] flex flex-col relative mx-6 md:mx-20 lg:mx-40"
-      >
-        {/* paragraph */}
-        <div className="w-full sticky top-20 pt-20 uppercase">
-          <motion.div className="text-xl md:text-4xl lg:text-5xl text-center flex flex-wrap absolute font-extrabold">
-            {words.map((word, index) => (
-              <span className="mr-3 leading-snug opacity-10">{word}</span>
-            ))}
-          </motion.div>
-
-          <motion.div
-            // ref={targetRef}
-            className="text-xl text-[#3a3a3a] md:text-4xl lg:text-5xl text-center flex flex-wrap absolute font-extrabold"
-          >
-            {words.map((word, index) => wordAnimation(word, index))}
-          </motion.div>
+    <section className="min-h-screen lg:h-screen px-4 md:px-16 lg:px-14 py-20">
+      <div className="h-full flex flex-col lg:flex-row justify-between">
+        <div className="lg:w-[40%] text-xl font-semibold tracking-widest select-none font-mono">
+          <span>/</span>
+          <span className="pl-4 md:pl-10 lg:pl-28 text-[#6b6b6c]">ABOUT</span>
         </div>
 
-        {/* about me button */}
-        {/* <div
-          onClick={() => navigate("/about")}
-          className="absolute bottom-24 py-6 flex justify-center items-center gap-8 cursor-pointer rounded-md transition duration-300 hover:text-white/35"
-        >
-          <p className="text-xl md:text-3xl lg:text-4xl font-medium tracking-widest">
-            ABOUT ME
-          </p>
-          <IoIosArrowForward className="text-4xl mt-1 absolute -right-16" />
-        </div> */}
+        {/* paragraph */}
+        <div className="lg:w-[60%] py-20 lg:py-0 flex justify-end">
+          <div className="w-full flex items-end">
+            <div className=" flex flex-wrap relative">
+              <p
+                className="lg:text-xl text-[#6b6b6c] text-justify font-extrabold uppercase font-mono"
+                style={{ textIndent: "40%" }}
+              >
+                I'm a full-stack developer passionate about building intuitive
+                and scalable digital experiences. With a strong foundation in
+                both front-end and back-end technologies, I craft seamless
+                applications that blend. Lorem ipsum dolor sit amet consectetur
+                adipisicing elit. Commodi deserunt et perferendis eligendi
+                facilis cum, beatae enim a sed, ipsum esse magnam animi
+                delectus, at vitae architecto minima ullam! Voluptas! Lorem
+                ipsum dolor sit amet consectetur adipisicing elit. Laboriosam
+                maiores voluptatibus delectus voluptatum nisi ea, reprehenderit,
+                suscipit error sequi neque placeat, deserunt ullam? In libero,
+                atque neque at alias ea? Lorem ipsum dolor sit amet, consectetur
+                adipisicing elit. Natus ea maxime voluptates dignissimos tempora
+                molestiae, totam, consequatur illum, eaque quae quaerat. Nisi
+                veritatis explicabo voluptatum veniam, nemo ullam nostrum totam!
+                Lorem ipsum dolor sit amet consectetur adipisicing elit. Quidem
+                blanditiis modi, a quos dolor eveniet, optio distinctio
+                inventore est delectus ea impedit eaque, nulla quis ipsa
+                doloribus beatae voluptatem explicabo.
+              </p>
+              <div
+                className="absolute inset-0 z-10 pointer-events-none grid"
+                style={{
+                  gridTemplateColumns: `repeat(auto-fit, minmax(${columnSize}px, 1fr))`,
+                  gridTemplateRows: `repeat(auto-fit, minmax(${rowSize}px, 1fr))`,
+                }}
+              >
+                {[...Array(100)].map((_, i) => (
+                  <motion.div
+                    key={i}
+                    className="bg-[#f1f1f1]"
+                    initial={{ opacity: 1 }}
+                    whileInView={{ opacity: 0 }}
+                    transition={{ delay: Math.random() * 1.5, duration: 0.3 }}
+                    viewport={{ once: true }}
+                  />
+                ))}
+              </div>
+            </div>
+          </div>
+        </div>
       </div>
     </section>
   );
