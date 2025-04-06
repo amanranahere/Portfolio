@@ -14,13 +14,14 @@ function getDay() {
   const now = new Date();
 
   return now.toLocaleDateString("en-US", {
-    weekday: "short",
+    weekday: "long",
   });
 }
 
 const Time = () => {
   const [time, setTime] = useState(getCurrentTime());
   const [day, setDay] = useState(getDay());
+  const [showColon, setShowColon] = useState(true);
 
   useEffect(() => {
     const timer = setInterval(() => {
@@ -28,15 +29,28 @@ const Time = () => {
       setDay(getDay());
     }, 1000);
 
+    const colonBlink = setInterval(() => {
+      setShowColon((prev) => !prev);
+    }, 500);
+
     setTime(getCurrentTime());
     setDay(getDay());
 
-    return () => clearInterval(timer);
+    return () => {
+      clearInterval(timer);
+      clearInterval(colonBlink);
+    };
   }, []);
+
+  const [hour, minute] = time.split(":");
 
   return (
     <div className="uppercase">
-      {time}, {day}
+      {hour}
+      <span style={{ opacity: showColon ? 1 : 0, transition: "opacity 0.2s" }}>
+        :
+      </span>
+      {minute}, {day}
     </div>
   );
 };

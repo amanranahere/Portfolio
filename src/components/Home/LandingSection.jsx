@@ -15,7 +15,6 @@ function LandingSection() {
     <div className="h-screen pt-24 pb-24 md:pt-40 md:pb-20 w-full flex flex-col items-center justify-between gap-32 lg:gap-0">
       <div className="md:h-[40%] w-full px-14 md:px-24 lg:px-32 flex flex-col gap-16 lg:gap-0 lg:flex-row justify-between text-[#6b6b6c]">
         <div className="lg:w-[40%] flex justify-between pt-14 text-sm font-semibold font-mono">
-          {/* <div>FREELANCE</div> */}
           <motion.div
             initial={{ opacity: 0 }}
             animate={{ opacity: 1 }}
@@ -31,8 +30,10 @@ function LandingSection() {
             initial={{ opacity: 0 }}
             animate={{ opacity: 1 }}
             transition={{ duration: 1, ease: "easeOut", delay: 0.9 }}
+            className="flex flex-col lg:flex-row text-right"
           >
-            BASED IN INDIA
+            <span>BASED IN</span>
+            <span>INDIA</span>
           </motion.div>
         </div>
 

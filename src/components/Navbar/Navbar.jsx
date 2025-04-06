@@ -29,7 +29,13 @@ function Navbar() {
     },
     {
       name: "ABOUT",
-      slug: "/about",
+      action: () => {
+        if (window.location.pathname !== "/") {
+          navigate("/", { state: { scrollToAbout: true } });
+        } else {
+          window.dispatchEvent(new Event("scrollToAbout"));
+        }
+      },
     },
     {
       name: "CAPABILITIES",

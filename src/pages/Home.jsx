@@ -15,16 +15,36 @@ function Home() {
     const handleScrollToContact = () => scrollToContactSection();
     window.addEventListener("scrollToContact", handleScrollToContact);
 
+    const handleScrollToAbout = () => scrollToAboutSection();
+    window.addEventListener("scrollToAbout", handleScrollToAbout);
+
     if (location.state?.scrollToContact) {
-      scrollToContactSection();
+      setTimeout(() => {
+        scrollToContactSection();
+      }, 1000);
     }
 
-    return () =>
+    if (location.state?.scrollToAbout) {
+      setTimeout(() => {
+        scrollToAboutSection();
+      }, 1000);
+    }
+
+    return () => {
       window.removeEventListener("scrollToContact", handleScrollToContact);
+      window.removeEventListener("scrollToAbout", handleScrollToAbout);
+    };
   }, [location]);
 
   const scrollToContactSection = () => {
     const section = document.getElementById("contactSection");
+    if (section) {
+      section.scrollIntoView({ behavior: "smooth" });
+    }
+  };
+
+  const scrollToAboutSection = () => {
+    const section = document.getElementById("aboutSection");
     if (section) {
       section.scrollIntoView({ behavior: "smooth" });
     }
@@ -36,7 +56,7 @@ function Home() {
         <LandingSection />
       </div>
 
-      <div className="bg-[#f1f1f1]">
+      <div id="aboutSection" className="bg-[#f1f1f1]">
         <AboutSection />
       </div>
 

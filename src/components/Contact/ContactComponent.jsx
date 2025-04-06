@@ -1,6 +1,7 @@
 import React from "react";
 import ContactForm from "./ContactForm.jsx";
 import { motion } from "framer-motion";
+import RandomText from "../Animations/RandomText.jsx";
 
 function ContactComponent() {
   return (
@@ -17,9 +18,8 @@ function ContactComponent() {
         </div>
 
         <div className="bg-[#f1f1f1] p-2 gap-10 lg:gap-0">
-          <div className="text-xl lg:text-3xl leading-tight font-medium px-2 lg:px-3 py-4 lg:pt-6 select-none">
-            Looking to bring an idea to life? Let&apos;s work together to shape
-            your vision into something meaningful and impactful.
+          <div className="text-xl lg:text-3xl leading-tight font-medium px-2 lg:px-3 py-4 lg:pt-6 select-none uppercase font-mono">
+            <RandomText text=" Looking to bring an idea to life? Let's work together to shape your vision into something meaningful and impactful." />
           </div>
         </div>
       </motion.div>

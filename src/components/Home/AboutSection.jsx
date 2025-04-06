@@ -12,9 +12,9 @@ function AboutSection() {
   return (
     <section className="min-h-screen lg:h-screen px-4 md:px-16 lg:px-14 py-20">
       <div className="h-full flex flex-col lg:flex-row justify-between">
-        <div className="lg:w-[40%] text-xl font-semibold tracking-widest select-none font-mono">
+        <div className="lg:w-[40%] text-xl font-bold tracking-widest select-none font-mono">
           <span>/</span>
-          <span className="pl-4 md:pl-10 lg:pl-28 text-[#6b6b6c]">ABOUT</span>
+          <span className="pl-4 md:pl-10 lg:pl-28">ABOUT</span>
         </div>
 
         {/* paragraph */}
@@ -22,7 +22,7 @@ function AboutSection() {
           <div className="w-full flex items-end">
             <div className=" flex flex-wrap relative">
               <p
-                className="lg:text-xl text-[#6b6b6c] text-justify font-extrabold uppercase font-mono"
+                className="lg:text-xl text-[#6b6b6c] text-justify font-semibold uppercase font-mono"
                 style={{ textIndent: "40%" }}
               >
                 I'm a full-stack developer passionate about building intuitive

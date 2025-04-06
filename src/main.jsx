@@ -4,7 +4,6 @@ import "./index.css";
 import App from "./App.jsx";
 import {
   Home,
-  About,
   Work,
   Capabilities,
   ProjectDetail,
@@ -28,10 +27,10 @@ const router = createBrowserRouter([
         path: "/work/:projectName",
         element: <ProjectDetail />,
       },
-      {
-        path: "/about",
-        element: <About />,
-      },
+      // {
+      //   path: "/about",
+      //   element: <About />,
+      // },
       {
         path: "/capabilities",
         element: <Capabilities />,

@@ -26,6 +26,7 @@ import {
   SiNextdotjs,
   SiGreensock,
 } from "react-icons/si";
+import RandomText from "../Animations/RandomText";
 
 function CapabilitiesComponent() {
   const location = useLocation();
@@ -266,33 +267,18 @@ function CapabilitiesComponent() {
     "Exploring / Learning",
   ];
 
-  const delays = categories.map(() => Math.random() * 0.7);
-
-  const nameVariant = {
-    hidden: { y: "-100%" },
-    visible: {
-      y: "0%",
-      transition: { duration: 0.7, ease: "easeInOut" },
-    },
-  };
+  const delays = categories.map(() => Math.random() * 1);
 
   return (
     <div className="w-full min-h-screen bg-black text-[#fff] flex flex-col lg:flex-row">
       <div className="w-full lg:w-[50%]">
-        <div className="lg:sticky top-52 mt-52 lg:mt-0 lg:pt-0 px-6 z-10 bg-black">
-          <motion.div className="lg:w-[80%] text-5xl lg:text-6xl pb-3 font-medium select-none overflow-hidden">
-            <motion.div
-              variants={nameVariant}
-              initial="hidden"
-              whileInView="visible"
-              viewport={{ once: true }}
-            >
-              Building with the Right Stack
-            </motion.div>
-          </motion.div>
+        <div className="lg:sticky top-52 mt-52 lg:mt-0 lg:pt-0 px-6 z-10">
+          <div className="lg:w-[80%] text-5xl lg:text-6xl pb-3 font-medium select-none overflow-hidden">
+            <RandomText text="BUILDING WITH THE RIGHT STACK" />
+          </div>
           <p
-            className="lg:w-[65%] pt-9 pb-12 lg:pb-20 select-none fade-in"
-            style={{ textIndent: "35%" }}
+            className="lg:w-[65%] pt-9 pb-12 lg:pb-20 select-none fade-in text-justify font-mono text-[#6b6b6c] uppercase"
+            style={{ textIndent: "30%" }}
           >
             A strong foundation of the right technologies is key to building
             efficient and high-performing applications. These are the languages,
@@ -350,13 +336,10 @@ function CapabilitiesComponent() {
 
                   {/* label */}
                   <div
-                    className={`w-full lg:w-[40%] text-[0.6rem] md:text-[0.7rem] group-hover:text-black/70
-                    ${
-                      expandedItem === name ? "text-black/70" : "text-white/70"
-                    } 
-                    font-medium md:font-semibold my-auto transition-colors duration-300`}
+                    className={`w-full lg:w-[40%] text-[0.6rem] md:text-[0.7rem] text-[#6b6b6c] 
+                    font-medium md:font-semibold my-auto transition-colors duration-300 uppercase`}
                   >
-                    {label.toUpperCase()}
+                    {label}
                   </div>
                 </div>
 
@@ -404,11 +387,11 @@ function CapabilitiesComponent() {
                   transition={{ duration: 0.3, ease: "easeInOut" }}
                   className="border-t border-black/40 p-4 flex gap-4 bg-gray-50 origin-top"
                 >
-                  <div className="w-[60%] pb-16 py-6 text-black font-medium leading-tight">
+                  <div className="w-[70%] pb-16 py-6 text-[#6b6b6c] font-medium leading-tight font-mono uppercase">
                     {description}
                   </div>
 
-                  <div className="w-[40%] flex justify-center pt-6">
+                  <div className="w-[30%] flex justify-center pt-6">
                     <div className="text-black">{logo}</div>
                   </div>
                 </motion.div>
