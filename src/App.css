@@ -43,6 +43,15 @@
 }
 
 @font-face {
+  font-family: "JosefinSans";
+  src: url("/fonts/JosefinSans.ttf") format("truetype");
+}
+
+.josefinSans-text {
+  font-family: "JosefinSans", sans-serif;
+}
+
+@font-face {
   font-family: "Lato";
   src: url("/fonts/Lato.ttf") format("truetype");
 }

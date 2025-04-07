@@ -33,6 +33,7 @@ function LandingSection() {
             className="flex flex-col lg:flex-row text-right"
           >
             <span>BASED IN</span>
+            <span className="hidden lg:block">&nbsp;</span>
             <span>INDIA</span>
           </motion.div>
         </div>
@@ -54,11 +55,14 @@ function LandingSection() {
 
       {/* name div */}
       <div className="w-full pl-6 md:px-24 lg:px-32 flex flex-col lg:flex-row justify-between gap-14 lg:gap-0">
-        <div className="w-full flex flex-col text-4xl md:text-6xl lg:text-[6vw]">
-          <RandomText text="AMAN RANA" className="lato-text" />
+        <div className="w-full flex flex-col text-[2rem] leading-none md:text-6xl lg:text-[5vw]">
           <RandomText
-            text="&nbsp;&nbsp;&nbsp;&nbsp;WEB DEVELOPER"
-            className="font-semibold inter-text"
+            text="AMAN RANA"
+            className="josefinSans-text font-extralight"
+          />
+          <RandomText
+            text="&nbsp;&nbsp;&nbsp;WEB DEVELOPER"
+            className="font-bold josefinSans-text"
           />
         </div>
 

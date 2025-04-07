@@ -273,11 +273,11 @@ function CapabilitiesComponent() {
     <div className="w-full min-h-screen bg-black text-[#fff] flex flex-col lg:flex-row">
       <div className="w-full lg:w-[50%]">
         <div className="lg:sticky top-52 mt-52 lg:mt-0 lg:pt-0 px-6 z-10">
-          <div className="lg:w-[80%] text-5xl lg:text-6xl pb-3 font-medium select-none overflow-hidden">
+          <div className="lg:w-[80%] text-3xl lg:text-4xl pb-3 font-medium select-none overflow-hidden josefinSans-text">
             <RandomText text="BUILDING WITH THE RIGHT STACK" />
           </div>
           <p
-            className="lg:w-[65%] pt-9 pb-12 lg:pb-20 select-none fade-in text-justify font-mono text-[#6b6b6c] uppercase"
+            className="lg:w-[75%] pt-9 pb-12 lg:pb-20 select-none fade-in text-justify font-mono text-sm lg:text-base text-[#6b6b6c] uppercase"
             style={{ textIndent: "30%" }}
           >
             A strong foundation of the right technologies is key to building
@@ -287,7 +287,7 @@ function CapabilitiesComponent() {
         </div>
 
         {/* categories buttons */}
-        <div className="lg:sticky top-[34rem] lg:w-[70%] gap-2 lg:gap-3 p-6 flex flex-wrap select-none">
+        <div className="lg:sticky top-[34rem] lg:w-[80%] gap-2 lg:gap-3 p-6 flex flex-wrap select-none">
           {categories.map((category, index) => (
             <motion.button
               key={category}
@@ -298,7 +298,7 @@ function CapabilitiesComponent() {
                 setSelectedCategory(category);
                 window.scrollTo({ top: 0, behavior: "smooth" });
               }}
-              className={`px-6 py-2 border border-white text-[0.6rem] font-medium tracking-widest rounded-[0.21rem] hover:text-black hover:bg-[#fff] transition duration-300 active:scale-95  ${
+              className={`px-6 py-1 lg:px-8 lg:py-2 border border-white text-[0.6rem] font-medium tracking-widest rounded-[0.21rem] hover:text-black hover:bg-[#fff] transition duration-300 active:scale-95  ${
                 selectedCategory === category ? "bg-[#fff] text-black" : ""
               }`}
             >

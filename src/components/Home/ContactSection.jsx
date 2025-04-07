@@ -1,13 +1,17 @@
 import React from "react";
 import ContactComponent from "../Contact/ContactComponent.jsx";
+import ContactForm from "../Contact/ContactForm.jsx";
 
 function ContactSection() {
   return (
-    <div
-      id="contactSection"
-      className="h-full flex justify-center items-center bg-black px-3 md:px-6 lg:px-10 py-14"
-    >
-      <ContactComponent />
+    <div className="w-full min-h-screen lg:h-screen flex flex-col lg:flex-row justify-between px-4 md:px-16 lg:px-14 py-16">
+      <div className="lg:w-[40%] h-full">
+        <ContactComponent />
+      </div>
+
+      <div className="h-full lg:w-[50%]">
+        <ContactForm />
+      </div>
     </div>
   );
 }

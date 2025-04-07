@@ -57,6 +57,25 @@ function WorkSection() {
 
   return (
     <>
+      <div className="h-full w-full bg-[#1e1e1e] flex justify-between items-center px-4 md:px-16 lg:px-14 py-20">
+        <div className="josefinSans-text font-semibold text-sm text-[#f1f1f1] select-none flex items-center">
+          <span>/</span>
+          <span className="pl-10 lg:pl-28 text-lg lg:text-xl tracking-widest ">
+            WORK
+          </span>
+        </div>
+
+        <div className="flex items-center justify-center select-none">
+          <button
+            onClick={() => navigate("/work")}
+            className="tracking-widest text-[#9a9a9a] hover:text-[#f7f7f7] font-mono duration-300 text-xs lg:text-sm"
+          >
+            <span className="px-4 whitespace-nowrap">VIEW ALL</span>
+            <span className="text-lg">&rarr;</span>
+          </button>
+        </div>
+      </div>
+
       <section
         ref={containerRef}
         className="relative h-[4000vh] lg:h-[900vh] bg-[#1e1e1e]"
@@ -126,25 +145,6 @@ function WorkSection() {
           </motion.div>
         </div>
       </section>
-
-      <div className="h-[20vh] w-full bg-[#1e1e1e] text-[#f1f1f1] text-sm font-semibold font-mono flex justify-between items-center px-4">
-        <div className=" select-none">
-          /<span className="pl-4 md:pl-10 lg:pl-28 tracking-widest">WORK</span>
-        </div>
-
-        <div className="lg:w-[25%] select-none overflow-hidden">
-          <span>/</span>
-          <button
-            onClick={() => navigate("/work")}
-            className="tracking-widest hover:text-[#9a9a9a]"
-          >
-            <span className="px-4 md:px-10 lg:px-28 whitespace-nowrap">
-              VIEW ALL
-            </span>
-            <span className="text-lg">&rarr;</span>
-          </button>
-        </div>
-      </div>
     </>
   );
 }

@@ -74,29 +74,32 @@ function CapabilitiesSection() {
 
   return (
     <div className="min-h-max bg-[#f1f1f1] px-4">
-      <div className="pt-32 lg:py-32 flex flex-col lg:flex-row lg:justify-center lg:items-center text-[#333]">
-        <div className="lg:w-[25%] my-10 lg:my-0 text-sm font-semibold tracking-widest select-none font-mono">
+      <div className="pt-16 lg:pt-28 px-4 md:px-16 lg:px-14 flex flex-col text-[#333]">
+        <div className="lg:w-[25%] my-10 lg:my-0  text-lg lg:text-xl font-semibold tracking-widest select-none josefinSans-text">
           <span>/</span>
           <span className="pl-4 md:pl-10 lg:pl-28">CAPABILITIES</span>
         </div>
 
-        <div className="lg:w-[50%] text-5xl font-medium lg:mt-14 mr-auto lg:flex lg:flex-col">
-          <RandomText text="TOOLS THAT SHAPE" />
-          <RandomText text="MY CRAFT" />
-        </div>
+        <div className="flex flex-col mx-auto">
+          <div className="text-3xl lg:text-5xl font-medium lg:mt-14 mr-auto josefinSans-text flex flex-col lg:flex-row">
+            <RandomText text="TOOLS THAT SHAPE" />
+            <div className="flex justify-end">
+              <RandomText text=" MY CRAFT" />
+            </div>
+          </div>
 
-        <div className="lg:w-[25%] md:mx-20 my-14 lg:mx-0 lg:my-0 text-sm font-semibold tracking-widest font-mono lg:flex lg:justify-between overflow-hidden">
-          <div className="flex justify-end items-end select-none">
-            <span>/</span>
-            <button
-              onClick={() => navigate("/capabilities")}
-              className="hover:text-black/30 overflow-hidden"
-            >
-              <span className="px-4 md:px-10 lg:px-28 whitespace-nowrap">
-                VIEW ALL
-              </span>
-              <span className="text-lg">&rarr;</span>
-            </button>
+          <div className="md:mx-20 my-2 lg:mx-0 lg:my-0 text-sm font-semibold tracking-widest lg:flex lg:justify-end overflow-hidden">
+            <div className="flex justify-end items-center select-none">
+              <button
+                onClick={() => navigate("/capabilities")}
+                className="text-[#6b6b6c] overflow-hidden font-mono"
+              >
+                <span className="px-4 whitespace-nowrap text-xs lg:text-sm">
+                  VIEW ALL
+                </span>
+                <span className="text-lg">&rarr;</span>
+              </button>
+            </div>
           </div>
         </div>
       </div>

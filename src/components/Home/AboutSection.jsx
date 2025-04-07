@@ -12,9 +12,9 @@ function AboutSection() {
   return (
     <section className="min-h-screen lg:h-screen px-4 md:px-16 lg:px-14 py-20">
       <div className="h-full flex flex-col lg:flex-row justify-between">
-        <div className="lg:w-[40%] text-xl font-bold tracking-widest select-none font-mono">
+        <div className="lg:w-[40%] text-lg lg:text-xl font-medium tracking-widest select-none josefinSans-text">
           <span>/</span>
-          <span className="pl-4 md:pl-10 lg:pl-28">ABOUT</span>
+          <span className="pl-10 lg:pl-28">ABOUT</span>
         </div>
 
         {/* paragraph */}

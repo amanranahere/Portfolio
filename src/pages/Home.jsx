@@ -64,10 +64,8 @@ function Home() {
 
       <CapabilitiesSection />
 
-      <div className="py-32 bg-black">
-        <div id="contactSection">
-          <ContactSection />
-        </div>
+      <div id="contactSection" className="bg-[#161616]">
+        <ContactSection />
       </div>
 
       <div className="border-t-2 border-white">
