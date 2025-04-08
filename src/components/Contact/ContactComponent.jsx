@@ -2,6 +2,7 @@ import React from "react";
 import { motion } from "framer-motion";
 import RandomText from "../Animations/RandomText.jsx";
 import useScreenSize from "../../utils/ScreenSize.jsx";
+import MaskingGrid from "../Animations/MaskingGrid.jsx";
 
 function ContactComponent() {
   const screenSize = useScreenSize();
@@ -30,24 +31,7 @@ function ContactComponent() {
           </p>
 
           {/* masking div for animation */}
-          <div
-            className="absolute inset-0 z-10 pointer-events-none grid"
-            style={{
-              gridTemplateColumns: `repeat(auto-fit, minmax(${columnSize}px, 1fr))`,
-              gridTemplateRows: `repeat(auto-fit, minmax(${rowSize}px, 1fr))`,
-            }}
-          >
-            {[...Array(100)].map((_, i) => (
-              <motion.div
-                key={i}
-                className="bg-[#161616]"
-                initial={{ opacity: 1 }}
-                whileInView={{ opacity: 0 }}
-                transition={{ delay: Math.random() * 1.5, duration: 0.3 }}
-                viewport={{ once: true }}
-              />
-            ))}
-          </div>
+          <MaskingGrid color="#161616" baseRowSize={20} baseColumnSize={20} />
         </div>
 
         {/* social */}

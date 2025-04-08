@@ -27,6 +27,7 @@ import {
   SiGreensock,
 } from "react-icons/si";
 import RandomText from "../Animations/RandomText";
+import MaskingGrid from "../Animations/MaskingGrid";
 
 function CapabilitiesComponent() {
   const location = useLocation();
@@ -276,14 +277,18 @@ function CapabilitiesComponent() {
           <div className="lg:w-[80%] text-3xl lg:text-4xl pb-3 font-medium select-none overflow-hidden josefinSans-text">
             <RandomText text="BUILDING WITH THE RIGHT STACK" />
           </div>
-          <p
-            className="lg:w-[75%] pt-9 pb-12 lg:pb-20 select-none fade-in text-justify font-mono text-sm lg:text-base text-[#6b6b6c] uppercase"
+          <div
+            className="lg:w-[75%] pt-9 pb-12 lg:pb-20 select-none text-justify font-mono text-sm lg:text-base text-[#6b6b6c] uppercase bg-black z-10 relative"
             style={{ textIndent: "30%" }}
           >
-            A strong foundation of the right technologies is key to building
-            efficient and high-performing applications. These are the languages,
-            frameworks, and tools I use to bring ideas to life.
-          </p>
+            <p>
+              A strong foundation of the right technologies is key to building
+              efficient and high-performing applications. These are the
+              languages, frameworks, and tools I use to bring ideas to life.
+            </p>
+
+            <MaskingGrid color="#000" baseRowSize={20} baseColumnSize={20} />
+          </div>
         </div>
 
         {/* categories buttons */}
@@ -310,13 +315,13 @@ function CapabilitiesComponent() {
 
       {/* tech list */}
       <motion.div
-        initial={{ opacity: 0, y: 80 }}
-        animate={{ opacity: 1, y: 0 }}
-        transition={{ duration: 0.4, delay: 0.9 }}
-        viewport={{ once: true }}
+        initial={{ opacity: 0 }}
+        animate={{ opacity: 1 }}
+        transition={{ duration: 1, ease: "easeOut", delay: 1.2 }}
         className="lg:w-[50%] lg:pr-8 lg:mt-52 pt-6 lg:pt-0"
       >
         <div className="mx-4 border-b-2 border-dotted border-[#6a6a6a]"></div>
+
         <ul className="pb-6">
           {filteredTech.map(({ name, label, logo, description }) => (
             <>

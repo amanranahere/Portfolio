@@ -9,6 +9,7 @@ import FlappyBirdImg from "../../assets/images/flappyBird.png";
 import SnakeGameImg from "../../assets/images/snakeGame.png";
 import { motion } from "framer-motion";
 import RandomText from "../Animations/RandomText";
+import MaskingGrid from "../Animations/MaskingGrid";
 
 function ProjectsListComponent() {
   const [activeProject, setActiveProject] = useState(null);
@@ -34,7 +35,6 @@ function ProjectsListComponent() {
       name: "Weblog",
       type: "Blogging website",
       path: "weblog",
-      hoverColor: "hover:bg-blue-100",
       img: (
         <img
           src={WeblogImg}
@@ -47,7 +47,6 @@ function ProjectsListComponent() {
       name: "Vidron",
       type: "Streaming Platform",
       path: "vidron",
-      hoverColor: "hover:bg-teal-100",
       img: (
         <img
           src={VidronImg}
@@ -60,7 +59,6 @@ function ProjectsListComponent() {
       name: "Currency Converter",
       type: "Tool",
       path: "currencyConverter",
-      hoverColor: "hover:bg-pink-100",
       img: (
         <img
           src={CurrConvImg}
@@ -73,7 +71,6 @@ function ProjectsListComponent() {
       name: "Brick Breaker",
       type: "Arcade Game",
       path: "brickBreaker",
-      hoverColor: "hover:bg-orange-100",
       img: (
         <img
           src={BrickBreakerImg}
@@ -86,7 +83,6 @@ function ProjectsListComponent() {
       name: "Flappy Bird Clone",
       type: "Casual Game",
       path: "flappyBird",
-      hoverColor: "hover:bg-green-100",
       img: (
         <img
           src={FlappyBirdImg}
@@ -99,7 +95,6 @@ function ProjectsListComponent() {
       name: "Hungry Snake",
       type: "Classic Game",
       path: "hungrySnake",
-      hoverColor: "hover:bg-cyan-100",
       img: (
         <img
           src={SnakeGameImg}
@@ -118,17 +113,34 @@ function ProjectsListComponent() {
 
   return (
     <>
-      {/* MY PROJECTS heading */}
-      <div className="mb-12 lg:mb-20 flex justify-center items-center">
-        <div className=" dark:text-[#f1f1f1] flex flex-col md:flex-row justify-center items-center">
-          <span className="dark:text-white text-5xl md:text-8xl lg:text-9xl leading-3">
+      {/* heading and paragraph */}
+      <div className="flex flex-col justify-center items-center">
+        <div className="w-[90%] lg:w-[75%] mt-20 md:mt-40 lg:mt-20">
+          <div className="w-full text-3xl lg:text-4xl font-medium select-none josefinSans-text">
             <RandomText text="MY PROJECTS" />
-          </span>
+          </div>
+
+          <div
+            className="mt-10 mb-20 md:mt-20 md:mb-28 select-none text-justify font-mono text-sm lg:text-base text-[#6b6b6c] uppercase relative"
+            style={{ textIndent: "30%" }}
+          >
+            <p>
+              Lorem ipsum dolor sit amet consectetur adipisicing elit. Eveniet,
+              eligendi sapiente accusamus, eum modi neque facere quia totam rem
+              voluptas numquam quisquam quam in excepturi minus. Itaque ipsam
+              eaque dignissimos! Lorem, ipsum dolor sit amet consectetur
+              adipisicing elit. Voluptas dicta sit dolor maiores laboriosam
+              placeat accusantium reiciendis, quibusdam dolorum, adipisci eius
+              ratione facilis.
+            </p>
+
+            <MaskingGrid color="#161616" baseRowSize={5} baseColumnSize={5} />
+          </div>
         </div>
       </div>
 
       {/* projects list */}
-      <div className="w-full h-full flex justify-center items-center pb-[30vh]">
+      <div className="w-full h-full flex justify-center items-center">
         <motion.ul
           variants={{
             hidden: { opacity: 0 },
@@ -165,7 +177,7 @@ function ProjectsListComponent() {
               }}
               whileHover={{ y: -35 }}
               key={project.path}
-              className={`text-5xl md:text-6xl lg:text-8xl flex whitespace-nowrap overflow-hidden lg:overflow-visible lg:line-clamp-1 font-semibold relative bg-[#f1f1f1] dark:bg-black border-y border-black dark:border-white  shadow-black cursor-pointer transition-transform duration-300 will-change-transform -mt-5 md:-mt-6 lg:-mt-9 first:mt-0 last:hover:transform-none last:pointer-events-none last:border-t last:border-b-0 last:shadow-none last:bg-[#f1f1f1] dark:last:bg-[#1c1d21] hover:shadow-lg select-none ${project.hoverColor} project-${index}`}
+              className={`text-5xl md:text-6xl lg:text-8xl flex whitespace-nowrap overflow-hidden lg:overflow-visible lg:line-clamp-1 font-semibold relative  border-y bg-[#161616] border-[#f1f1f1] cursor-pointer transition-transform duration-300 will-change-transform -mt-5 md:-mt-6 lg:-mt-9 first:mt-0 last:hover:transform-none last:pointer-events-none last:border-t last:border-b-0 last:shadow-none hover:shadow-lg select-none project-${index}`}
               style={{
                 transitionTimingFunction: "cubic-bezier(0.25, 1, 0.5, 1)",
               }}
@@ -175,24 +187,26 @@ function ProjectsListComponent() {
                 <a
                   href={`/work/${project.path}`}
                   className={`absolute left-0 top-0 h-full aspect-square 
-                  bg-white dark:bg-[#1c1d21] active:bg-white/0 text-lg flex items-center justify-center transition-transform duration-300 border-x border-black dark:border-white ${
+                  bg-black  active:bg-white/0 text-lg flex items-center justify-center transition-transform duration-300 border-x border-[#f1f1f1]  ${
                     activeProject === index
                       ? "translate-x-0"
                       : "-translate-x-full"
                   } lg:hidden`}
                 >
-                  <IoArrowForwardCircleOutline className="w-6 h-6 md:h-8 md:w-8 dark:text-white" />
+                  <IoArrowForwardCircleOutline className="w-6 h-6 md:h-8 md:w-8 " />
                 </a>
 
                 {/* list for lg screens */}
                 <Link
                   to={`/work/${project.path}`}
-                  className="hidden lg:block w-full group dark:text-[#f1f1f1] tracking-tight z-10"
+                  className="hidden lg:block w-full group tracking-tight z-10"
                 >
-                  {project.name.toUpperCase()}
+                  <span style={{ wordSpacing: "0.1em" }}>
+                    {project.name.toUpperCase()}
+                  </span>
 
                   {project.type && (
-                    <span className="text-sm ml-2 self-start text-gray-700 dark:text-white/80 tracking-wide">
+                    <span className="text-sm ml-4 self-start text-[#6b6b6c] tracking-wide font-mono">
                       {project.type.toUpperCase()}
                     </span>
                   )}
@@ -202,11 +216,12 @@ function ProjectsListComponent() {
 
                 {/* list for sm and md screens */}
                 <span
-                  className={`transition-transform duration-300 lg:hidden dark:text-[#f1f1f1] tracking-tighter ${
+                  className={`transition-transform duration-300 lg:hidden tracking-tighter ${
                     activeProject === index
                       ? "translate-x-16 md:translate-x-20"
                       : "translate-x-0"
                   }`}
+                  style={{ wordSpacing: "0.2em" }}
                 >
                   {project.name.toUpperCase()}
                 </span>

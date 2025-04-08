@@ -1,6 +1,5 @@
 import React from "react";
 import { useLocation, useNavigate } from "react-router-dom";
-import DarkModeToggle from "../DarkModeToggle.jsx";
 import { IoIosArrowUp } from "react-icons/io";
 import RandomText from "../Animations/RandomText.jsx";
 
@@ -123,13 +122,6 @@ function Footer() {
             PAGE TOP
           </p>
         </div>
-
-        {/* light/dark toggle */}
-        {currentPage === "/work" && (
-          <div className="absolute top-32 md:top-52 right-11 md:right-[3.2rem]">
-            <DarkModeToggle />
-          </div>
-        )}
       </div>
 
       {/* name at the very bottom */}

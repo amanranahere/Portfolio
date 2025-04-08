@@ -1,14 +1,8 @@
 import React, { useRef } from "react";
-import { useNavigate } from "react-router-dom";
 import { motion } from "framer-motion";
-import useScreenSize from "../../utils/ScreenSize.jsx";
+import MaskingGrid from "../Animations/MaskingGrid.jsx";
 
 function AboutSection() {
-  const screenSize = useScreenSize();
-
-  const columnSize = screenSize === "sm" ? 60 : screenSize === "md" ? 90 : 120;
-  const rowSize = screenSize === "sm" ? 30 : screenSize === "md" ? 45 : 60;
-
   return (
     <section className="min-h-screen lg:h-screen px-4 md:px-16 lg:px-14 py-20">
       <div className="h-full flex flex-col lg:flex-row justify-between">
@@ -45,25 +39,7 @@ function AboutSection() {
                 doloribus beatae voluptatem explicabo.
               </p>
 
-              {/* masking div for animation */}
-              <div
-                className="absolute inset-0 z-10 pointer-events-none grid"
-                style={{
-                  gridTemplateColumns: `repeat(auto-fit, minmax(${columnSize}px, 1fr))`,
-                  gridTemplateRows: `repeat(auto-fit, minmax(${rowSize}px, 1fr))`,
-                }}
-              >
-                {[...Array(100)].map((_, i) => (
-                  <motion.div
-                    key={i}
-                    className="bg-[#f1f1f1]"
-                    initial={{ opacity: 1 }}
-                    whileInView={{ opacity: 0 }}
-                    transition={{ delay: Math.random() * 1.5, duration: 0.3 }}
-                    viewport={{ once: true }}
-                  />
-                ))}
-              </div>
+              <MaskingGrid baseRowSize={60} baseColumnSize={60} />
             </div>
           </div>
         </div>

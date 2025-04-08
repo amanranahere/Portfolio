@@ -5,7 +5,7 @@ import Footer from "../components/Footer/Footer.jsx";
 
 function Work() {
   return (
-    <div className="bg-[#f1f1f1] dark:bg-[#1c1d21] pt-20">
+    <div className="bg-[#161616] text-[#f3f1ec] pt-20">
       <div>
         <ProjectsListComponent />
       </div>
