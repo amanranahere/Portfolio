@@ -75,13 +75,13 @@ function CapabilitiesSection() {
   return (
     <div className="min-h-max bg-[#f1f1f1] px-4">
       <div className="pt-16 lg:pt-28 px-4 md:px-16 lg:px-14 flex flex-col text-[#333]">
-        <div className="lg:w-[25%] my-10 lg:my-0  text-lg lg:text-xl font-semibold tracking-widest select-none josefinSans-text">
+        <div className="lg:w-[25%] my-10 lg:my-0 text-lg lg:text-xl font-semibold tracking-widest select-none josefinSans-text">
           <span>/</span>
           <span className="pl-4 md:pl-10 lg:pl-28">CAPABILITIES</span>
         </div>
 
-        <div className="flex flex-col mx-auto">
-          <div className="text-3xl lg:text-5xl font-medium lg:mt-14 mr-auto josefinSans-text flex flex-col lg:flex-row">
+        <div className="flex flex-col mx-auto mt-14 lg:mb-14">
+          <div className="text-3xl lg:text-5xl font-medium lg:mt-14 mr-auto josefinSans-text flex flex-col md:flex-row">
             <RandomText text="TOOLS THAT SHAPE" />
             <div className="flex justify-end">
               <RandomText text=" MY CRAFT" />
@@ -92,7 +92,7 @@ function CapabilitiesSection() {
             <div className="flex justify-end items-center select-none">
               <button
                 onClick={() => navigate("/capabilities")}
-                className="text-[#6b6b6c] overflow-hidden font-mono"
+                className="text-[#6b6b6c] hover:text-black overflow-hidden font-mono"
               >
                 <span className="px-4 whitespace-nowrap text-xs lg:text-sm">
                   VIEW ALL

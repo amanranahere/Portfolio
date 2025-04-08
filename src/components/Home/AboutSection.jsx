@@ -44,6 +44,8 @@ function AboutSection() {
                 inventore est delectus ea impedit eaque, nulla quis ipsa
                 doloribus beatae voluptatem explicabo.
               </p>
+
+              {/* masking div for animation */}
               <div
                 className="absolute inset-0 z-10 pointer-events-none grid"
                 style={{

@@ -2,7 +2,7 @@ import React from "react";
 import { useLocation, useNavigate } from "react-router-dom";
 import DarkModeToggle from "../DarkModeToggle.jsx";
 import { IoIosArrowUp } from "react-icons/io";
-import { MdArrowOutward } from "react-icons/md";
+import RandomText from "../Animations/RandomText.jsx";
 
 function Footer() {
   const navigate = useNavigate();
@@ -59,9 +59,9 @@ function Footer() {
                         navigate(item.slug);
                       }
                     }}
-                    className="text-xl md:text-2xl lg:text-4xl font-extrabold hover:text-[#7a7a7a] oswald-text transition duration-300 leading-relaxed cursor-pointer select-none"
+                    className="text-lg md:text-xl lg:text-2xl font-extrabold hover:text-[#7a7a7a] oswald-text transition duration-300 leading-relaxed cursor-pointer select-none"
                   >
-                    {item.name}
+                    <RandomText text={item.name} />
                   </div>
                 </li>
               ))}
@@ -73,30 +73,27 @@ function Footer() {
                 href=""
                 target="_blank"
                 rel="noopener noreferrer"
-                className="text-xl md:text-2xl lg:text-4xl font-extrabold hover:text-[#4a4a4a] oswald-text transition duration-300 flex justify-center items-center group leading-relaxed"
+                className="text-lg md:text-xl lg:text-2xl font-extrabold hover:text-[#4a4a4a] oswald-text transition duration-300 flex justify-center items-center group leading-relaxed"
               >
-                <span>LINKEDIN</span>
-                <MdArrowOutward className="w-7 h-7 md:w-8 md:h-8 lg:w-12 lg:h-12 group-hover:rotate-90 transition duration-300" />
+                <RandomText text="LINKEDIN" />
               </a>
 
               <a
                 href="https://github.com/amanranahere"
                 target="_blank"
                 rel="noopener noreferrer"
-                className="text-xl md:text-2xl lg:text-4xl font-extrabold hover:text-[rgb(74,74,74)] oswald-text transition duration-300 flex justify-center items-center group leading-relaxed"
+                className="text-lg md:text-xl lg:text-2xl font-extrabold hover:text-[rgb(74,74,74)] oswald-text transition duration-300 flex justify-center items-center group leading-relaxed"
               >
-                <span>GITHUB</span>
-                <MdArrowOutward className="w-7 h-7 md:w-8 md:h-8 lg:w-12 lg:h-12 group-hover:rotate-90 transition duration-300" />
+                <RandomText text="GITHUB" />
               </a>
 
               <a
                 href=""
                 target="_blank"
                 rel="noopener noreferrer"
-                className="text-xl md:text-2xl lg:text-4xl font-extrabold hover:text-[#4a4a4a] oswald-text transition duration-300 flex justify-center items-center group leading-relaxed"
+                className="text-lg md:text-xl lg:text-2xl font-extrabold hover:text-[#4a4a4a] oswald-text transition duration-300 flex justify-center items-center group leading-relaxed"
               >
-                <span>X (TWITTER)</span>
-                <MdArrowOutward className="w-7 h-7 md:w-8 md:h-8 lg:w-12 lg:h-12 group-hover:rotate-90 transition duration-300" />
+                <RandomText text="X" />
               </a>
             </div>
           </div>
@@ -105,8 +102,7 @@ function Footer() {
             href="mailto:amanranahere@gmail.com"
             className="mx-10 my-5 md:m-10 flex lg:justify-start items-center hover:text-[#7a7a7a] transition duration-300 text-xl md:text-2xl lg:text-5xl font-extrabold uppercase leading-none oswald-text group"
           >
-            <span>amanranahere@gmail.com</span>
-            <MdArrowOutward className="w-7 h-7 md:w-9 md:h-9 lg:w-20 lg:h-20 md:pt-1 md:scale-110 group-hover:rotate-90 transition duration-300" />
+            <RandomText text="amanranahere@gmail.com" />
           </a>
         </div>
 
