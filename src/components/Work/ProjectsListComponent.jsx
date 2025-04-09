@@ -1,6 +1,6 @@
 import React, { useState, useEffect, useRef } from "react";
 import { Link } from "react-router-dom";
-import { IoArrowForwardCircleOutline } from "react-icons/io5";
+import { IoMdArrowRoundForward } from "react-icons/io";
 import WeblogImg from "../../assets/images/weblogAllBlogs.png";
 import VidronImg from "../../assets/images/vidronHome.png";
 import CurrConvImg from "../../assets/images/CurrencyConverter.png";
@@ -103,7 +103,6 @@ function ProjectsListComponent() {
         />
       ),
     },
-
     {
       // placeholder list item
       name: "\u00A0",
@@ -134,7 +133,11 @@ function ProjectsListComponent() {
               ratione facilis.
             </p>
 
-            <MaskingGrid color="#161616" baseRowSize={5} baseColumnSize={5} />
+            <MaskingGrid
+              color="#161616"
+              rowSizes={{ sm: 50, md: 35, lg: 40 }}
+              columnSizes={{ sm: 50, md: 50, lg: 50 }}
+            />
           </div>
         </div>
       </div>
@@ -177,7 +180,7 @@ function ProjectsListComponent() {
               }}
               whileHover={{ y: -35 }}
               key={project.path}
-              className={`text-5xl md:text-6xl lg:text-8xl flex whitespace-nowrap overflow-hidden lg:overflow-visible lg:line-clamp-1 font-semibold relative  border-y bg-[#161616] border-[#f1f1f1] cursor-pointer transition-transform duration-300 will-change-transform -mt-5 md:-mt-6 lg:-mt-9 first:mt-0 last:hover:transform-none last:pointer-events-none last:border-t last:border-b-0 last:shadow-none hover:shadow-lg select-none project-${index}`}
+              className={`text-5xl md:text-6xl lg:text-8xl flex whitespace-nowrap overflow-hidden lg:overflow-visible lg:line-clamp-1 font-semibold relative  border-y bg-[#161616] shadow-2xl shadow-white border-[#f1f1f1] cursor-pointer transition-transform duration-300 will-change-transform -mt-5 md:-mt-6 lg:-mt-9 first:mt-0 last:hover:transform-none last:pointer-events-none last:border-t last:border-b-0 last:shadow-none hover:shadow-lg select-none project-${index}`}
               style={{
                 transitionTimingFunction: "cubic-bezier(0.25, 1, 0.5, 1)",
               }}
@@ -193,7 +196,7 @@ function ProjectsListComponent() {
                       : "-translate-x-full"
                   } lg:hidden`}
                 >
-                  <IoArrowForwardCircleOutline className="w-6 h-6 md:h-8 md:w-8 " />
+                  <IoMdArrowRoundForward className="w-6 h-6 md:h-8 md:w-8 " />
                 </a>
 
                 {/* list for lg screens */}

@@ -1,4 +1,4 @@
-import React, { useState, useEffect } from "react";
+import React from "react";
 import PageTransition from "../components/Animations/PageTransition.jsx";
 import ProjectsListComponent from "../components/Work/ProjectsListComponent.jsx";
 import Footer from "../components/Footer/Footer.jsx";

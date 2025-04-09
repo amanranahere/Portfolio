@@ -26,6 +26,7 @@ import {
   SiFramer,
   SiDotenv,
 } from "react-icons/si";
+import MaskingGrid from "../Animations/MaskingGrid";
 
 function Vidron() {
   const builtWith = [
@@ -96,15 +97,7 @@ function Vidron() {
     },
   ];
 
-  const imageVariant = {
-    hidden: { opacity: 0, y: 50, scale: 1.1 },
-    visible: (delay) => ({
-      opacity: 1,
-      y: 0,
-      scale: 1,
-      transition: { duration: 0.6, delay },
-    }),
-  };
+  const delays = builtWith.map(() => Math.random() * 1.2);
 
   return (
     <ProjectTemplate
@@ -120,99 +113,103 @@ function Vidron() {
       projectCodeLink="https://github.com/amanranahere/Vidron"
       projectBuiltWith={
         <>
-          {builtWith.map((item) => (
-            <div
+          {builtWith.map((item, index) => (
+            <motion.div
+              initial={{ opacity: 0 }}
+              whileInView={{ opacity: 1 }}
+              transition={{ delay: delays[index], duration: 0.5 }}
+              viewport={{ once: true }}
               key={item.name}
               className="border border-white/40 flex items-center gap-2 py-1 px-2"
             >
               {item.logo && item.logo}
               <span className="leading-tight">{item.name}</span>
-            </div>
+            </motion.div>
           ))}
         </>
       }
       projectImages={
-        <div className=" gap-4">
+        <div className="gap-4">
           <div className="h-full flex flex-wrap justify-between">
-            <motion.img
-              src={VidronHome}
-              alt="Vidron Home"
-              className="md:w-[49.3%] mb-5"
-              variants={imageVariant}
-              initial="hidden"
-              whileInView="visible"
-              viewport={{ once: true, amount: 0.2 }}
-            />
+            <div className="md:w-[49.3%] mb-5 relative">
+              <img src={VidronHome} alt="Vidron Home" />
 
-            <motion.img
-              src={VidronVidPage}
-              alt="Vidron Video page"
-              className="md:w-[49.3%] mb-5"
-              variants={imageVariant}
-              initial="hidden"
-              whileInView="visible"
-              viewport={{ once: true, amount: 1 }}
-            />
+              <MaskingGrid
+                color="#161616"
+                rowSizes={{ sm: 30, md: 45, lg: 120 }}
+                columnSizes={{ sm: 60, md: 90, lg: 120 }}
+              />
+            </div>
 
-            <motion.img
-              src={VidronAllSnaps}
-              alt="Vidron All Snaps"
-              className="md:w-[49.3%] mb-5"
-              variants={imageVariant}
-              initial="hidden"
-              whileInView="visible"
-              viewport={{ once: true, amount: 0.2 }}
-            />
+            <div className="md:w-[49.3%] mb-5 relative">
+              <img src={VidronVidPage} alt="Vidron Video page" />
 
-            <motion.img
-              src={VidronSnap}
-              alt="Vidron Snap"
-              className="md:w-[49.3%] mb-5"
-              variants={imageVariant}
-              initial="hidden"
-              whileInView="visible"
-              viewport={{ once: true, amount: 1 }}
-            />
+              <MaskingGrid
+                color="#161616"
+                rowSizes={{ sm: 30, md: 45, lg: 120 }}
+                columnSizes={{ sm: 60, md: 90, lg: 120 }}
+              />
+            </div>
 
-            <motion.img
-              src={VidronTweets}
-              alt="Vidron Tweets"
-              className="md:w-[49.3%] mb-5"
-              variants={imageVariant}
-              initial="hidden"
-              whileInView="visible"
-              viewport={{ once: true, amount: 0.2 }}
-            />
+            <div className="md:w-[49.3%] mb-5 relative">
+              <img src={VidronAllSnaps} alt="Vidron All Snaps" />
 
-            <motion.img
-              src={VidronChannel}
-              alt="Vidron Channel"
-              className="md:w-[49.3%] mb-5"
-              variants={imageVariant}
-              initial="hidden"
-              whileInView="visible"
-              viewport={{ once: true, amount: 1 }}
-            />
+              <MaskingGrid
+                color="#161616"
+                rowSizes={{ sm: 30, md: 45, lg: 120 }}
+                columnSizes={{ sm: 60, md: 90, lg: 120 }}
+              />
+            </div>
 
-            <motion.img
-              src={VidronMetrics}
-              alt="Vidron Metrics"
-              className="md:w-[49.3%] mb-5"
-              variants={imageVariant}
-              initial="hidden"
-              whileInView="visible"
-              viewport={{ once: true, amount: 0.2 }}
-            />
+            <div className="md:w-[49.3%] mb-5 relative">
+              <img src={VidronSnap} alt="Vidron Snap" />
 
-            <motion.img
-              src={VidronSettings}
-              alt="Vidron Settings"
-              className="md:w-[49.3%] mb-5"
-              variants={imageVariant}
-              initial="hidden"
-              whileInView="visible"
-              viewport={{ once: true, amount: 1 }}
-            />
+              <MaskingGrid
+                color="#161616"
+                rowSizes={{ sm: 30, md: 45, lg: 120 }}
+                columnSizes={{ sm: 60, md: 90, lg: 120 }}
+              />
+            </div>
+
+            <div className="md:w-[49.3%] mb-5 relative">
+              <img src={VidronTweets} alt="Vidron Tweets" />
+
+              <MaskingGrid
+                color="#161616"
+                rowSizes={{ sm: 30, md: 45, lg: 120 }}
+                columnSizes={{ sm: 60, md: 90, lg: 120 }}
+              />
+            </div>
+
+            <div className="md:w-[49.3%] mb-5 relative">
+              <img src={VidronChannel} alt="Vidron Channel" />
+
+              <MaskingGrid
+                color="#161616"
+                rowSizes={{ sm: 30, md: 45, lg: 120 }}
+                columnSizes={{ sm: 60, md: 90, lg: 120 }}
+              />
+            </div>
+
+            <div className="md:w-[49.3%] mb-5 relative">
+              <img src={VidronMetrics} alt="Vidron Metrics" />
+
+              <MaskingGrid
+                color="#161616"
+                rowSizes={{ sm: 30, md: 45, lg: 120 }}
+                columnSizes={{ sm: 60, md: 90, lg: 120 }}
+              />
+            </div>
+
+            <div className="md:w-[49.3%] mb-5 relative">
+              <img src={VidronSettings} alt="Vidron Settings" />
+
+              <MaskingGrid
+                color="#161616"
+                rowSizes={{ sm: 30, md: 45, lg: 120 }}
+                columnSizes={{ sm: 60, md: 90, lg: 120 }}
+              />
+            </div>
           </div>
         </div>
       }

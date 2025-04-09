@@ -17,6 +17,7 @@ import {
   SiReact,
   SiFramer,
 } from "react-icons/si";
+import MaskingGrid from "../Animations/MaskingGrid";
 
 function Weblog() {
   const builtWith = [
@@ -57,15 +58,7 @@ function Weblog() {
     },
   ];
 
-  const imageVariant = {
-    hidden: { opacity: 0, y: 50, scale: 1.1 },
-    visible: (delay) => ({
-      opacity: 1,
-      y: 0,
-      scale: 1,
-      transition: { duration: 0.6, delay },
-    }),
-  };
+  const delays = builtWith.map(() => Math.random() * 1.2);
 
   return (
     <ProjectTemplate
@@ -79,62 +72,71 @@ function Weblog() {
       projectCodeLink="https://github.com/amanranahere/WeBlog"
       projectBuiltWith={
         <>
-          {builtWith.map((item) => (
-            <div
+          {builtWith.map((item, index) => (
+            <motion.div
+              initial={{ opacity: 0 }}
+              whileInView={{ opacity: 1 }}
+              transition={{ delay: delays[index], duration: 0.5 }}
+              viewport={{ once: true }}
               key={item.name}
               className="border border-white/40 flex items-center gap-2 py-1 px-2"
             >
               {item.logo && item.logo}
               <span className="leading-tight">{item.name}</span>
-            </div>
+            </motion.div>
           ))}
         </>
       }
       projectImages={
         <div className="flex flex-col md:flex-row gap-4">
           <div className="md:w-1/2 flex-col justify-between">
-            <motion.img
-              src={weblogAddBlog}
-              alt="Add Blog"
-              className="mb-5"
-              variants={imageVariant}
-              initial="hidden"
-              whileInView="visible"
-              viewport={{ once: true, amount: 0.2 }}
-            />
+            <div className="relative mb-5">
+              <img
+                src={weblogAddBlog}
+                alt="Add Blog"
+                variants={imageVariant}
+                initial="hidden"
+                whileInView="visible"
+                viewport={{ once: true, amount: 0.2 }}
+              />
+            </div>
 
-            <motion.img
-              src={weblogAllBlogs}
-              alt="All Blogs"
-              className="mt-5"
-              variants={imageVariant}
-              initial="hidden"
-              whileInView="visible"
-              viewport={{ once: true, amount: 0.2 }}
-            />
+            <div className="relative mt-5">
+              <img
+                src={weblogAllBlogs}
+                alt="All Blogs"
+                variants={imageVariant}
+                initial="hidden"
+                whileInView="visible"
+                viewport={{ once: true, amount: 0.2 }}
+              />
+            </div>
 
-            <motion.img
-              src={weblogBlog}
-              alt="Blog"
-              className="mt-5"
-              variants={imageVariant}
-              initial="hidden"
-              whileInView="visible"
-              viewport={{ once: true, amount: 0.2 }}
-            />
+            <div className="relative mt-5">
+              <img
+                src={weblogBlog}
+                alt="Blog"
+                variants={imageVariant}
+                initial="hidden"
+                whileInView="visible"
+                viewport={{ once: true, amount: 0.2 }}
+              />
+            </div>
 
-            <motion.img
-              src={weblogEditBlog}
-              alt="Edit Blogs"
-              className="mt-5"
-              variants={imageVariant}
-              initial="hidden"
-              whileInView="visible"
-              viewport={{ once: true, amount: 0.2 }}
-            />
+            <div className="relative mt-5">
+              <img
+                src={weblogEditBlog}
+                alt="Edit Blogs"
+                variants={imageVariant}
+                initial="hidden"
+                whileInView="visible"
+                viewport={{ once: true, amount: 0.2 }}
+              />
+            </div>
           </div>
-          <div className="md:w-1/2">
-            <motion.img
+
+          <div className="md:w-1/2 relative">
+            <img
               src={weblogHome}
               alt="Home page"
               variants={imageVariant}

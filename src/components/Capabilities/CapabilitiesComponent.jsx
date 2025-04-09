@@ -287,7 +287,11 @@ function CapabilitiesComponent() {
               languages, frameworks, and tools I use to bring ideas to life.
             </p>
 
-            <MaskingGrid color="#000" baseRowSize={20} baseColumnSize={20} />
+            <MaskingGrid
+              color="#000"
+              rowSizes={{ sm: 30, md: 45, lg: 50 }}
+              columnSizes={{ sm: 60, md: 90, lg: 50 }}
+            />
           </div>
         </div>
 

@@ -1,23 +1,18 @@
 import React from "react";
-import { motion } from "framer-motion";
+import { delay, motion } from "framer-motion";
 import useScreenSize from "../../utils/ScreenSize.jsx";
 
 function MaskingGrid({
   color = "#f1f1f1",
-  baseRowSize = 30,
-  baseColumnSize = 60,
+  rowSizes = { sm: 30, md: 45, lg: 60 },
+  columnSizes = { sm: 60, md: 90, lg: 120 },
   totalCells = 100,
+  delaySpread = 1,
 }) {
   const screenSize = useScreenSize();
 
-  const getSize = (base, step) => {
-    if (screenSize === "sm") return base;
-    if (screenSize === "md") return base + step;
-    return base + step * 2;
-  };
-
-  const rowSize = getSize(baseRowSize, 15);
-  const columnSize = getSize(baseColumnSize, 30);
+  const rowSize = rowSizes[screenSize] || rowSizes.md;
+  const columnSize = columnSizes[screenSize] || columnSizes.md;
 
   return (
     <div
@@ -33,7 +28,7 @@ function MaskingGrid({
           style={{ backgroundColor: color }}
           initial={{ opacity: 1 }}
           whileInView={{ opacity: 0 }}
-          transition={{ delay: Math.random() * 1.5, duration: 0.3 }}
+          transition={{ delay: Math.random() * delaySpread, duration: 0.3 }}
           viewport={{ once: true }}
         />
       ))}

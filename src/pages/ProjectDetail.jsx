@@ -21,11 +21,11 @@ const ProjectDetail = () => {
   const { projectName } = useParams();
   return (
     <>
-      <div className="bg-[#1c1d21]">
+      <div className="bg-[#161616]">
         {project[projectName] ? (
           project[projectName]
         ) : (
-          <h1 className="p-10 uppercase font-bold text-xl text-[#333]">
+          <h1 className="h-[20vh] p-10 uppercase font-bold text-xl text-[#f1f1f1] font-mono">
             Project not found :(
           </h1>
         )}

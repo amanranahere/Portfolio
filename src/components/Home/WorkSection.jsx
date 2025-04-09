@@ -1,6 +1,7 @@
 import { useRef } from "react";
 import { motion, useScroll, useTransform, useSpring } from "framer-motion";
 import { useNavigate } from "react-router-dom";
+import { HiOutlineArrowNarrowRight } from "react-icons/hi";
 import useScreenSize from "../../utils/ScreenSize.jsx";
 import brickBreaker from "../../assets/images/brickBreaker.png";
 import currencyConverter from "../../assets/images/currencyConverter.png";
@@ -68,10 +69,10 @@ function WorkSection() {
         <div className="flex items-center justify-center select-none">
           <button
             onClick={() => navigate("/work")}
-            className="tracking-widest text-[#9a9a9a] hover:text-[#f7f7f7] font-mono duration-300 text-xs lg:text-sm"
+            className="tracking-widest text-[#9a9a9a] hover:text-[#f7f7f7] font-mono duration-300 text-xs lg:text-sm flex items-center"
           >
-            <span className="px-4 whitespace-nowrap">VIEW ALL</span>
-            <span className="text-lg">&rarr;</span>
+            <span className="px-2 whitespace-nowrap">VIEW ALL</span>
+            <HiOutlineArrowNarrowRight />
           </button>
         </div>
       </div>

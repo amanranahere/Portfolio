@@ -15,7 +15,7 @@ const RandomText = ({ text = "", className = "", delaySpread = 1 }) => {
   return (
     <div className={`inline-flex flex-wrap gap-x-4 ${className}`}>
       {words.map((letters, wordIdx) => (
-        <motion.span key={wordIdx} className="inline-block whitespace-nowrap">
+        <motion.span key={wordIdx} className="inline-block ">
           {letters.map(({ char, id, delay }) => (
             <motion.span
               key={id}

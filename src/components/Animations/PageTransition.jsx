@@ -1,9 +1,9 @@
 import { motion } from "framer-motion";
 
 const PageTransition = (OgComponent) => {
-  return () => (
+  return (props) => (
     <>
-      <OgComponent />
+      <OgComponent {...props} />
 
       <motion.div
         className="slide-in"

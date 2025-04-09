@@ -4,6 +4,7 @@ import CurrencyConverterVideo from "../../assets/videos/currencyConverter_vid.mp
 import CurrConvImage from "../../assets/images/currencyConverter.png";
 import CurrConvImage02 from "../../assets/images/currencyConverter02.png";
 import { motion } from "framer-motion";
+import MaskingGrid from "../Animations/MaskingGrid";
 
 import { SiJavascript, SiHtml5, SiCss3 } from "react-icons/si";
 
@@ -23,15 +24,7 @@ function CurrencyConverter() {
     },
   ];
 
-  const imageVariant = {
-    hidden: { opacity: 0, y: 50, scale: 0.9 },
-    visible: (delay) => ({
-      opacity: 1,
-      y: 0,
-      scale: 1,
-      transition: { duration: 0.6, delay },
-    }),
-  };
+  const delays = builtWith.map(() => Math.random() * 1);
 
   return (
     <ProjectTemplate
@@ -46,36 +39,40 @@ function CurrencyConverter() {
       projectCodeLink="https://github.com/amanranahere/Currency-Converter"
       projectBuiltWith={
         <>
-          {builtWith.map((item) => (
-            <div
+          {builtWith.map((item, index) => (
+            <motion.div
+              initial={{ opacity: 0 }}
+              whileInView={{ opacity: 1 }}
+              transition={{ delay: delays[index], duration: 0.5 }}
+              viewport={{ once: true }}
               key={item.name}
               className="border border-white/40 flex items-center gap-2 py-1 px-2"
             >
               {item.logo && item.logo}
               <span className="leading-tight">{item.name}</span>
-            </div>
+            </motion.div>
           ))}
         </>
       }
       projectImages={
-        <div className="">
-          <div className="md:w-[49.5%] flex flex-col md:flex-row justify-between gap-4">
-            <motion.img
-              src={CurrConvImage}
-              alt="Currency converter"
-              variants={imageVariant}
-              initial="hidden"
-              whileInView="visible"
-              viewport={{ once: true, amount: 0.6 }}
-            />
+        <div className="flex flex-col md:flex-row justify-between gap-4">
+          <div className="md:w-[49.5%] relative">
+            <img src={CurrConvImage} alt="Currency converter" />
 
-            <motion.img
-              src={CurrConvImage02}
-              alt="Currency converter 02"
-              variants={imageVariant}
-              initial="hidden"
-              whileInView="visible"
-              viewport={{ once: true, amount: 0.6 }}
+            <MaskingGrid
+              color="#161616"
+              rowSizes={{ sm: 30, md: 45, lg: 120 }}
+              columnSizes={{ sm: 60, md: 90, lg: 120 }}
+            />
+          </div>
+
+          <div className="md:w-[49.5%] relative">
+            <img src={CurrConvImage02} alt="Currency converter 02" />
+
+            <MaskingGrid
+              color="#161616"
+              rowSizes={{ sm: 30, md: 45, lg: 120 }}
+              columnSizes={{ sm: 60, md: 90, lg: 120 }}
             />
           </div>
         </div>

@@ -39,7 +39,10 @@ function AboutSection() {
                 doloribus beatae voluptatem explicabo.
               </p>
 
-              <MaskingGrid baseRowSize={60} baseColumnSize={60} />
+              <MaskingGrid
+                rowSizes={{ sm: 60, md: 90, lg: 100 }}
+                columnSizes={{ sm: 60, md: 90, lg: 100 }}
+              />
             </div>
           </div>
         </div>

@@ -1,6 +1,7 @@
 import React from "react";
 import { motion, useScroll, useTransform } from "framer-motion";
 import { useNavigate } from "react-router-dom";
+import { HiOutlineArrowNarrowRight } from "react-icons/hi";
 import useScreenSize from "../../utils/ScreenSize";
 import RandomText from "../Animations/RandomText";
 
@@ -92,12 +93,12 @@ function CapabilitiesSection() {
             <div className="flex justify-end items-center select-none">
               <button
                 onClick={() => navigate("/capabilities")}
-                className="text-[#6b6b6c] hover:text-black overflow-hidden font-mono"
+                className="text-[#6b6b6c] hover:text-black overflow-hidden font-mono flex items-center"
               >
-                <span className="px-4 whitespace-nowrap text-xs lg:text-sm">
+                <span className="px-2 whitespace-nowrap text-xs lg:text-sm">
                   VIEW ALL
                 </span>
-                <span className="text-lg">&rarr;</span>
+                <HiOutlineArrowNarrowRight />
               </button>
             </div>
           </div>

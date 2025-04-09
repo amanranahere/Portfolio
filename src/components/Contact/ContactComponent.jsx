@@ -1,15 +1,9 @@
 import React from "react";
 import { motion } from "framer-motion";
 import RandomText from "../Animations/RandomText.jsx";
-import useScreenSize from "../../utils/ScreenSize.jsx";
 import MaskingGrid from "../Animations/MaskingGrid.jsx";
 
 function ContactComponent() {
-  const screenSize = useScreenSize();
-
-  const columnSize = screenSize === "sm" ? 20 : screenSize === "md" ? 50 : 80;
-  const rowSize = screenSize === "sm" ? 10 : screenSize === "md" ? 25 : 40;
-
   return (
     <div className="h-full w-full flex flex-col justify-between">
       <div className="text-xl font-bold tracking-widest select-none josefinSans-text text-white">
@@ -20,7 +14,7 @@ function ContactComponent() {
       <div className="flex flex-col justify-between">
         {/* paragraph */}
         <div
-          className="py-20 lg:py-0 text-sm md:text-base text-semibold text-[#6b6b6c] font-mono text-justify uppercase relative"
+          className="my-20 lg:my-0 text-sm md:text-base text-semibold text-[#6b6b6c] font-mono text-justify uppercase relative"
           style={{ textIndent: "40%" }}
         >
           <p>
@@ -31,7 +25,11 @@ function ContactComponent() {
           </p>
 
           {/* masking div for animation */}
-          <MaskingGrid color="#161616" baseRowSize={20} baseColumnSize={20} />
+          <MaskingGrid
+            color="#161616"
+            rowSizes={{ sm: 30, md: 45, lg: 40 }}
+            columnSizes={{ sm: 60, md: 90, lg: 50 }}
+          />
         </div>
 
         {/* social */}
