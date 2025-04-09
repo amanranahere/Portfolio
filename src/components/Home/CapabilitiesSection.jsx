@@ -3,7 +3,8 @@ import { motion, useScroll, useTransform } from "framer-motion";
 import { useNavigate } from "react-router-dom";
 import { HiOutlineArrowNarrowRight } from "react-icons/hi";
 import useScreenSize from "../../utils/ScreenSize";
-import RandomText from "../Animations/RandomText";
+import RandomText from "../Animations/RandomText.jsx";
+import MaskingGrid from "../Animations/MaskingGrid.jsx";
 
 function CapabilitiesSection() {
   const navigate = useNavigate();
@@ -78,19 +79,27 @@ function CapabilitiesSection() {
       <div className="pt-16 lg:pt-28 px-4 md:px-16 lg:px-14 flex flex-col text-[#333]">
         <div className="lg:w-[25%] my-10 lg:my-0 text-lg lg:text-xl font-semibold tracking-widest select-none josefinSans-text">
           <span>/</span>
-          <span className="pl-4 md:pl-10 lg:pl-28">CAPABILITIES</span>
+          <span className="pl-4 md:pl-10 lg:pl-28">
+            <RandomText text="CAPABILITIES" />
+          </span>
         </div>
 
         <div className="flex flex-col mx-auto mt-14 lg:mb-14">
           <div className="text-3xl lg:text-5xl font-medium lg:mt-14 mr-auto josefinSans-text flex flex-col md:flex-row">
-            <RandomText text="TOOLS THAT SHAPE" />
+            <RandomText text="TOOLS THAT SHAPE" startDelay={0.3} />
             <div className="flex justify-end">
-              <RandomText text=" MY CRAFT" />
+              <RandomText text=" MY CRAFT" startDelay={0.3} />
             </div>
           </div>
 
           <div className="md:mx-20 my-2 lg:mx-0 lg:my-0 text-sm font-semibold tracking-widest lg:flex lg:justify-end overflow-hidden">
-            <div className="flex justify-end items-center select-none">
+            <motion.div
+              initial={{ opacity: 0 }}
+              whileInView={{ opacity: 1 }}
+              transition={{ duration: 1, ease: "easeOut", delay: 0.8 }}
+              viewport={{ once: true }}
+              className="flex justify-end items-center select-none"
+            >
               <button
                 onClick={() => navigate("/capabilities")}
                 className="text-[#6b6b6c] hover:text-black overflow-hidden font-mono flex items-center"
@@ -100,7 +109,7 @@ function CapabilitiesSection() {
                 </span>
                 <HiOutlineArrowNarrowRight />
               </button>
-            </div>
+            </motion.div>
           </div>
         </div>
       </div>
@@ -125,35 +134,53 @@ function CapabilitiesSection() {
                   </h1>
 
                   <p
-                    className="text-sm md:text-base pt-16 lg:pt-20 pb-12 lg:pr-40 text-justify uppercase font-mono text-[#6b6b6c] font-medium"
+                    className="text-sm md:text-base mt-16 lg:mt-20 mb-12 lg:mr-40 text-justify uppercase font-mono text-[#6b6b6c] font-medium relative"
                     style={{ textIndent: "30%" }}
                   >
                     {item.description}
+
+                    <MaskingGrid
+                      rowSizes={{ sm: 50, md: 50, lg: 60 }}
+                      columnSizes={{ sm: 50, md: 50, lg: 60 }}
+                    />
                   </p>
 
                   {item.buttonText && (
-                    <div className="w-full flex justify-end lg:justify-start ">
-                      <button
+                    <div className="w-full flex justify-end lg:justify-start">
+                      <motion.button
+                        initial={{ opacity: 0 }}
+                        whileInView={{ opacity: 1 }}
+                        transition={{
+                          duration: 1,
+                          ease: "easeOut",
+                          delay: 0.3,
+                        }}
+                        viewport={{ once: true }}
                         onClick={() =>
                           navigate("/capabilities", {
                             state: { selectedCategory: item.category },
                           })
                         }
-                        className="px-6 py-2 text-black/70 border border-black/50 bg-[#f1f1f1] text-xs font-medium md:tracking-widest rounded-[0.21rem] hover:text-white hover:bg-black transition duration-300 active:scale-95 uppercase font-mono"
+                        className="px-6 py-2 text-black/70 border border-black/50 bg-[#f1f1f1] text-xs font-medium md:tracking-widest rounded-[0.21rem] hover:text-white hover:bg-black duration-300 active:scale-95 uppercase font-mono"
                       >
                         {item.buttonText}{" "}
                         <span className="leading-3 text-base">
                           &nbsp;&rarr;
                         </span>
-                      </button>
+                      </motion.button>
                     </div>
                   )}
                 </div>
 
                 {item.img && (
                   <div className="hidden lg:flex lg:w-[25%] my-7  justify-end items-center rounded-sm">
-                    <div className="w-full h-full bg-gray-300 rounded-sm flex justify-center items-center">
+                    <div className="w-full h-full bg-gray-300 rounded-sm flex justify-center items-center relative">
                       {item.img}
+
+                      <MaskingGrid
+                        rowSizes={{ sm: 30, md: 45, lg: 60 }}
+                        columnSizes={{ sm: 60, md: 90, lg: 60 }}
+                      />
                     </div>
                   </div>
                 )}

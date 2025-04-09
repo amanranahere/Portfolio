@@ -1,13 +1,18 @@
 import React, { useMemo } from "react";
 import { motion } from "framer-motion";
 
-const RandomText = ({ text = "", className = "", delaySpread = 1 }) => {
+const RandomText = ({
+  text = "",
+  className = "",
+  delaySpread = 1,
+  startDelay = 0,
+}) => {
   const words = useMemo(() => {
     return text.split(" ").map((word, wordIdx) => {
       return word.split("").map((char, charIdx) => ({
         char,
         id: `${wordIdx}-${charIdx}`,
-        delay: Math.random() * delaySpread,
+        delay: startDelay + Math.random() * delaySpread,
       }));
     });
   }, [text, delaySpread]);

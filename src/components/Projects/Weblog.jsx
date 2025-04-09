@@ -91,58 +91,53 @@ function Weblog() {
         <div className="flex flex-col md:flex-row gap-4">
           <div className="md:w-1/2 flex-col justify-between">
             <div className="relative mb-5">
-              <img
-                src={weblogAddBlog}
-                alt="Add Blog"
-                variants={imageVariant}
-                initial="hidden"
-                whileInView="visible"
-                viewport={{ once: true, amount: 0.2 }}
+              <img src={weblogAddBlog} alt="Add Blog" />
+
+              <MaskingGrid
+                color="#161616"
+                rowSizes={{ sm: 30, md: 45, lg: 120 }}
+                columnSizes={{ sm: 60, md: 90, lg: 120 }}
               />
             </div>
 
             <div className="relative mt-5">
-              <img
-                src={weblogAllBlogs}
-                alt="All Blogs"
-                variants={imageVariant}
-                initial="hidden"
-                whileInView="visible"
-                viewport={{ once: true, amount: 0.2 }}
+              <img src={weblogAllBlogs} alt="All Blogs" />
+
+              <MaskingGrid
+                color="#161616"
+                rowSizes={{ sm: 30, md: 45, lg: 120 }}
+                columnSizes={{ sm: 60, md: 90, lg: 120 }}
               />
             </div>
 
             <div className="relative mt-5">
-              <img
-                src={weblogBlog}
-                alt="Blog"
-                variants={imageVariant}
-                initial="hidden"
-                whileInView="visible"
-                viewport={{ once: true, amount: 0.2 }}
+              <img src={weblogBlog} alt="Blog" />
+
+              <MaskingGrid
+                color="#161616"
+                rowSizes={{ sm: 30, md: 45, lg: 120 }}
+                columnSizes={{ sm: 60, md: 90, lg: 120 }}
               />
             </div>
 
             <div className="relative mt-5">
-              <img
-                src={weblogEditBlog}
-                alt="Edit Blogs"
-                variants={imageVariant}
-                initial="hidden"
-                whileInView="visible"
-                viewport={{ once: true, amount: 0.2 }}
+              <img src={weblogEditBlog} alt="Edit Blogs" />
+
+              <MaskingGrid
+                color="#161616"
+                rowSizes={{ sm: 30, md: 45, lg: 120 }}
+                columnSizes={{ sm: 60, md: 90, lg: 120 }}
               />
             </div>
           </div>
 
           <div className="md:w-1/2 relative">
-            <img
-              src={weblogHome}
-              alt="Home page"
-              variants={imageVariant}
-              initial="hidden"
-              whileInView="visible"
-              viewport={{ once: true, amount: 0.2 }}
+            <img src={weblogHome} alt="Home page" />
+
+            <MaskingGrid
+              color="#161616"
+              rowSizes={{ sm: 30, md: 45, lg: 120 }}
+              columnSizes={{ sm: 60, md: 90, lg: 120 }}
             />
           </div>
         </div>

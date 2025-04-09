@@ -1,6 +1,7 @@
 import React, { useRef } from "react";
 import { motion } from "framer-motion";
 import MaskingGrid from "../Animations/MaskingGrid.jsx";
+import RandomText from "../Animations/RandomText.jsx";
 
 function AboutSection() {
   return (
@@ -8,7 +9,9 @@ function AboutSection() {
       <div className="h-full flex flex-col lg:flex-row justify-between">
         <div className="lg:w-[40%] text-lg lg:text-xl font-medium tracking-widest select-none josefinSans-text">
           <span>/</span>
-          <span className="pl-10 lg:pl-28">ABOUT</span>
+          <span className="pl-10 lg:pl-28">
+            <RandomText text="ABOUT" />
+          </span>
         </div>
 
         {/* paragraph */}
@@ -42,6 +45,7 @@ function AboutSection() {
               <MaskingGrid
                 rowSizes={{ sm: 60, md: 90, lg: 100 }}
                 columnSizes={{ sm: 60, md: 90, lg: 100 }}
+                startDelay={0.3}
               />
             </div>
           </div>

@@ -8,6 +8,7 @@ import currencyConverter from "../../assets/images/currencyConverter.png";
 import snakeGame from "../../assets/images/snakeGame.png";
 import vidron from "../../assets/images/vidronHome.png";
 import weblog from "../..//assets/images/weblog.png";
+import RandomText from "../Animations/RandomText.jsx";
 
 function WorkSection() {
   const navigate = useNavigate();
@@ -62,11 +63,17 @@ function WorkSection() {
         <div className="josefinSans-text font-semibold text-sm text-[#f1f1f1] select-none flex items-center">
           <span>/</span>
           <span className="pl-10 lg:pl-28 text-lg lg:text-xl tracking-widest ">
-            WORK
+            <RandomText text="WORK" />
           </span>
         </div>
 
-        <div className="flex items-center justify-center select-none">
+        <motion.div
+          initial={{ opacity: 0 }}
+          whileInView={{ opacity: 1 }}
+          transition={{ duration: 1, ease: "easeOut", delay: 0.8 }}
+          viewport={{ once: true }}
+          className="flex items-center justify-center select-none"
+        >
           <button
             onClick={() => navigate("/work")}
             className="tracking-widest text-[#9a9a9a] hover:text-[#f7f7f7] font-mono duration-300 text-xs lg:text-sm flex items-center"
@@ -74,7 +81,7 @@ function WorkSection() {
             <span className="px-2 whitespace-nowrap">VIEW ALL</span>
             <HiOutlineArrowNarrowRight />
           </button>
-        </div>
+        </motion.div>
       </div>
 
       <section

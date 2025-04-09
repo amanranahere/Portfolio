@@ -106,7 +106,6 @@ function ProjectTemplate({
 
           <MaskingGrid
             color="#161616"
-            delaySpread={1.2}
             rowSizes={{ sm: 30, md: 45, lg: 150 }}
             columnSizes={{ sm: 60, md: 90, lg: 150 }}
           />

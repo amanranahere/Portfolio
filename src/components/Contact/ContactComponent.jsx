@@ -8,7 +8,9 @@ function ContactComponent() {
     <div className="h-full w-full flex flex-col justify-between">
       <div className="text-xl font-bold tracking-widest select-none josefinSans-text text-white">
         <span>/</span>
-        <span className="pl-4 md:pl-10 lg:pl-28">CONTACT</span>
+        <span className="pl-4 md:pl-10 lg:pl-28">
+          <RandomText text="CONTACT" />
+        </span>
       </div>
 
       <div className="flex flex-col justify-between">
@@ -38,7 +40,7 @@ function ContactComponent() {
             href="https://www.linkedin.com/in/aman-rana-709a0a330/"
             target="_blank"
             rel="noopener noreferrer"
-            className="text-xl font-semibold font-mono text-[#6b6b6c] hover:text-[#c0c0c0]"
+            className="text-xl font-semibold font-mono text-[#6b6b6c] hover:text-[#c0c0c0] duration-300"
           >
             <RandomText text="LINKEDIN" />
           </a>

@@ -8,6 +8,7 @@ function MaskingGrid({
   columnSizes = { sm: 60, md: 90, lg: 120 },
   totalCells = 100,
   delaySpread = 1,
+  startDelay = 0,
 }) {
   const screenSize = useScreenSize();
 
@@ -28,7 +29,10 @@ function MaskingGrid({
           style={{ backgroundColor: color }}
           initial={{ opacity: 1 }}
           whileInView={{ opacity: 0 }}
-          transition={{ delay: Math.random() * delaySpread, duration: 0.3 }}
+          transition={{
+            delay: startDelay + Math.random() * delaySpread,
+            duration: 0.3,
+          }}
           viewport={{ once: true }}
         />
       ))}

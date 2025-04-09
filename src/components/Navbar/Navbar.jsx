@@ -21,7 +21,13 @@ function Navbar() {
   const navItems = [
     {
       name: "HOME",
-      slug: "/",
+      action: () => {
+        if (window.location.pathname !== "/") {
+          navigate("/");
+        } else {
+          window.scrollTo({ top: 0, behavior: "smooth" });
+        }
+      },
     },
     {
       name: "WORK",
