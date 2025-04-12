@@ -1,6 +1,6 @@
 import React from "react";
 import { useLocation, useNavigate } from "react-router-dom";
-import { IoIosArrowUp } from "react-icons/io";
+import { HiOutlineArrowNarrowUp } from "react-icons/hi";
 import RandomText from "../Animations/RandomText.jsx";
 
 function Footer() {
@@ -19,7 +19,13 @@ function Footer() {
     },
     {
       name: "ABOUT",
-      slug: "/about",
+      action: () => {
+        if (window.location.pathname !== "/") {
+          navigate("/", { state: { scrollToAbout: true } });
+        } else {
+          window.dispatchEvent(new Event("scrollToAbout"));
+        }
+      },
     },
     {
       name: "CAPABILITIES",
@@ -58,7 +64,7 @@ function Footer() {
                         navigate(item.slug);
                       }
                     }}
-                    className="text-lg md:text-xl lg:text-2xl font-extrabold hover:text-[#7a7a7a] oswald-text transition duration-300 leading-relaxed cursor-pointer select-none"
+                    className=" md:text-lg lg:text-xl font-extrabold hover:text-[#7a7a7a] font-mono transition duration-300 leading-relaxed cursor-pointer select-none"
                   >
                     <RandomText text={item.name} />
                   </div>
@@ -67,12 +73,12 @@ function Footer() {
             </ul>
 
             {/* social link buttons */}
-            <div className="flex flex-col items-start md:items-end px-10 py-4 md:p-10">
+            <div className="flex flex-col items-start px-10 py-4 md:p-10">
               <a
                 href=""
                 target="_blank"
                 rel="noopener noreferrer"
-                className="text-lg md:text-xl lg:text-2xl font-extrabold hover:text-[#4a4a4a] oswald-text transition duration-300 flex justify-center items-center group leading-relaxed"
+                className="md:text-lg lg:text-xl font-extrabold hover:text-[#4a4a4a] font-mono transition duration-300 flex justify-center items-center group leading-relaxed"
               >
                 <RandomText text="LINKEDIN" />
               </a>
@@ -81,7 +87,7 @@ function Footer() {
                 href="https://github.com/amanranahere"
                 target="_blank"
                 rel="noopener noreferrer"
-                className="text-lg md:text-xl lg:text-2xl font-extrabold hover:text-[rgb(74,74,74)] oswald-text transition duration-300 flex justify-center items-center group leading-relaxed"
+                className="text-lg md:text-xl lg:text-xl font-extrabold hover:text-[rgb(74,74,74)] font-mono transition duration-300 flex justify-center items-center group leading-relaxed"
               >
                 <RandomText text="GITHUB" />
               </a>
@@ -90,7 +96,7 @@ function Footer() {
                 href=""
                 target="_blank"
                 rel="noopener noreferrer"
-                className="text-lg md:text-xl lg:text-2xl font-extrabold hover:text-[#4a4a4a] oswald-text transition duration-300 flex justify-center items-center group leading-relaxed"
+                className="md:text-lg lg:text-xl font-extrabold hover:text-[#4a4a4a] font-mono transition duration-300 flex justify-center items-center group leading-relaxed"
               >
                 <RandomText text="X" />
               </a>
@@ -99,7 +105,7 @@ function Footer() {
 
           <a
             href="mailto:amanranahere@gmail.com"
-            className="mx-10 my-5 md:m-10 flex lg:justify-start items-center hover:text-[#7a7a7a] transition duration-300 text-xl md:text-2xl lg:text-5xl font-extrabold uppercase leading-none oswald-text group"
+            className="mx-10 my-5 md:m-10 flex lg:justify-start items-center hover:text-[#7a7a7a] transition duration-300 text-xl md:text-2xl lg:text-5xl font-extrabold uppercase leading-none font-mono group"
           >
             <RandomText text="amanranahere@gmail.com" />
           </a>
@@ -108,19 +114,11 @@ function Footer() {
         {/* page top button */}
         <div
           onClick={() => window.scrollTo({ top: 0, behavior: "smooth" })}
-          className="absolute top-[3.4rem] md:top-10 right-10 flex flex-col items-center cursor-pointer group -translate-y-20 select-none"
+          className="p-6 md:p-10 flex flex-col items-center gap-2 cursor-pointer group select-none"
         >
-          <IoIosArrowUp
-            strokeWidth="10"
-            className="h-12 w-12 md:h-20 md:w-20 translate-y-[2.5rem] md:translate-y-16 group-hover:translate-y-[2rem] md:group-hover:translate-y-[3.5rem] transition-transform duration-300 group-hover:text-[#7a7a7a]"
-          />
-          <IoIosArrowUp
-            strokeWidth="10"
-            className="h-12 w-12 md:h-20 md:w-20 translate-y-[0.5rem]  group-hover:translate-y-[0rem] md:translate-y-2 md:group-hover:translate-y-0 transition-transform duration-300 delay-100 group-hover:text-[#7a7a7a]"
-          />
-          <p className="text-sm md:text-base oswald-text tracking-widest">
-            PAGE TOP
-          </p>
+          <HiOutlineArrowNarrowUp className="text-4xl group-hover:-translate-y-2 md:group-hover:-translate-y-2 transition-transform duration-300" />
+
+          <p className="text-sm text-center font-mono">PAGE TOP</p>
         </div>
       </div>
 

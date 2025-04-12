@@ -1,5 +1,4 @@
 import React from "react";
-import { motion } from "framer-motion";
 import ContactComponent from "../Contact/ContactComponent.jsx";
 import ContactForm from "../Contact/ContactForm.jsx";
 
@@ -10,14 +9,9 @@ function ContactSection() {
         <ContactComponent />
       </div>
 
-      <motion.div
-        initial={{ opacity: 0 }}
-        whileInView={{ opacity: 1 }}
-        transition={{ duration: 1, ease: "easeOut", delay: 1 }}
-        className="h-full lg:w-[50%]"
-      >
+      <div className="h-full lg:w-[50%]">
         <ContactForm />
-      </motion.div>
+      </div>
     </div>
   );
 }

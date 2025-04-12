@@ -214,7 +214,7 @@ function ProjectTemplate({
           transition={{ duration: 0.4 }}
           viewport={{ once: true, amount: 0.6 }}
         >
-          <div className="lg:w-[55%] text-[#f1f1f1] flex flex-wrap gap-2 pr-2">
+          <div className="lg:w-[55%] text-[#ccc] flex flex-wrap gap-2 pr-2">
             {projectBuiltWith}
           </div>
         </div>

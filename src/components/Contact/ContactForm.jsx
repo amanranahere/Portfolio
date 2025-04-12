@@ -50,10 +50,17 @@ export default function ContactForm() {
 
   return (
     <div className="h-full flex justify-end items-end overflow-hidden lg:pl-20">
-      <form onSubmit={handleSubmit} className="w-full flex flex-col">
+      <motion.form
+        initial={{ opacity: 0 }}
+        whileInView={{ opacity: 1 }}
+        transition={{ duration: 1, ease: "easeOut", delay: 1 }}
+        viewport={{ once: true }}
+        onSubmit={handleSubmit}
+        className="w-full flex flex-col"
+      >
         {/* fields */}
         <div className="flex flex-col gap-y-2">
-          <motion.div className="w-full relative">
+          <div className="w-full relative">
             <input
               type="text"
               name="name"
@@ -67,9 +74,9 @@ export default function ContactForm() {
             <span className="absolute top-2 right-2 text-xs text-gray-400">
               *Required
             </span>
-          </motion.div>
+          </div>
 
-          <motion.div className="w-full relative">
+          <div className="w-full relative">
             <input
               type="email"
               name="email"
@@ -83,9 +90,9 @@ export default function ContactForm() {
             <span className="absolute top-2 right-2 text-xs text-gray-400">
               *Required
             </span>
-          </motion.div>
+          </div>
 
-          <motion.div className="w-full relative">
+          <div className="w-full relative">
             <input
               type="text"
               name="company"
@@ -98,9 +105,9 @@ export default function ContactForm() {
             <span className="absolute top-2 right-2 text-xs text-gray-400">
               Optional
             </span>
-          </motion.div>
+          </div>
 
-          <motion.div className="w-full relative">
+          <div className="w-full relative">
             <input
               type="tel"
               name="phone"
@@ -113,9 +120,9 @@ export default function ContactForm() {
             <span className="absolute top-2 right-2 text-xs text-gray-400">
               Optional
             </span>
-          </motion.div>
+          </div>
 
-          <motion.div className="w-full relative">
+          <div className="w-full relative">
             <textarea
               name="message"
               placeholder="MESSAGE"
@@ -129,13 +136,13 @@ export default function ContactForm() {
             <span className="absolute top-2 right-2 text-xs text-gray-400">
               *Required
             </span>
-          </motion.div>
+          </div>
         </div>
 
         {/* buttons */}
         <div className="w-full mt-6 flex justify-end items-end leading-5">
           <div className="w-[40%]">
-            <motion.button
+            <button
               type="submit"
               className="w-full h-full leading-5 flex justify-end items-center text-xl text-[#6b6b6c] relative transition duration-300"
             >
@@ -149,19 +156,19 @@ export default function ContactForm() {
                   </span>
                 </span>
               ) : (
-                <div className="font-semibold flex justify-center font-mono hover:text-[#ffffffae] active:text-[#f7f7f7] duration-500">
+                <div className="px-2 font-semibold flex justify-center font-mono hover:text-[#ffffffae] active:text-[#f7f7f7] duration-500 group">
                   <span>SEND</span>
-                  <FaArrowRightLong className="w-6 ml-2" />
+                  <FaArrowRightLong className="w-6 ml-2 group-hover:translate-x-2 duration-300" />
                 </div>
               )}
 
               <div className="absolute -left-10 lg:-left-0 lg:-right-16 -top-4 text-xs text-[#f7f7f7] text-mono uppercase">
                 {status && <p>{status}</p>}
               </div>
-            </motion.button>
+            </button>
           </div>
         </div>
-      </form>
+      </motion.form>
     </div>
   );
 }

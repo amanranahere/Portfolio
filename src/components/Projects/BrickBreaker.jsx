@@ -47,7 +47,7 @@ function BrickBreaker() {
               transition={{ delay: delays[index], duration: 0.5 }}
               viewport={{ once: true }}
               key={item.name}
-              className="border border-white/40 flex items-center gap-2 py-1 px-2"
+              className="border border-[#6b6b6c] flex items-center gap-2 py-1 px-2"
             >
               {item.logo && item.logo}
               <span className="leading-tight">{item.name}</span>
