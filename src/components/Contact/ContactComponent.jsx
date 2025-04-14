@@ -20,10 +20,12 @@ function ContactComponent() {
           style={{ textIndent: "40%" }}
         >
           <p>
-            Lorem ipsum dolor sit amet consectetur, adipisicing elit. Autem
-            exercitationem quisquam perferendis dolorem dolorum, nobis
-            voluptatem totam non optio vitae ipsa error rerum mollitia repellat
-            aliquid, dolore vero veniam ut.
+            I'm always open to exciting opportunities — whether it&apos;s a
+            potential role, freelance collaboration, or a creative idea that
+            needs a developer&apos;s touch. If you&apos;re looking for someone
+            who brings both technical skill and a fresh perspective, let&apos;s
+            connect. And even if it's just to say hi or share thoughts, my inbox
+            is always open.
           </p>
 
           {/* masking div for animation */}

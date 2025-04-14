@@ -51,27 +51,33 @@ function Home() {
   };
 
   return (
-    <>
-      <div className="bg-[#161616] text-[#f3f1ec]">
+    <div className="bg-[#161616]">
+      <div className="">
         <LandingSection />
       </div>
 
-      <div id="aboutSection" className="bg-[#f1f1f1]">
+      <div className="border-b border-[#4a4a4a] m-5 lg:m-10"></div>
+
+      <div id="aboutSection">
         <AboutSection />
       </div>
 
-      <WorkSection />
+      <div className="border-b border-[#4a4a4a] m-5 lg:m-10"></div>
+
+      <div className="">
+        <WorkSection />
+      </div>
 
       <CapabilitiesSection />
 
-      <div id="contactSection" className="bg-[#161616]">
+      <div id="contactSection" className="">
         <ContactSection />
       </div>
 
       <div className="border-t-2 border-white">
         <Footer />
       </div>
-    </>
+    </div>
   );
 }
 

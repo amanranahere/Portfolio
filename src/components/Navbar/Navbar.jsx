@@ -3,7 +3,7 @@ import { useNavigate, useLocation } from "react-router-dom";
 import { SiLinkedin, SiGithub, SiX } from "react-icons/si";
 import { IoMail } from "react-icons/io5";
 import { motion, AnimatePresence } from "framer-motion";
-import RandomText from "../Animations/RandomText";
+import RandomText from "../Animations/RandomText.jsx";
 
 function Navbar() {
   const navigate = useNavigate();
@@ -81,7 +81,7 @@ function Navbar() {
     },
     {
       icon: (
-        <IoMail className="text-3xl lg:text-4xl scale-110 hover:scale-125 text-[#f1f1f1] hover:text-[#7a7a7a] transition duration-300" />
+        <IoMail className="text-3xl lg:text-3xl scale-110 hover:scale-125 text-[#f1f1f1] hover:text-[#7a7a7a] transition duration-300" />
       ),
       link: "mailto:amanranahere@gmail.com",
     },
@@ -114,65 +114,67 @@ function Navbar() {
       </motion.div>
 
       <AnimatePresence>
-        {isMenuOpen && (
-          <>
-            <div
-              onClick={() => setIsMenuOpen(false)}
-              className="fixed inset-0 z-[99] backdrop-blur-lg"
-            ></div>
+        <div className="relative">
+          {isMenuOpen && (
+            <>
+              <div
+                onClick={() => setIsMenuOpen(false)}
+                className="fixed inset-0 z-[99] backdrop-blur-lg"
+              ></div>
 
-            {/* menu box */}
-            <motion.div
-              initial={{ scaleX: 0.3, scaleY: 0, opacity: 0 }}
-              animate={{ scaleX: 1, scaleY: 1, opacity: 1 }}
-              exit={{ scaleX: 0.3, scaleY: 0, opacity: 0 }}
-              transition={{ duration: 0.4, ease: [0.25, 1, 0.5, 1] }}
-              className="fixed top-6 right-2 lg:right-16 flex flex-col justify-between z-[9999] origin-top-right"
-            >
-              <ul className="h-[50vh] lg:h-[60vh] w-[15rem] md:w-[19rem] lg:w-[18rem] py-6 lg:right-10 bg-[#111] rounded-3xl">
-                {navItems.map((item) => (
-                  <li key={item.name}>
-                    <div className="overflow-hidden">
-                      <div
-                        className="py-1 max-w-max px-6 text-[#f1f1f1] hover:text-[#4a4a4a] font-bold hover:scale-105 transition duration-300 text-2xl md:text-2xl select-none cursor-pointer font-mono tracking-wider"
-                        onClick={() => {
-                          if (item.action) {
-                            item.action();
-                          } else {
-                            navigate(item.slug);
-                          }
-                          setIsMenuOpen(false);
-                        }}
-                      >
-                        <RandomText text={item.name} delaySpread={0.6} />
+              {/* menu box */}
+              <motion.div
+                initial={{ scaleX: 0.3, scaleY: 0, opacity: 0 }}
+                animate={{ scaleX: 1, scaleY: 1, opacity: 1 }}
+                exit={{ scaleX: 0.3, scaleY: 0, opacity: 0 }}
+                transition={{ duration: 0.4, ease: [0.25, 1, 0.5, 1] }}
+                className="fixed top-6 right-2 lg:right-16 flex flex-col justify-between z-[9999] origin-top-right "
+              >
+                <ul className="h-[50vh] lg:h-[60vh] w-[15rem] md:w-[19rem] lg:w-[18rem] py-6 lg:right-10 bg-[#111] rounded-3xl">
+                  {navItems.map((item) => (
+                    <li key={item.name}>
+                      <div className="overflow-hidden">
+                        <div
+                          className="py-1 max-w-max px-6 text-[#f1f1f1] hover:text-[#4a4a4a] font-bold hover:scale-105 transition duration-300 text-2xl md:text-2xl select-none cursor-pointer font-mono tracking-wider"
+                          onClick={() => {
+                            if (item.action) {
+                              item.action();
+                            } else {
+                              navigate(item.slug);
+                            }
+                            setIsMenuOpen(false);
+                          }}
+                        >
+                          <RandomText text={item.name} delaySpread={0.6} />
+                        </div>
                       </div>
-                    </div>
-                  </li>
-                ))}
-              </ul>
-
-              {/* social icons */}
-              <div className="flex absolute bottom-6 right-6 text-white text-2xl md:text-3xl">
-                <div className="flex justify-center items-center gap-3 lg:gap-5">
-                  {socialIcons.map((item, index) => (
-                    <motion.a
-                      key={item.name}
-                      initial={{ opacity: 0 }}
-                      animate={{ opacity: 1 }}
-                      transition={{ delay: delays[index], duration: 0.5 }}
-                      exit="hidden"
-                      href={item.link}
-                      target="_blank"
-                      rel="noopener noreferrer"
-                    >
-                      {item.icon}
-                    </motion.a>
+                    </li>
                   ))}
+                </ul>
+
+                {/* social icons */}
+                <div className="flex absolute bottom-6 right-6 text-white text-2xl md:text-2xl">
+                  <div className="flex justify-center items-center gap-3 lg:gap-4">
+                    {socialIcons.map((item, index) => (
+                      <motion.a
+                        key={item.name}
+                        initial={{ opacity: 0 }}
+                        animate={{ opacity: 1 }}
+                        transition={{ delay: delays[index], duration: 0.5 }}
+                        exit="hidden"
+                        href={item.link}
+                        target="_blank"
+                        rel="noopener noreferrer"
+                      >
+                        {item.icon}
+                      </motion.a>
+                    ))}
+                  </div>
                 </div>
-              </div>
-            </motion.div>
-          </>
-        )}
+              </motion.div>
+            </>
+          )}
+        </div>
       </AnimatePresence>
     </>
   );

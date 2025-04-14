@@ -59,7 +59,7 @@ function WorkSection() {
 
   return (
     <>
-      <div className="h-full w-full bg-[#1e1e1e] flex justify-between items-center px-4 md:px-16 lg:px-14 py-20">
+      <div className="h-full w-full flex justify-between items-center px-4 md:px-16 lg:px-14 pt-20 lg:py-20">
         <div className="josefinSans-text font-semibold text-sm text-[#f1f1f1] select-none flex items-center">
           <span>/</span>
           <span className="pl-10 lg:pl-28 text-lg lg:text-xl tracking-widest ">
@@ -84,10 +84,7 @@ function WorkSection() {
         </motion.div>
       </div>
 
-      <section
-        ref={containerRef}
-        className="relative h-[4000vh] lg:h-[900vh] bg-[#1e1e1e]"
-      >
+      <section ref={containerRef} className="relative h-[4000vh] lg:h-[900vh]">
         <div className="sticky top-0 flex flex-col h-screen transform -translate-y-5 justify-center items-center overflow-hidden">
           <motion.div
             style={{ x: firstLineTransformX }}
@@ -153,6 +150,8 @@ function WorkSection() {
           </motion.div>
         </div>
       </section>
+
+      <div className="h-28"></div>
     </>
   );
 }

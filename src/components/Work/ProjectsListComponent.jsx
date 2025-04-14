@@ -3,7 +3,7 @@ import { Link } from "react-router-dom";
 import { IoMdArrowRoundForward } from "react-icons/io";
 import WeblogImg from "../../assets/images/weblogAllBlogs.png";
 import VidronImg from "../../assets/images/vidronHome.png";
-import CurrConvImg from "../../assets/images/CurrencyConverter.png";
+import CurrConvImg from "../../assets/images/currencyConverter.png";
 import BrickBreakerImg from "../../assets/images/brickBreaker.png";
 import FlappyBirdImg from "../../assets/images/flappyBird.png";
 import SnakeGameImg from "../../assets/images/snakeGame.png";
@@ -115,8 +115,8 @@ function ProjectsListComponent() {
       {/* heading and paragraph */}
       <div className="flex flex-col justify-center items-center">
         <div className="w-[90%] lg:w-[75%] mt-20 md:mt-40 lg:mt-20">
-          <div className="w-full text-3xl lg:text-4xl font-medium select-none josefinSans-text">
-            <RandomText text="MY PROJECTS" />
+          <div className="w-full text-3xl lg:text-5xl font-medium select-none josefinSans-text">
+            <RandomText text="WHAT I'VE BUILT" />
           </div>
 
           <div
@@ -124,13 +124,11 @@ function ProjectsListComponent() {
             style={{ textIndent: "30%" }}
           >
             <p>
-              Lorem ipsum dolor sit amet consectetur adipisicing elit. Eveniet,
-              eligendi sapiente accusamus, eum modi neque facere quia totam rem
-              voluptas numquam quisquam quam in excepturi minus. Itaque ipsam
-              eaque dignissimos! Lorem, ipsum dolor sit amet consectetur
-              adipisicing elit. Voluptas dicta sit dolor maiores laboriosam
-              placeat accusantium reiciendis, quibusdam dolorum, adipisci eius
-              ratione facilis.
+              Here&apos;s a collection of the projects I&apos;ve poured my time,
+              creativity, and skills into. Each one reflects a learning curve, a
+              new challenge tackled, or a creative solution implemented. From
+              frontend finesse to backend logic, these works showcase what I
+              love about development—bringing ideas to life through code.
             </p>
 
             <MaskingGrid

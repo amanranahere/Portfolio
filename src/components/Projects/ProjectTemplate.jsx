@@ -245,10 +245,10 @@ function ProjectTemplate({
 
         {/* other projects heading */}
 
-        <div>
+        <div className="flex justify-end">
           <Link
             to={`/work`}
-            className="text-4xl lg:text-7xl text-right pt-4 pb-[30vh] text-[#f1f1f1] hover:text-white/80 tracking-tight font-semibold flex flex-wrap justify-end josefinSans-text"
+            className="max-w-max text-4xl lg:text-7xl text-right pt-4 mb-[30vh] text-[#f1f1f1] hover:text-[#6b6b6c] tracking-tight font-semibold flex flex-wrap justify-end josefinSans-text duration-300"
           >
             <RandomText text="OTHER WORKS" />
           </Link>

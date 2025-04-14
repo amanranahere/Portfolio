@@ -5,9 +5,9 @@ import RandomText from "../Animations/RandomText.jsx";
 
 function AboutSection() {
   return (
-    <section className="min-h-screen lg:h-screen px-4 md:px-16 lg:px-14 py-20">
+    <section className="min-h-screen lg:h-screen px-4 md:px-16 lg:px-14 pt-20 lg:py-20">
       <div className="h-full flex flex-col lg:flex-row justify-between">
-        <div className="lg:w-[40%] text-lg lg:text-xl font-medium tracking-widest select-none josefinSans-text">
+        <div className="lg:w-[40%] text-lg lg:text-xl font-medium tracking-widest select-none josefinSans-text text-[#f3f1ec]">
           <span>/</span>
           <span className="pl-10 lg:pl-28">
             <RandomText text="ABOUT" />
@@ -22,27 +22,24 @@ function AboutSection() {
                 className="lg:text-xl text-[#6b6b6c] text-justify font-semibold uppercase font-mono"
                 style={{ textIndent: "40%" }}
               >
-                I'm a full-stack developer passionate about building intuitive
-                and scalable digital experiences. With a strong foundation in
-                both front-end and back-end technologies, I craft seamless
-                applications that blend. Lorem ipsum dolor sit amet consectetur
-                adipisicing elit. Commodi deserunt et perferendis eligendi
-                facilis cum, beatae enim a sed, ipsum esse magnam animi
-                delectus, at vitae architecto minima ullam! Voluptas! Lorem
-                ipsum dolor sit amet consectetur adipisicing elit. Laboriosam
-                maiores voluptatibus delectus voluptatum nisi ea, reprehenderit,
-                suscipit error sequi neque placeat, deserunt ullam? In libero,
-                atque neque at alias ea? Lorem ipsum dolor sit amet, consectetur
-                adipisicing elit. Natus ea maxime voluptates dignissimos tempora
-                molestiae, totam, consequatur illum, eaque quae quaerat. Nisi
-                veritatis explicabo voluptatum veniam, nemo ullam nostrum totam!
-                Lorem ipsum dolor sit amet consectetur adipisicing elit. Quidem
-                blanditiis modi, a quos dolor eveniet, optio distinctio
-                inventore est delectus ea impedit eaque, nulla quis ipsa
-                doloribus beatae voluptatem explicabo.
+                Currently pursuing a B.Tech in Computer Science, I&apos;ve been
+                diving deep into full stack web development using tools like
+                React, Node.js, Express, and MongoDB. Alongside that, my
+                academics have helped me better understand how computers and
+                systems work under the hood, which naturally enhances the way I
+                approach development. My interest in tech started with a simple
+                curiosity — I used to wonder how websites were built or how
+                games reacted instantly to every click, movement, or command. It
+                inspired me to start imagining what I could create, just for the
+                sake of creating it. That curiosity gradually turned into
+                something I genuinely enjoy — writing lines of code and
+                structured logic that transform into visual experiences on a
+                screen. When I&apos;m not coding, I&apos;m probably out playing
+                basketball or catching a quick gaming session to recharge.
               </p>
 
               <MaskingGrid
+                color="#161616"
                 rowSizes={{ sm: 60, md: 90, lg: 100 }}
                 columnSizes={{ sm: 60, md: 90, lg: 100 }}
                 startDelay={0.3}

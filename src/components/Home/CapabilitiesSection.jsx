@@ -121,7 +121,7 @@ function CapabilitiesSection() {
             return (
               <motion.li
                 key={index}
-                className={`h-[70vh] md:h-[60vh] lg:h-[70vh] border-t-2 border-dotted border-[#6a6a6a] flex flex-col lg:flex-row bg-[#f1f1f1] sticky last:relative last:border-none last:h-[50vh] last:bg-transparent`}
+                className={`h-[70vh] md:h-[60vh] lg:h-[70vh] border-t-2 border-dotted border-[#6a6a6a] flex flex-col lg:flex-row bg-[#f1f1f1] sticky last:relative last:border-none last:h-[50vh] last:bg-transparent `}
                 style={{ top: `${index * 12}vh`, y: moveUp }}
               >
                 <div className="text-xs lg:text-sm lg:w-[25%] py-2 lg:py-5 font-mono">
@@ -130,20 +130,23 @@ function CapabilitiesSection() {
 
                 <div className="lg:w-[50%] md:px-20 lg:px-0">
                   <h1 className="text-lg md:text-xl lg:py-5 pr-4 uppercase font-semibold">
-                    {item.title}
+                    <RandomText text={item.title} />
                   </h1>
 
-                  <p
+                  <motion.p
+                    initial={{ opacity: 0 }}
+                    whileInView={{ opacity: 1 }}
+                    transition={{
+                      duration: 1,
+                      ease: "easeOut",
+                      delay: 0.3,
+                    }}
+                    viewport={{ once: true, amount: 0.5 }}
                     className="text-sm md:text-base mt-16 lg:mt-20 mb-12 lg:mr-40 text-justify uppercase font-mono text-[#6b6b6c] font-medium relative"
                     style={{ textIndent: "30%" }}
                   >
                     {item.description}
-
-                    <MaskingGrid
-                      rowSizes={{ sm: 50, md: 50, lg: 60 }}
-                      columnSizes={{ sm: 50, md: 50, lg: 60 }}
-                    />
-                  </p>
+                  </motion.p>
 
                   {item.buttonText && (
                     <div className="w-full flex justify-end lg:justify-start">
@@ -173,16 +176,21 @@ function CapabilitiesSection() {
                 </div>
 
                 {item.img && (
-                  <div className="hidden lg:flex lg:w-[25%] my-7  justify-end items-center rounded-sm">
-                    <div className="w-full h-full bg-gray-300 rounded-sm flex justify-center items-center relative">
+                  <motion.div
+                    initial={{ opacity: 0 }}
+                    whileInView={{ opacity: 1 }}
+                    transition={{
+                      duration: 1,
+                      ease: "easeOut",
+                      delay: 0.3,
+                    }}
+                    viewport={{ once: true, amount: 0.4 }}
+                    className="hidden lg:flex lg:w-[25%] my-7  justify-end items-center rounded-sm"
+                  >
+                    <div className="w-full h-full bg-gray-300 rounded-sm flex justify-center items-center ">
                       {item.img}
-
-                      <MaskingGrid
-                        rowSizes={{ sm: 30, md: 45, lg: 60 }}
-                        columnSizes={{ sm: 60, md: 90, lg: 60 }}
-                      />
                     </div>
-                  </div>
+                  </motion.div>
                 )}
               </motion.li>
             );

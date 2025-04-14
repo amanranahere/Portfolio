@@ -63,7 +63,7 @@ function LandingSection() {
 
       {/* name div */}
       <div className="w-full pl-6 md:px-20 lg:px-32 flex flex-col lg:flex-row justify-between gap-14 lg:gap-0">
-        <div className="w-full flex flex-col text-[2rem] leading-none md:text-6xl lg:text-[5vw]">
+        <div className="w-full flex flex-col text-[2rem] text-[#f3f1ec] leading-none md:text-6xl lg:text-[5vw]">
           <RandomText
             text="AMAN RANA"
             className="josefinSans-text font-extralight"
