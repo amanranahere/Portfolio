@@ -2,14 +2,14 @@ import React from "react";
 import ProjectTemplate from "./ProjectTemplate";
 import { motion } from "framer-motion";
 import VidronVideo from "../../assets/videos/vidron_vid.mp4";
-import VidronHome from "../../assets/images/VidronHome.png";
-import VidronVidPage from "../../assets/images/VidronVidPage.png";
-import VidronSnap from "../../assets/images/VidronSnap.png";
-import VidronAllSnaps from "../../assets/images/VidronAllSnaps.png";
-import VidronTweets from "../../assets/images/VidronTweets.png";
-import VidronMetrics from "../../assets/images/VidronMetrics.png";
-import VidronChannel from "../../assets/images/VidronChannel.png";
-import VidronSettings from "../../assets/images/VidronSettings.png";
+import VidronHome from "../../assets/images/vidronHome.png";
+import VidronVidPage from "../../assets/images/vidronVidPage.png";
+import VidronSnap from "../../assets/images/vidronSnap.png";
+import VidronAllSnaps from "../../assets/images/vidronAllSnaps.png";
+import VidronTweets from "../../assets/images/vidronTweets.png";
+import VidronMetrics from "../../assets/images/vidronMetrics.png";
+import VidronChannel from "../../assets/images/vidronChannel.png";
+import VidronSettings from "../../assets/images/vidronSettings.png";
 import {
   SiReact,
   SiNodedotjs,
