@@ -43,14 +43,13 @@ function LandingSection() {
 
         {/* description */}
         <div
-          className="lg:w-[30%] text-sm font-semibold uppercase font-mono text-justify relative"
+          className="lg:w-[30%] lg:mt-5 text-sm font-semibold uppercase font-mono text-justify relative "
           style={{ textIndent: "20%" }}
         >
           <p>
-            Loremm ipsumm dolor sit ameddt consectetur adipisicing elit. Optio
-            facere aspernatur deleniti dolorusdfasdm nostrum accusantium
-            corporis aperiam iusto aliasdasquid molestias, tempora qusadfisquam
-            voluptate aliquam.
+            Freelance full-stack web developer writing code to create visual
+            experiences that feel seamless. From layout to logic, it&apos;s all
+            part of the craft.
           </p>
 
           <MaskingGrid

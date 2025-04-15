@@ -4,7 +4,6 @@ import { useNavigate } from "react-router-dom";
 import { HiOutlineArrowNarrowRight } from "react-icons/hi";
 import useScreenSize from "../../utils/ScreenSize";
 import RandomText from "../Animations/RandomText.jsx";
-import MaskingGrid from "../Animations/MaskingGrid.jsx";
 
 function CapabilitiesSection() {
   const navigate = useNavigate();
@@ -52,7 +51,7 @@ function CapabilitiesSection() {
       number: "C / 005",
       title: "Always Exploring",
       description:
-        "The tech landscape is constantly evolving, and I strive to grow with it. Exploring TypeScript has enhanced my ability to write maintainable and error-free code. Three.js opens the door to immersive 3D web experiences, while Docker streamlines development and deployment processes. Learning never stops, and I’m always on the lookout for the next tool to refine my craft.",
+        "The tech landscape is constantly evolving, and I strive to grow with it. Exploring TypeScript has enhanced my ability to write maintainable and error-free code. Three.js opens the door to immersive 3D web experiences. Learning never stops, and I’m always on the lookout for the next tool to refine my craft.",
       buttonText: "Discover What I’m Learning",
       category: "Exploring / Learning",
       img: "img",
@@ -121,7 +120,7 @@ function CapabilitiesSection() {
             return (
               <motion.li
                 key={index}
-                className={`h-[70vh] md:h-[60vh] lg:h-[70vh] border-t-2 border-dotted border-[#6a6a6a] flex flex-col lg:flex-row bg-[#f1f1f1] sticky last:relative last:border-none last:h-[50vh] last:bg-transparent `}
+                className={`h-[70vh] md:h-[60vh] lg:h-[90vh] border-t-2 border-dotted border-[#6a6a6a] flex flex-col lg:flex-row bg-[#f1f1f1] sticky last:relative last:border-none last:h-[50vh] last:bg-transparent `}
                 style={{ top: `${index * 12}vh`, y: moveUp }}
               >
                 <div className="text-xs lg:text-sm lg:w-[25%] py-2 lg:py-5 font-mono">
@@ -185,9 +184,9 @@ function CapabilitiesSection() {
                       delay: 0.3,
                     }}
                     viewport={{ once: true, amount: 0.4 }}
-                    className="hidden lg:flex lg:w-[25%] my-7  justify-end items-center rounded-sm"
+                    className="hidden lg:flex lg:w-[25%] lg:h-[80%] my-7  justify-end items-center rounded-sm"
                   >
-                    <div className="w-full h-full bg-gray-300 rounded-sm flex justify-center items-center ">
+                    <div className="w-full h-full bg-[#e2e3e6] rounded-sm flex justify-center items-center ">
                       {item.img}
                     </div>
                   </motion.div>

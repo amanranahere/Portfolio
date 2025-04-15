@@ -25,6 +25,8 @@ import {
   SiPostman,
   SiNextdotjs,
   SiGreensock,
+  SiTypescript,
+  SiThreedotjs,
 } from "react-icons/si";
 import RandomText from "../Animations/RandomText";
 import MaskingGrid from "../Animations/MaskingGrid";
@@ -248,6 +250,22 @@ function CapabilitiesComponent() {
         "GSAP (GreenSock Animation Platform) is a powerful JavaScript animation library used to create high-performance, smooth animations in web applications.",
       category: "Exploring / Learning",
     },
+    {
+      name: "TypeScript",
+      label: "Language",
+      logo: <SiTypescript className="w-14 h-14" />,
+      description:
+        "TypeScript is a statically typed superset of JavaScript that helps catch errors early through type checking, enhancing developer productivity and code maintainability.",
+      category: "Exploring / Learning",
+    },
+    {
+      name: "Three.js",
+      label: "3D Library",
+      logo: <SiThreedotjs className="w-14 h-14" />,
+      description:
+        "Three.js is a JavaScript library used to create and display animated 3D graphics in the browser using WebGL.",
+      category: "Exploring / Learning",
+    },
   ];
 
   const filteredTech =
@@ -271,7 +289,7 @@ function CapabilitiesComponent() {
   const delays = categories.map(() => Math.random() * 1);
 
   return (
-    <div className="w-full min-h-screen bg-black text-[#fff] flex flex-col lg:flex-row">
+    <div className="w-full min-h-[120vh] bg-black text-[#fff] flex flex-col lg:flex-row">
       <div className="w-full lg:w-[50%]">
         <div className="lg:sticky top-52 mt-52 lg:mt-0 lg:pt-0 px-6 z-10">
           <div className="lg:w-[80%] text-3xl lg:text-4xl pb-3 font-medium select-none overflow-hidden josefinSans-text">
@@ -326,7 +344,7 @@ function CapabilitiesComponent() {
       >
         <div className="mx-4 border-b-2 border-dotted border-[#6a6a6a]"></div>
 
-        <ul className="pb-6">
+        <ul className="pb-32">
           {filteredTech.map(({ name, label, logo, description }) => (
             <>
               <motion.li
