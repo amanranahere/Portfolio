@@ -31,7 +31,7 @@ Each project links to its live demo and code repository.
 
 Feel free to reach out!
 
-- **Email:** amanrana@example.com  
+- **Email:** amanranahere@gmail.com  
 - **LinkedIn:** [Aman Rana](https://www.linkedin.com/in/aman-rana-709a0a330/)  
 - **Twitter:** [@handle](https://twitter.com/)
 
