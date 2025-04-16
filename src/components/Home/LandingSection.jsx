@@ -36,7 +36,10 @@ function LandingSection() {
             </span>
             <span className="hidden lg:block">&nbsp;</span>
             <span>
-              <RandomText text="INDIA" />
+              <RandomText text="DELHI" />
+            </span>
+            <span className="hidden md:flex">
+              <RandomText text=", INDIA" />
             </span>
           </div>
         </div>
