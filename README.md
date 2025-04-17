@@ -33,6 +33,5 @@ Feel free to reach out!
 
 - **Email:** amanranahere@gmail.com  
 - **LinkedIn:** [Aman Rana](https://www.linkedin.com/in/aman-rana-709a0a330/)  
-- **Twitter:** [@handle](https://twitter.com/)
 
 
