@@ -100,15 +100,15 @@ function Footer() {
               >
                 <RandomText text="X" />
               </a>
+
+              <a
+                href="mailto:amanranahere@gmail.com"
+                className="md:text-lg lg:text-xl font-extrabold hover:text-[#6b6b6c] font-mono transition duration-300 flex justify-center items-center group leading-relaxed"
+              >
+                <RandomText text="MAIL" />
+              </a>
             </div>
           </div>
-
-          <a
-            href="mailto:amanranahere@gmail.com"
-            className="mx-10 my-5 md:m-10 flex lg:justify-start items-center hover:text-[#6b6b6c] transition duration-300 text-xl md:text-2xl lg:text-5xl font-extrabold uppercase leading-none font-mono group"
-          >
-            <RandomText text="amanranahere@gmail.com" />
-          </a>
         </div>
 
         {/* page top button */}
@@ -123,7 +123,7 @@ function Footer() {
       </div>
 
       {/* name at the very bottom */}
-      <div className="w-full p-4 flex justify-end text-4xl lg:text-6xl leading-none badeenDisplay-text overflow-hidden select-none absolute bottom-0 right-0">
+      <div className="w-full p-4 flex justify-end text-4xl lg:text-9xl leading-none badeenDisplay-text overflow-hidden select-none absolute bottom-0 right-0">
         AMAN RANA
       </div>
     </div>

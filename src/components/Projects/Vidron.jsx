@@ -102,7 +102,7 @@ function Vidron() {
   return (
     <ProjectTemplate
       projectName="VIDRON"
-      projectTagline="A video streaming platform offering a diverse range of content, including engaging full-length videos and quick 30-second snaps."
+      projectTagline="A video streaming platform offering a diverse range of content, including engaging full-length videos and short-form snaps."
       projectLink="https://vidron.vercel.app"
       projectVideo={VidronVideo}
       projectYear="2025"

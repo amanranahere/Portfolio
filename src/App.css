@@ -16,33 +16,6 @@
 }
 
 @font-face {
-  font-family: "BigShouldersStencil";
-  src: url("/fonts/BigShouldersStencil.ttf") format("truetype");
-}
-
-.bigShoulderStencil-text {
-  font-family: "BigShouldersStencil", sans-serif;
-}
-
-@font-face {
-  font-family: "GiveYouGlory";
-  src: url("/fonts/GiveYouGlory.ttf") format("truetype");
-}
-
-.giveYouGlory-text {
-  font-family: "GiveYouGlory", sans-serif;
-}
-
-@font-face {
-  font-family: "Inter";
-  src: url("/fonts/Inter.ttf") format("truetype");
-}
-
-.inter-text {
-  font-family: "Inter", sans-serif;
-}
-
-@font-face {
   font-family: "JosefinSans";
   src: url("/fonts/JosefinSans.ttf") format("truetype");
 }
@@ -52,30 +25,12 @@
 }
 
 @font-face {
-  font-family: "Lato";
-  src: url("/fonts/Lato.ttf") format("truetype");
-}
-
-.lato-text {
-  font-family: "Lato", sans-serif;
-}
-
-@font-face {
   font-family: "Oswald";
   src: url("/fonts/Oswald.ttf") format("truetype");
 }
 
 .oswald-text {
   font-family: "Oswald", sans-serif;
-}
-
-@font-face {
-  font-family: "YesevaOne";
-  src: url("/fonts/YesevaOne.ttf") format("truetype");
-}
-
-.yesevaOne-text {
-  font-family: "YesevaOne", sans-serif;
 }
 
 /* fonts - end */
@@ -93,58 +48,6 @@
   );
   transition: mask-image 0.3s ease;
 }
-
-/* light & dark toggle - start */
-
-.switch-container {
-  position: relative;
-  display: inline-block;
-  width: 3.5em;
-  height: 2em;
-}
-
-.switch-container input {
-  opacity: 0;
-  width: 0;
-  height: 0;
-}
-
-.switch-container .slider {
-  --background: linear-gradient(to right, #f3f3f3ef, #ffffff);
-  position: absolute;
-  cursor: pointer;
-  top: 0;
-  left: 0;
-  right: 0;
-  bottom: 0;
-  background: var(--background);
-  transition: background-color 0.5s;
-  border-radius: 30px;
-}
-
-.switch-container .slider:before {
-  position: absolute;
-  content: "";
-  height: 1.4em;
-  width: 1.4em;
-  border-radius: 50%;
-  left: 10%;
-  bottom: 15%;
-  box-shadow: inset 15px -4px 0px 15px #f8ea27;
-  background: var(--background);
-  transition: transform 0.5s, box-shadow 0.5s;
-}
-
-.switch-container input:checked + .slider {
-  background-color: #000;
-}
-
-.switch-container input:checked + .slider:before {
-  transform: translateX(100%);
-  box-shadow: inset 8px -4px 0px 0px black;
-}
-
-/* light & dark toggle - end */
 
 /* loading dots - start */
 

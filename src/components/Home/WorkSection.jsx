@@ -78,7 +78,7 @@ function WorkSection() {
             onClick={() => navigate("/work")}
             className="tracking-widest text-[#9a9a9a] hover:text-[#f7f7f7] font-mono duration-300 text-xs lg:text-sm flex items-center"
           >
-            <span className="px-2 whitespace-nowrap">VIEW ALL</span>
+            <span className="px-2 whitespace-nowrap p-5">VIEW ALL</span>
             <HiOutlineArrowNarrowRight />
           </button>
         </motion.div>

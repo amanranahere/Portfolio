@@ -39,7 +39,7 @@ function LandingSection() {
               <RandomText text="DELHI" />
             </span>
             <span className="hidden md:flex">
-              <RandomText text=", INDIA" />
+              <RandomText text=",&nbsp;INDIA" />
             </span>
           </div>
         </div>
