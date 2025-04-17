@@ -1,8 +1,37 @@
-# React + Vite
+# Personal Portfolio
 
-This template provides a minimal setup to get React working in Vite with HMR and some ESLint rules.
+A modern, responsive, and animated portfolio website built to showcase my projects, skills, and journey as a full-stack web developer.
 
-Currently, two official plugins are available:
+[**Live Site**](https://amanrana.vercel.app)
 
-- [@vitejs/plugin-react](https://github.com/vitejs/vite-plugin-react/blob/main/packages/plugin-react/README.md) uses [Babel](https://babeljs.io/) for Fast Refresh
-- [@vitejs/plugin-react-swc](https://github.com/vitejs/vite-plugin-react-swc) uses [SWC](https://swc.rs/) for Fast Refresh
+<br>
+
+## Built With
+
+- **React JS**
+- **Tailwind CSS**
+- **Framer Motion**
+- **Vercel** (for deployment)
+
+<br>
+
+## Projects Included
+
+The portfolio features a curated selection of my best work, including:
+
+- **WeBlog** – A modern blogging platform where users can read, write, and share blogs.
+- **Vidron** – A video streaming platform offering a diverse range of content, including engaging full-length videos and short-form snaps.
+- And more...
+
+Each project links to its live demo and code repository.
+
+<br>
+
+## Contact
+
+Feel free to reach out!
+
+- **Email:** amanranahere@gmail.com  
+- **LinkedIn:** [Aman Rana](https://www.linkedin.com/in/aman-rana-709a0a330/)  
+
+
