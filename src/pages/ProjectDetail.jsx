@@ -31,7 +31,9 @@ const ProjectDetail = () => {
         )}
       </div>
 
-      <Footer />
+      <div className="bg-[#161616]">
+        <Footer />
+      </div>
     </>
   );
 };

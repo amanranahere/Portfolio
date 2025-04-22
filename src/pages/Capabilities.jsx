@@ -6,11 +6,11 @@ import PageTransition from "../components/Animations/PageTransition.jsx";
 function Capabilities() {
   return (
     <>
-      <div className="border-b-2 border-white">
-        <CapabilitiesComponent />
-      </div>
+      <CapabilitiesComponent />
 
-      <Footer />
+      <div className="bg-black">
+        <Footer />
+      </div>
     </>
   );
 }

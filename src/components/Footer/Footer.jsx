@@ -47,13 +47,13 @@ function Footer() {
 
   return (
     <div
-      className={`h-[60vh] md:h-[40vh] lg:h-[60vh] w-full bg-black text-white border-t-2 border-white flex flex-col justify-between overflow-hidden relative`}
+      className={`h-[60vh] md:h-[40vh] lg:h-[60vh] w-full text-white flex flex-col lg:flex-row justify-around overflow-hidden relative`}
     >
-      <div className="flex flex-row md:justify-between relative">
-        <div className="w-screen md:w-[70%] lg:w-[60%]">
-          <div className="flex flex-col md:flex-row justify-between">
+      <div className="lg:w-[45%] flex flex-row justify-between items-end ">
+        <div className="">
+          <div className="flex flex-col">
             {/* links to different pages */}
-            <ul className="flex flex-col px-10 py-5 md:p-10">
+            <ul className="flex gap-5 pl-20">
               {filteredNavItems.map((item) => (
                 <li key={item.name}>
                   <div
@@ -64,7 +64,7 @@ function Footer() {
                         navigate(item.slug);
                       }
                     }}
-                    className=" md:text-lg lg:text-xl font-extrabold hover:text-[#6b6b6c] font-mono transition duration-300 leading-relaxed cursor-pointer select-none"
+                    className="md:text-lg lg:text-xl font-extrabold hover:text-[#6b6b6c] font-mono transition duration-300 leading-relaxed cursor-pointer select-none"
                   >
                     <RandomText text={item.name} />
                   </div>
@@ -73,7 +73,7 @@ function Footer() {
             </ul>
 
             {/* social link buttons */}
-            <div className="flex flex-col items-start px-10 py-4 md:p-10">
+            <div className="flex gap-10">
               <a
                 href=""
                 target="_blank"
@@ -112,18 +112,18 @@ function Footer() {
         </div>
 
         {/* page top button */}
-        <div
+        {/* <div
           onClick={() => window.scrollTo({ top: 0, behavior: "smooth" })}
           className="max-h-max p-6 md:p-10 flex flex-col items-center gap-2 cursor-pointer group select-none"
         >
           <HiOutlineArrowNarrowUp className="text-4xl group-hover:-translate-y-2 md:group-hover:-translate-y-2 transition-transform duration-300" />
 
           <p className="text-sm text-center font-mono">PAGE TOP</p>
-        </div>
+        </div> */}
       </div>
 
       {/* name at the very bottom */}
-      <div className="w-full p-4 flex justify-end text-4xl lg:text-9xl leading-none badeenDisplay-text overflow-hidden select-none absolute bottom-0 right-0">
+      <div className="lg:w-[50%] p-4 flex justify-end items-end text-4xl lg:text-9xl leading-none badeenDisplay-text overflow-hidden select-none ">
         AMAN RANA
       </div>
     </div>

@@ -74,7 +74,7 @@ function Home() {
         <ContactSection />
       </div>
 
-      <div className="border-t-2 border-white">
+      <div className="">
         <Footer />
       </div>
     </div>
