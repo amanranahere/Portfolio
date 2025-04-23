@@ -47,7 +47,7 @@ function Footer() {
 
   return (
     <div
-      className={`h-full w-full pt-[40vh] lg:pt-[50vh] text-white flex flex-col lg:flex-row justify-around overflow-hidden relative`}
+      className={`h-full w-full pt-[10vh] lg:pt-[30vh] text-white flex flex-col lg:flex-row justify-around overflow-hidden relative`}
     >
       <div className="w-full flex flex-col lg:flex-row">
         <div className="lg:min-w-[50%] flex flex-row justify-between items-end">
@@ -124,7 +124,7 @@ function Footer() {
         </div>
 
         {/* name at the very bottom */}
-        <div className="h-[20vh] w-full p-4 flex justify-center lg:justify-end items-end text-[clamp(7rem,8vw,8rem)] leading-none badeenDisplay-text overflow-hidden select-none">
+        <div className="h-[20vh] w-full p-4 flex justify-center lg:justify-end items-end text-[clamp(7rem,8vw,9rem)] leading-none badeenDisplay-text overflow-hidden select-none">
           <div className="md:hidden">
             <RandomText text="AMAN" />
           </div>
