@@ -344,7 +344,7 @@ function CapabilitiesComponent() {
       >
         <div className="mx-4 border-b-2 border-dotted border-[#6a6a6a]"></div>
 
-        <ul className="pb-32">
+        <ul className="pb-36">
           {filteredTech.map(({ name, label, logo, description }) => (
             <>
               <motion.li
