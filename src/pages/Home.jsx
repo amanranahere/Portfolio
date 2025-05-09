@@ -68,13 +68,11 @@ function Home() {
 
       <CapabilitiesSection />
 
-      <div id="contactSection" className="">
+      <div id="contactSection">
         <ContactSection />
       </div>
 
-      <div className="">
-        <Footer />
-      </div>
+      <Footer />
     </div>
   );
 }

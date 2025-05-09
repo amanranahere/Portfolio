@@ -4,24 +4,29 @@ body {
   background-color: #f7f7f7;
 }
 
-/* scrollbar styles */
+/* scrollbar styles - start */
 
-/* body {
-  scrollbar-color: #fff #161616;
+html,
+body {
+  scrollbar-color: #6b6b6c #161616;
 }
 
+html::-webkit-scrollbar,
 body::-webkit-scrollbar {
   width: 8px;
-  height: 8px;
 }
 
+html::-webkit-scrollbar-track,
 body::-webkit-scrollbar-track {
   background: #161616;
 }
 
+html::-webkit-scrollbar-thumb,
 body::-webkit-scrollbar-thumb {
-  background-color: #fff;
-} */
+  background-color: #6b6b6c;
+}
+
+/* scrollbar styles - end */
 
 /* page transition - start */
 

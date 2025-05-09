@@ -8,7 +8,7 @@ function Capabilities() {
     <>
       <CapabilitiesComponent />
 
-      <div className="bg-black">
+      <div className="bg-[#161616]">
         <Footer />
       </div>
     </>

@@ -298,14 +298,14 @@ function CapabilitiesComponent() {
   const delays = categories.map(() => Math.random() * 1);
 
   return (
-    <div className="w-full min-h-[120vh] bg-black text-[#fff] flex flex-col lg:flex-row">
+    <div className="w-full min-h-[120vh] bg-[#161616] text-[#fff] flex flex-col lg:flex-row">
       <div className="w-full lg:w-[50%]">
         <div className="lg:sticky top-52 mt-52 lg:mt-0 lg:pt-0 px-6 z-10">
           <div className="lg:w-[80%] text-3xl lg:text-4xl pb-3 font-medium select-none overflow-hidden josefinSans-text">
             <RandomText text="BUILDING WITH THE RIGHT STACK" />
           </div>
           <div
-            className="lg:w-[75%] pt-9 pb-12 lg:pb-20 select-none text-justify font-mono text-sm lg:text-base text-[#6b6b6c] uppercase bg-black z-10 relative"
+            className="lg:w-[75%] pt-9 pb-12 lg:pb-20 select-none text-justify font-mono text-sm lg:text-base text-[#6b6b6c] uppercase bg-[#161616] z-10 relative"
             style={{ textIndent: "30%" }}
           >
             <p>
@@ -315,7 +315,7 @@ function CapabilitiesComponent() {
             </p>
 
             <MaskingGrid
-              color="#000"
+              color="#161616"
               rowSizes={{ sm: 30, md: 45, lg: 50 }}
               columnSizes={{ sm: 60, md: 90, lg: 50 }}
             />
@@ -334,7 +334,7 @@ function CapabilitiesComponent() {
                 setSelectedCategory(category);
                 window.scrollTo({ top: 0, behavior: "smooth" });
               }}
-              className={`px-6 py-1 lg:px-8 lg:py-2 border border-white text-[0.6rem] font-medium tracking-widest rounded-[0.21rem] hover:text-black hover:bg-[#fff] transition duration-300 active:scale-95 cursor-pointer ${
+              className={`px-6 py-1 lg:px-8 lg:py-2 border border-white text-[0.6rem] font-medium font-mono tracking-widest rounded-[0.21rem] hover:text-black hover:bg-[#fff] transition duration-300 active:scale-95 cursor-pointer ${
                 selectedCategory === category ? "bg-[#fff] text-black" : ""
               }`}
             >
@@ -353,7 +353,7 @@ function CapabilitiesComponent() {
       >
         <div className="mx-4 border-b-2 border-dotted border-[#6a6a6a]"></div>
 
-        <ul className="pb-36">
+        <ul className="pb-2">
           {filteredTech.map(({ name, label, logo, description }) => (
             <React.Fragment key={name}>
               <motion.li
