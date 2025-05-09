@@ -156,7 +156,7 @@ export default function ContactForm() {
                   </span>
                 </span>
               ) : (
-                <div className="px-2 font-semibold flex justify-center font-mono hover:text-[#ffffffae] active:text-[#f7f7f7] duration-500 group">
+                <div className="px-2 font-semibold flex justify-center font-mono hover:text-[#ffffffae] active:text-[#f7f7f7] duration-500 group cursor-pointer">
                   <span>SEND</span>
                   <FaArrowRightLong className="w-6 ml-2 group-hover:translate-x-2 duration-300" />
                 </div>

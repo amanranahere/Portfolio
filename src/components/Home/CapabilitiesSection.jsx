@@ -155,7 +155,7 @@ function CapabilitiesSection() {
             >
               <button
                 onClick={() => navigate("/capabilities")}
-                className="text-[#6b6b6c] hover:text-black overflow-hidden font-mono flex items-center"
+                className="text-[#6b6b6c] hover:text-black overflow-hidden font-mono flex items-center cursor-pointer"
               >
                 <span className="px-2 whitespace-nowrap text-xs lg:text-sm">
                   VIEW ALL
@@ -217,7 +217,7 @@ function CapabilitiesSection() {
                             state: { selectedCategory: item.category },
                           })
                         }
-                        className="px-6 py-2 text-black/70 border border-black/50 bg-[#f1f1f1] text-xs font-medium md:tracking-widest rounded-[0.21rem] hover:text-white hover:bg-black duration-300 active:scale-95 uppercase font-mono flex"
+                        className="px-6 py-2 text-black/70 border border-black/50 bg-[#f1f1f1] text-xs font-medium md:tracking-widest rounded-[0.21rem] hover:text-white hover:bg-black duration-300 active:scale-95 uppercase font-mono flex cursor-pointer"
                       >
                         {item.buttonText}
                         <span className="leading-3 text-base pl-2">

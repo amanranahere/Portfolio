@@ -76,7 +76,7 @@ function WorkSection() {
         >
           <button
             onClick={() => navigate("/work")}
-            className="tracking-widest text-[#9a9a9a] hover:text-[#f7f7f7] font-mono duration-300 text-xs lg:text-sm flex items-center"
+            className="tracking-widest text-[#9a9a9a] hover:text-[#f7f7f7] font-mono duration-300 text-xs lg:text-sm flex items-center cursor-pointer"
           >
             <span className="px-2 whitespace-nowrap p-5">VIEW ALL</span>
             <HiOutlineArrowNarrowRight />

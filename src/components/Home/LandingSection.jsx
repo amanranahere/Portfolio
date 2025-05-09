@@ -79,7 +79,7 @@ function LandingSection() {
         <div className="lg:w-[10%] flex justify-end">
           <button
             onClick={scrollToAboutSection}
-            className="text-sm text-[#6b6b6c] hover:text-white/50 font-semibold font-mono transition duration-300 px-14 md:px-0"
+            className="text-sm text-[#6b6b6c] hover:text-white/50 font-semibold font-mono transition duration-300 px-14 md:px-0 cursor-pointer"
           >
             <RandomText text="EXPLORE" />
           </button>

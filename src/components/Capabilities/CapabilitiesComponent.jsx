@@ -79,6 +79,14 @@ function CapabilitiesComponent() {
       category: "Languages",
     },
     {
+      name: "TypeScript",
+      label: "Language",
+      logo: <SiTypescript className="w-14 h-14" />,
+      description:
+        "TypeScript is a statically typed superset of JavaScript that helps catch errors early through type checking, enhancing developer productivity and code maintainability.",
+      category: "Languages",
+    },
+    {
       name: "Redux",
       label: "State Management",
       logo: <SiRedux className="w-14 h-14" />,
@@ -188,14 +196,14 @@ function CapabilitiesComponent() {
         "C is a powerful low-level programming language known for its efficiency, often used in system programming, embedded systems, and OS development.",
       category: "Languages",
     },
-    {
-      name: "Python",
-      label: "Language",
-      logo: <SiPython className="w-14 h-14" />,
-      description:
-        "Python is a high-level, easy-to-read programming language known for its versatility in web development, AI, data science, and automation.",
-      category: "Languages",
-    },
+    // {
+    //   name: "Python",
+    //   label: "Language",
+    //   logo: <SiPython className="w-14 h-14" />,
+    //   description:
+    //     "Python is a high-level, easy-to-read programming language known for its versatility in web development, AI, data science, and automation.",
+    //   category: "Languages",
+    // },
     {
       name: "Vite",
       label: "Build Tool",
@@ -248,14 +256,6 @@ function CapabilitiesComponent() {
       logo: <SiGreensock className="w-14 h-14" />,
       description:
         "GSAP (GreenSock Animation Platform) is a powerful JavaScript animation library used to create high-performance, smooth animations in web applications.",
-      category: "Exploring / Learning",
-    },
-    {
-      name: "TypeScript",
-      label: "Language",
-      logo: <SiTypescript className="w-14 h-14" />,
-      description:
-        "TypeScript is a statically typed superset of JavaScript that helps catch errors early through type checking, enhancing developer productivity and code maintainability.",
       category: "Exploring / Learning",
     },
     {
@@ -325,7 +325,7 @@ function CapabilitiesComponent() {
                 setSelectedCategory(category);
                 window.scrollTo({ top: 0, behavior: "smooth" });
               }}
-              className={`px-6 py-1 lg:px-8 lg:py-2 border border-white text-[0.6rem] font-medium tracking-widest rounded-[0.21rem] hover:text-black hover:bg-[#fff] transition duration-300 active:scale-95  ${
+              className={`px-6 py-1 lg:px-8 lg:py-2 border border-white text-[0.6rem] font-medium tracking-widest rounded-[0.21rem] hover:text-black hover:bg-[#fff] transition duration-300 active:scale-95 cursor-pointer ${
                 selectedCategory === category ? "bg-[#fff] text-black" : ""
               }`}
             >
