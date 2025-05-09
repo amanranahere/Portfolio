@@ -5,7 +5,7 @@ import ScrollToTop from "./utils/ScrollToTop.jsx";
 
 function App() {
   return (
-    <div className="scrollbar-thin scrollbar-thumb-[#2a2a2a] scrollbar-track-black">
+    <div>
       <ScrollToTop />
 
       <Navbar />

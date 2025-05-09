@@ -207,13 +207,7 @@ function ProjectTemplate({
           viewport={{ once: true }}
         />
 
-        <div
-          className="w-full flex justify-end"
-          initial={{ opacity: 0, y: 50 }}
-          whileInView={{ opacity: 1, y: 0 }}
-          transition={{ duration: 0.4 }}
-          viewport={{ once: true, amount: 0.6 }}
-        >
+        <div className="w-full flex justify-end">
           <div className="lg:w-[55%] text-[#ccc] flex flex-wrap gap-2 pr-2">
             {projectBuiltWith}
           </div>

@@ -64,9 +64,7 @@ function Home() {
 
       <div className="border-b border-[#4a4a4a] m-5 lg:m-10"></div>
 
-      <div className="">
-        <WorkSection />
-      </div>
+      <WorkSection />
 
       <CapabilitiesSection />
 

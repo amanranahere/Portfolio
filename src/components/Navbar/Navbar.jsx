@@ -157,7 +157,7 @@ function Navbar() {
                   <div className="flex justify-center items-center gap-3 lg:gap-4">
                     {socialIcons.map((item, index) => (
                       <motion.a
-                        key={item.name}
+                        key={index}
                         initial={{ opacity: 0 }}
                         animate={{ opacity: 1 }}
                         transition={{ delay: delays[index], duration: 0.5 }}

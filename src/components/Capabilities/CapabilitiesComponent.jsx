@@ -355,7 +355,7 @@ function CapabilitiesComponent() {
 
         <ul className="pb-36">
           {filteredTech.map(({ name, label, logo, description }) => (
-            <>
+            <React.Fragment key={name}>
               <motion.li
                 layout
                 onClick={() => toggleExpand(name)}
@@ -434,7 +434,7 @@ function CapabilitiesComponent() {
               )}
 
               <div className="mx-4 border-b-2 border-dotted border-[#6a6a6a] last:mb-20"></div>
-            </>
+            </React.Fragment>
           ))}
         </ul>
       </motion.div>

@@ -4,24 +4,24 @@ body {
   background-color: #f7f7f7;
 }
 
-/* outline text - start */
+/* scrollbar styles */
 
-.blackColor {
-  --textColor: black;
+/* body {
+  scrollbar-color: #fff #161616;
 }
 
-.whiteColor {
-  --textColor: white;
+body::-webkit-scrollbar {
+  width: 8px;
+  height: 8px;
 }
 
-.outline-text {
-  font-family: sans-serif;
-  color: transparent;
-  -webkit-text-stroke-color: var(--textColor);
-  -webkit-text-stroke-width: 1.5px;
+body::-webkit-scrollbar-track {
+  background: #161616;
 }
 
-/* outline text - end */
+body::-webkit-scrollbar-thumb {
+  background-color: #fff;
+} */
 
 /* page transition - start */
 

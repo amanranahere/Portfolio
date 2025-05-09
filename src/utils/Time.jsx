@@ -45,13 +45,13 @@ const Time = () => {
   const [hour, minute] = time.split(":");
 
   return (
-    <div className="uppercase">
+    <span className="uppercase">
       {hour}
       <span style={{ opacity: showColon ? 1 : 0, transition: "opacity 0.2s" }}>
         :
       </span>
       {minute}, {day}
-    </div>
+    </span>
   );
 };
 
