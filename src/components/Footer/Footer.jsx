@@ -54,7 +54,7 @@ function Footer() {
           <div className="md:h-[20vh] w-full flex flex-col justify-around">
             <div className="w-full flex flex-col gap-4">
               {/* links to different pages */}
-              <ul className="w-full flex flex-wrap justify-around lg:pl-32 ">
+              <ul className="w-full flex flex-wrap justify-center lg:justify-end gap-x-5 lg:gap-x-7 ">
                 {filteredNavItems.map((item) => (
                   <li key={item.name}>
                     <div
@@ -74,9 +74,9 @@ function Footer() {
               </ul>
 
               {/* social link buttons */}
-              <div className="flex justify-around lg:justify-normal lg:gap-14 lg:pl-20">
+              <div className="flex justify-center lg:justify-normal gap-x-5 lg:gap-x-7 lg:pl-20">
                 <a
-                  href=""
+                  href="https://www.linkedin.com/in/aman-rana-709a0a330/"
                   target="_blank"
                   rel="noopener noreferrer"
                   className="md:text-lg lg:text-xl font-extrabold hover:text-[#6b6b6c] font-mono transition duration-300 flex justify-center items-center group leading-relaxed"

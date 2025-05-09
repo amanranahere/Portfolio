@@ -51,8 +51,8 @@ function LandingSection() {
         >
           <p>
             Freelance full-stack web developer writing code to create visual
-            experiences that feel seamless. From layout to logic, it&apos;s all
-            part of the craft.
+            experiences that feel seamless. From layout to logic, it's all part
+            of the craft.
           </p>
 
           <MaskingGrid

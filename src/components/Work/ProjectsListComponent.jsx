@@ -124,7 +124,7 @@ function ProjectsListComponent() {
             style={{ textIndent: "30%" }}
           >
             <p>
-              Here&apos;s a collection of the projects I&apos;ve poured my time,
+              Here's a collection of the projects I've poured my time,
               creativity, and skills into. Each one reflects a learning curve, a
               new challenge tackled, or a creative solution implemented. From
               frontend finesse to backend logic, these works showcase what I

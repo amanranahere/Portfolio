@@ -22,7 +22,7 @@ function AboutSection() {
                 className="lg:text-xl text-[#6b6b6c] text-justify font-semibold uppercase font-mono"
                 style={{ textIndent: "40%" }}
               >
-                Currently pursuing a B.Tech in Computer Science, I&apos;ve been
+                Currently pursuing a B.Tech in Computer Science, I've been
                 diving deep into full stack web development using tools like
                 React, Node.js, Express, and MongoDB. Alongside that, my
                 academics have helped me better understand how computers and
@@ -33,9 +33,9 @@ function AboutSection() {
                 me to start imagining what I could create, just for the sake of
                 creating it. That curiosity gradually turned into something I
                 genuinely enjoy — writing lines of code and structured logic
-                that transform into visual experiences on a screen. When
-                I&apos;m not coding, I&apos;m probably out playing basketball or
-                catching a quick gaming session to recharge.
+                that transform into visual experiences on a screen. When I'm not
+                coding, I'm probably out playing basketball or catching a quick
+                gaming session to recharge.
               </p>
 
               <MaskingGrid

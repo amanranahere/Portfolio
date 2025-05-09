@@ -20,12 +20,11 @@ function ContactComponent() {
           style={{ textIndent: "40%" }}
         >
           <p>
-            I'm always open to exciting opportunities — whether it&apos;s a
-            potential role, freelance collaboration, or a creative idea that
-            needs a developer&apos;s touch. If you&apos;re looking for someone
-            who brings both technical skill and a fresh perspective, let&apos;s
-            connect. And even if it's just to say hi or share thoughts, my inbox
-            is always open.
+            I'm always open to exciting opportunities — whether it's a potential
+            role, freelance collaboration, or a creative idea that needs a
+            developer's touch. If you're looking for someone who brings both
+            technical skill and a fresh perspective, let's connect. And even if
+            it's just to say hi or share thoughts, my inbox is always open.
           </p>
 
           {/* masking div for animation */}

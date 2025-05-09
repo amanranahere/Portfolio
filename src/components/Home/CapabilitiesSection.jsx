@@ -33,8 +33,15 @@ function CapabilitiesSection() {
     {
       number: "C / 001",
       title: "Crafting Engaging Interfaces",
-      description:
-        "Bringing ideas to life requires more than just code—it’s about crafting seamless, interactive, and dynamic experiences. With React.js, I build modular and reusable UI components that are efficient and scalable. Managing state efficiently is essential, and Redux ensures a predictable flow, while React Router allows users to navigate effortlessly through applications.",
+      description: (
+        <>
+          Clean, responsive UI<span className="normal-case">s</span> start with
+          modular React components. I use Tailwind CSS for rapid styling and
+          Framer Motion & GSAP to add smooth, intuitive animations. React Hook
+          Form ensures seamless interaction in forms. My goal is to build
+          interfaces that feel fluid and alive.
+        </>
+      ),
       buttonText: "Explore My Frontend Stack",
       category: "Frontend",
       lottie: (
@@ -49,8 +56,15 @@ function CapabilitiesSection() {
     {
       number: "C / 002",
       title: "Engineering Scalable Backends",
-      description:
-        "Behind every robust application is a powerful backend that handles data, authentication, and scalability. I rely on Node.js and Express.js to create high-performance APIs that process requests efficiently. MongoDB, coupled with Mongoose, provides flexible and scalable data storage, while JWT and Bcrypt.js ensure secure authentication for user protection.",
+      description: (
+        <>
+          A solid backend powers any real-world application. I use Node.js with
+          Express.js to create fast, scalable API
+          <span className="normal-case">s</span>. MongoDB with Mongoose offers
+          flexible data storage, while JWT and Bcrypt.js ensure secure
+          authentication workflows.
+        </>
+      ),
       buttonText: "Dive Into My Backend Toolkit",
       category: "Backend",
       lottie: (
@@ -64,25 +78,14 @@ function CapabilitiesSection() {
     },
     {
       number: "C / 003",
-      title: "Aesthetics & Motion",
-      description:
-        "Design is not just about appearance—it's about experience. Tailwind CSS allows me to style applications with precision and speed, keeping the UI clean and responsive. To add motion and interactivity, I use Framer Motion and GSAP, creating fluid transitions and engaging animations that make interfaces feel alive. Forms are an essential part of user interaction, and with React Hook Form, I ensure smooth validation and state management.",
-      buttonText: "See My Design & Animation Tools",
-      category: "Frontend",
-      lottie: (
-        <Lottie
-          animationData={c003}
-          lottieRef={lottieRef3}
-          loop
-          className="w-[250px] h-[250px]"
-        />
-      ),
-    },
-    {
-      number: "C / 004",
       title: "Dev Tools & Enhancements",
-      description:
-        "A streamlined workflow is key to building efficiently. Vite accelerates development with instant hot module replacement, while Axios simplifies API communication. Debugging and testing are critical, and tools like Postman help analyze API responses effectively. For backend services without the hassle of manual setup, I leverage Appwrite, a powerful backend-as-a-service solution.",
+      description: (
+        <>
+          Efficiency matters. Vite speeds up development, Axios simplifies API
+          requests, and Postman helps test them. For backend-as-a-service needs,
+          I use Appwrite to ship faster without sacrificing flexibility.
+        </>
+      ),
       buttonText: "Check Out My Dev Toolkit",
       category: "Tools & Services",
       lottie: (
@@ -95,11 +98,38 @@ function CapabilitiesSection() {
       ),
     },
     {
+      number: "C / 004",
+      title: "Speaking in Code",
+      description: (
+        <>
+          From scripting dynamic web pages with JavaScript and TypeScript to
+          solving algorithmic problems in C++, I enjoy learning languages that
+          make me think differently. Each one brings new tools for expressing
+          logic, solving problems, and building smarter software.
+        </>
+      ),
+      buttonText: "Explore My Programming Languages",
+      category: "Languages",
+      lottie: (
+        <Lottie
+          animationData={c003}
+          lottieRef={lottieRef3}
+          loop
+          className="w-[250px] h-[250px]"
+        />
+      ),
+    },
+    {
       number: "C / 005",
       title: "Always Exploring",
-      description:
-        "The tech landscape is constantly evolving, and I strive to grow with it. Exploring TypeScript has enhanced my ability to write maintainable and error-free code. Three.js opens the door to immersive 3D web experiences. Learning never stops, and I’m always on the lookout for the next tool to refine my craft.",
-      buttonText: "Discover What I’m Learning",
+      description: (
+        <>
+          I'm always curious about what's next. Currently exploring Three.js for
+          3D web experiences and Next.js for hybrid rendering. Learning never
+          stops—it's how I grow and refine my craft.
+        </>
+      ),
+      buttonText: "Discover What I'm Learning",
       category: "Exploring / Learning",
       lottie: (
         <Lottie
@@ -195,7 +225,7 @@ function CapabilitiesSection() {
                       delay: 0.3,
                     }}
                     viewport={{ once: true, amount: 0.5 }}
-                    className="text-sm md:text-base mt-16 lg:mt-20 mb-12 lg:mr-40 text-justify uppercase font-mono text-[#6b6b6c] font-medium relative"
+                    className="text-sm md:text-base mt-16 lg:mt-20 mb-20 lg:mr-40 text-justify uppercase font-mono text-[#6b6b6c] font-medium relative"
                     style={{ textIndent: "30%" }}
                   >
                     {item.description}

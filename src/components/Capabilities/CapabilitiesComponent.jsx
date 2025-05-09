@@ -27,6 +27,7 @@ import {
   SiGreensock,
   SiTypescript,
   SiThreedotjs,
+  SiVercel,
 } from "react-icons/si";
 import RandomText from "../Animations/RandomText";
 import MaskingGrid from "../Animations/MaskingGrid";
@@ -226,6 +227,14 @@ function CapabilitiesComponent() {
       logo: <SiPostman className="w-14 h-14" />,
       description:
         "Postman is a tool for testing APIs, allowing developers to send requests, inspect responses, and automate testing workflows.",
+      category: "Tools & Services",
+    },
+    {
+      name: "Vercel",
+      label: "Deployment Platform",
+      logo: <SiVercel className="w-14 h-14" />,
+      description:
+        "Vercel is a cloud platform for frontend frameworks and static sites, enabling developers to deploy web apps quickly with global CDN support and seamless CI/CD integration.",
       category: "Tools & Services",
     },
     {
