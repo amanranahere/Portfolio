@@ -96,6 +96,13 @@ function CapabilitiesComponent() {
       category: "Frontend",
     },
     {
+      name: "Zustand",
+      label: "State Management",
+      description:
+        "Zustand is a lightweight and scalable state management library for React. It simplifies global state without boilerplate or context providers.",
+      category: "Frontend",
+    },
+    {
       name: "React Router",
       label: "Routing",
       logo: <SiReactrouter className="w-14 h-14" />,

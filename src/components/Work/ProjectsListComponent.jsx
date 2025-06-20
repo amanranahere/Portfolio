@@ -32,24 +32,24 @@ function ProjectsListComponent() {
 
   const projects = [
     {
-      name: "Weblog",
-      type: "Blogging website",
-      path: "weblog",
-      img: (
-        <img
-          src={WeblogImg}
-          alt="Project Preview"
-          className="w-full h-full object-cover project-img"
-        />
-      ),
-    },
-    {
       name: "Vidron",
       type: "Streaming Platform",
       path: "vidron",
       img: (
         <img
           src={VidronImg}
+          alt="Project Preview"
+          className="w-full h-full object-cover project-img"
+        />
+      ),
+    },
+    {
+      name: "Weblog",
+      type: "Blogging website",
+      path: "weblog",
+      img: (
+        <img
+          src={WeblogImg}
           alt="Project Preview"
           className="w-full h-full object-cover project-img"
         />

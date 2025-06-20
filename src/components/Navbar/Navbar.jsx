@@ -119,7 +119,7 @@ function Navbar() {
             <>
               <div
                 onClick={() => setIsMenuOpen(false)}
-                className="fixed inset-0 z-[99] backdrop-blur-lg"
+                className="fixed inset-0 z-[99] bg-black/70"
               ></div>
 
               {/* menu box */}
@@ -135,7 +135,7 @@ function Navbar() {
                     <li key={item.name}>
                       <div className="overflow-hidden">
                         <div
-                          className="py-1 max-w-max px-6 text-[#f1f1f1] hover:text-[#4a4a4a] font-bold hover:scale-105 transition duration-300 text-2xl md:text-2xl select-none cursor-pointer font-mono tracking-wider"
+                          className="py-1 w-full px-6 text-[#f1f1f1] hover:text-[#4a4a4a] font-bold hover:scale-105 transition duration-300 text-2xl md:text-2xl select-none cursor-pointer font-mono tracking-wider"
                           onClick={() => {
                             if (item.action) {
                               item.action();

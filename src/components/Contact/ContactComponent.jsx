@@ -38,7 +38,7 @@ function ContactComponent() {
         {/* social */}
         <div className="w-full flex justify-between mb-20 lg:mb-0 lg:mt-20">
           <a
-            href="https://www.linkedin.com/in/aman-rana-709a0a330/"
+            href="https://www.linkedin.com/in/amanrana-dev/"
             target="_blank"
             rel="noopener noreferrer"
             className="text-xl font-semibold font-mono text-[#6b6b6c] hover:text-[#c0c0c0] duration-300"
