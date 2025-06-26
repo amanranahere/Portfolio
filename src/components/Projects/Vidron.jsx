@@ -23,7 +23,6 @@ import {
   SiReactrouter,
   SiAxios,
   SiReacthookform,
-  SiFramer,
   SiDotenv,
 } from "react-icons/si";
 import MaskingGrid from "../Animations/MaskingGrid";
@@ -80,10 +79,6 @@ function Vidron() {
     {
       name: "React Hook Form",
       logo: <SiReacthookform className="w-6 h-6" />,
-    },
-    {
-      name: "Framer Motion",
-      logo: <SiFramer className="w-6 h-6" />,
     },
     {
       name: "React-Toastify",

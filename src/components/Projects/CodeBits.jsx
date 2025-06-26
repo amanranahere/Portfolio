@@ -92,12 +92,12 @@ function CodeBits() {
     <ProjectTemplate
       projectName="CODE-BITS"
       projectTagline="A code snippets storing tool."
-      projectLink="https://codebits.vercel.app"
+      projectLink="https://usecodebits.vercel.app"
       //   projectVideo={VidronVideo}
       projectYear="2025"
       projectOverview=""
       projectMaking01=""
-      projectMaking02="One of the most frustrating yet interesting parts was integrating the backend with the frontend. There were multiple instances where data didn’t appear as expected, and I had to carefully inspect and adjust how responses were structured. Debugging these issues helped me gain a much deeper understanding of how the frontend processes and displays data."
+      projectMaking02=""
       projectMaking03=""
       projectCodeLink="https://github.com/amanranahere/CodeBits"
       projectBuiltWith={
