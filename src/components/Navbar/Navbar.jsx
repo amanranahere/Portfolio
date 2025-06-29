@@ -65,7 +65,7 @@ function Navbar() {
       icon: (
         <SiLinkedin className="hover:scale-110 text-[#f1f1f1] hover:text-[#7a7a7a] transition duration-300" />
       ),
-      link: "https://www.linkedin.com/in/aman-rana-709a0a330/",
+      link: "https://www.linkedin.com/in/amanrana-dev/",
     },
     {
       icon: (
@@ -135,7 +135,7 @@ function Navbar() {
                     <li key={item.name}>
                       <div className="overflow-hidden">
                         <div
-                          className="py-1 w-full px-6 text-[#f1f1f1] hover:text-[#4a4a4a] font-bold hover:scale-105 transition duration-300 text-2xl md:text-2xl select-none cursor-pointer font-mono tracking-wider"
+                          className="py-1 w-full px-6 text-[#f1f1f1] hover:text-[#4a4a4a] font-bold duration-300 text-2xl md:text-2xl select-none cursor-pointer font-mono tracking-wider"
                           onClick={() => {
                             if (item.action) {
                               item.action();
