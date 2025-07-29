@@ -1,6 +1,4 @@
-import React from "react";
 import ProjectTemplate from "./ProjectTemplate";
-import SnakeGameVideo from "../../assets/videos/snakeGame_vid.mp4";
 import SnakeGameImage from "../../assets/images/snakeGame.png";
 import SnakeGameOverImage from "../../assets/images/snakeGameOver.png";
 import { motion } from "framer-motion";
@@ -41,7 +39,7 @@ function HungrySnake() {
       projectName="HUNGRY SNAKE"
       projectTagline="A simple browser-based Snake game"
       projectLink="https://amanranahere.github.io/Hungry-Snake"
-      projectVideo={SnakeGameVideo}
+      projectVideo="/videos/snakeGame_vid.mp4"
       projectYear="2024"
       projectOverview="Snake Game is a simple implementation of the classic Snake game using HTML, CSS, and JavaScript. The goal is to navigate the snake, eat food, and grow longer while avoiding collisions with the walls or itself. With each piece of food consumed, the snake increases in size, moves faster, and the score goes up. The game ends if the snake crashes, challenging players to survive as long as possible."
       projectMaking01="I built this project when I had just started coding, and it was one of my first experiences working with JavaScript to create an interactive game. The logic for moving the snake, detecting collisions, and dynamically generating food was a fun challenge, and it helped me understand how to update the DOM efficiently."

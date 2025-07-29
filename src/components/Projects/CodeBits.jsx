@@ -1,7 +1,5 @@
-import React from "react";
 import ProjectTemplate from "./ProjectTemplate";
 import { motion } from "framer-motion";
-import VidronVideo from "../../assets/videos/vidron_vid.mp4";
 import VidronHome from "../../assets/images/vidronHome.png";
 import VidronVidPage from "../../assets/images/vidronVidPage.png";
 import VidronSnap from "../../assets/images/vidronSnap.png";
@@ -16,8 +14,6 @@ import {
   SiExpress,
   SiMongodb,
   SiMongoose,
-  SiCloudinary,
-  SiRedux,
   SiJsonwebtokens,
   SiTailwindcss,
   SiReactrouter,
@@ -63,6 +59,10 @@ function CodeBits() {
       logo: <SiTailwindcss className="w-6 h-6" />,
     },
     {
+      name: "Framer Motion",
+      logo: <SiFramer className="w-6 h-6" />,
+    },
+    {
       name: "React Router",
       logo: <SiReactrouter className="w-6 h-6" />,
     },
@@ -90,15 +90,14 @@ function CodeBits() {
 
   return (
     <ProjectTemplate
-      projectName="CODE-BITS"
+      projectName="CODEBITS"
       projectTagline="A code snippets storing tool."
       projectLink="https://usecodebits.vercel.app"
       //   projectVideo={VidronVideo}
       projectYear="2025"
-      projectOverview=""
-      projectMaking01=""
-      projectMaking02=""
-      projectMaking03=""
+      projectOverview="CodeBits is a modern web app designed to help developers save, organize, and quickly access reusable code snippets. It provides a familiar, editor-like experience with syntax highlighting and a Monaco Editor integration, making it feel like you're working inside a lightweight version of VS Code. Users can categorize snippets by language, add descriptions, and manage them effortlessly, making it an essential tool for boosting coding productivity."
+      projectMaking01="CodeBits started as an idea to solve a personal problem — I often found myself searching old projects just to copy a piece of code I had written months ago. I wanted a centralized, clean, and developer-friendly way to store these snippets, so I decided to build one myself. The biggest design goal was to make it feel familiar to developers, which is why I used Monaco Editor to give it a VS Code-like experience."
+      projectMaking02="What I enjoyed most was refining the user interface to feel intuitive and fast. I also experimented with Framer Motion animations for smooth transitions, giving it a polished, modern vibe. CodeBits isn't just another CRUD app for me — it's a tool I actively use, which makes seeing it in action even more satisfying."
       projectCodeLink="https://github.com/amanranahere/CodeBits"
       projectBuiltWith={
         <>
@@ -206,4 +205,4 @@ function CodeBits() {
   );
 }
 
-export default Vidron;
+export default CodeBits;

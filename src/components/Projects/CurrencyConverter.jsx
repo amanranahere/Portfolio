@@ -1,6 +1,4 @@
-import React from "react";
 import ProjectTemplate from "./ProjectTemplate";
-import CurrencyConverterVideo from "../../assets/videos/currencyConverter_vid.mp4";
 import CurrConvImage from "../../assets/images/currencyConverter.png";
 import CurrConvImage02 from "../../assets/images/currencyConverter02.png";
 import { motion } from "framer-motion";
@@ -31,7 +29,7 @@ function CurrencyConverter() {
       projectName="CURRENCY CONVERTER"
       projectTagline="A simple tool to convert between different currencies using real-time exchange rates."
       projectLink="https://amanranahere.github.io/Currency-Converter"
-      projectVideo={CurrencyConverterVideo}
+      projectVideo="/videos/currencyConverter_vid.mp4"
       projectYear="2024"
       projectOverview="Currency Converter is a simple static website that allows users to convert different currencies based on their input. Built with HTML, CSS, and JavaScript, the project features a user-friendly interface and real-time conversion using JavaScript logic. By selecting the desired currencies and entering an amount, users can instantly get the exchange rate and converted value."
       projectMaking01="This project was a great way for me to practice working with APIs and handling real-time data in JavaScript. To fetch exchange rates, I used @fawazahmed0/currency-api, which provided up-to-date currency conversion data. This was one of my first experiences making API calls using fetch() and dynamically updating the UI based on the response. I also learned how to handle asynchronous operations in JavaScript while ensuring smooth user interaction."

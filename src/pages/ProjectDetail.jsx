@@ -7,10 +7,12 @@ import CurrencyConverter from "../components/Projects/CurrencyConverter.jsx";
 import HungrySnake from "../components/Projects/HungrySnake.jsx";
 import FlappyBird from "../components/Projects/FlappyBird.jsx";
 import BrickBreaker from "../components/Projects/BrickBreaker.jsx";
+import CodeBits from "../components/Projects/CodeBits.jsx";
 
 const project = {
-  weblog: <Weblog />,
+  // codeBits: <CodeBits />,
   vidron: <Vidron />,
+  weblog: <Weblog />,
   currencyConverter: <CurrencyConverter />,
   hungrySnake: <HungrySnake />,
   flappyBird: <FlappyBird />,

@@ -31,6 +31,18 @@ function ProjectsListComponent() {
   }, []);
 
   const projects = [
+    // {
+    //   name: "CodeBits",
+    //   type: "Code Snippet Manager",
+    //   path: "codeBits",
+    //   img: (
+    //     <img
+    //       src={VidronImg}
+    //       alt="Project Preview"
+    //       className="w-full h-full object-cover project-img"
+    //     />
+    //   ),
+    // },
     {
       name: "Vidron",
       type: "Streaming Platform",
@@ -128,7 +140,7 @@ function ProjectsListComponent() {
               creativity, and skills into. Each one reflects a learning curve, a
               new challenge tackled, or a creative solution implemented. From
               frontend finesse to backend logic, these works showcase what I
-              love about development—bringing ideas to life through code.
+              love about development — bringing ideas to life through code.
             </p>
 
             <MaskingGrid
@@ -178,7 +190,7 @@ function ProjectsListComponent() {
               }}
               whileHover={{ y: -35 }}
               key={project.path}
-              className={`text-5xl md:text-6xl lg:text-8xl flex whitespace-nowrap overflow-hidden lg:overflow-visible lg:line-clamp-1 font-semibold relative  border-y bg-[#161616] lg:shadow-2xl shadow-white border-[#f1f1f1] cursor-pointer transition-transform duration-300 will-change-transform -mt-5 md:-mt-6 lg:-mt-9 first:mt-0 last:hover:transform-none last:pointer-events-none last:border-t last:border-b-0 last:shadow-none hover:shadow-lg select-none project-${index}`}
+              className={`text-5xl md:text-6xl lg:text-8xl flex whitespace-nowrap overflow-hidden lg:overflow-visible lg:line-clamp-1 font-semibold relative border-y bg-[#161616] border-[#f1f1f1] cursor-pointer transition-transform duration-300 will-change-transform -mt-5 md:-mt-6 lg:-mt-9 first:mt-0 last:hover:transform-none last:pointer-events-none last:border-t last:border-b-0 last:shadow-none hover:shadow-lg select-none project-${index}`}
               style={{
                 transitionTimingFunction: "cubic-bezier(0.25, 1, 0.5, 1)",
               }}

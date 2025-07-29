@@ -1,4 +1,4 @@
-import React, { useEffect } from "react";
+import { useEffect } from "react";
 import { useLocation } from "react-router-dom";
 import PageTransition from "../components/Animations/PageTransition.jsx";
 import LandingSection from "../components/Home/LandingSection.jsx";

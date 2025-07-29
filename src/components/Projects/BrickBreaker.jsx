@@ -1,6 +1,4 @@
-import React from "react";
 import ProjectTemplate from "./ProjectTemplate";
-import BrickBreakerVideo from "../../assets/videos/brickBreaker_vid.mp4";
 import BrickBreakerImg from "../../assets/images/brickBreaker.png";
 import BrickBreakerGameOverImg from "../../assets/images/brickBreakerGameOver.png";
 import { motion } from "framer-motion";
@@ -31,7 +29,7 @@ function BrickBreaker() {
       projectName="BRICK BREAKER"
       projectTagline="All time favourite arcade game"
       projectLink="https://amanranahere.github.io/Brick-Breaker"
-      projectVideo={BrickBreakerVideo}
+      projectVideo="/videos/brickBreaker_vid.mp4"
       projectYear="2024"
       projectOverview="Brick Breaker is a classic arcade-style game where players control a paddle to bounce a ball and break bricks. The goal is to clear all the bricks while keeping the ball in play. This game is built using HTML, CSS, and JavaScript."
       projectMaking01="I built this project as a fun way to practice working with the HTML5 Canvas element in JavaScript. One of the key things I learned was handling collision detection, ensuring that the ball interacts correctly with bricks, the paddle, and the board boundaries."

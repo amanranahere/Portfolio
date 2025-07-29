@@ -1,7 +1,5 @@
-import React from "react";
 import ProjectTemplate from "./ProjectTemplate";
 import { motion } from "framer-motion";
-import VidronVideo from "../../assets/videos/vidron_vid.mp4";
 import VidronHome from "../../assets/images/vidronHome.png";
 import VidronVidPage from "../../assets/images/vidronVidPage.png";
 import VidronSnap from "../../assets/images/vidronSnap.png";
@@ -99,11 +97,11 @@ function Vidron() {
       projectName="VIDRON"
       projectTagline="A video streaming platform offering a diverse range of content, including engaging full-length videos and short-form snaps."
       projectLink="https://vidron.vercel.app"
-      projectVideo={VidronVideo}
+      projectVideo="/videos/vidron_vid.mp4"
       projectYear="2025"
       projectOverview="Vidron is a dynamic video streaming platform designed to deliver an engaging viewing experience. Users can explore a diverse collection of content, including full-length videos and short-form snaps. The platform allows seamless video playback, intuitive navigation, and a user-friendly interface for managing channels and content. Built with scalability in mind, Vidron offers smooth performance while handling media uploads and streaming efficiently."
       projectMaking01="Building Vidron was an exciting and challenging experience, especially because it was my first project where I designed the backend from the ground up. I had worked with backend-as-a-service platforms before, but this time, I wanted to take full control over how data flowed between the server and the client. Setting up authentication, managing media storage, and optimizing API performance were all new but rewarding challenges."
-      projectMaking02="One of the most frustrating yet interesting parts was integrating the backend with the frontend. There were multiple instances where data didn’t appear as expected, and I had to carefully inspect and adjust how responses were structured. Debugging these issues helped me gain a much deeper understanding of how the frontend processes and displays data."
+      projectMaking02="One of the most frustrating yet interesting parts was integrating the backend with the frontend. There were multiple instances where data didn't appear as expected, and I had to carefully inspect and adjust how responses were structured. Debugging these issues helped me gain a much deeper understanding of how the frontend processes and displays data."
       projectMaking03="Vidron was more than just a coding project, it was a deep dive into the complexities of backend development. Seeing everything come together, from database design to frontend integration, was incredibly satisfying."
       projectCodeLink="https://github.com/amanranahere/Vidron"
       projectBuiltWith={

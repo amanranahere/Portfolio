@@ -1,7 +1,5 @@
-import React from "react";
 import ProjectTemplate from "./ProjectTemplate";
 import { motion } from "framer-motion";
-import weblogVideo from "../../assets/videos/weblog_vid.mp4";
 import weblogHome from "../../assets/images/weblogHome.png";
 import weblogAddBlog from "../../assets/images/weblogAddBlog.png";
 import weblogAllBlogs from "../../assets/images/weblogAllBlogs.png";
@@ -65,10 +63,10 @@ function Weblog() {
       projectName="WEBLOG"
       projectTagline="A modern blogging platform where users can read, write, and share blogs."
       projectLink="https://weblogspace.vercel.app"
-      projectVideo={weblogVideo}
+      projectVideo="/videos/weblog_vid.mp4"
       projectYear="2024"
       projectOverview="WeBlog is a modern, responsive blog website designed for discovering and sharing new ideas and topics. Users can browse through a variety of blog posts written by others, or contribute by writing their own blogs once they sign up or log in. The website offers a smooth reading experience across all devices."
-      projectMaking01="WeBlog is my first large project built with React, and it was also my first real experience working with the backend—well, kind of! Since I used Appwrite, which is a backend-as-a-service, I didn't have to build everything from scratch, but I did get some exposure to setting up authentication and connecting the frontend with a backend system. It was interesting to see how everything came together, from initializing Appwrite to integrating it with my React app. This project also helped me get comfortable with state management, routing, and handling dynamic content efficiently. Plus, it was the first project I ever deployed on the web using Vercel, which was a whole new experience in itself."
+      projectMaking01="WeBlog is my first large project built with React, and it was also my first real experience working with the backend — well, kind of! Since I used Appwrite, which is a backend-as-a-service, I didn't have to build everything from scratch, but I did get some exposure to setting up authentication and connecting the frontend with a backend system. It was interesting to see how everything came together, from initializing Appwrite to integrating it with my React app. This project also helped me get comfortable with state management, routing, and handling dynamic content efficiently. Plus, it was the first project I ever deployed on the web using Vercel, which was a whole new experience in itself."
       projectCodeLink="https://github.com/amanranahere/WeBlog"
       projectBuiltWith={
         <>
