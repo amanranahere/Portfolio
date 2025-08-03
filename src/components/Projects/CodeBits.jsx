@@ -6,7 +6,7 @@ import CodebitsFeatures from "../../assets/images/codebitsFeatures.png";
 import CodebitsShowcase from "../../assets/images/codebitsShowcase.png";
 import CodebitsFooter from "../../assets/images/cbFooter.png";
 import CodebitsHome from "../../assets/images/codebitsHome.png";
-import CodebitsDropdown from "../../assets/images/codebitsDropdown.png";
+import CodebitsDropdown from "../../assets/images/cbdropdown.png";
 import CodebitsSearch from "../../assets/images/codebitsSearch.png";
 import {
   SiReact,
