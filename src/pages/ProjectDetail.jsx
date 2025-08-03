@@ -10,7 +10,7 @@ import BrickBreaker from "../components/Projects/BrickBreaker.jsx";
 import CodeBits from "../components/Projects/CodeBits.jsx";
 
 const project = {
-  // codeBits: <CodeBits />,
+  codeBits: <CodeBits />,
   vidron: <Vidron />,
   weblog: <Weblog />,
   currencyConverter: <CurrencyConverter />,

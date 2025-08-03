@@ -13,7 +13,6 @@ import {
   SiReacthookform,
   SiAppwrite,
   SiReact,
-  SiFramer,
 } from "react-icons/si";
 import MaskingGrid from "../Animations/MaskingGrid";
 
@@ -49,7 +48,6 @@ function Weblog() {
     },
     {
       name: "Framer Motion",
-      logo: <SiFramer className="w-6 h-6" />,
     },
     {
       name: "TinyMCE",

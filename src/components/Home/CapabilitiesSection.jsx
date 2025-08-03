@@ -125,8 +125,8 @@ function CapabilitiesSection() {
       description: (
         <>
           I'm always curious about what's next. Currently exploring Three.js for
-          3D web experiences and Next.js for hybrid rendering. Learning never
-          stops—it's how I grow and refine my craft.
+          3D web experiences. Learning never stops — it's how I grow and refine
+          my craft.
         </>
       ),
       buttonText: "Discover What I'm Learning",

@@ -1,13 +1,13 @@
 import ProjectTemplate from "./ProjectTemplate";
 import { motion } from "framer-motion";
-import VidronHome from "../../assets/images/vidronHome.png";
-import VidronVidPage from "../../assets/images/vidronVidPage.png";
-import VidronSnap from "../../assets/images/vidronSnap.png";
-import VidronAllSnaps from "../../assets/images/vidronAllSnaps.png";
-import VidronTweets from "../../assets/images/vidronTweets.png";
-import VidronMetrics from "../../assets/images/vidronMetrics.png";
-import VidronChannel from "../../assets/images/vidronChannel.png";
-import VidronSettings from "../../assets/images/vidronSettings.png";
+import CodebitsHero from "../../assets/images/codebitsHero.png";
+import CodebitsOverview from "../../assets/images/codebitsOverview.png";
+import CodebitsFeatures from "../../assets/images/codebitsFeatures.png";
+import CodebitsShowcase from "../../assets/images/codebitsShowcase.png";
+import Codebitsfooter from "../../assets/images/codebitsfooter.png";
+import CodebitsHome from "../../assets/images/codebitsHome.png";
+import CodebitsDropdown from "../../assets/images/codebitsDropdown.png";
+import CodebitsSearch from "../../assets/images/codebitsSearch.png";
 import {
   SiReact,
   SiNodedotjs,
@@ -19,8 +19,6 @@ import {
   SiReactrouter,
   SiAxios,
   SiReacthookform,
-  SiFramer,
-  SiDotenv,
 } from "react-icons/si";
 import MaskingGrid from "../Animations/MaskingGrid";
 
@@ -48,7 +46,9 @@ function CodeBits() {
     },
     {
       name: "Zustand",
-      //   logo: <SiRedux className="w-6 h-6" />,
+    },
+    {
+      name: "Monaco Editor",
     },
     {
       name: "JWT",
@@ -60,7 +60,6 @@ function CodeBits() {
     },
     {
       name: "Framer Motion",
-      logo: <SiFramer className="w-6 h-6" />,
     },
     {
       name: "React Router",
@@ -77,13 +76,6 @@ function CodeBits() {
     {
       name: "React-Toastify",
     },
-    {
-      name: "bcrypt.js",
-    },
-    {
-      name: "dotenv",
-      logo: <SiDotenv className="w-6 h-6" />,
-    },
   ];
 
   const delays = builtWith.map(() => Math.random() * 1.2);
@@ -93,7 +85,7 @@ function CodeBits() {
       projectName="CODEBITS"
       projectTagline="A code snippets storing tool."
       projectLink="https://usecodebits.vercel.app"
-      //   projectVideo={VidronVideo}
+      projectVideo="/videos/codebits_vid.mp4"
       projectYear="2025"
       projectOverview="CodeBits is a modern web app designed to help developers save, organize, and quickly access reusable code snippets. It provides a familiar, editor-like experience with syntax highlighting and a Monaco Editor integration, making it feel like you're working inside a lightweight version of VS Code. Users can categorize snippets by language, add descriptions, and manage them effortlessly, making it an essential tool for boosting coding productivity."
       projectMaking01="CodeBits started as an idea to solve a personal problem — I often found myself searching old projects just to copy a piece of code I had written months ago. I wanted a centralized, clean, and developer-friendly way to store these snippets, so I decided to build one myself. The biggest design goal was to make it feel familiar to developers, which is why I used Monaco Editor to give it a VS Code-like experience."
@@ -120,7 +112,7 @@ function CodeBits() {
         <div className="gap-4">
           <div className="h-full flex flex-wrap justify-between">
             <div className="md:w-[49.3%] mb-5 relative">
-              <img src={VidronHome} alt="Vidron Home" />
+              <img src={CodebitsHero} alt="Codebits Hero" />
 
               <MaskingGrid
                 color="#161616"
@@ -130,7 +122,7 @@ function CodeBits() {
             </div>
 
             <div className="md:w-[49.3%] mb-5 relative">
-              <img src={VidronVidPage} alt="Vidron Video page" />
+              <img src={CodebitsOverview} alt="CodeBits Overview" />
 
               <MaskingGrid
                 color="#161616"
@@ -140,7 +132,7 @@ function CodeBits() {
             </div>
 
             <div className="md:w-[49.3%] mb-5 relative">
-              <img src={VidronAllSnaps} alt="Vidron All Snaps" />
+              <img src={CodebitsFeatures} alt="Codebits Features" />
 
               <MaskingGrid
                 color="#161616"
@@ -150,7 +142,7 @@ function CodeBits() {
             </div>
 
             <div className="md:w-[49.3%] mb-5 relative">
-              <img src={VidronSnap} alt="Vidron Snap" />
+              <img src={CodebitsShowcase} alt="Codebits Showcase" />
 
               <MaskingGrid
                 color="#161616"
@@ -160,7 +152,7 @@ function CodeBits() {
             </div>
 
             <div className="md:w-[49.3%] mb-5 relative">
-              <img src={VidronTweets} alt="Vidron Tweets" />
+              <img src={Codebitsfooter} alt="Codebits Footer" />
 
               <MaskingGrid
                 color="#161616"
@@ -170,7 +162,7 @@ function CodeBits() {
             </div>
 
             <div className="md:w-[49.3%] mb-5 relative">
-              <img src={VidronChannel} alt="Vidron Channel" />
+              <img src={CodebitsHome} alt="Codebits Home" />
 
               <MaskingGrid
                 color="#161616"
@@ -180,7 +172,7 @@ function CodeBits() {
             </div>
 
             <div className="md:w-[49.3%] mb-5 relative">
-              <img src={VidronMetrics} alt="Vidron Metrics" />
+              <img src={CodebitsDropdown} alt="Codebits Dropdown" />
 
               <MaskingGrid
                 color="#161616"
@@ -190,7 +182,7 @@ function CodeBits() {
             </div>
 
             <div className="md:w-[49.3%] mb-5 relative">
-              <img src={VidronSettings} alt="Vidron Settings" />
+              <img src={CodebitsSearch} alt="Codebits Search" />
 
               <MaskingGrid
                 color="#161616"

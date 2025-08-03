@@ -81,13 +81,6 @@ function Vidron() {
     {
       name: "React-Toastify",
     },
-    {
-      name: "bcrypt.js",
-    },
-    {
-      name: "dotenv",
-      logo: <SiDotenv className="w-6 h-6" />,
-    },
   ];
 
   const delays = builtWith.map(() => Math.random() * 1.2);

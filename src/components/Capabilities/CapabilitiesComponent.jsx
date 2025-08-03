@@ -40,6 +40,14 @@ function CapabilitiesComponent() {
 
   const techStack = [
     {
+      name: "Next JS",
+      label: "Full-Stack Framework",
+      logo: <SiNextdotjs className="w-14 h-14" />,
+      description:
+        "Next.js is a React-based framework that enables server-side rendering, static site generation, and API routes for building optimized web apps.",
+      category: "Frontend",
+    },
+    {
       name: "React JS",
       label: "Framework",
       logo: <SiReact className="w-14 h-14" />,
@@ -257,14 +265,6 @@ function CapabilitiesComponent() {
       description:
         "TinyMCE is a flexible WYSIWYG editor that allows users to create and edit rich text content in web applications.",
       category: "Frontend",
-    },
-    {
-      name: "Next JS",
-      label: "Full-Stack Framework",
-      logo: <SiNextdotjs className="w-14 h-14" />,
-      description:
-        "Next.js is a React-based framework that enables server-side rendering, static site generation, and API routes for building optimized web apps.",
-      category: "Exploring / Learning",
     },
     {
       name: "GSAP",

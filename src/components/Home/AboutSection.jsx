@@ -24,18 +24,18 @@ function AboutSection() {
               >
                 Currently pursuing a B.Tech in Computer Science, I've been
                 diving deep into full stack web development using tools like
-                React, Node.js, Express, and MongoDB. Alongside that, my
-                academics have helped me better understand how computers and
-                systems work under the hood, which naturally enhances the way I
-                approach development. My interest in tech started with a simple
-                curiosity — I used to wonder how websites were built or how
-                games reacted to every click, movement, or command. It inspired
-                me to start imagining what I could create, just for the sake of
-                creating it. That curiosity gradually turned into something I
-                genuinely enjoy — writing lines of code and structured logic
-                that transform into visual experiences on a screen. When I'm not
-                coding, I'm probably out playing basketball or catching a quick
-                gaming session to recharge.
+                Next.js and MongoDB. Earlier, I built several projects with
+                Node.js and Express, which gave me a strong foundation in
+                backend development. Alongside that, my academics have helped me
+                better understand how computers and systems work under the hood,
+                which naturally enhances the way I approach development. My
+                interest in tech started with a simple curiosity — I used to
+                wonder how websites were built or how games reacted to every
+                click, movement, or command. It inspired me to start imagining
+                what I could create, just for the sake of creating it. That
+                curiosity gradually turned into something I genuinely enjoy —
+                writing lines of code and structured logic that transform into
+                visual experiences on a screen.
               </p>
 
               <MaskingGrid

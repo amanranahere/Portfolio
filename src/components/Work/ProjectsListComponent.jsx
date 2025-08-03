@@ -1,6 +1,7 @@
-import React, { useState, useEffect, useRef } from "react";
+import { useState, useEffect, useRef } from "react";
 import { Link } from "react-router-dom";
 import { IoMdArrowRoundForward } from "react-icons/io";
+import CodebitsImg from "../../assets/images/codebitsHero.png";
 import WeblogImg from "../../assets/images/weblogAllBlogs.png";
 import VidronImg from "../../assets/images/vidronHome.png";
 import CurrConvImg from "../../assets/images/currencyConverter.png";
@@ -31,18 +32,18 @@ function ProjectsListComponent() {
   }, []);
 
   const projects = [
-    // {
-    //   name: "CodeBits",
-    //   type: "Code Snippet Manager",
-    //   path: "codeBits",
-    //   img: (
-    //     <img
-    //       src={VidronImg}
-    //       alt="Project Preview"
-    //       className="w-full h-full object-cover project-img"
-    //     />
-    //   ),
-    // },
+    {
+      name: "CodeBits",
+      type: "Code Snippet Manager",
+      path: "codeBits",
+      img: (
+        <img
+          src={CodebitsImg}
+          alt="Project Preview"
+          className="w-full h-full object-cover project-img"
+        />
+      ),
+    },
     {
       name: "Vidron",
       type: "Streaming Platform",

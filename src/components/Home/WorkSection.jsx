@@ -5,9 +5,10 @@ import { HiOutlineArrowNarrowRight } from "react-icons/hi";
 import useScreenSize from "../../utils/ScreenSize.jsx";
 import brickBreaker from "../../assets/images/brickBreaker.png";
 import currencyConverter from "../../assets/images/currencyConverter.png";
-import snakeGame from "../../assets/images/snakeGame.png";
+// import snakeGame from "../../assets/images/snakeGame.png";
 import vidron from "../../assets/images/vidronHome.png";
-import weblog from "../..//assets/images/weblog.png";
+import weblog from "../../assets/images/weblog.png";
+import codebits from "../../assets/images/codebitsHero.png";
 import RandomText from "../Animations/RandomText.jsx";
 
 function WorkSection() {
@@ -118,6 +119,14 @@ function WorkSection() {
             <div className="w-[90vw] lg:w-[30vw] aspect-video flex-shrink-0 rounded-2xl">
               <img
                 className="w-full h-full rounded-2xl"
+                src={codebits}
+                alt="Codebits"
+              />
+            </div>
+
+            <div className="w-[90vw] lg:w-[30vw] aspect-video flex-shrink-0 rounded-2xl">
+              <img
+                className="w-full h-full rounded-2xl"
                 src={vidron}
                 alt="Vidron"
               />
@@ -128,14 +137,6 @@ function WorkSection() {
                 className="w-full h-full rounded-2xl"
                 src={brickBreaker}
                 alt="Brick Breaker"
-              />
-            </div>
-
-            <div className=" w-[90vw] lg:w-[30vw] aspect-video flex-shrink-0 rounded-2xl">
-              <img
-                className="w-full h-full rounded-2xl"
-                src={snakeGame}
-                alt="Snake Game"
               />
             </div>
           </motion.div>
