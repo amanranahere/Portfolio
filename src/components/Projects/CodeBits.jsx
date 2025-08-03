@@ -4,7 +4,7 @@ import CodebitsHero from "../../assets/images/codebitsHero.png";
 import CodebitsOverview from "../../assets/images/codebitsOverview.png";
 import CodebitsFeatures from "../../assets/images/codebitsFeatures.png";
 import CodebitsShowcase from "../../assets/images/codebitsShowcase.png";
-import Codebitsfooter from "../../assets/images/codebitsFooter.png";
+import CodebitsFooter from "../../assets/images/codebitsFooter.png";
 import CodebitsHome from "../../assets/images/codebitsHome.png";
 import CodebitsDropdown from "../../assets/images/codebitsDropdown.png";
 import CodebitsSearch from "../../assets/images/codebitsSearch.png";
@@ -152,7 +152,7 @@ function CodeBits() {
             </div>
 
             <div className="md:w-[49.3%] mb-5 relative">
-              <img src={Codebitsfooter} alt="Codebits Footer" />
+              <img src={CodebitsFooter} alt="Codebits Footer" />
 
               <MaskingGrid
                 color="#161616"
