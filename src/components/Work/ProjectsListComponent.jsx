@@ -33,6 +33,18 @@ function ProjectsListComponent() {
 
   const projects = [
     {
+      name: "Proctoring System",
+      type: "Proctoring System",
+      path: "videoProctoringSystem",
+      img: (
+        <img
+          src={CodebitsImg}
+          alt="Project Preview"
+          className="w-full h-full object-cover project-img"
+        />
+      ),
+    },
+    {
       name: "CodeBits",
       type: "Code Snippet Manager",
       path: "codeBits",

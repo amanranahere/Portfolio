@@ -8,8 +8,10 @@ import HungrySnake from "../components/Projects/HungrySnake.jsx";
 import FlappyBird from "../components/Projects/FlappyBird.jsx";
 import BrickBreaker from "../components/Projects/BrickBreaker.jsx";
 import CodeBits from "../components/Projects/CodeBits.jsx";
+import VideoProctoringSystem from "../components/Projects/VideoProctoringSystem.jsx";
 
 const project = {
+  videoProctoringSystem: <VideoProctoringSystem />,
   codeBits: <CodeBits />,
   vidron: <Vidron />,
   weblog: <Weblog />,
@@ -23,7 +25,7 @@ const ProjectDetail = () => {
   const { projectName } = useParams();
   return (
     <>
-      <div className="bg-[#161616]">
+      <div className="min-h-screen lg:min-h-[50vh] bg-[#161616]">
         {project[projectName] ? (
           project[projectName]
         ) : (
